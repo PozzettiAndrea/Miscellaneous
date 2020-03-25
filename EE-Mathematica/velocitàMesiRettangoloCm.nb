@@ -1,0 +1,4818 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 11.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[    183599,       4810]
+NotebookOptionsPosition[    172245,       4505]
+NotebookOutlinePosition[    172591,       4520]
+CellTagsIndexPosition[    172548,       4517]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{
+   RowBox[{"J", "[", 
+    RowBox[{"zm_", ",", "ym_", ",", "b_", ",", 
+     RowBox[{"h_", "?", "NumericQ"}]}], "]"}], ":=", 
+   RowBox[{
+    RowBox[{"NIntegrate", "[", 
+     RowBox[{
+      RowBox[{
+       RowBox[{"(", 
+        RowBox[{
+         RowBox[{"b", "/", "2"}], "+", "zm"}], ")"}], " ", 
+       RowBox[{
+        RowBox[{"(", 
+         RowBox[{"Sqrt", "[", 
+          RowBox[{
+           RowBox[{
+            RowBox[{"(", 
+             RowBox[{"ym", "-", "y"}], ")"}], "^", "2"}], "+", 
+           RowBox[{
+            RowBox[{"(", 
+             RowBox[{
+              RowBox[{"b", "/", "2"}], "+", "zm"}], ")"}], "^", "2"}]}], 
+          "]"}], ")"}], "^", 
+        RowBox[{"(", 
+         RowBox[{
+          RowBox[{"-", "6"}], "/", "7"}], ")"}]}]}], ",", " ", 
+      RowBox[{"{", 
+       RowBox[{"y", ",", "0", ",", "h"}], "}"}]}], "]"}], " ", "+", " ", 
+    RowBox[{"NIntegrate", "[", 
+     RowBox[{
+      RowBox[{
+       RowBox[{"(", 
+        RowBox[{
+         RowBox[{"b", "/", "2"}], "-", "zm"}], ")"}], " ", 
+       RowBox[{
+        RowBox[{"(", 
+         RowBox[{"Sqrt", "[", 
+          RowBox[{
+           RowBox[{
+            RowBox[{"(", 
+             RowBox[{"ym", "-", "y"}], ")"}], "^", "2"}], "+", 
+           RowBox[{
+            RowBox[{"(", 
+             RowBox[{
+              RowBox[{"b", "/", "2"}], "-", "zm"}], ")"}], "^", "2"}]}], 
+          "]"}], ")"}], "^", 
+        RowBox[{"(", 
+         RowBox[{
+          RowBox[{"-", "6"}], "/", "7"}], ")"}]}]}], ",", " ", 
+      RowBox[{"{", 
+       RowBox[{"y", ",", "0", ",", " ", "h"}], "}"}]}], "]"}], "+", " ", 
+    RowBox[{"NIntegrate", "[", 
+     RowBox[{
+      RowBox[{"ym", " ", 
+       RowBox[{
+        RowBox[{"(", 
+         RowBox[{"Sqrt", "[", 
+          RowBox[{
+           RowBox[{
+            RowBox[{"(", 
+             RowBox[{"zm", " ", "-", " ", "z"}], ")"}], "^", "2"}], " ", "+", 
+           " ", 
+           RowBox[{"ym", "^", "2"}]}], "]"}], ")"}], "^", 
+        RowBox[{"(", 
+         RowBox[{
+          RowBox[{"-", "6"}], "/", "7"}], ")"}]}]}], ",", " ", 
+      RowBox[{"{", 
+       RowBox[{"z", ",", 
+        RowBox[{
+         RowBox[{"-", "b"}], "/", "2"}], ",", 
+        RowBox[{"b", "/", "2"}]}], "}"}]}], "]"}]}]}], "\[IndentingNewLine]", 
+  "\[IndentingNewLine]"}], "\[IndentingNewLine]", 
+ RowBox[{"J", "[", 
+  RowBox[{"9", ",", "2", ",", "10", ",", "4"}], 
+  "]"}], "\[IndentingNewLine]"}], "Input",
+ CellChangeTimes->{{3.696517164971029*^9, 3.696517167007476*^9}}],
+
+Cell[BoxData["4.324876668660227`"], "Output",
+ CellChangeTimes->{
+  3.6965171702127533`*^9, {3.6966391698267126`*^9, 3.696639191504178*^9}, 
+   3.6966472518010087`*^9, 3.6966493840842533`*^9, 3.696675515643193*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"velGennaio", "[", 
+   RowBox[{"zm_", ",", "ym_"}], "]"}], " ", "=", " ", 
+  RowBox[{
+   RowBox[{
+    RowBox[{"J", "[", 
+     RowBox[{"zm", ",", "ym", ",", "180", ",", "7"}], "]"}], "/", 
+    RowBox[{"Sum", "[", 
+     RowBox[{
+      RowBox[{"J", "[", 
+       RowBox[{"zm", ",", "ym", ",", "180", ",", "7"}], "]"}], ",", " ", 
+      RowBox[{"{", 
+       RowBox[{"ym", ",", "0", ",", "7"}], "}"}], ",", 
+      RowBox[{"{", 
+       RowBox[{"zm", ",", 
+        RowBox[{"-", "90"}], ",", "90"}], "}"}]}], "]"}]}], " ", "*", 
+   RowBox[{"10", "/", "0.01"}]}]}]], "Input",
+ CellChangeTimes->{{3.696517201415931*^9, 3.6965172193547077`*^9}, {
+  3.6965179541485662`*^9, 3.696517991248646*^9}, {3.696638593282048*^9, 
+  3.6966386210655346`*^9}, {3.6966465430642676`*^9, 3.6966465493620124`*^9}}],
+
+Cell[BoxData[
+ TemplateBox[{
+  "NIntegrate","inumr",
+   "\"The integrand \\!\\(\\*FractionBox[RowBox[{\\\"90\\\", \\\"+\\\", \
+\\\"zm\\\"}], SuperscriptBox[RowBox[{\\\"(\\\", \
+RowBox[{SuperscriptBox[RowBox[{\\\"(\\\", RowBox[{RowBox[{\\\"-\\\", \
+\\\"y\\\"}], \\\"+\\\", \\\"ym\\\"}], \\\")\\\"}], \\\"2\\\"], \\\"+\\\", \
+SuperscriptBox[RowBox[{\\\"(\\\", RowBox[{\\\"90\\\", \\\"+\\\", \
+\\\"zm\\\"}], \\\")\\\"}], \\\"2\\\"]}], \\\")\\\"}], RowBox[{\\\"3\\\", \
+\\\"/\\\", \\\"7\\\"}]]]\\) has evaluated to non-numerical values for all \
+sampling points in the region with boundaries \\!\\(\\*RowBox[{\\\"{\\\", \
+RowBox[{\\\"{\\\", RowBox[{\\\"0\\\", \\\",\\\", \\\"7\\\"}], \\\"}\\\"}], \\\
+\"}\\\"}]\\).\"",2,165,716,23667967595296183195,"Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellChangeTimes->{3.696647251847866*^9}],
+
+Cell[BoxData[
+ TemplateBox[{
+  "NIntegrate","inumr",
+   "\"The integrand \\!\\(\\*FractionBox[RowBox[{\\\"90\\\", \\\"-\\\", \
+\\\"zm\\\"}], SuperscriptBox[RowBox[{\\\"(\\\", \
+RowBox[{SuperscriptBox[RowBox[{\\\"(\\\", RowBox[{RowBox[{\\\"-\\\", \
+\\\"y\\\"}], \\\"+\\\", \\\"ym\\\"}], \\\")\\\"}], \\\"2\\\"], \\\"+\\\", \
+SuperscriptBox[RowBox[{\\\"(\\\", RowBox[{\\\"90\\\", \\\"-\\\", \
+\\\"zm\\\"}], \\\")\\\"}], \\\"2\\\"]}], \\\")\\\"}], RowBox[{\\\"3\\\", \
+\\\"/\\\", \\\"7\\\"}]]]\\) has evaluated to non-numerical values for all \
+sampling points in the region with boundaries \\!\\(\\*RowBox[{\\\"{\\\", \
+RowBox[{\\\"{\\\", RowBox[{\\\"0\\\", \\\",\\\", \\\"7\\\"}], \\\"}\\\"}], \\\
+\"}\\\"}]\\).\"",2,165,717,23667967595296183195,"Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellChangeTimes->{3.696647251879136*^9}],
+
+Cell[BoxData[
+ TemplateBox[{
+  "NIntegrate","inumr",
+   "\"The integrand \\!\\(\\*FractionBox[\\\"ym\\\", \
+SuperscriptBox[RowBox[{\\\"(\\\", RowBox[{SuperscriptBox[\\\"ym\\\", \
+\\\"2\\\"], \\\"+\\\", SuperscriptBox[RowBox[{\\\"(\\\", \
+RowBox[{RowBox[{\\\"-\\\", \\\"z\\\"}], \\\"+\\\", \\\"zm\\\"}], \\\")\\\"}], \
+\\\"2\\\"]}], \\\")\\\"}], RowBox[{\\\"3\\\", \\\"/\\\", \\\"7\\\"}]]]\\) has \
+evaluated to non-numerical values for all sampling points in the region with \
+boundaries \\!\\(\\*RowBox[{\\\"{\\\", RowBox[{\\\"{\\\", \
+RowBox[{RowBox[{\\\"-\\\", \\\"90\\\"}], \\\",\\\", \\\"90\\\"}], \
+\\\"}\\\"}], \\\"}\\\"}]\\).\"",2,165,718,23667967595296183195,"Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellChangeTimes->{3.6966472518947444`*^9}],
+
+Cell[BoxData[
+ TemplateBox[{
+  "General","stop",
+   "\"Further output of \\!\\(\\*StyleBox[RowBox[{\\\"NIntegrate\\\", \
+\\\"::\\\", \\\"inumr\\\"}], \\\"MessageName\\\"]\\) will be suppressed \
+during this calculation.\"",2,165,719,23667967595296183195,"Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellChangeTimes->{3.69664725191037*^9}],
+
+Cell[BoxData[
+ TemplateBox[{
+  "NIntegrate","izero",
+   "\"Integral and error estimates are 0 on all integration subregions. Try \
+increasing the value of the MinRecursion option. If value of integral may be \
+0, specify a finite value for the AccuracyGoal option.\"",2,165,720,
+   23667967595296183195,"Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellChangeTimes->{3.6966472519259944`*^9}],
+
+Cell[BoxData[
+ TemplateBox[{
+  "NIntegrate","izero",
+   "\"Integral and error estimates are 0 on all integration subregions. Try \
+increasing the value of the MinRecursion option. If value of integral may be \
+0, specify a finite value for the AccuracyGoal option.\"",2,165,721,
+   23667967595296183195,"Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellChangeTimes->{3.6966472519572625`*^9}],
+
+Cell[BoxData[
+ TemplateBox[{
+  "NIntegrate","izero",
+   "\"Integral and error estimates are 0 on all integration subregions. Try \
+increasing the value of the MinRecursion option. If value of integral may be \
+0, specify a finite value for the AccuracyGoal option.\"",2,165,722,
+   23667967595296183195,"Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellChangeTimes->{3.69664725197287*^9}],
+
+Cell[BoxData[
+ TemplateBox[{
+  "General","stop",
+   "\"Further output of \\!\\(\\*StyleBox[RowBox[{\\\"NIntegrate\\\", \
+\\\"::\\\", \\\"izero\\\"}], \\\"MessageName\\\"]\\) will be suppressed \
+during this calculation.\"",2,165,723,23667967595296183195,"Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellChangeTimes->{3.6966472520041375`*^9}],
+
+Cell[BoxData[
+ RowBox[{"0.01134585054552213`", " ", 
+  RowBox[{"(", 
+   RowBox[{
+    RowBox[{"NIntegrate", "[", 
+     RowBox[{
+      RowBox[{"ym", " ", 
+       SuperscriptBox[
+        SqrtBox[
+         RowBox[{
+          SuperscriptBox[
+           RowBox[{"(", 
+            RowBox[{"zm", "-", "z"}], ")"}], "2"], "+", 
+          SuperscriptBox["ym", "2"]}]], 
+        RowBox[{
+         RowBox[{"-", "6"}], "/", "7"}]]}], ",", 
+      RowBox[{"{", 
+       RowBox[{"z", ",", 
+        RowBox[{"-", 
+         FractionBox["180", "2"]}], ",", 
+        FractionBox["180", "2"]}], "}"}]}], "]"}], "+", 
+    RowBox[{"NIntegrate", "[", 
+     RowBox[{
+      RowBox[{
+       RowBox[{"(", 
+        RowBox[{
+         FractionBox["180", "2"], "-", "zm"}], ")"}], " ", 
+       SuperscriptBox[
+        SqrtBox[
+         RowBox[{
+          SuperscriptBox[
+           RowBox[{"(", 
+            RowBox[{"ym", "-", "y"}], ")"}], "2"], "+", 
+          SuperscriptBox[
+           RowBox[{"(", 
+            RowBox[{
+             FractionBox["180", "2"], "-", "zm"}], ")"}], "2"]}]], 
+        RowBox[{
+         RowBox[{"-", "6"}], "/", "7"}]]}], ",", 
+      RowBox[{"{", 
+       RowBox[{"y", ",", "0", ",", "7"}], "}"}]}], "]"}], "+", 
+    RowBox[{"NIntegrate", "[", 
+     RowBox[{
+      RowBox[{
+       RowBox[{"(", 
+        RowBox[{
+         FractionBox["180", "2"], "+", "zm"}], ")"}], " ", 
+       SuperscriptBox[
+        SqrtBox[
+         RowBox[{
+          SuperscriptBox[
+           RowBox[{"(", 
+            RowBox[{"ym", "-", "y"}], ")"}], "2"], "+", 
+          SuperscriptBox[
+           RowBox[{"(", 
+            RowBox[{
+             FractionBox["180", "2"], "+", "zm"}], ")"}], "2"]}]], 
+        RowBox[{
+         RowBox[{"-", "6"}], "/", "7"}]]}], ",", 
+      RowBox[{"{", 
+       RowBox[{"y", ",", "0", ",", "7"}], "}"}]}], "]"}]}], ")"}]}]], "Output",
+ CellChangeTimes->{3.696647274933777*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"velGennaioCm", "[", 
+   RowBox[{"zm_", ",", "ym_"}], "]"}], " ", "=", " ", 
+  RowBox[{
+   RowBox[{
+    RowBox[{"J", "[", 
+     RowBox[{"zm", ",", "ym", ",", "180", ",", "67"}], "]"}], "/", 
+    RowBox[{"Sum", "[", 
+     RowBox[{
+      RowBox[{"J", "[", 
+       RowBox[{"zm", ",", "ym", ",", "180", ",", "67"}], "]"}], ",", " ", 
+      RowBox[{"{", 
+       RowBox[{"ym", ",", "0", ",", "67"}], "}"}], ",", 
+      RowBox[{"{", 
+       RowBox[{"zm", ",", 
+        RowBox[{"-", "90"}], ",", "90"}], "}"}]}], "]"}]}], " ", "*", 
+   RowBox[{"10", "/", "0.001"}]}]}]], "Input",
+ CellChangeTimes->{{3.6966752644625015`*^9, 3.6966752649823136`*^9}, {
+  3.6966754981157875`*^9, 3.6966755057492075`*^9}}],
+
+Cell[BoxData[
+ TemplateBox[{
+  "NIntegrate","inumr",
+   "\"The integrand \\!\\(\\*FractionBox[RowBox[{\\\"90\\\", \\\"+\\\", \
+\\\"zm\\\"}], SuperscriptBox[RowBox[{\\\"(\\\", \
+RowBox[{SuperscriptBox[RowBox[{\\\"(\\\", RowBox[{RowBox[{\\\"-\\\", \
+\\\"y\\\"}], \\\"+\\\", \\\"ym\\\"}], \\\")\\\"}], \\\"2\\\"], \\\"+\\\", \
+SuperscriptBox[RowBox[{\\\"(\\\", RowBox[{\\\"90\\\", \\\"+\\\", \
+\\\"zm\\\"}], \\\")\\\"}], \\\"2\\\"]}], \\\")\\\"}], RowBox[{\\\"3\\\", \
+\\\"/\\\", \\\"7\\\"}]]]\\) has evaluated to non-numerical values for all \
+sampling points in the region with boundaries \\!\\(\\*RowBox[{\\\"{\\\", \
+RowBox[{\\\"{\\\", RowBox[{\\\"0\\\", \\\",\\\", \\\"67\\\"}], \\\"}\\\"}], \
+\\\"}\\\"}]\\).\"",2,4,1,23668241090185444519,"Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellChangeTimes->{3.6966755185302367`*^9}],
+
+Cell[BoxData[
+ TemplateBox[{
+  "NIntegrate","inumr",
+   "\"The integrand \\!\\(\\*FractionBox[RowBox[{\\\"90\\\", \\\"-\\\", \
+\\\"zm\\\"}], SuperscriptBox[RowBox[{\\\"(\\\", \
+RowBox[{SuperscriptBox[RowBox[{\\\"(\\\", RowBox[{RowBox[{\\\"-\\\", \
+\\\"y\\\"}], \\\"+\\\", \\\"ym\\\"}], \\\")\\\"}], \\\"2\\\"], \\\"+\\\", \
+SuperscriptBox[RowBox[{\\\"(\\\", RowBox[{\\\"90\\\", \\\"-\\\", \
+\\\"zm\\\"}], \\\")\\\"}], \\\"2\\\"]}], \\\")\\\"}], RowBox[{\\\"3\\\", \
+\\\"/\\\", \\\"7\\\"}]]]\\) has evaluated to non-numerical values for all \
+sampling points in the region with boundaries \\!\\(\\*RowBox[{\\\"{\\\", \
+RowBox[{\\\"{\\\", RowBox[{\\\"0\\\", \\\",\\\", \\\"67\\\"}], \\\"}\\\"}], \
+\\\"}\\\"}]\\).\"",2,4,2,23668241090185444519,"Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellChangeTimes->{3.6966755185572567`*^9}],
+
+Cell[BoxData[
+ TemplateBox[{
+  "NIntegrate","inumr",
+   "\"The integrand \\!\\(\\*FractionBox[\\\"ym\\\", \
+SuperscriptBox[RowBox[{\\\"(\\\", RowBox[{SuperscriptBox[\\\"ym\\\", \
+\\\"2\\\"], \\\"+\\\", SuperscriptBox[RowBox[{\\\"(\\\", \
+RowBox[{RowBox[{\\\"-\\\", \\\"z\\\"}], \\\"+\\\", \\\"zm\\\"}], \\\")\\\"}], \
+\\\"2\\\"]}], \\\")\\\"}], RowBox[{\\\"3\\\", \\\"/\\\", \\\"7\\\"}]]]\\) has \
+evaluated to non-numerical values for all sampling points in the region with \
+boundaries \\!\\(\\*RowBox[{\\\"{\\\", RowBox[{\\\"{\\\", \
+RowBox[{RowBox[{\\\"-\\\", \\\"90\\\"}], \\\",\\\", \\\"90\\\"}], \
+\\\"}\\\"}], \\\"}\\\"}]\\).\"",2,4,3,23668241090185444519,"Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellChangeTimes->{3.6966755185842953`*^9}],
+
+Cell[BoxData[
+ TemplateBox[{
+  "General","stop",
+   "\"Further output of \\!\\(\\*StyleBox[RowBox[{\\\"NIntegrate\\\", \
+\\\"::\\\", \\\"inumr\\\"}], \\\"MessageName\\\"]\\) will be suppressed \
+during this calculation.\"",2,4,4,23668241090185444519,"Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellChangeTimes->{3.6966755186062927`*^9}],
+
+Cell[BoxData[
+ TemplateBox[{
+  "NIntegrate","izero",
+   "\"Integral and error estimates are 0 on all integration subregions. Try \
+increasing the value of the MinRecursion option. If value of integral may be \
+0, specify a finite value for the AccuracyGoal option.\"",2,4,5,
+   23668241090185444519,"Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellChangeTimes->{3.6966755186293087`*^9}],
+
+Cell[BoxData[
+ TemplateBox[{
+  "NIntegrate","izero",
+   "\"Integral and error estimates are 0 on all integration subregions. Try \
+increasing the value of the MinRecursion option. If value of integral may be \
+0, specify a finite value for the AccuracyGoal option.\"",2,4,6,
+   23668241090185444519,"Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellChangeTimes->{3.6966755186523232`*^9}],
+
+Cell[BoxData[
+ TemplateBox[{
+  "NIntegrate","izero",
+   "\"Integral and error estimates are 0 on all integration subregions. Try \
+increasing the value of the MinRecursion option. If value of integral may be \
+0, specify a finite value for the AccuracyGoal option.\"",2,4,7,
+   23668241090185444519,"Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellChangeTimes->{3.696675518678342*^9}],
+
+Cell[BoxData[
+ TemplateBox[{
+  "General","stop",
+   "\"Further output of \\!\\(\\*StyleBox[RowBox[{\\\"NIntegrate\\\", \
+\\\"::\\\", \\\"izero\\\"}], \\\"MessageName\\\"]\\) will be suppressed \
+during this calculation.\"",2,4,8,23668241090185444519,"Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellChangeTimes->{3.6966755186793427`*^9}],
+
+Cell[BoxData[
+ RowBox[{"0.002069196299568921`", " ", 
+  RowBox[{"(", 
+   RowBox[{
+    RowBox[{"NIntegrate", "[", 
+     RowBox[{
+      RowBox[{"ym", " ", 
+       SuperscriptBox[
+        SqrtBox[
+         RowBox[{
+          SuperscriptBox[
+           RowBox[{"(", 
+            RowBox[{"zm", "-", "z"}], ")"}], "2"], "+", 
+          SuperscriptBox["ym", "2"]}]], 
+        RowBox[{
+         RowBox[{"-", "6"}], "/", "7"}]]}], ",", 
+      RowBox[{"{", 
+       RowBox[{"z", ",", 
+        RowBox[{"-", 
+         FractionBox["180", "2"]}], ",", 
+        FractionBox["180", "2"]}], "}"}]}], "]"}], "+", 
+    RowBox[{"NIntegrate", "[", 
+     RowBox[{
+      RowBox[{
+       RowBox[{"(", 
+        RowBox[{
+         FractionBox["180", "2"], "-", "zm"}], ")"}], " ", 
+       SuperscriptBox[
+        SqrtBox[
+         RowBox[{
+          SuperscriptBox[
+           RowBox[{"(", 
+            RowBox[{"ym", "-", "y"}], ")"}], "2"], "+", 
+          SuperscriptBox[
+           RowBox[{"(", 
+            RowBox[{
+             FractionBox["180", "2"], "-", "zm"}], ")"}], "2"]}]], 
+        RowBox[{
+         RowBox[{"-", "6"}], "/", "7"}]]}], ",", 
+      RowBox[{"{", 
+       RowBox[{"y", ",", "0", ",", "67"}], "}"}]}], "]"}], "+", 
+    RowBox[{"NIntegrate", "[", 
+     RowBox[{
+      RowBox[{
+       RowBox[{"(", 
+        RowBox[{
+         FractionBox["180", "2"], "+", "zm"}], ")"}], " ", 
+       SuperscriptBox[
+        SqrtBox[
+         RowBox[{
+          SuperscriptBox[
+           RowBox[{"(", 
+            RowBox[{"ym", "-", "y"}], ")"}], "2"], "+", 
+          SuperscriptBox[
+           RowBox[{"(", 
+            RowBox[{
+             FractionBox["180", "2"], "+", "zm"}], ")"}], "2"]}]], 
+        RowBox[{
+         RowBox[{"-", "6"}], "/", "7"}]]}], ",", 
+      RowBox[{"{", 
+       RowBox[{"y", ",", "0", ",", "67"}], "}"}]}], "]"}]}], 
+   ")"}]}]], "Output",
+ CellChangeTimes->{3.696675712835244*^9}]
+}, Open  ]],
+
+Cell[BoxData["\[IndentingNewLine]"], "Input",
+ CellChangeTimes->{3.6965173664004703`*^9}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"velFebbraio", "[", 
+   RowBox[{"zm_", ",", "ym_"}], "]"}], " ", "=", " ", 
+  RowBox[{
+   RowBox[{
+    RowBox[{"J", "[", 
+     RowBox[{"zm", ",", "ym", ",", "180", ",", "5"}], "]"}], "/", 
+    RowBox[{"Sum", "[", 
+     RowBox[{
+      RowBox[{"J", "[", 
+       RowBox[{"zm", ",", "ym", ",", "180", ",", "5"}], "]"}], ",", " ", 
+      RowBox[{"{", 
+       RowBox[{"ym", ",", "0", ",", "5"}], "}"}], ",", 
+      RowBox[{"{", 
+       RowBox[{"zm", ",", 
+        RowBox[{"-", "90"}], ",", "90"}], "}"}]}], "]"}]}], " ", "*", 
+   RowBox[{"7", "/", "0.01"}]}]}]], "Input",
+ CellChangeTimes->{{3.696517322253405*^9, 3.696517350530692*^9}, {
+  3.696518046039733*^9, 3.69651806407981*^9}, {3.696638660047081*^9, 
+  3.6966386722318225`*^9}, {3.696646562955972*^9, 3.6966465669153614`*^9}, {
+  3.696649389858384*^9, 3.6966493933628297`*^9}}],
+
+Cell[BoxData[
+ TemplateBox[{
+  "NIntegrate","inumr",
+   "\"The integrand \\!\\(\\*FractionBox[RowBox[{\\\"90\\\", \\\"+\\\", \
+\\\"zm\\\"}], SuperscriptBox[RowBox[{\\\"(\\\", \
+RowBox[{SuperscriptBox[RowBox[{\\\"(\\\", RowBox[{RowBox[{\\\"-\\\", \
+\\\"y\\\"}], \\\"+\\\", \\\"ym\\\"}], \\\")\\\"}], \\\"2\\\"], \\\"+\\\", \
+SuperscriptBox[RowBox[{\\\"(\\\", RowBox[{\\\"90\\\", \\\"+\\\", \
+\\\"zm\\\"}], \\\")\\\"}], \\\"2\\\"]}], \\\")\\\"}], RowBox[{\\\"3\\\", \
+\\\"/\\\", \\\"7\\\"}]]]\\) has evaluated to non-numerical values for all \
+sampling points in the region with boundaries \\!\\(\\*RowBox[{\\\"{\\\", \
+RowBox[{\\\"{\\\", RowBox[{\\\"0\\\", \\\",\\\", \\\"5\\\"}], \\\"}\\\"}], \\\
+\"}\\\"}]\\).\"",2,9,15,23668072636786623294,"Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellChangeTimes->{3.696647274980652*^9, 3.6966493952302527`*^9}],
+
+Cell[BoxData[
+ TemplateBox[{
+  "NIntegrate","inumr",
+   "\"The integrand \\!\\(\\*FractionBox[RowBox[{\\\"90\\\", \\\"-\\\", \
+\\\"zm\\\"}], SuperscriptBox[RowBox[{\\\"(\\\", \
+RowBox[{SuperscriptBox[RowBox[{\\\"(\\\", RowBox[{RowBox[{\\\"-\\\", \
+\\\"y\\\"}], \\\"+\\\", \\\"ym\\\"}], \\\")\\\"}], \\\"2\\\"], \\\"+\\\", \
+SuperscriptBox[RowBox[{\\\"(\\\", RowBox[{\\\"90\\\", \\\"-\\\", \
+\\\"zm\\\"}], \\\")\\\"}], \\\"2\\\"]}], \\\")\\\"}], RowBox[{\\\"3\\\", \
+\\\"/\\\", \\\"7\\\"}]]]\\) has evaluated to non-numerical values for all \
+sampling points in the region with boundaries \\!\\(\\*RowBox[{\\\"{\\\", \
+RowBox[{\\\"{\\\", RowBox[{\\\"0\\\", \\\",\\\", \\\"5\\\"}], \\\"}\\\"}], \\\
+\"}\\\"}]\\).\"",2,9,16,23668072636786623294,"Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellChangeTimes->{3.696647274980652*^9, 3.6966493952615027`*^9}],
+
+Cell[BoxData[
+ TemplateBox[{
+  "NIntegrate","inumr",
+   "\"The integrand \\!\\(\\*FractionBox[\\\"ym\\\", \
+SuperscriptBox[RowBox[{\\\"(\\\", RowBox[{SuperscriptBox[\\\"ym\\\", \
+\\\"2\\\"], \\\"+\\\", SuperscriptBox[RowBox[{\\\"(\\\", \
+RowBox[{RowBox[{\\\"-\\\", \\\"z\\\"}], \\\"+\\\", \\\"zm\\\"}], \\\")\\\"}], \
+\\\"2\\\"]}], \\\")\\\"}], RowBox[{\\\"3\\\", \\\"/\\\", \\\"7\\\"}]]]\\) has \
+evaluated to non-numerical values for all sampling points in the region with \
+boundaries \\!\\(\\*RowBox[{\\\"{\\\", RowBox[{\\\"{\\\", \
+RowBox[{RowBox[{\\\"-\\\", \\\"90\\\"}], \\\",\\\", \\\"90\\\"}], \
+\\\"}\\\"}], \\\"}\\\"}]\\).\"",2,9,17,23668072636786623294,"Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellChangeTimes->{3.696647274980652*^9, 3.6966493952927713`*^9}],
+
+Cell[BoxData[
+ TemplateBox[{
+  "General","stop",
+   "\"Further output of \\!\\(\\*StyleBox[RowBox[{\\\"NIntegrate\\\", \
+\\\"::\\\", \\\"inumr\\\"}], \\\"MessageName\\\"]\\) will be suppressed \
+during this calculation.\"",2,9,18,23668072636786623294,"Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellChangeTimes->{3.696647274980652*^9, 3.6966493953083816`*^9}],
+
+Cell[BoxData[
+ TemplateBox[{
+  "NIntegrate","izero",
+   "\"Integral and error estimates are 0 on all integration subregions. Try \
+increasing the value of the MinRecursion option. If value of integral may be \
+0, specify a finite value for the AccuracyGoal option.\"",2,9,19,
+   23668072636786623294,"Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellChangeTimes->{3.696647274980652*^9, 3.696649395324006*^9}],
+
+Cell[BoxData[
+ TemplateBox[{
+  "NIntegrate","izero",
+   "\"Integral and error estimates are 0 on all integration subregions. Try \
+increasing the value of the MinRecursion option. If value of integral may be \
+0, specify a finite value for the AccuracyGoal option.\"",2,9,20,
+   23668072636786623294,"Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellChangeTimes->{3.696647274980652*^9, 3.696649395355254*^9}],
+
+Cell[BoxData[
+ TemplateBox[{
+  "NIntegrate","izero",
+   "\"Integral and error estimates are 0 on all integration subregions. Try \
+increasing the value of the MinRecursion option. If value of integral may be \
+0, specify a finite value for the AccuracyGoal option.\"",2,9,21,
+   23668072636786623294,"Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellChangeTimes->{3.696647274980652*^9, 3.696649395370882*^9}],
+
+Cell[BoxData[
+ TemplateBox[{
+  "General","stop",
+   "\"Further output of \\!\\(\\*StyleBox[RowBox[{\\\"NIntegrate\\\", \
+\\\"::\\\", \\\"izero\\\"}], \\\"MessageName\\\"]\\) will be suppressed \
+during this calculation.\"",2,9,22,23668072636786623294,"Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellChangeTimes->{3.696647274980652*^9, 3.69664939540213*^9}],
+
+Cell[BoxData[
+ RowBox[{"0.014278699491933196`", " ", 
+  RowBox[{"(", 
+   RowBox[{
+    RowBox[{"NIntegrate", "[", 
+     RowBox[{
+      RowBox[{"ym", " ", 
+       SuperscriptBox[
+        SqrtBox[
+         RowBox[{
+          SuperscriptBox[
+           RowBox[{"(", 
+            RowBox[{"zm", "-", "z"}], ")"}], "2"], "+", 
+          SuperscriptBox["ym", "2"]}]], 
+        RowBox[{
+         RowBox[{"-", "6"}], "/", "7"}]]}], ",", 
+      RowBox[{"{", 
+       RowBox[{"z", ",", 
+        RowBox[{"-", 
+         FractionBox["180", "2"]}], ",", 
+        FractionBox["180", "2"]}], "}"}]}], "]"}], "+", 
+    RowBox[{"NIntegrate", "[", 
+     RowBox[{
+      RowBox[{
+       RowBox[{"(", 
+        RowBox[{
+         FractionBox["180", "2"], "-", "zm"}], ")"}], " ", 
+       SuperscriptBox[
+        SqrtBox[
+         RowBox[{
+          SuperscriptBox[
+           RowBox[{"(", 
+            RowBox[{"ym", "-", "y"}], ")"}], "2"], "+", 
+          SuperscriptBox[
+           RowBox[{"(", 
+            RowBox[{
+             FractionBox["180", "2"], "-", "zm"}], ")"}], "2"]}]], 
+        RowBox[{
+         RowBox[{"-", "6"}], "/", "7"}]]}], ",", 
+      RowBox[{"{", 
+       RowBox[{"y", ",", "0", ",", "5"}], "}"}]}], "]"}], "+", 
+    RowBox[{"NIntegrate", "[", 
+     RowBox[{
+      RowBox[{
+       RowBox[{"(", 
+        RowBox[{
+         FractionBox["180", "2"], "+", "zm"}], ")"}], " ", 
+       SuperscriptBox[
+        SqrtBox[
+         RowBox[{
+          SuperscriptBox[
+           RowBox[{"(", 
+            RowBox[{"ym", "-", "y"}], ")"}], "2"], "+", 
+          SuperscriptBox[
+           RowBox[{"(", 
+            RowBox[{
+             FractionBox["180", "2"], "+", "zm"}], ")"}], "2"]}]], 
+        RowBox[{
+         RowBox[{"-", "6"}], "/", "7"}]]}], ",", 
+      RowBox[{"{", 
+       RowBox[{"y", ",", "0", ",", "5"}], "}"}]}], "]"}]}], ")"}]}]], "Output",
+ CellChangeTimes->{3.696647294598712*^9, 3.696649411060973*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"velFebbraioCm", "[", 
+   RowBox[{"zm_", ",", "ym_"}], "]"}], " ", "=", " ", 
+  RowBox[{
+   RowBox[{
+    RowBox[{"J", "[", 
+     RowBox[{"zm", ",", "ym", ",", "180", ",", "53"}], "]"}], "/", 
+    RowBox[{"Sum", "[", 
+     RowBox[{
+      RowBox[{"J", "[", 
+       RowBox[{"zm", ",", "ym", ",", "180", ",", "53"}], "]"}], ",", " ", 
+      RowBox[{"{", 
+       RowBox[{"ym", ",", "0", ",", "53"}], "}"}], ",", 
+      RowBox[{"{", 
+       RowBox[{"zm", ",", 
+        RowBox[{"-", "90"}], ",", "90"}], "}"}]}], "]"}]}], " ", "*", 
+   RowBox[{"7", "/", "0.001"}]}]}]], "Input",
+ CellChangeTimes->{{3.696675528106112*^9, 3.69667553800412*^9}}],
+
+Cell[BoxData[
+ TemplateBox[{
+  "NIntegrate","inumr",
+   "\"The integrand \\!\\(\\*FractionBox[RowBox[{\\\"90\\\", \\\"+\\\", \
+\\\"zm\\\"}], SuperscriptBox[RowBox[{\\\"(\\\", \
+RowBox[{SuperscriptBox[RowBox[{\\\"(\\\", RowBox[{RowBox[{\\\"-\\\", \
+\\\"y\\\"}], \\\"+\\\", \\\"ym\\\"}], \\\")\\\"}], \\\"2\\\"], \\\"+\\\", \
+SuperscriptBox[RowBox[{\\\"(\\\", RowBox[{\\\"90\\\", \\\"+\\\", \
+\\\"zm\\\"}], \\\")\\\"}], \\\"2\\\"]}], \\\")\\\"}], RowBox[{\\\"3\\\", \
+\\\"/\\\", \\\"7\\\"}]]]\\) has evaluated to non-numerical values for all \
+sampling points in the region with boundaries \\!\\(\\*RowBox[{\\\"{\\\", \
+RowBox[{\\\"{\\\", RowBox[{\\\"0\\\", \\\",\\\", \\\"53\\\"}], \\\"}\\\"}], \
+\\\"}\\\"}]\\).\"",2,5,9,23668241090185444519,"Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellChangeTimes->{3.6966757128922853`*^9}],
+
+Cell[BoxData[
+ TemplateBox[{
+  "NIntegrate","inumr",
+   "\"The integrand \\!\\(\\*FractionBox[RowBox[{\\\"90\\\", \\\"-\\\", \
+\\\"zm\\\"}], SuperscriptBox[RowBox[{\\\"(\\\", \
+RowBox[{SuperscriptBox[RowBox[{\\\"(\\\", RowBox[{RowBox[{\\\"-\\\", \
+\\\"y\\\"}], \\\"+\\\", \\\"ym\\\"}], \\\")\\\"}], \\\"2\\\"], \\\"+\\\", \
+SuperscriptBox[RowBox[{\\\"(\\\", RowBox[{\\\"90\\\", \\\"-\\\", \
+\\\"zm\\\"}], \\\")\\\"}], \\\"2\\\"]}], \\\")\\\"}], RowBox[{\\\"3\\\", \
+\\\"/\\\", \\\"7\\\"}]]]\\) has evaluated to non-numerical values for all \
+sampling points in the region with boundaries \\!\\(\\*RowBox[{\\\"{\\\", \
+RowBox[{\\\"{\\\", RowBox[{\\\"0\\\", \\\",\\\", \\\"53\\\"}], \\\"}\\\"}], \
+\\\"}\\\"}]\\).\"",2,5,10,23668241090185444519,"Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellChangeTimes->{3.696675712920305*^9}],
+
+Cell[BoxData[
+ TemplateBox[{
+  "NIntegrate","inumr",
+   "\"The integrand \\!\\(\\*FractionBox[\\\"ym\\\", \
+SuperscriptBox[RowBox[{\\\"(\\\", RowBox[{SuperscriptBox[\\\"ym\\\", \
+\\\"2\\\"], \\\"+\\\", SuperscriptBox[RowBox[{\\\"(\\\", \
+RowBox[{RowBox[{\\\"-\\\", \\\"z\\\"}], \\\"+\\\", \\\"zm\\\"}], \\\")\\\"}], \
+\\\"2\\\"]}], \\\")\\\"}], RowBox[{\\\"3\\\", \\\"/\\\", \\\"7\\\"}]]]\\) has \
+evaluated to non-numerical values for all sampling points in the region with \
+boundaries \\!\\(\\*RowBox[{\\\"{\\\", RowBox[{\\\"{\\\", \
+RowBox[{RowBox[{\\\"-\\\", \\\"90\\\"}], \\\",\\\", \\\"90\\\"}], \
+\\\"}\\\"}], \\\"}\\\"}]\\).\"",2,5,11,23668241090185444519,"Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellChangeTimes->{3.6966757129473257`*^9}],
+
+Cell[BoxData[
+ TemplateBox[{
+  "General","stop",
+   "\"Further output of \\!\\(\\*StyleBox[RowBox[{\\\"NIntegrate\\\", \
+\\\"::\\\", \\\"inumr\\\"}], \\\"MessageName\\\"]\\) will be suppressed \
+during this calculation.\"",2,5,12,23668241090185444519,"Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellChangeTimes->{3.6966757129733443`*^9}],
+
+Cell[BoxData[
+ TemplateBox[{
+  "NIntegrate","izero",
+   "\"Integral and error estimates are 0 on all integration subregions. Try \
+increasing the value of the MinRecursion option. If value of integral may be \
+0, specify a finite value for the AccuracyGoal option.\"",2,5,13,
+   23668241090185444519,"Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellChangeTimes->{3.6966757130033636`*^9}],
+
+Cell[BoxData[
+ TemplateBox[{
+  "NIntegrate","izero",
+   "\"Integral and error estimates are 0 on all integration subregions. Try \
+increasing the value of the MinRecursion option. If value of integral may be \
+0, specify a finite value for the AccuracyGoal option.\"",2,5,14,
+   23668241090185444519,"Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellChangeTimes->{3.6966757130293818`*^9}],
+
+Cell[BoxData[
+ TemplateBox[{
+  "NIntegrate","izero",
+   "\"Integral and error estimates are 0 on all integration subregions. Try \
+increasing the value of the MinRecursion option. If value of integral may be \
+0, specify a finite value for the AccuracyGoal option.\"",2,5,15,
+   23668241090185444519,"Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellChangeTimes->{3.696675713055402*^9}],
+
+Cell[BoxData[
+ TemplateBox[{
+  "General","stop",
+   "\"Further output of \\!\\(\\*StyleBox[RowBox[{\\\"NIntegrate\\\", \
+\\\"::\\\", \\\"izero\\\"}], \\\"MessageName\\\"]\\) will be suppressed \
+during this calculation.\"",2,5,16,23668241090185444519,"Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellChangeTimes->{3.6966757130804176`*^9}],
+
+Cell[BoxData[
+ RowBox[{"0.0021796336092618726`", " ", 
+  RowBox[{"(", 
+   RowBox[{
+    RowBox[{"NIntegrate", "[", 
+     RowBox[{
+      RowBox[{"ym", " ", 
+       SuperscriptBox[
+        SqrtBox[
+         RowBox[{
+          SuperscriptBox[
+           RowBox[{"(", 
+            RowBox[{"zm", "-", "z"}], ")"}], "2"], "+", 
+          SuperscriptBox["ym", "2"]}]], 
+        RowBox[{
+         RowBox[{"-", "6"}], "/", "7"}]]}], ",", 
+      RowBox[{"{", 
+       RowBox[{"z", ",", 
+        RowBox[{"-", 
+         FractionBox["180", "2"]}], ",", 
+        FractionBox["180", "2"]}], "}"}]}], "]"}], "+", 
+    RowBox[{"NIntegrate", "[", 
+     RowBox[{
+      RowBox[{
+       RowBox[{"(", 
+        RowBox[{
+         FractionBox["180", "2"], "-", "zm"}], ")"}], " ", 
+       SuperscriptBox[
+        SqrtBox[
+         RowBox[{
+          SuperscriptBox[
+           RowBox[{"(", 
+            RowBox[{"ym", "-", "y"}], ")"}], "2"], "+", 
+          SuperscriptBox[
+           RowBox[{"(", 
+            RowBox[{
+             FractionBox["180", "2"], "-", "zm"}], ")"}], "2"]}]], 
+        RowBox[{
+         RowBox[{"-", "6"}], "/", "7"}]]}], ",", 
+      RowBox[{"{", 
+       RowBox[{"y", ",", "0", ",", "53"}], "}"}]}], "]"}], "+", 
+    RowBox[{"NIntegrate", "[", 
+     RowBox[{
+      RowBox[{
+       RowBox[{"(", 
+        RowBox[{
+         FractionBox["180", "2"], "+", "zm"}], ")"}], " ", 
+       SuperscriptBox[
+        SqrtBox[
+         RowBox[{
+          SuperscriptBox[
+           RowBox[{"(", 
+            RowBox[{"ym", "-", "y"}], ")"}], "2"], "+", 
+          SuperscriptBox[
+           RowBox[{"(", 
+            RowBox[{
+             FractionBox["180", "2"], "+", "zm"}], ")"}], "2"]}]], 
+        RowBox[{
+         RowBox[{"-", "6"}], "/", "7"}]]}], ",", 
+      RowBox[{"{", 
+       RowBox[{"y", ",", "0", ",", "53"}], "}"}]}], "]"}]}], 
+   ")"}]}]], "Output",
+ CellChangeTimes->{3.6966758727023306`*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"\[IndentingNewLine]", "\[IndentingNewLine]", 
+  RowBox[{
+   RowBox[{"velMarzo", "[", 
+    RowBox[{"zm_", ",", "ym_"}], "]"}], " ", "=", " ", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"J", "[", 
+      RowBox[{"zm", ",", "ym", ",", "180", ",", "5"}], "]"}], "/", 
+     RowBox[{"Sum", "[", 
+      RowBox[{
+       RowBox[{"J", "[", 
+        RowBox[{"zm", ",", "ym", ",", "180", ",", "5"}], "]"}], ",", " ", 
+       RowBox[{"{", 
+        RowBox[{"ym", ",", "0", ",", "5"}], "}"}], ",", 
+       RowBox[{"{", 
+        RowBox[{"zm", ",", 
+         RowBox[{"-", "90"}], ",", "90"}], "}"}]}], "]"}]}], " ", "*", 
+    RowBox[{"6", "/", "0.01"}]}]}]}]], "Input",
+ CellChangeTimes->{{3.6965184028664317`*^9, 3.696518415111993*^9}, {
+  3.696638676163476*^9, 3.696638689494906*^9}, {3.696646570244007*^9, 
+  3.6966465740145025`*^9}}],
+
+Cell[BoxData[
+ TemplateBox[{
+  "NIntegrate","inumr",
+   "\"The integrand \\!\\(\\*FractionBox[RowBox[{\\\"90\\\", \\\"+\\\", \
+\\\"zm\\\"}], SuperscriptBox[RowBox[{\\\"(\\\", \
+RowBox[{SuperscriptBox[RowBox[{\\\"(\\\", RowBox[{RowBox[{\\\"-\\\", \
+\\\"y\\\"}], \\\"+\\\", \\\"ym\\\"}], \\\")\\\"}], \\\"2\\\"], \\\"+\\\", \
+SuperscriptBox[RowBox[{\\\"(\\\", RowBox[{\\\"90\\\", \\\"+\\\", \
+\\\"zm\\\"}], \\\")\\\"}], \\\"2\\\"]}], \\\")\\\"}], RowBox[{\\\"3\\\", \
+\\\"/\\\", \\\"7\\\"}]]]\\) has evaluated to non-numerical values for all \
+sampling points in the region with boundaries \\!\\(\\*RowBox[{\\\"{\\\", \
+RowBox[{\\\"{\\\", RowBox[{\\\"0\\\", \\\",\\\", \\\"5\\\"}], \\\"}\\\"}], \\\
+\"}\\\"}]\\).\"",2,167,732,23667967595296183195,"Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellChangeTimes->{3.696647294629964*^9}],
+
+Cell[BoxData[
+ TemplateBox[{
+  "NIntegrate","inumr",
+   "\"The integrand \\!\\(\\*FractionBox[RowBox[{\\\"90\\\", \\\"-\\\", \
+\\\"zm\\\"}], SuperscriptBox[RowBox[{\\\"(\\\", \
+RowBox[{SuperscriptBox[RowBox[{\\\"(\\\", RowBox[{RowBox[{\\\"-\\\", \
+\\\"y\\\"}], \\\"+\\\", \\\"ym\\\"}], \\\")\\\"}], \\\"2\\\"], \\\"+\\\", \
+SuperscriptBox[RowBox[{\\\"(\\\", RowBox[{\\\"90\\\", \\\"-\\\", \
+\\\"zm\\\"}], \\\")\\\"}], \\\"2\\\"]}], \\\")\\\"}], RowBox[{\\\"3\\\", \
+\\\"/\\\", \\\"7\\\"}]]]\\) has evaluated to non-numerical values for all \
+sampling points in the region with boundaries \\!\\(\\*RowBox[{\\\"{\\\", \
+RowBox[{\\\"{\\\", RowBox[{\\\"0\\\", \\\",\\\", \\\"5\\\"}], \\\"}\\\"}], \\\
+\"}\\\"}]\\).\"",2,167,733,23667967595296183195,"Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellChangeTimes->{3.696647294645589*^9}],
+
+Cell[BoxData[
+ TemplateBox[{
+  "NIntegrate","inumr",
+   "\"The integrand \\!\\(\\*FractionBox[\\\"ym\\\", \
+SuperscriptBox[RowBox[{\\\"(\\\", RowBox[{SuperscriptBox[\\\"ym\\\", \
+\\\"2\\\"], \\\"+\\\", SuperscriptBox[RowBox[{\\\"(\\\", \
+RowBox[{RowBox[{\\\"-\\\", \\\"z\\\"}], \\\"+\\\", \\\"zm\\\"}], \\\")\\\"}], \
+\\\"2\\\"]}], \\\")\\\"}], RowBox[{\\\"3\\\", \\\"/\\\", \\\"7\\\"}]]]\\) has \
+evaluated to non-numerical values for all sampling points in the region with \
+boundaries \\!\\(\\*RowBox[{\\\"{\\\", RowBox[{\\\"{\\\", \
+RowBox[{RowBox[{\\\"-\\\", \\\"90\\\"}], \\\",\\\", \\\"90\\\"}], \
+\\\"}\\\"}], \\\"}\\\"}]\\).\"",2,167,734,23667967595296183195,"Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellChangeTimes->{3.6966472946768436`*^9}],
+
+Cell[BoxData[
+ TemplateBox[{
+  "General","stop",
+   "\"Further output of \\!\\(\\*StyleBox[RowBox[{\\\"NIntegrate\\\", \
+\\\"::\\\", \\\"inumr\\\"}], \\\"MessageName\\\"]\\) will be suppressed \
+during this calculation.\"",2,167,735,23667967595296183195,"Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellChangeTimes->{3.696647294692467*^9}],
+
+Cell[BoxData[
+ TemplateBox[{
+  "NIntegrate","izero",
+   "\"Integral and error estimates are 0 on all integration subregions. Try \
+increasing the value of the MinRecursion option. If value of integral may be \
+0, specify a finite value for the AccuracyGoal option.\"",2,167,736,
+   23667967595296183195,"Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellChangeTimes->{3.6966472947080927`*^9}],
+
+Cell[BoxData[
+ TemplateBox[{
+  "NIntegrate","izero",
+   "\"Integral and error estimates are 0 on all integration subregions. Try \
+increasing the value of the MinRecursion option. If value of integral may be \
+0, specify a finite value for the AccuracyGoal option.\"",2,167,737,
+   23667967595296183195,"Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellChangeTimes->{3.6966472947237177`*^9}],
+
+Cell[BoxData[
+ TemplateBox[{
+  "NIntegrate","izero",
+   "\"Integral and error estimates are 0 on all integration subregions. Try \
+increasing the value of the MinRecursion option. If value of integral may be \
+0, specify a finite value for the AccuracyGoal option.\"",2,167,738,
+   23667967595296183195,"Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellChangeTimes->{3.6966472947549677`*^9}],
+
+Cell[BoxData[
+ TemplateBox[{
+  "General","stop",
+   "\"Further output of \\!\\(\\*StyleBox[RowBox[{\\\"NIntegrate\\\", \
+\\\"::\\\", \\\"izero\\\"}], \\\"MessageName\\\"]\\) will be suppressed \
+during this calculation.\"",2,167,739,23667967595296183195,"Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellChangeTimes->{3.6966472947705927`*^9}],
+
+Cell[BoxData[
+ RowBox[{"0.012238885278799882`", " ", 
+  RowBox[{"(", 
+   RowBox[{
+    RowBox[{"NIntegrate", "[", 
+     RowBox[{
+      RowBox[{"ym", " ", 
+       SuperscriptBox[
+        SqrtBox[
+         RowBox[{
+          SuperscriptBox[
+           RowBox[{"(", 
+            RowBox[{"zm", "-", "z"}], ")"}], "2"], "+", 
+          SuperscriptBox["ym", "2"]}]], 
+        RowBox[{
+         RowBox[{"-", "6"}], "/", "7"}]]}], ",", 
+      RowBox[{"{", 
+       RowBox[{"z", ",", 
+        RowBox[{"-", 
+         FractionBox["180", "2"]}], ",", 
+        FractionBox["180", "2"]}], "}"}]}], "]"}], "+", 
+    RowBox[{"NIntegrate", "[", 
+     RowBox[{
+      RowBox[{
+       RowBox[{"(", 
+        RowBox[{
+         FractionBox["180", "2"], "-", "zm"}], ")"}], " ", 
+       SuperscriptBox[
+        SqrtBox[
+         RowBox[{
+          SuperscriptBox[
+           RowBox[{"(", 
+            RowBox[{"ym", "-", "y"}], ")"}], "2"], "+", 
+          SuperscriptBox[
+           RowBox[{"(", 
+            RowBox[{
+             FractionBox["180", "2"], "-", "zm"}], ")"}], "2"]}]], 
+        RowBox[{
+         RowBox[{"-", "6"}], "/", "7"}]]}], ",", 
+      RowBox[{"{", 
+       RowBox[{"y", ",", "0", ",", "5"}], "}"}]}], "]"}], "+", 
+    RowBox[{"NIntegrate", "[", 
+     RowBox[{
+      RowBox[{
+       RowBox[{"(", 
+        RowBox[{
+         FractionBox["180", "2"], "+", "zm"}], ")"}], " ", 
+       SuperscriptBox[
+        SqrtBox[
+         RowBox[{
+          SuperscriptBox[
+           RowBox[{"(", 
+            RowBox[{"ym", "-", "y"}], ")"}], "2"], "+", 
+          SuperscriptBox[
+           RowBox[{"(", 
+            RowBox[{
+             FractionBox["180", "2"], "+", "zm"}], ")"}], "2"]}]], 
+        RowBox[{
+         RowBox[{"-", "6"}], "/", "7"}]]}], ",", 
+      RowBox[{"{", 
+       RowBox[{"y", ",", "0", ",", "5"}], "}"}]}], "]"}]}], ")"}]}]], "Output",
+ CellChangeTimes->{3.6966473110927353`*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"velMarzoCm", "[", 
+   RowBox[{"zm_", ",", "ym_"}], "]"}], " ", "=", " ", 
+  RowBox[{
+   RowBox[{
+    RowBox[{"J", "[", 
+     RowBox[{"zm", ",", "ym", ",", "180", ",", "48"}], "]"}], "/", 
+    RowBox[{"Sum", "[", 
+     RowBox[{
+      RowBox[{"J", "[", 
+       RowBox[{"zm", ",", "ym", ",", "180", ",", "48"}], "]"}], ",", " ", 
+      RowBox[{"{", 
+       RowBox[{"ym", ",", "0", ",", "48"}], "}"}], ",", 
+      RowBox[{"{", 
+       RowBox[{"zm", ",", 
+        RowBox[{"-", "90"}], ",", "90"}], "}"}]}], "]"}]}], " ", "*", 
+   RowBox[{"6", "/", "0.001"}]}]}]], "Input",
+ CellChangeTimes->{{3.696675549393608*^9, 3.6966755708327885`*^9}}],
+
+Cell[BoxData[
+ TemplateBox[{
+  "NIntegrate","inumr",
+   "\"The integrand \\!\\(\\*FractionBox[RowBox[{\\\"90\\\", \\\"+\\\", \
+\\\"zm\\\"}], SuperscriptBox[RowBox[{\\\"(\\\", \
+RowBox[{SuperscriptBox[RowBox[{\\\"(\\\", RowBox[{RowBox[{\\\"-\\\", \
+\\\"y\\\"}], \\\"+\\\", \\\"ym\\\"}], \\\")\\\"}], \\\"2\\\"], \\\"+\\\", \
+SuperscriptBox[RowBox[{\\\"(\\\", RowBox[{\\\"90\\\", \\\"+\\\", \
+\\\"zm\\\"}], \\\")\\\"}], \\\"2\\\"]}], \\\")\\\"}], RowBox[{\\\"3\\\", \
+\\\"/\\\", \\\"7\\\"}]]]\\) has evaluated to non-numerical values for all \
+sampling points in the region with boundaries \\!\\(\\*RowBox[{\\\"{\\\", \
+RowBox[{\\\"{\\\", RowBox[{\\\"0\\\", \\\",\\\", \\\"48\\\"}], \\\"}\\\"}], \
+\\\"}\\\"}]\\).\"",2,6,17,23668241090185444519,"Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellChangeTimes->{3.6966758849184856`*^9}],
+
+Cell[BoxData[
+ TemplateBox[{
+  "NIntegrate","inumr",
+   "\"The integrand \\!\\(\\*FractionBox[RowBox[{\\\"90\\\", \\\"-\\\", \
+\\\"zm\\\"}], SuperscriptBox[RowBox[{\\\"(\\\", \
+RowBox[{SuperscriptBox[RowBox[{\\\"(\\\", RowBox[{RowBox[{\\\"-\\\", \
+\\\"y\\\"}], \\\"+\\\", \\\"ym\\\"}], \\\")\\\"}], \\\"2\\\"], \\\"+\\\", \
+SuperscriptBox[RowBox[{\\\"(\\\", RowBox[{\\\"90\\\", \\\"-\\\", \
+\\\"zm\\\"}], \\\")\\\"}], \\\"2\\\"]}], \\\")\\\"}], RowBox[{\\\"3\\\", \
+\\\"/\\\", \\\"7\\\"}]]]\\) has evaluated to non-numerical values for all \
+sampling points in the region with boundaries \\!\\(\\*RowBox[{\\\"{\\\", \
+RowBox[{\\\"{\\\", RowBox[{\\\"0\\\", \\\",\\\", \\\"48\\\"}], \\\"}\\\"}], \
+\\\"}\\\"}]\\).\"",2,6,18,23668241090185444519,"Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellChangeTimes->{3.6966758849341135`*^9}],
+
+Cell[BoxData[
+ TemplateBox[{
+  "NIntegrate","inumr",
+   "\"The integrand \\!\\(\\*FractionBox[\\\"ym\\\", \
+SuperscriptBox[RowBox[{\\\"(\\\", RowBox[{SuperscriptBox[\\\"ym\\\", \
+\\\"2\\\"], \\\"+\\\", SuperscriptBox[RowBox[{\\\"(\\\", \
+RowBox[{RowBox[{\\\"-\\\", \\\"z\\\"}], \\\"+\\\", \\\"zm\\\"}], \\\")\\\"}], \
+\\\"2\\\"]}], \\\")\\\"}], RowBox[{\\\"3\\\", \\\"/\\\", \\\"7\\\"}]]]\\) has \
+evaluated to non-numerical values for all sampling points in the region with \
+boundaries \\!\\(\\*RowBox[{\\\"{\\\", RowBox[{\\\"{\\\", \
+RowBox[{RowBox[{\\\"-\\\", \\\"90\\\"}], \\\",\\\", \\\"90\\\"}], \
+\\\"}\\\"}], \\\"}\\\"}]\\).\"",2,6,19,23668241090185444519,"Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellChangeTimes->{3.6966758849653807`*^9}],
+
+Cell[BoxData[
+ TemplateBox[{
+  "General","stop",
+   "\"Further output of \\!\\(\\*StyleBox[RowBox[{\\\"NIntegrate\\\", \
+\\\"::\\\", \\\"inumr\\\"}], \\\"MessageName\\\"]\\) will be suppressed \
+during this calculation.\"",2,6,20,23668241090185444519,"Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellChangeTimes->{3.696675884981002*^9}],
+
+Cell[BoxData[
+ TemplateBox[{
+  "NIntegrate","izero",
+   "\"Integral and error estimates are 0 on all integration subregions. Try \
+increasing the value of the MinRecursion option. If value of integral may be \
+0, specify a finite value for the AccuracyGoal option.\"",2,6,21,
+   23668241090185444519,"Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellChangeTimes->{3.6966758850122557`*^9}],
+
+Cell[BoxData[
+ TemplateBox[{
+  "NIntegrate","izero",
+   "\"Integral and error estimates are 0 on all integration subregions. Try \
+increasing the value of the MinRecursion option. If value of integral may be \
+0, specify a finite value for the AccuracyGoal option.\"",2,6,22,
+   23668241090185444519,"Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellChangeTimes->{3.6966758850498457`*^9}],
+
+Cell[BoxData[
+ TemplateBox[{
+  "NIntegrate","izero",
+   "\"Integral and error estimates are 0 on all integration subregions. Try \
+increasing the value of the MinRecursion option. If value of integral may be \
+0, specify a finite value for the AccuracyGoal option.\"",2,6,23,
+   23668241090185444519,"Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellChangeTimes->{3.696675885065471*^9}],
+
+Cell[BoxData[
+ TemplateBox[{
+  "General","stop",
+   "\"Further output of \\!\\(\\*StyleBox[RowBox[{\\\"NIntegrate\\\", \
+\\\"::\\\", \\\"izero\\\"}], \\\"MessageName\\\"]\\) will be suppressed \
+during this calculation.\"",2,6,24,23668241090185444519,"Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellChangeTimes->{3.696675885065471*^9}],
+
+Cell[BoxData[
+ RowBox[{"0.0022229765875141413`", " ", 
+  RowBox[{"(", 
+   RowBox[{
+    RowBox[{"NIntegrate", "[", 
+     RowBox[{
+      RowBox[{"ym", " ", 
+       SuperscriptBox[
+        SqrtBox[
+         RowBox[{
+          SuperscriptBox[
+           RowBox[{"(", 
+            RowBox[{"zm", "-", "z"}], ")"}], "2"], "+", 
+          SuperscriptBox["ym", "2"]}]], 
+        RowBox[{
+         RowBox[{"-", "6"}], "/", "7"}]]}], ",", 
+      RowBox[{"{", 
+       RowBox[{"z", ",", 
+        RowBox[{"-", 
+         FractionBox["180", "2"]}], ",", 
+        FractionBox["180", "2"]}], "}"}]}], "]"}], "+", 
+    RowBox[{"NIntegrate", "[", 
+     RowBox[{
+      RowBox[{
+       RowBox[{"(", 
+        RowBox[{
+         FractionBox["180", "2"], "-", "zm"}], ")"}], " ", 
+       SuperscriptBox[
+        SqrtBox[
+         RowBox[{
+          SuperscriptBox[
+           RowBox[{"(", 
+            RowBox[{"ym", "-", "y"}], ")"}], "2"], "+", 
+          SuperscriptBox[
+           RowBox[{"(", 
+            RowBox[{
+             FractionBox["180", "2"], "-", "zm"}], ")"}], "2"]}]], 
+        RowBox[{
+         RowBox[{"-", "6"}], "/", "7"}]]}], ",", 
+      RowBox[{"{", 
+       RowBox[{"y", ",", "0", ",", "48"}], "}"}]}], "]"}], "+", 
+    RowBox[{"NIntegrate", "[", 
+     RowBox[{
+      RowBox[{
+       RowBox[{"(", 
+        RowBox[{
+         FractionBox["180", "2"], "+", "zm"}], ")"}], " ", 
+       SuperscriptBox[
+        SqrtBox[
+         RowBox[{
+          SuperscriptBox[
+           RowBox[{"(", 
+            RowBox[{"ym", "-", "y"}], ")"}], "2"], "+", 
+          SuperscriptBox[
+           RowBox[{"(", 
+            RowBox[{
+             FractionBox["180", "2"], "+", "zm"}], ")"}], "2"]}]], 
+        RowBox[{
+         RowBox[{"-", "6"}], "/", "7"}]]}], ",", 
+      RowBox[{"{", 
+       RowBox[{"y", ",", "0", ",", "48"}], "}"}]}], "]"}]}], 
+   ")"}]}]], "Output",
+ CellChangeTimes->{3.6966760208472223`*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"\[IndentingNewLine]", "\[IndentingNewLine]", 
+  RowBox[{
+   RowBox[{"velAprile", "[", 
+    RowBox[{"zm_", ",", "ym_"}], "]"}], " ", "=", "  ", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"J", "[", 
+      RowBox[{"zm", ",", "ym", ",", "180", ",", "7"}], "]"}], "/", 
+     RowBox[{"Sum", "[", 
+      RowBox[{
+       RowBox[{"J", "[", 
+        RowBox[{"zm", ",", "ym", ",", "180", ",", "7"}], "]"}], ",", " ", 
+       RowBox[{"{", 
+        RowBox[{"ym", ",", "0", ",", "7"}], "}"}], ",", 
+       RowBox[{"{", 
+        RowBox[{"zm", ",", 
+         RowBox[{"-", "90"}], ",", "90"}], "}"}]}], "]"}]}], " ", "*", 
+    RowBox[{"10", "/", "0.01"}]}]}]}]], "Input",
+ CellChangeTimes->{{3.6965184822964067`*^9, 3.6965184960190287`*^9}, 
+   3.6966386940287094`*^9, 3.696639280205038*^9, 3.696646558237156*^9}],
+
+Cell[BoxData[
+ TemplateBox[{
+  "NIntegrate","inumr",
+   "\"The integrand \\!\\(\\*FractionBox[RowBox[{\\\"90\\\", \\\"+\\\", \
+\\\"zm\\\"}], SuperscriptBox[RowBox[{\\\"(\\\", \
+RowBox[{SuperscriptBox[RowBox[{\\\"(\\\", RowBox[{RowBox[{\\\"-\\\", \
+\\\"y\\\"}], \\\"+\\\", \\\"ym\\\"}], \\\")\\\"}], \\\"2\\\"], \\\"+\\\", \
+SuperscriptBox[RowBox[{\\\"(\\\", RowBox[{\\\"90\\\", \\\"+\\\", \
+\\\"zm\\\"}], \\\")\\\"}], \\\"2\\\"]}], \\\")\\\"}], RowBox[{\\\"3\\\", \
+\\\"/\\\", \\\"7\\\"}]]]\\) has evaluated to non-numerical values for all \
+sampling points in the region with boundaries \\!\\(\\*RowBox[{\\\"{\\\", \
+RowBox[{\\\"{\\\", RowBox[{\\\"0\\\", \\\",\\\", \\\"7\\\"}], \\\"}\\\"}], \\\
+\"}\\\"}]\\).\"",2,168,740,23667967595296183195,"Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellChangeTimes->{3.6966473111708407`*^9}],
+
+Cell[BoxData[
+ TemplateBox[{
+  "NIntegrate","inumr",
+   "\"The integrand \\!\\(\\*FractionBox[RowBox[{\\\"90\\\", \\\"-\\\", \
+\\\"zm\\\"}], SuperscriptBox[RowBox[{\\\"(\\\", \
+RowBox[{SuperscriptBox[RowBox[{\\\"(\\\", RowBox[{RowBox[{\\\"-\\\", \
+\\\"y\\\"}], \\\"+\\\", \\\"ym\\\"}], \\\")\\\"}], \\\"2\\\"], \\\"+\\\", \
+SuperscriptBox[RowBox[{\\\"(\\\", RowBox[{\\\"90\\\", \\\"-\\\", \
+\\\"zm\\\"}], \\\")\\\"}], \\\"2\\\"]}], \\\")\\\"}], RowBox[{\\\"3\\\", \
+\\\"/\\\", \\\"7\\\"}]]]\\) has evaluated to non-numerical values for all \
+sampling points in the region with boundaries \\!\\(\\*RowBox[{\\\"{\\\", \
+RowBox[{\\\"{\\\", RowBox[{\\\"0\\\", \\\",\\\", \\\"7\\\"}], \\\"}\\\"}], \\\
+\"}\\\"}]\\).\"",2,168,741,23667967595296183195,"Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellChangeTimes->{3.6966473112020917`*^9}],
+
+Cell[BoxData[
+ TemplateBox[{
+  "NIntegrate","inumr",
+   "\"The integrand \\!\\(\\*FractionBox[\\\"ym\\\", \
+SuperscriptBox[RowBox[{\\\"(\\\", RowBox[{SuperscriptBox[\\\"ym\\\", \
+\\\"2\\\"], \\\"+\\\", SuperscriptBox[RowBox[{\\\"(\\\", \
+RowBox[{RowBox[{\\\"-\\\", \\\"z\\\"}], \\\"+\\\", \\\"zm\\\"}], \\\")\\\"}], \
+\\\"2\\\"]}], \\\")\\\"}], RowBox[{\\\"3\\\", \\\"/\\\", \\\"7\\\"}]]]\\) has \
+evaluated to non-numerical values for all sampling points in the region with \
+boundaries \\!\\(\\*RowBox[{\\\"{\\\", RowBox[{\\\"{\\\", \
+RowBox[{RowBox[{\\\"-\\\", \\\"90\\\"}], \\\",\\\", \\\"90\\\"}], \
+\\\"}\\\"}], \\\"}\\\"}]\\).\"",2,168,742,23667967595296183195,"Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellChangeTimes->{3.696647311217719*^9}],
+
+Cell[BoxData[
+ TemplateBox[{
+  "General","stop",
+   "\"Further output of \\!\\(\\*StyleBox[RowBox[{\\\"NIntegrate\\\", \
+\\\"::\\\", \\\"inumr\\\"}], \\\"MessageName\\\"]\\) will be suppressed \
+during this calculation.\"",2,168,743,23667967595296183195,"Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellChangeTimes->{3.696647311248969*^9}],
+
+Cell[BoxData[
+ TemplateBox[{
+  "NIntegrate","izero",
+   "\"Integral and error estimates are 0 on all integration subregions. Try \
+increasing the value of the MinRecursion option. If value of integral may be \
+0, specify a finite value for the AccuracyGoal option.\"",2,168,744,
+   23667967595296183195,"Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellChangeTimes->{3.696647311264594*^9}],
+
+Cell[BoxData[
+ TemplateBox[{
+  "NIntegrate","izero",
+   "\"Integral and error estimates are 0 on all integration subregions. Try \
+increasing the value of the MinRecursion option. If value of integral may be \
+0, specify a finite value for the AccuracyGoal option.\"",2,168,745,
+   23667967595296183195,"Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellChangeTimes->{3.696647311280219*^9}],
+
+Cell[BoxData[
+ TemplateBox[{
+  "NIntegrate","izero",
+   "\"Integral and error estimates are 0 on all integration subregions. Try \
+increasing the value of the MinRecursion option. If value of integral may be \
+0, specify a finite value for the AccuracyGoal option.\"",2,168,746,
+   23667967595296183195,"Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellChangeTimes->{3.696647311311467*^9}],
+
+Cell[BoxData[
+ TemplateBox[{
+  "General","stop",
+   "\"Further output of \\!\\(\\*StyleBox[RowBox[{\\\"NIntegrate\\\", \
+\\\"::\\\", \\\"izero\\\"}], \\\"MessageName\\\"]\\) will be suppressed \
+during this calculation.\"",2,168,747,23667967595296183195,"Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellChangeTimes->{3.696647311327093*^9}],
+
+Cell[BoxData[
+ RowBox[{"0.01134585054552213`", " ", 
+  RowBox[{"(", 
+   RowBox[{
+    RowBox[{"NIntegrate", "[", 
+     RowBox[{
+      RowBox[{"ym", " ", 
+       SuperscriptBox[
+        SqrtBox[
+         RowBox[{
+          SuperscriptBox[
+           RowBox[{"(", 
+            RowBox[{"zm", "-", "z"}], ")"}], "2"], "+", 
+          SuperscriptBox["ym", "2"]}]], 
+        RowBox[{
+         RowBox[{"-", "6"}], "/", "7"}]]}], ",", 
+      RowBox[{"{", 
+       RowBox[{"z", ",", 
+        RowBox[{"-", 
+         FractionBox["180", "2"]}], ",", 
+        FractionBox["180", "2"]}], "}"}]}], "]"}], "+", 
+    RowBox[{"NIntegrate", "[", 
+     RowBox[{
+      RowBox[{
+       RowBox[{"(", 
+        RowBox[{
+         FractionBox["180", "2"], "-", "zm"}], ")"}], " ", 
+       SuperscriptBox[
+        SqrtBox[
+         RowBox[{
+          SuperscriptBox[
+           RowBox[{"(", 
+            RowBox[{"ym", "-", "y"}], ")"}], "2"], "+", 
+          SuperscriptBox[
+           RowBox[{"(", 
+            RowBox[{
+             FractionBox["180", "2"], "-", "zm"}], ")"}], "2"]}]], 
+        RowBox[{
+         RowBox[{"-", "6"}], "/", "7"}]]}], ",", 
+      RowBox[{"{", 
+       RowBox[{"y", ",", "0", ",", "7"}], "}"}]}], "]"}], "+", 
+    RowBox[{"NIntegrate", "[", 
+     RowBox[{
+      RowBox[{
+       RowBox[{"(", 
+        RowBox[{
+         FractionBox["180", "2"], "+", "zm"}], ")"}], " ", 
+       SuperscriptBox[
+        SqrtBox[
+         RowBox[{
+          SuperscriptBox[
+           RowBox[{"(", 
+            RowBox[{"ym", "-", "y"}], ")"}], "2"], "+", 
+          SuperscriptBox[
+           RowBox[{"(", 
+            RowBox[{
+             FractionBox["180", "2"], "+", "zm"}], ")"}], "2"]}]], 
+        RowBox[{
+         RowBox[{"-", "6"}], "/", "7"}]]}], ",", 
+      RowBox[{"{", 
+       RowBox[{"y", ",", "0", ",", "7"}], "}"}]}], "]"}]}], ")"}]}]], "Output",
+ CellChangeTimes->{3.6966473331970506`*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"velAprileCm", "[", 
+   RowBox[{"zm_", ",", "ym_"}], "]"}], " ", "=", "  ", 
+  RowBox[{
+   RowBox[{
+    RowBox[{"J", "[", 
+     RowBox[{"zm", ",", "ym", ",", "180", ",", "67"}], "]"}], "/", 
+    RowBox[{"Sum", "[", 
+     RowBox[{
+      RowBox[{"J", "[", 
+       RowBox[{"zm", ",", "ym", ",", "180", ",", "67"}], "]"}], ",", " ", 
+      RowBox[{"{", 
+       RowBox[{"ym", ",", "0", ",", "67"}], "}"}], ",", 
+      RowBox[{"{", 
+       RowBox[{"zm", ",", 
+        RowBox[{"-", "90"}], ",", "90"}], "}"}]}], "]"}]}], " ", "*", 
+   RowBox[{"10", "/", "0.001"}]}]}]], "Input",
+ CellChangeTimes->{{3.696675586648988*^9, 3.696675600642897*^9}}],
+
+Cell[BoxData[
+ TemplateBox[{
+  "NIntegrate","inumr",
+   "\"The integrand \\!\\(\\*FractionBox[RowBox[{\\\"90\\\", \\\"+\\\", \
+\\\"zm\\\"}], SuperscriptBox[RowBox[{\\\"(\\\", \
+RowBox[{SuperscriptBox[RowBox[{\\\"(\\\", RowBox[{RowBox[{\\\"-\\\", \
+\\\"y\\\"}], \\\"+\\\", \\\"ym\\\"}], \\\")\\\"}], \\\"2\\\"], \\\"+\\\", \
+SuperscriptBox[RowBox[{\\\"(\\\", RowBox[{\\\"90\\\", \\\"+\\\", \
+\\\"zm\\\"}], \\\")\\\"}], \\\"2\\\"]}], \\\")\\\"}], RowBox[{\\\"3\\\", \
+\\\"/\\\", \\\"7\\\"}]]]\\) has evaluated to non-numerical values for all \
+sampling points in the region with boundaries \\!\\(\\*RowBox[{\\\"{\\\", \
+RowBox[{\\\"{\\\", RowBox[{\\\"0\\\", \\\",\\\", \\\"67\\\"}], \\\"}\\\"}], \
+\\\"}\\\"}]\\).\"",2,7,25,23668241090185444519,"Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellChangeTimes->{3.6966760209002604`*^9}],
+
+Cell[BoxData[
+ TemplateBox[{
+  "NIntegrate","inumr",
+   "\"The integrand \\!\\(\\*FractionBox[RowBox[{\\\"90\\\", \\\"-\\\", \
+\\\"zm\\\"}], SuperscriptBox[RowBox[{\\\"(\\\", \
+RowBox[{SuperscriptBox[RowBox[{\\\"(\\\", RowBox[{RowBox[{\\\"-\\\", \
+\\\"y\\\"}], \\\"+\\\", \\\"ym\\\"}], \\\")\\\"}], \\\"2\\\"], \\\"+\\\", \
+SuperscriptBox[RowBox[{\\\"(\\\", RowBox[{\\\"90\\\", \\\"-\\\", \
+\\\"zm\\\"}], \\\")\\\"}], \\\"2\\\"]}], \\\")\\\"}], RowBox[{\\\"3\\\", \
+\\\"/\\\", \\\"7\\\"}]]]\\) has evaluated to non-numerical values for all \
+sampling points in the region with boundaries \\!\\(\\*RowBox[{\\\"{\\\", \
+RowBox[{\\\"{\\\", RowBox[{\\\"0\\\", \\\",\\\", \\\"67\\\"}], \\\"}\\\"}], \
+\\\"}\\\"}]\\).\"",2,7,26,23668241090185444519,"Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellChangeTimes->{3.6966760209322853`*^9}],
+
+Cell[BoxData[
+ TemplateBox[{
+  "NIntegrate","inumr",
+   "\"The integrand \\!\\(\\*FractionBox[\\\"ym\\\", \
+SuperscriptBox[RowBox[{\\\"(\\\", RowBox[{SuperscriptBox[\\\"ym\\\", \
+\\\"2\\\"], \\\"+\\\", SuperscriptBox[RowBox[{\\\"(\\\", \
+RowBox[{RowBox[{\\\"-\\\", \\\"z\\\"}], \\\"+\\\", \\\"zm\\\"}], \\\")\\\"}], \
+\\\"2\\\"]}], \\\")\\\"}], RowBox[{\\\"3\\\", \\\"/\\\", \\\"7\\\"}]]]\\) has \
+evaluated to non-numerical values for all sampling points in the region with \
+boundaries \\!\\(\\*RowBox[{\\\"{\\\", RowBox[{\\\"{\\\", \
+RowBox[{RowBox[{\\\"-\\\", \\\"90\\\"}], \\\",\\\", \\\"90\\\"}], \
+\\\"}\\\"}], \\\"}\\\"}]\\).\"",2,7,27,23668241090185444519,"Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellChangeTimes->{3.69667602096731*^9}],
+
+Cell[BoxData[
+ TemplateBox[{
+  "General","stop",
+   "\"Further output of \\!\\(\\*StyleBox[RowBox[{\\\"NIntegrate\\\", \
+\\\"::\\\", \\\"inumr\\\"}], \\\"MessageName\\\"]\\) will be suppressed \
+during this calculation.\"",2,7,28,23668241090185444519,"Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellChangeTimes->{3.696676020998329*^9}],
+
+Cell[BoxData[
+ TemplateBox[{
+  "NIntegrate","izero",
+   "\"Integral and error estimates are 0 on all integration subregions. Try \
+increasing the value of the MinRecursion option. If value of integral may be \
+0, specify a finite value for the AccuracyGoal option.\"",2,7,29,
+   23668241090185444519,"Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellChangeTimes->{3.6966760210303535`*^9}],
+
+Cell[BoxData[
+ TemplateBox[{
+  "NIntegrate","izero",
+   "\"Integral and error estimates are 0 on all integration subregions. Try \
+increasing the value of the MinRecursion option. If value of integral may be \
+0, specify a finite value for the AccuracyGoal option.\"",2,7,30,
+   23668241090185444519,"Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellChangeTimes->{3.6966760210653954`*^9}],
+
+Cell[BoxData[
+ TemplateBox[{
+  "NIntegrate","izero",
+   "\"Integral and error estimates are 0 on all integration subregions. Try \
+increasing the value of the MinRecursion option. If value of integral may be \
+0, specify a finite value for the AccuracyGoal option.\"",2,7,31,
+   23668241090185444519,"Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellChangeTimes->{3.696676021092411*^9}],
+
+Cell[BoxData[
+ TemplateBox[{
+  "General","stop",
+   "\"Further output of \\!\\(\\*StyleBox[RowBox[{\\\"NIntegrate\\\", \
+\\\"::\\\", \\\"izero\\\"}], \\\"MessageName\\\"]\\) will be suppressed \
+during this calculation.\"",2,7,32,23668241090185444519,"Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellChangeTimes->{3.696676021120416*^9}],
+
+Cell[BoxData[
+ RowBox[{"0.002069196299568921`", " ", 
+  RowBox[{"(", 
+   RowBox[{
+    RowBox[{"NIntegrate", "[", 
+     RowBox[{
+      RowBox[{"ym", " ", 
+       SuperscriptBox[
+        SqrtBox[
+         RowBox[{
+          SuperscriptBox[
+           RowBox[{"(", 
+            RowBox[{"zm", "-", "z"}], ")"}], "2"], "+", 
+          SuperscriptBox["ym", "2"]}]], 
+        RowBox[{
+         RowBox[{"-", "6"}], "/", "7"}]]}], ",", 
+      RowBox[{"{", 
+       RowBox[{"z", ",", 
+        RowBox[{"-", 
+         FractionBox["180", "2"]}], ",", 
+        FractionBox["180", "2"]}], "}"}]}], "]"}], "+", 
+    RowBox[{"NIntegrate", "[", 
+     RowBox[{
+      RowBox[{
+       RowBox[{"(", 
+        RowBox[{
+         FractionBox["180", "2"], "-", "zm"}], ")"}], " ", 
+       SuperscriptBox[
+        SqrtBox[
+         RowBox[{
+          SuperscriptBox[
+           RowBox[{"(", 
+            RowBox[{"ym", "-", "y"}], ")"}], "2"], "+", 
+          SuperscriptBox[
+           RowBox[{"(", 
+            RowBox[{
+             FractionBox["180", "2"], "-", "zm"}], ")"}], "2"]}]], 
+        RowBox[{
+         RowBox[{"-", "6"}], "/", "7"}]]}], ",", 
+      RowBox[{"{", 
+       RowBox[{"y", ",", "0", ",", "67"}], "}"}]}], "]"}], "+", 
+    RowBox[{"NIntegrate", "[", 
+     RowBox[{
+      RowBox[{
+       RowBox[{"(", 
+        RowBox[{
+         FractionBox["180", "2"], "+", "zm"}], ")"}], " ", 
+       SuperscriptBox[
+        SqrtBox[
+         RowBox[{
+          SuperscriptBox[
+           RowBox[{"(", 
+            RowBox[{"ym", "-", "y"}], ")"}], "2"], "+", 
+          SuperscriptBox[
+           RowBox[{"(", 
+            RowBox[{
+             FractionBox["180", "2"], "+", "zm"}], ")"}], "2"]}]], 
+        RowBox[{
+         RowBox[{"-", "6"}], "/", "7"}]]}], ",", 
+      RowBox[{"{", 
+       RowBox[{"y", ",", "0", ",", "67"}], "}"}]}], "]"}]}], 
+   ")"}]}]], "Output",
+ CellChangeTimes->{3.696676225325862*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"\[IndentingNewLine]", "\[IndentingNewLine]", 
+  RowBox[{
+   RowBox[{"velMaggio", "[", 
+    RowBox[{"zm_", ",", "ym_"}], "]"}], " ", "=", " ", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"J", "[", 
+      RowBox[{"zm", ",", "ym", ",", "180", ",", "10"}], "]"}], "/", 
+     RowBox[{"Sum", "[", 
+      RowBox[{
+       RowBox[{"J", "[", 
+        RowBox[{"zm", ",", "ym", ",", "180", ",", "10"}], "]"}], ",", " ", 
+       RowBox[{"{", 
+        RowBox[{"ym", ",", "0", ",", "10"}], "}"}], ",", 
+       RowBox[{"{", 
+        RowBox[{"zm", ",", 
+         RowBox[{"-", "90"}], ",", "90"}], "}"}]}], "]"}]}], " ", "*", 
+    RowBox[{"19", "/", "0.01"}]}]}]}]], "Input",
+ CellChangeTimes->{{3.696517417317971*^9, 3.6965174369771967`*^9}, {
+  3.6965185476726665`*^9, 3.6965185628288355`*^9}, {3.6966387032692313`*^9, 
+  3.6966387177223916`*^9}}],
+
+Cell[BoxData[
+ TemplateBox[{
+  "NIntegrate","inumr",
+   "\"The integrand \\!\\(\\*FractionBox[RowBox[{\\\"90\\\", \\\"+\\\", \
+\\\"zm\\\"}], SuperscriptBox[RowBox[{\\\"(\\\", \
+RowBox[{SuperscriptBox[RowBox[{\\\"(\\\", RowBox[{RowBox[{\\\"-\\\", \
+\\\"y\\\"}], \\\"+\\\", \\\"ym\\\"}], \\\")\\\"}], \\\"2\\\"], \\\"+\\\", \
+SuperscriptBox[RowBox[{\\\"(\\\", RowBox[{\\\"90\\\", \\\"+\\\", \
+\\\"zm\\\"}], \\\")\\\"}], \\\"2\\\"]}], \\\")\\\"}], RowBox[{\\\"3\\\", \
+\\\"/\\\", \\\"7\\\"}]]]\\) has evaluated to non-numerical values for all \
+sampling points in the region with boundaries \\!\\(\\*RowBox[{\\\"{\\\", \
+RowBox[{\\\"{\\\", RowBox[{\\\"0\\\", \\\",\\\", \\\"10\\\"}], \\\"}\\\"}], \
+\\\"}\\\"}]\\).\"",2,169,748,23667967595296183195,"Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellChangeTimes->{3.6966473332650995`*^9}],
+
+Cell[BoxData[
+ TemplateBox[{
+  "NIntegrate","inumr",
+   "\"The integrand \\!\\(\\*FractionBox[RowBox[{\\\"90\\\", \\\"-\\\", \
+\\\"zm\\\"}], SuperscriptBox[RowBox[{\\\"(\\\", \
+RowBox[{SuperscriptBox[RowBox[{\\\"(\\\", RowBox[{RowBox[{\\\"-\\\", \
+\\\"y\\\"}], \\\"+\\\", \\\"ym\\\"}], \\\")\\\"}], \\\"2\\\"], \\\"+\\\", \
+SuperscriptBox[RowBox[{\\\"(\\\", RowBox[{\\\"90\\\", \\\"-\\\", \
+\\\"zm\\\"}], \\\")\\\"}], \\\"2\\\"]}], \\\")\\\"}], RowBox[{\\\"3\\\", \
+\\\"/\\\", \\\"7\\\"}]]]\\) has evaluated to non-numerical values for all \
+sampling points in the region with boundaries \\!\\(\\*RowBox[{\\\"{\\\", \
+RowBox[{\\\"{\\\", RowBox[{\\\"0\\\", \\\",\\\", \\\"10\\\"}], \\\"}\\\"}], \
+\\\"}\\\"}]\\).\"",2,169,749,23667967595296183195,"Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellChangeTimes->{3.6966473332911177`*^9}],
+
+Cell[BoxData[
+ TemplateBox[{
+  "NIntegrate","inumr",
+   "\"The integrand \\!\\(\\*FractionBox[\\\"ym\\\", \
+SuperscriptBox[RowBox[{\\\"(\\\", RowBox[{SuperscriptBox[\\\"ym\\\", \
+\\\"2\\\"], \\\"+\\\", SuperscriptBox[RowBox[{\\\"(\\\", \
+RowBox[{RowBox[{\\\"-\\\", \\\"z\\\"}], \\\"+\\\", \\\"zm\\\"}], \\\")\\\"}], \
+\\\"2\\\"]}], \\\")\\\"}], RowBox[{\\\"3\\\", \\\"/\\\", \\\"7\\\"}]]]\\) has \
+evaluated to non-numerical values for all sampling points in the region with \
+boundaries \\!\\(\\*RowBox[{\\\"{\\\", RowBox[{\\\"{\\\", \
+RowBox[{RowBox[{\\\"-\\\", \\\"90\\\"}], \\\",\\\", \\\"90\\\"}], \
+\\\"}\\\"}], \\\"}\\\"}]\\).\"",2,169,750,23667967595296183195,"Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellChangeTimes->{3.696647333320139*^9}],
+
+Cell[BoxData[
+ TemplateBox[{
+  "General","stop",
+   "\"Further output of \\!\\(\\*StyleBox[RowBox[{\\\"NIntegrate\\\", \
+\\\"::\\\", \\\"inumr\\\"}], \\\"MessageName\\\"]\\) will be suppressed \
+during this calculation.\"",2,169,751,23667967595296183195,"Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellChangeTimes->{3.696647333346157*^9}],
+
+Cell[BoxData[
+ TemplateBox[{
+  "NIntegrate","izero",
+   "\"Integral and error estimates are 0 on all integration subregions. Try \
+increasing the value of the MinRecursion option. If value of integral may be \
+0, specify a finite value for the AccuracyGoal option.\"",2,169,752,
+   23667967595296183195,"Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellChangeTimes->{3.6966473333731766`*^9}],
+
+Cell[BoxData[
+ TemplateBox[{
+  "NIntegrate","izero",
+   "\"Integral and error estimates are 0 on all integration subregions. Try \
+increasing the value of the MinRecursion option. If value of integral may be \
+0, specify a finite value for the AccuracyGoal option.\"",2,169,753,
+   23667967595296183195,"Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellChangeTimes->{3.6966473333981934`*^9}],
+
+Cell[BoxData[
+ TemplateBox[{
+  "NIntegrate","izero",
+   "\"Integral and error estimates are 0 on all integration subregions. Try \
+increasing the value of the MinRecursion option. If value of integral may be \
+0, specify a finite value for the AccuracyGoal option.\"",2,169,754,
+   23667967595296183195,"Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellChangeTimes->{3.6966473334242134`*^9}],
+
+Cell[BoxData[
+ TemplateBox[{
+  "General","stop",
+   "\"Further output of \\!\\(\\*StyleBox[RowBox[{\\\"NIntegrate\\\", \
+\\\"::\\\", \\\"izero\\\"}], \\\"MessageName\\\"]\\) will be suppressed \
+during this calculation.\"",2,169,755,23667967595296183195,"Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellChangeTimes->{3.6966473334532323`*^9}],
+
+Cell[BoxData[
+ RowBox[{"0.01147580104179343`", " ", 
+  RowBox[{"(", 
+   RowBox[{
+    RowBox[{"NIntegrate", "[", 
+     RowBox[{
+      RowBox[{"ym", " ", 
+       SuperscriptBox[
+        SqrtBox[
+         RowBox[{
+          SuperscriptBox[
+           RowBox[{"(", 
+            RowBox[{"zm", "-", "z"}], ")"}], "2"], "+", 
+          SuperscriptBox["ym", "2"]}]], 
+        RowBox[{
+         RowBox[{"-", "6"}], "/", "7"}]]}], ",", 
+      RowBox[{"{", 
+       RowBox[{"z", ",", 
+        RowBox[{"-", 
+         FractionBox["180", "2"]}], ",", 
+        FractionBox["180", "2"]}], "}"}]}], "]"}], "+", 
+    RowBox[{"NIntegrate", "[", 
+     RowBox[{
+      RowBox[{
+       RowBox[{"(", 
+        RowBox[{
+         FractionBox["180", "2"], "-", "zm"}], ")"}], " ", 
+       SuperscriptBox[
+        SqrtBox[
+         RowBox[{
+          SuperscriptBox[
+           RowBox[{"(", 
+            RowBox[{"ym", "-", "y"}], ")"}], "2"], "+", 
+          SuperscriptBox[
+           RowBox[{"(", 
+            RowBox[{
+             FractionBox["180", "2"], "-", "zm"}], ")"}], "2"]}]], 
+        RowBox[{
+         RowBox[{"-", "6"}], "/", "7"}]]}], ",", 
+      RowBox[{"{", 
+       RowBox[{"y", ",", "0", ",", "10"}], "}"}]}], "]"}], "+", 
+    RowBox[{"NIntegrate", "[", 
+     RowBox[{
+      RowBox[{
+       RowBox[{"(", 
+        RowBox[{
+         FractionBox["180", "2"], "+", "zm"}], ")"}], " ", 
+       SuperscriptBox[
+        SqrtBox[
+         RowBox[{
+          SuperscriptBox[
+           RowBox[{"(", 
+            RowBox[{"ym", "-", "y"}], ")"}], "2"], "+", 
+          SuperscriptBox[
+           RowBox[{"(", 
+            RowBox[{
+             FractionBox["180", "2"], "+", "zm"}], ")"}], "2"]}]], 
+        RowBox[{
+         RowBox[{"-", "6"}], "/", "7"}]]}], ",", 
+      RowBox[{"{", 
+       RowBox[{"y", ",", "0", ",", "10"}], "}"}]}], "]"}]}], 
+   ")"}]}]], "Output",
+ CellChangeTimes->{3.6966473741233845`*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"velMaggioCm", "[", 
+   RowBox[{"zm_", ",", "ym_"}], "]"}], " ", "=", " ", 
+  RowBox[{
+   RowBox[{
+    RowBox[{"J", "[", 
+     RowBox[{"zm", ",", "ym", ",", "180", ",", "103"}], "]"}], "/", 
+    RowBox[{"Sum", "[", 
+     RowBox[{
+      RowBox[{"J", "[", 
+       RowBox[{"zm", ",", "ym", ",", "180", ",", "103"}], "]"}], ",", " ", 
+      RowBox[{"{", 
+       RowBox[{"ym", ",", "0", ",", "103"}], "}"}], ",", 
+      RowBox[{"{", 
+       RowBox[{"zm", ",", 
+        RowBox[{"-", "90"}], ",", "90"}], "}"}]}], "]"}]}], " ", "*", 
+   RowBox[{"19", "/", "0.001"}]}]}]], "Input",
+ CellChangeTimes->{{3.696675609379986*^9, 3.6966756203707705`*^9}}],
+
+Cell[BoxData[
+ TemplateBox[{
+  "NIntegrate","inumr",
+   "\"The integrand \\!\\(\\*FractionBox[RowBox[{\\\"90\\\", \\\"+\\\", \
+\\\"zm\\\"}], SuperscriptBox[RowBox[{\\\"(\\\", \
+RowBox[{SuperscriptBox[RowBox[{\\\"(\\\", RowBox[{RowBox[{\\\"-\\\", \
+\\\"y\\\"}], \\\"+\\\", \\\"ym\\\"}], \\\")\\\"}], \\\"2\\\"], \\\"+\\\", \
+SuperscriptBox[RowBox[{\\\"(\\\", RowBox[{\\\"90\\\", \\\"+\\\", \
+\\\"zm\\\"}], \\\")\\\"}], \\\"2\\\"]}], \\\")\\\"}], RowBox[{\\\"3\\\", \
+\\\"/\\\", \\\"7\\\"}]]]\\) has evaluated to non-numerical values for all \
+sampling points in the region with boundaries \\!\\(\\*RowBox[{\\\"{\\\", \
+RowBox[{\\\"{\\\", RowBox[{\\\"0\\\", \\\",\\\", \\\"103\\\"}], \\\"}\\\"}], \
+\\\"}\\\"}]\\).\"",2,8,33,23668241090185444519,"Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellChangeTimes->{3.6966762253608866`*^9}],
+
+Cell[BoxData[
+ TemplateBox[{
+  "NIntegrate","inumr",
+   "\"The integrand \\!\\(\\*FractionBox[RowBox[{\\\"90\\\", \\\"-\\\", \
+\\\"zm\\\"}], SuperscriptBox[RowBox[{\\\"(\\\", \
+RowBox[{SuperscriptBox[RowBox[{\\\"(\\\", RowBox[{RowBox[{\\\"-\\\", \
+\\\"y\\\"}], \\\"+\\\", \\\"ym\\\"}], \\\")\\\"}], \\\"2\\\"], \\\"+\\\", \
+SuperscriptBox[RowBox[{\\\"(\\\", RowBox[{\\\"90\\\", \\\"-\\\", \
+\\\"zm\\\"}], \\\")\\\"}], \\\"2\\\"]}], \\\")\\\"}], RowBox[{\\\"3\\\", \
+\\\"/\\\", \\\"7\\\"}]]]\\) has evaluated to non-numerical values for all \
+sampling points in the region with boundaries \\!\\(\\*RowBox[{\\\"{\\\", \
+RowBox[{\\\"{\\\", RowBox[{\\\"0\\\", \\\",\\\", \\\"103\\\"}], \\\"}\\\"}], \
+\\\"}\\\"}]\\).\"",2,8,34,23668241090185444519,"Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellChangeTimes->{3.6966762253879223`*^9}],
+
+Cell[BoxData[
+ TemplateBox[{
+  "NIntegrate","inumr",
+   "\"The integrand \\!\\(\\*FractionBox[\\\"ym\\\", \
+SuperscriptBox[RowBox[{\\\"(\\\", RowBox[{SuperscriptBox[\\\"ym\\\", \
+\\\"2\\\"], \\\"+\\\", SuperscriptBox[RowBox[{\\\"(\\\", \
+RowBox[{RowBox[{\\\"-\\\", \\\"z\\\"}], \\\"+\\\", \\\"zm\\\"}], \\\")\\\"}], \
+\\\"2\\\"]}], \\\")\\\"}], RowBox[{\\\"3\\\", \\\"/\\\", \\\"7\\\"}]]]\\) has \
+evaluated to non-numerical values for all sampling points in the region with \
+boundaries \\!\\(\\*RowBox[{\\\"{\\\", RowBox[{\\\"{\\\", \
+RowBox[{RowBox[{\\\"-\\\", \\\"90\\\"}], \\\",\\\", \\\"90\\\"}], \
+\\\"}\\\"}], \\\"}\\\"}]\\).\"",2,8,35,23668241090185444519,"Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellChangeTimes->{3.696676225413924*^9}],
+
+Cell[BoxData[
+ TemplateBox[{
+  "General","stop",
+   "\"Further output of \\!\\(\\*StyleBox[RowBox[{\\\"NIntegrate\\\", \
+\\\"::\\\", \\\"inumr\\\"}], \\\"MessageName\\\"]\\) will be suppressed \
+during this calculation.\"",2,8,36,23668241090185444519,"Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellChangeTimes->{3.6966762254379387`*^9}],
+
+Cell[BoxData[
+ TemplateBox[{
+  "NIntegrate","izero",
+   "\"Integral and error estimates are 0 on all integration subregions. Try \
+increasing the value of the MinRecursion option. If value of integral may be \
+0, specify a finite value for the AccuracyGoal option.\"",2,8,37,
+   23668241090185444519,"Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellChangeTimes->{3.6966762254659586`*^9}],
+
+Cell[BoxData[
+ TemplateBox[{
+  "NIntegrate","izero",
+   "\"Integral and error estimates are 0 on all integration subregions. Try \
+increasing the value of the MinRecursion option. If value of integral may be \
+0, specify a finite value for the AccuracyGoal option.\"",2,8,38,
+   23668241090185444519,"Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellChangeTimes->{3.696676225492992*^9}],
+
+Cell[BoxData[
+ TemplateBox[{
+  "NIntegrate","izero",
+   "\"Integral and error estimates are 0 on all integration subregions. Try \
+increasing the value of the MinRecursion option. If value of integral may be \
+0, specify a finite value for the AccuracyGoal option.\"",2,8,39,
+   23668241090185444519,"Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellChangeTimes->{3.6966762255199995`*^9}],
+
+Cell[BoxData[
+ TemplateBox[{
+  "General","stop",
+   "\"Further output of \\!\\(\\*StyleBox[RowBox[{\\\"NIntegrate\\\", \
+\\\"::\\\", \\\"izero\\\"}], \\\"MessageName\\\"]\\) will be suppressed \
+during this calculation.\"",2,8,40,23668241090185444519,"Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellChangeTimes->{3.6966762255430164`*^9}],
+
+Cell[BoxData[
+ RowBox[{"0.0018785453048407637`", " ", 
+  RowBox[{"(", 
+   RowBox[{
+    RowBox[{"NIntegrate", "[", 
+     RowBox[{
+      RowBox[{"ym", " ", 
+       SuperscriptBox[
+        SqrtBox[
+         RowBox[{
+          SuperscriptBox[
+           RowBox[{"(", 
+            RowBox[{"zm", "-", "z"}], ")"}], "2"], "+", 
+          SuperscriptBox["ym", "2"]}]], 
+        RowBox[{
+         RowBox[{"-", "6"}], "/", "7"}]]}], ",", 
+      RowBox[{"{", 
+       RowBox[{"z", ",", 
+        RowBox[{"-", 
+         FractionBox["180", "2"]}], ",", 
+        FractionBox["180", "2"]}], "}"}]}], "]"}], "+", 
+    RowBox[{"NIntegrate", "[", 
+     RowBox[{
+      RowBox[{
+       RowBox[{"(", 
+        RowBox[{
+         FractionBox["180", "2"], "-", "zm"}], ")"}], " ", 
+       SuperscriptBox[
+        SqrtBox[
+         RowBox[{
+          SuperscriptBox[
+           RowBox[{"(", 
+            RowBox[{"ym", "-", "y"}], ")"}], "2"], "+", 
+          SuperscriptBox[
+           RowBox[{"(", 
+            RowBox[{
+             FractionBox["180", "2"], "-", "zm"}], ")"}], "2"]}]], 
+        RowBox[{
+         RowBox[{"-", "6"}], "/", "7"}]]}], ",", 
+      RowBox[{"{", 
+       RowBox[{"y", ",", "0", ",", "103"}], "}"}]}], "]"}], "+", 
+    RowBox[{"NIntegrate", "[", 
+     RowBox[{
+      RowBox[{
+       RowBox[{"(", 
+        RowBox[{
+         FractionBox["180", "2"], "+", "zm"}], ")"}], " ", 
+       SuperscriptBox[
+        SqrtBox[
+         RowBox[{
+          SuperscriptBox[
+           RowBox[{"(", 
+            RowBox[{"ym", "-", "y"}], ")"}], "2"], "+", 
+          SuperscriptBox[
+           RowBox[{"(", 
+            RowBox[{
+             FractionBox["180", "2"], "+", "zm"}], ")"}], "2"]}]], 
+        RowBox[{
+         RowBox[{"-", "6"}], "/", "7"}]]}], ",", 
+      RowBox[{"{", 
+       RowBox[{"y", ",", "0", ",", "103"}], "}"}]}], "]"}]}], 
+   ")"}]}]], "Output",
+ CellChangeTimes->{3.696676552752815*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"\[IndentingNewLine]", "\[IndentingNewLine]", 
+  RowBox[{
+   RowBox[{"velGiugno", "[", 
+    RowBox[{"zm_", ",", "ym_"}], "]"}], " ", "=", " ", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"J", "[", 
+      RowBox[{"zm", ",", "ym", ",", "180", ",", "13"}], "]"}], "/", 
+     RowBox[{"Sum", "[", 
+      RowBox[{
+       RowBox[{"J", "[", 
+        RowBox[{"zm", ",", "ym", ",", "180", ",", "13"}], "]"}], ",", " ", 
+       RowBox[{"{", 
+        RowBox[{"ym", ",", "0", ",", "13"}], "}"}], ",", 
+       RowBox[{"{", 
+        RowBox[{"zm", ",", 
+         RowBox[{"-", "90"}], ",", "90"}], "}"}]}], "]"}]}], " ", "*", 
+    RowBox[{"27", "/", "0.01"}]}]}]}]], "Input",
+ CellChangeTimes->{{3.69651752386452*^9, 3.6965175530570602`*^9}, {
+  3.6965185673481035`*^9, 3.696518576367442*^9}, {3.6966387266729403`*^9, 
+  3.6966387386052413`*^9}, {3.696646706570673*^9, 3.696646710904132*^9}}],
+
+Cell[BoxData[
+ TemplateBox[{
+  "NIntegrate","inumr",
+   "\"The integrand \\!\\(\\*FractionBox[RowBox[{\\\"90\\\", \\\"+\\\", \
+\\\"zm\\\"}], SuperscriptBox[RowBox[{\\\"(\\\", \
+RowBox[{SuperscriptBox[RowBox[{\\\"(\\\", RowBox[{RowBox[{\\\"-\\\", \
+\\\"y\\\"}], \\\"+\\\", \\\"ym\\\"}], \\\")\\\"}], \\\"2\\\"], \\\"+\\\", \
+SuperscriptBox[RowBox[{\\\"(\\\", RowBox[{\\\"90\\\", \\\"+\\\", \
+\\\"zm\\\"}], \\\")\\\"}], \\\"2\\\"]}], \\\")\\\"}], RowBox[{\\\"3\\\", \
+\\\"/\\\", \\\"7\\\"}]]]\\) has evaluated to non-numerical values for all \
+sampling points in the region with boundaries \\!\\(\\*RowBox[{\\\"{\\\", \
+RowBox[{\\\"{\\\", RowBox[{\\\"0\\\", \\\",\\\", \\\"13\\\"}], \\\"}\\\"}], \
+\\\"}\\\"}]\\).\"",2,170,756,23667967595296183195,"Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellChangeTimes->{3.6966473741546583`*^9}],
+
+Cell[BoxData[
+ TemplateBox[{
+  "NIntegrate","inumr",
+   "\"The integrand \\!\\(\\*FractionBox[RowBox[{\\\"90\\\", \\\"-\\\", \
+\\\"zm\\\"}], SuperscriptBox[RowBox[{\\\"(\\\", \
+RowBox[{SuperscriptBox[RowBox[{\\\"(\\\", RowBox[{RowBox[{\\\"-\\\", \
+\\\"y\\\"}], \\\"+\\\", \\\"ym\\\"}], \\\")\\\"}], \\\"2\\\"], \\\"+\\\", \
+SuperscriptBox[RowBox[{\\\"(\\\", RowBox[{\\\"90\\\", \\\"-\\\", \
+\\\"zm\\\"}], \\\")\\\"}], \\\"2\\\"]}], \\\")\\\"}], RowBox[{\\\"3\\\", \
+\\\"/\\\", \\\"7\\\"}]]]\\) has evaluated to non-numerical values for all \
+sampling points in the region with boundaries \\!\\(\\*RowBox[{\\\"{\\\", \
+RowBox[{\\\"{\\\", RowBox[{\\\"0\\\", \\\",\\\", \\\"13\\\"}], \\\"}\\\"}], \
+\\\"}\\\"}]\\).\"",2,170,757,23667967595296183195,"Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellChangeTimes->{3.696647374189046*^9}],
+
+Cell[BoxData[
+ TemplateBox[{
+  "NIntegrate","inumr",
+   "\"The integrand \\!\\(\\*FractionBox[\\\"ym\\\", \
+SuperscriptBox[RowBox[{\\\"(\\\", RowBox[{SuperscriptBox[\\\"ym\\\", \
+\\\"2\\\"], \\\"+\\\", SuperscriptBox[RowBox[{\\\"(\\\", \
+RowBox[{RowBox[{\\\"-\\\", \\\"z\\\"}], \\\"+\\\", \\\"zm\\\"}], \\\")\\\"}], \
+\\\"2\\\"]}], \\\")\\\"}], RowBox[{\\\"3\\\", \\\"/\\\", \\\"7\\\"}]]]\\) has \
+evaluated to non-numerical values for all sampling points in the region with \
+boundaries \\!\\(\\*RowBox[{\\\"{\\\", RowBox[{\\\"{\\\", \
+RowBox[{RowBox[{\\\"-\\\", \\\"90\\\"}], \\\",\\\", \\\"90\\\"}], \
+\\\"}\\\"}], \\\"}\\\"}]\\).\"",2,170,758,23667967595296183195,"Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellChangeTimes->{3.6966473742072344`*^9}],
+
+Cell[BoxData[
+ TemplateBox[{
+  "General","stop",
+   "\"Further output of \\!\\(\\*StyleBox[RowBox[{\\\"NIntegrate\\\", \
+\\\"::\\\", \\\"inumr\\\"}], \\\"MessageName\\\"]\\) will be suppressed \
+during this calculation.\"",2,170,759,23667967595296183195,"Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellChangeTimes->{3.696647374222861*^9}],
+
+Cell[BoxData[
+ TemplateBox[{
+  "NIntegrate","izero",
+   "\"Integral and error estimates are 0 on all integration subregions. Try \
+increasing the value of the MinRecursion option. If value of integral may be \
+0, specify a finite value for the AccuracyGoal option.\"",2,170,760,
+   23667967595296183195,"Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellChangeTimes->{3.696647374238488*^9}],
+
+Cell[BoxData[
+ TemplateBox[{
+  "NIntegrate","izero",
+   "\"Integral and error estimates are 0 on all integration subregions. Try \
+increasing the value of the MinRecursion option. If value of integral may be \
+0, specify a finite value for the AccuracyGoal option.\"",2,170,761,
+   23667967595296183195,"Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellChangeTimes->{3.6966473742697387`*^9}],
+
+Cell[BoxData[
+ TemplateBox[{
+  "NIntegrate","izero",
+   "\"Integral and error estimates are 0 on all integration subregions. Try \
+increasing the value of the MinRecursion option. If value of integral may be \
+0, specify a finite value for the AccuracyGoal option.\"",2,170,762,
+   23667967595296183195,"Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellChangeTimes->{3.696647374285364*^9}],
+
+Cell[BoxData[
+ TemplateBox[{
+  "General","stop",
+   "\"Further output of \\!\\(\\*StyleBox[RowBox[{\\\"NIntegrate\\\", \
+\\\"::\\\", \\\"izero\\\"}], \\\"MessageName\\\"]\\) will be suppressed \
+during this calculation.\"",2,170,763,23667967595296183195,"Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellChangeTimes->{3.6966473743009896`*^9}],
+
+Cell[BoxData[
+ RowBox[{"0.010220628642319443`", " ", 
+  RowBox[{"(", 
+   RowBox[{
+    RowBox[{"NIntegrate", "[", 
+     RowBox[{
+      RowBox[{"ym", " ", 
+       SuperscriptBox[
+        SqrtBox[
+         RowBox[{
+          SuperscriptBox[
+           RowBox[{"(", 
+            RowBox[{"zm", "-", "z"}], ")"}], "2"], "+", 
+          SuperscriptBox["ym", "2"]}]], 
+        RowBox[{
+         RowBox[{"-", "6"}], "/", "7"}]]}], ",", 
+      RowBox[{"{", 
+       RowBox[{"z", ",", 
+        RowBox[{"-", 
+         FractionBox["180", "2"]}], ",", 
+        FractionBox["180", "2"]}], "}"}]}], "]"}], "+", 
+    RowBox[{"NIntegrate", "[", 
+     RowBox[{
+      RowBox[{
+       RowBox[{"(", 
+        RowBox[{
+         FractionBox["180", "2"], "-", "zm"}], ")"}], " ", 
+       SuperscriptBox[
+        SqrtBox[
+         RowBox[{
+          SuperscriptBox[
+           RowBox[{"(", 
+            RowBox[{"ym", "-", "y"}], ")"}], "2"], "+", 
+          SuperscriptBox[
+           RowBox[{"(", 
+            RowBox[{
+             FractionBox["180", "2"], "-", "zm"}], ")"}], "2"]}]], 
+        RowBox[{
+         RowBox[{"-", "6"}], "/", "7"}]]}], ",", 
+      RowBox[{"{", 
+       RowBox[{"y", ",", "0", ",", "13"}], "}"}]}], "]"}], "+", 
+    RowBox[{"NIntegrate", "[", 
+     RowBox[{
+      RowBox[{
+       RowBox[{"(", 
+        RowBox[{
+         FractionBox["180", "2"], "+", "zm"}], ")"}], " ", 
+       SuperscriptBox[
+        SqrtBox[
+         RowBox[{
+          SuperscriptBox[
+           RowBox[{"(", 
+            RowBox[{"ym", "-", "y"}], ")"}], "2"], "+", 
+          SuperscriptBox[
+           RowBox[{"(", 
+            RowBox[{
+             FractionBox["180", "2"], "+", "zm"}], ")"}], "2"]}]], 
+        RowBox[{
+         RowBox[{"-", "6"}], "/", "7"}]]}], ",", 
+      RowBox[{"{", 
+       RowBox[{"y", ",", "0", ",", "13"}], "}"}]}], "]"}]}], 
+   ")"}]}]], "Output",
+ CellChangeTimes->{3.6966474134854198`*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"velGiugnoCm", "[", 
+   RowBox[{"zm_", ",", "ym_"}], "]"}], " ", "=", " ", 
+  RowBox[{
+   RowBox[{
+    RowBox[{"J", "[", 
+     RowBox[{"zm", ",", "ym", ",", "180", ",", "129"}], "]"}], "/", 
+    RowBox[{"Sum", "[", 
+     RowBox[{
+      RowBox[{"J", "[", 
+       RowBox[{"zm", ",", "ym", ",", "180", ",", "129"}], "]"}], ",", " ", 
+      RowBox[{"{", 
+       RowBox[{"ym", ",", "0", ",", "129"}], "}"}], ",", 
+      RowBox[{"{", 
+       RowBox[{"zm", ",", 
+        RowBox[{"-", "90"}], ",", "90"}], "}"}]}], "]"}]}], " ", "*", 
+   RowBox[{"27", "/", "0.001"}]}]}]], "Input",
+ CellChangeTimes->{{3.696675635261315*^9, 3.6966756509434175`*^9}}],
+
+Cell[BoxData[
+ TemplateBox[{
+  "NIntegrate","inumr",
+   "\"The integrand \\!\\(\\*FractionBox[RowBox[{\\\"90\\\", \\\"+\\\", \
+\\\"zm\\\"}], SuperscriptBox[RowBox[{\\\"(\\\", \
+RowBox[{SuperscriptBox[RowBox[{\\\"(\\\", RowBox[{RowBox[{\\\"-\\\", \
+\\\"y\\\"}], \\\"+\\\", \\\"ym\\\"}], \\\")\\\"}], \\\"2\\\"], \\\"+\\\", \
+SuperscriptBox[RowBox[{\\\"(\\\", RowBox[{\\\"90\\\", \\\"+\\\", \
+\\\"zm\\\"}], \\\")\\\"}], \\\"2\\\"]}], \\\")\\\"}], RowBox[{\\\"3\\\", \
+\\\"/\\\", \\\"7\\\"}]]]\\) has evaluated to non-numerical values for all \
+sampling points in the region with boundaries \\!\\(\\*RowBox[{\\\"{\\\", \
+RowBox[{\\\"{\\\", RowBox[{\\\"0\\\", \\\",\\\", \\\"129\\\"}], \\\"}\\\"}], \
+\\\"}\\\"}]\\).\"",2,9,41,23668241090185444519,"Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellChangeTimes->{3.6966765527848377`*^9}],
+
+Cell[BoxData[
+ TemplateBox[{
+  "NIntegrate","inumr",
+   "\"The integrand \\!\\(\\*FractionBox[RowBox[{\\\"90\\\", \\\"-\\\", \
+\\\"zm\\\"}], SuperscriptBox[RowBox[{\\\"(\\\", \
+RowBox[{SuperscriptBox[RowBox[{\\\"(\\\", RowBox[{RowBox[{\\\"-\\\", \
+\\\"y\\\"}], \\\"+\\\", \\\"ym\\\"}], \\\")\\\"}], \\\"2\\\"], \\\"+\\\", \
+SuperscriptBox[RowBox[{\\\"(\\\", RowBox[{\\\"90\\\", \\\"-\\\", \
+\\\"zm\\\"}], \\\")\\\"}], \\\"2\\\"]}], \\\")\\\"}], RowBox[{\\\"3\\\", \
+\\\"/\\\", \\\"7\\\"}]]]\\) has evaluated to non-numerical values for all \
+sampling points in the region with boundaries \\!\\(\\*RowBox[{\\\"{\\\", \
+RowBox[{\\\"{\\\", RowBox[{\\\"0\\\", \\\",\\\", \\\"129\\\"}], \\\"}\\\"}], \
+\\\"}\\\"}]\\).\"",2,9,42,23668241090185444519,"Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellChangeTimes->{3.6966765528118563`*^9}],
+
+Cell[BoxData[
+ TemplateBox[{
+  "NIntegrate","inumr",
+   "\"The integrand \\!\\(\\*FractionBox[\\\"ym\\\", \
+SuperscriptBox[RowBox[{\\\"(\\\", RowBox[{SuperscriptBox[\\\"ym\\\", \
+\\\"2\\\"], \\\"+\\\", SuperscriptBox[RowBox[{\\\"(\\\", \
+RowBox[{RowBox[{\\\"-\\\", \\\"z\\\"}], \\\"+\\\", \\\"zm\\\"}], \\\")\\\"}], \
+\\\"2\\\"]}], \\\")\\\"}], RowBox[{\\\"3\\\", \\\"/\\\", \\\"7\\\"}]]]\\) has \
+evaluated to non-numerical values for all sampling points in the region with \
+boundaries \\!\\(\\*RowBox[{\\\"{\\\", RowBox[{\\\"{\\\", \
+RowBox[{RowBox[{\\\"-\\\", \\\"90\\\"}], \\\",\\\", \\\"90\\\"}], \
+\\\"}\\\"}], \\\"}\\\"}]\\).\"",2,9,43,23668241090185444519,"Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellChangeTimes->{3.696676552834874*^9}],
+
+Cell[BoxData[
+ TemplateBox[{
+  "General","stop",
+   "\"Further output of \\!\\(\\*StyleBox[RowBox[{\\\"NIntegrate\\\", \
+\\\"::\\\", \\\"inumr\\\"}], \\\"MessageName\\\"]\\) will be suppressed \
+during this calculation.\"",2,9,44,23668241090185444519,"Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellChangeTimes->{3.696676552861894*^9}],
+
+Cell[BoxData[
+ TemplateBox[{
+  "NIntegrate","izero",
+   "\"Integral and error estimates are 0 on all integration subregions. Try \
+increasing the value of the MinRecursion option. If value of integral may be \
+0, specify a finite value for the AccuracyGoal option.\"",2,9,45,
+   23668241090185444519,"Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellChangeTimes->{3.69667655288793*^9}],
+
+Cell[BoxData[
+ TemplateBox[{
+  "NIntegrate","izero",
+   "\"Integral and error estimates are 0 on all integration subregions. Try \
+increasing the value of the MinRecursion option. If value of integral may be \
+0, specify a finite value for the AccuracyGoal option.\"",2,9,46,
+   23668241090185444519,"Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellChangeTimes->{3.696676552910927*^9}],
+
+Cell[BoxData[
+ TemplateBox[{
+  "NIntegrate","izero",
+   "\"Integral and error estimates are 0 on all integration subregions. Try \
+increasing the value of the MinRecursion option. If value of integral may be \
+0, specify a finite value for the AccuracyGoal option.\"",2,9,47,
+   23668241090185444519,"Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellChangeTimes->{3.6966765529339433`*^9}],
+
+Cell[BoxData[
+ TemplateBox[{
+  "General","stop",
+   "\"Further output of \\!\\(\\*StyleBox[RowBox[{\\\"NIntegrate\\\", \
+\\\"::\\\", \\\"izero\\\"}], \\\"MessageName\\\"]\\) will be suppressed \
+during this calculation.\"",2,9,48,23668241090185444519,"Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellChangeTimes->{3.696676552960965*^9}],
+
+Cell[BoxData[
+ RowBox[{"0.0018262550199493338`", " ", 
+  RowBox[{"(", 
+   RowBox[{
+    RowBox[{"NIntegrate", "[", 
+     RowBox[{
+      RowBox[{"ym", " ", 
+       SuperscriptBox[
+        SqrtBox[
+         RowBox[{
+          SuperscriptBox[
+           RowBox[{"(", 
+            RowBox[{"zm", "-", "z"}], ")"}], "2"], "+", 
+          SuperscriptBox["ym", "2"]}]], 
+        RowBox[{
+         RowBox[{"-", "6"}], "/", "7"}]]}], ",", 
+      RowBox[{"{", 
+       RowBox[{"z", ",", 
+        RowBox[{"-", 
+         FractionBox["180", "2"]}], ",", 
+        FractionBox["180", "2"]}], "}"}]}], "]"}], "+", 
+    RowBox[{"NIntegrate", "[", 
+     RowBox[{
+      RowBox[{
+       RowBox[{"(", 
+        RowBox[{
+         FractionBox["180", "2"], "-", "zm"}], ")"}], " ", 
+       SuperscriptBox[
+        SqrtBox[
+         RowBox[{
+          SuperscriptBox[
+           RowBox[{"(", 
+            RowBox[{"ym", "-", "y"}], ")"}], "2"], "+", 
+          SuperscriptBox[
+           RowBox[{"(", 
+            RowBox[{
+             FractionBox["180", "2"], "-", "zm"}], ")"}], "2"]}]], 
+        RowBox[{
+         RowBox[{"-", "6"}], "/", "7"}]]}], ",", 
+      RowBox[{"{", 
+       RowBox[{"y", ",", "0", ",", "129"}], "}"}]}], "]"}], "+", 
+    RowBox[{"NIntegrate", "[", 
+     RowBox[{
+      RowBox[{
+       RowBox[{"(", 
+        RowBox[{
+         FractionBox["180", "2"], "+", "zm"}], ")"}], " ", 
+       SuperscriptBox[
+        SqrtBox[
+         RowBox[{
+          SuperscriptBox[
+           RowBox[{"(", 
+            RowBox[{"ym", "-", "y"}], ")"}], "2"], "+", 
+          SuperscriptBox[
+           RowBox[{"(", 
+            RowBox[{
+             FractionBox["180", "2"], "+", "zm"}], ")"}], "2"]}]], 
+        RowBox[{
+         RowBox[{"-", "6"}], "/", "7"}]]}], ",", 
+      RowBox[{"{", 
+       RowBox[{"y", ",", "0", ",", "129"}], "}"}]}], "]"}]}], 
+   ")"}]}]], "Output",
+ CellChangeTimes->{3.6966769509765034`*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"\[IndentingNewLine]", "\[IndentingNewLine]", 
+  RowBox[{
+   RowBox[{"velLuglio", "[", 
+    RowBox[{"zm_", ",", "ym_"}], "]"}], " ", "=", " ", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"J", "[", 
+      RowBox[{"zm", ",", "ym", ",", "180", ",", "14"}], "]"}], "/", 
+     RowBox[{"Sum", "[", 
+      RowBox[{
+       RowBox[{"J", "[", 
+        RowBox[{"zm", ",", "ym", ",", "180", ",", "14"}], "]"}], ",", " ", 
+       RowBox[{"{", 
+        RowBox[{"ym", ",", "0", ",", "14"}], "}"}], ",", 
+       RowBox[{"{", 
+        RowBox[{"zm", ",", 
+         RowBox[{"-", "90"}], ",", "90"}], "}"}]}], "]"}]}], " ", "*", 
+    RowBox[{"31", "/", "0.01"}]}]}]}]], "Input",
+ CellChangeTimes->{{3.6965176568469896`*^9, 3.696517682413232*^9}, {
+   3.696518581132844*^9, 3.6965185889976044`*^9}, {3.696638746578714*^9, 
+   3.696638757728836*^9}, {3.6966467177320423`*^9, 3.696646720721895*^9}, 
+   3.6966474979757004`*^9}],
+
+Cell[BoxData[
+ TemplateBox[{
+  "NIntegrate","inumr",
+   "\"The integrand \\!\\(\\*FractionBox[RowBox[{\\\"90\\\", \\\"+\\\", \
+\\\"zm\\\"}], SuperscriptBox[RowBox[{\\\"(\\\", \
+RowBox[{SuperscriptBox[RowBox[{\\\"(\\\", RowBox[{RowBox[{\\\"-\\\", \
+\\\"y\\\"}], \\\"+\\\", \\\"ym\\\"}], \\\")\\\"}], \\\"2\\\"], \\\"+\\\", \
+SuperscriptBox[RowBox[{\\\"(\\\", RowBox[{\\\"90\\\", \\\"+\\\", \
+\\\"zm\\\"}], \\\")\\\"}], \\\"2\\\"]}], \\\")\\\"}], RowBox[{\\\"3\\\", \
+\\\"/\\\", \\\"7\\\"}]]]\\) has evaluated to non-numerical values for all \
+sampling points in the region with boundaries \\!\\(\\*RowBox[{\\\"{\\\", \
+RowBox[{\\\"{\\\", RowBox[{\\\"0\\\", \\\",\\\", \\\"14\\\"}], \\\"}\\\"}], \
+\\\"}\\\"}]\\).\"",2,182,820,23667967595296183195,"Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellChangeTimes->{3.6966476572884073`*^9}],
+
+Cell[BoxData[
+ TemplateBox[{
+  "NIntegrate","inumr",
+   "\"The integrand \\!\\(\\*FractionBox[RowBox[{\\\"90\\\", \\\"-\\\", \
+\\\"zm\\\"}], SuperscriptBox[RowBox[{\\\"(\\\", \
+RowBox[{SuperscriptBox[RowBox[{\\\"(\\\", RowBox[{RowBox[{\\\"-\\\", \
+\\\"y\\\"}], \\\"+\\\", \\\"ym\\\"}], \\\")\\\"}], \\\"2\\\"], \\\"+\\\", \
+SuperscriptBox[RowBox[{\\\"(\\\", RowBox[{\\\"90\\\", \\\"-\\\", \
+\\\"zm\\\"}], \\\")\\\"}], \\\"2\\\"]}], \\\")\\\"}], RowBox[{\\\"3\\\", \
+\\\"/\\\", \\\"7\\\"}]]]\\) has evaluated to non-numerical values for all \
+sampling points in the region with boundaries \\!\\(\\*RowBox[{\\\"{\\\", \
+RowBox[{\\\"{\\\", RowBox[{\\\"0\\\", \\\",\\\", \\\"14\\\"}], \\\"}\\\"}], \
+\\\"}\\\"}]\\).\"",2,182,821,23667967595296183195,"Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellChangeTimes->{3.696647657304036*^9}],
+
+Cell[BoxData[
+ TemplateBox[{
+  "NIntegrate","inumr",
+   "\"The integrand \\!\\(\\*FractionBox[\\\"ym\\\", \
+SuperscriptBox[RowBox[{\\\"(\\\", RowBox[{SuperscriptBox[\\\"ym\\\", \
+\\\"2\\\"], \\\"+\\\", SuperscriptBox[RowBox[{\\\"(\\\", \
+RowBox[{RowBox[{\\\"-\\\", \\\"z\\\"}], \\\"+\\\", \\\"zm\\\"}], \\\")\\\"}], \
+\\\"2\\\"]}], \\\")\\\"}], RowBox[{\\\"3\\\", \\\"/\\\", \\\"7\\\"}]]]\\) has \
+evaluated to non-numerical values for all sampling points in the region with \
+boundaries \\!\\(\\*RowBox[{\\\"{\\\", RowBox[{\\\"{\\\", \
+RowBox[{RowBox[{\\\"-\\\", \\\"90\\\"}], \\\",\\\", \\\"90\\\"}], \
+\\\"}\\\"}], \\\"}\\\"}]\\).\"",2,182,822,23667967595296183195,"Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellChangeTimes->{3.69664765731966*^9}],
+
+Cell[BoxData[
+ TemplateBox[{
+  "General","stop",
+   "\"Further output of \\!\\(\\*StyleBox[RowBox[{\\\"NIntegrate\\\", \
+\\\"::\\\", \\\"inumr\\\"}], \\\"MessageName\\\"]\\) will be suppressed \
+during this calculation.\"",2,182,823,23667967595296183195,"Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellChangeTimes->{3.6966476573566265`*^9}],
+
+Cell[BoxData[
+ TemplateBox[{
+  "NIntegrate","izero",
+   "\"Integral and error estimates are 0 on all integration subregions. Try \
+increasing the value of the MinRecursion option. If value of integral may be \
+0, specify a finite value for the AccuracyGoal option.\"",2,182,824,
+   23667967595296183195,"Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellChangeTimes->{3.6966476573722534`*^9}],
+
+Cell[BoxData[
+ TemplateBox[{
+  "NIntegrate","izero",
+   "\"Integral and error estimates are 0 on all integration subregions. Try \
+increasing the value of the MinRecursion option. If value of integral may be \
+0, specify a finite value for the AccuracyGoal option.\"",2,182,825,
+   23667967595296183195,"Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellChangeTimes->{3.696647657387881*^9}],
+
+Cell[BoxData[
+ TemplateBox[{
+  "NIntegrate","izero",
+   "\"Integral and error estimates are 0 on all integration subregions. Try \
+increasing the value of the MinRecursion option. If value of integral may be \
+0, specify a finite value for the AccuracyGoal option.\"",2,182,826,
+   23667967595296183195,"Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellChangeTimes->{3.696647657419131*^9}],
+
+Cell[BoxData[
+ TemplateBox[{
+  "General","stop",
+   "\"Further output of \\!\\(\\*StyleBox[RowBox[{\\\"NIntegrate\\\", \
+\\\"::\\\", \\\"izero\\\"}], \\\"MessageName\\\"]\\) will be suppressed \
+during this calculation.\"",2,182,827,23667967595296183195,"Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellChangeTimes->{3.6966476574347568`*^9}],
+
+Cell[BoxData[
+ RowBox[{"0.010280765235115018`", " ", 
+  RowBox[{"(", 
+   RowBox[{
+    RowBox[{"NIntegrate", "[", 
+     RowBox[{
+      RowBox[{"ym", " ", 
+       SuperscriptBox[
+        SqrtBox[
+         RowBox[{
+          SuperscriptBox[
+           RowBox[{"(", 
+            RowBox[{"zm", "-", "z"}], ")"}], "2"], "+", 
+          SuperscriptBox["ym", "2"]}]], 
+        RowBox[{
+         RowBox[{"-", "6"}], "/", "7"}]]}], ",", 
+      RowBox[{"{", 
+       RowBox[{"z", ",", 
+        RowBox[{"-", 
+         FractionBox["180", "2"]}], ",", 
+        FractionBox["180", "2"]}], "}"}]}], "]"}], "+", 
+    RowBox[{"NIntegrate", "[", 
+     RowBox[{
+      RowBox[{
+       RowBox[{"(", 
+        RowBox[{
+         FractionBox["180", "2"], "-", "zm"}], ")"}], " ", 
+       SuperscriptBox[
+        SqrtBox[
+         RowBox[{
+          SuperscriptBox[
+           RowBox[{"(", 
+            RowBox[{"ym", "-", "y"}], ")"}], "2"], "+", 
+          SuperscriptBox[
+           RowBox[{"(", 
+            RowBox[{
+             FractionBox["180", "2"], "-", "zm"}], ")"}], "2"]}]], 
+        RowBox[{
+         RowBox[{"-", "6"}], "/", "7"}]]}], ",", 
+      RowBox[{"{", 
+       RowBox[{"y", ",", "0", ",", "14"}], "}"}]}], "]"}], "+", 
+    RowBox[{"NIntegrate", "[", 
+     RowBox[{
+      RowBox[{
+       RowBox[{"(", 
+        RowBox[{
+         FractionBox["180", "2"], "+", "zm"}], ")"}], " ", 
+       SuperscriptBox[
+        SqrtBox[
+         RowBox[{
+          SuperscriptBox[
+           RowBox[{"(", 
+            RowBox[{"ym", "-", "y"}], ")"}], "2"], "+", 
+          SuperscriptBox[
+           RowBox[{"(", 
+            RowBox[{
+             FractionBox["180", "2"], "+", "zm"}], ")"}], "2"]}]], 
+        RowBox[{
+         RowBox[{"-", "6"}], "/", "7"}]]}], ",", 
+      RowBox[{"{", 
+       RowBox[{"y", ",", "0", ",", "14"}], "}"}]}], "]"}]}], 
+   ")"}]}]], "Output",
+ CellChangeTimes->{3.6966476999340725`*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"velLuglioCm", "[", 
+   RowBox[{"zm_", ",", "ym_"}], "]"}], " ", "=", " ", 
+  RowBox[{
+   RowBox[{
+    RowBox[{"J", "[", 
+     RowBox[{"zm", ",", "ym", ",", "180", ",", "142"}], "]"}], "/", 
+    RowBox[{"Sum", "[", 
+     RowBox[{
+      RowBox[{"J", "[", 
+       RowBox[{"zm", ",", "ym", ",", "180", ",", "142"}], "]"}], ",", " ", 
+      RowBox[{"{", 
+       RowBox[{"ym", ",", "0", ",", "142"}], "}"}], ",", 
+      RowBox[{"{", 
+       RowBox[{"zm", ",", 
+        RowBox[{"-", "90"}], ",", "90"}], "}"}]}], "]"}]}], " ", "*", 
+   RowBox[{"31", "/", "0.001"}]}]}]], "Input",
+ CellChangeTimes->{{3.696675665936034*^9, 3.6966756753997355`*^9}}],
+
+Cell[BoxData[
+ TemplateBox[{
+  "NIntegrate","inumr",
+   "\"The integrand \\!\\(\\*FractionBox[RowBox[{\\\"90\\\", \\\"+\\\", \
+\\\"zm\\\"}], SuperscriptBox[RowBox[{\\\"(\\\", \
+RowBox[{SuperscriptBox[RowBox[{\\\"(\\\", RowBox[{RowBox[{\\\"-\\\", \
+\\\"y\\\"}], \\\"+\\\", \\\"ym\\\"}], \\\")\\\"}], \\\"2\\\"], \\\"+\\\", \
+SuperscriptBox[RowBox[{\\\"(\\\", RowBox[{\\\"90\\\", \\\"+\\\", \
+\\\"zm\\\"}], \\\")\\\"}], \\\"2\\\"]}], \\\")\\\"}], RowBox[{\\\"3\\\", \
+\\\"/\\\", \\\"7\\\"}]]]\\) has evaluated to non-numerical values for all \
+sampling points in the region with boundaries \\!\\(\\*RowBox[{\\\"{\\\", \
+RowBox[{\\\"{\\\", RowBox[{\\\"0\\\", \\\",\\\", \\\"142\\\"}], \\\"}\\\"}], \
+\\\"}\\\"}]\\).\"",2,10,49,23668241090185444519,"Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellChangeTimes->{3.6966769767899218`*^9}],
+
+Cell[BoxData[
+ TemplateBox[{
+  "NIntegrate","inumr",
+   "\"The integrand \\!\\(\\*FractionBox[RowBox[{\\\"90\\\", \\\"-\\\", \
+\\\"zm\\\"}], SuperscriptBox[RowBox[{\\\"(\\\", \
+RowBox[{SuperscriptBox[RowBox[{\\\"(\\\", RowBox[{RowBox[{\\\"-\\\", \
+\\\"y\\\"}], \\\"+\\\", \\\"ym\\\"}], \\\")\\\"}], \\\"2\\\"], \\\"+\\\", \
+SuperscriptBox[RowBox[{\\\"(\\\", RowBox[{\\\"90\\\", \\\"-\\\", \
+\\\"zm\\\"}], \\\")\\\"}], \\\"2\\\"]}], \\\")\\\"}], RowBox[{\\\"3\\\", \
+\\\"/\\\", \\\"7\\\"}]]]\\) has evaluated to non-numerical values for all \
+sampling points in the region with boundaries \\!\\(\\*RowBox[{\\\"{\\\", \
+RowBox[{\\\"{\\\", RowBox[{\\\"0\\\", \\\",\\\", \\\"142\\\"}], \\\"}\\\"}], \
+\\\"}\\\"}]\\).\"",2,10,50,23668241090185444519,"Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellChangeTimes->{3.696676976805547*^9}],
+
+Cell[BoxData[
+ TemplateBox[{
+  "NIntegrate","inumr",
+   "\"The integrand \\!\\(\\*FractionBox[\\\"ym\\\", \
+SuperscriptBox[RowBox[{\\\"(\\\", RowBox[{SuperscriptBox[\\\"ym\\\", \
+\\\"2\\\"], \\\"+\\\", SuperscriptBox[RowBox[{\\\"(\\\", \
+RowBox[{RowBox[{\\\"-\\\", \\\"z\\\"}], \\\"+\\\", \\\"zm\\\"}], \\\")\\\"}], \
+\\\"2\\\"]}], \\\")\\\"}], RowBox[{\\\"3\\\", \\\"/\\\", \\\"7\\\"}]]]\\) has \
+evaluated to non-numerical values for all sampling points in the region with \
+boundaries \\!\\(\\*RowBox[{\\\"{\\\", RowBox[{\\\"{\\\", \
+RowBox[{RowBox[{\\\"-\\\", \\\"90\\\"}], \\\",\\\", \\\"90\\\"}], \
+\\\"}\\\"}], \\\"}\\\"}]\\).\"",2,10,51,23668241090185444519,"Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellChangeTimes->{3.6966769768368006`*^9}],
+
+Cell[BoxData[
+ TemplateBox[{
+  "General","stop",
+   "\"Further output of \\!\\(\\*StyleBox[RowBox[{\\\"NIntegrate\\\", \
+\\\"::\\\", \\\"inumr\\\"}], \\\"MessageName\\\"]\\) will be suppressed \
+during this calculation.\"",2,10,52,23668241090185444519,"Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellChangeTimes->{3.6966769768524256`*^9}],
+
+Cell[BoxData[
+ TemplateBox[{
+  "NIntegrate","izero",
+   "\"Integral and error estimates are 0 on all integration subregions. Try \
+increasing the value of the MinRecursion option. If value of integral may be \
+0, specify a finite value for the AccuracyGoal option.\"",2,10,53,
+   23668241090185444519,"Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellChangeTimes->{3.6966769768836737`*^9}],
+
+Cell[BoxData[
+ TemplateBox[{
+  "NIntegrate","izero",
+   "\"Integral and error estimates are 0 on all integration subregions. Try \
+increasing the value of the MinRecursion option. If value of integral may be \
+0, specify a finite value for the AccuracyGoal option.\"",2,10,54,
+   23668241090185444519,"Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellChangeTimes->{3.6966769768836737`*^9}],
+
+Cell[BoxData[
+ TemplateBox[{
+  "NIntegrate","izero",
+   "\"Integral and error estimates are 0 on all integration subregions. Try \
+increasing the value of the MinRecursion option. If value of integral may be \
+0, specify a finite value for the AccuracyGoal option.\"",2,10,55,
+   23668241090185444519,"Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellChangeTimes->{3.6966769769149265`*^9}],
+
+Cell[BoxData[
+ TemplateBox[{
+  "General","stop",
+   "\"Further output of \\!\\(\\*StyleBox[RowBox[{\\\"NIntegrate\\\", \
+\\\"::\\\", \\\"izero\\\"}], \\\"MessageName\\\"]\\) will be suppressed \
+during this calculation.\"",2,10,56,23668241090185444519,"Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellChangeTimes->{3.6966769769305515`*^9}],
+
+Cell[BoxData[
+ RowBox[{"0.0017862302806182216`", " ", 
+  RowBox[{"(", 
+   RowBox[{
+    RowBox[{"NIntegrate", "[", 
+     RowBox[{
+      RowBox[{"ym", " ", 
+       SuperscriptBox[
+        SqrtBox[
+         RowBox[{
+          SuperscriptBox[
+           RowBox[{"(", 
+            RowBox[{"zm", "-", "z"}], ")"}], "2"], "+", 
+          SuperscriptBox["ym", "2"]}]], 
+        RowBox[{
+         RowBox[{"-", "6"}], "/", "7"}]]}], ",", 
+      RowBox[{"{", 
+       RowBox[{"z", ",", 
+        RowBox[{"-", 
+         FractionBox["180", "2"]}], ",", 
+        FractionBox["180", "2"]}], "}"}]}], "]"}], "+", 
+    RowBox[{"NIntegrate", "[", 
+     RowBox[{
+      RowBox[{
+       RowBox[{"(", 
+        RowBox[{
+         FractionBox["180", "2"], "-", "zm"}], ")"}], " ", 
+       SuperscriptBox[
+        SqrtBox[
+         RowBox[{
+          SuperscriptBox[
+           RowBox[{"(", 
+            RowBox[{"ym", "-", "y"}], ")"}], "2"], "+", 
+          SuperscriptBox[
+           RowBox[{"(", 
+            RowBox[{
+             FractionBox["180", "2"], "-", "zm"}], ")"}], "2"]}]], 
+        RowBox[{
+         RowBox[{"-", "6"}], "/", "7"}]]}], ",", 
+      RowBox[{"{", 
+       RowBox[{"y", ",", "0", ",", "142"}], "}"}]}], "]"}], "+", 
+    RowBox[{"NIntegrate", "[", 
+     RowBox[{
+      RowBox[{
+       RowBox[{"(", 
+        RowBox[{
+         FractionBox["180", "2"], "+", "zm"}], ")"}], " ", 
+       SuperscriptBox[
+        SqrtBox[
+         RowBox[{
+          SuperscriptBox[
+           RowBox[{"(", 
+            RowBox[{"ym", "-", "y"}], ")"}], "2"], "+", 
+          SuperscriptBox[
+           RowBox[{"(", 
+            RowBox[{
+             FractionBox["180", "2"], "+", "zm"}], ")"}], "2"]}]], 
+        RowBox[{
+         RowBox[{"-", "6"}], "/", "7"}]]}], ",", 
+      RowBox[{"{", 
+       RowBox[{"y", ",", "0", ",", "142"}], "}"}]}], "]"}]}], 
+   ")"}]}]], "Output",
+ CellChangeTimes->{3.6966774163598895`*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"\[IndentingNewLine]", "\[IndentingNewLine]", 
+  RowBox[{
+   RowBox[{"velAgosto", "[", 
+    RowBox[{"zm_", ",", "ym_"}], "]"}], " ", "=", " ", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"J", "[", 
+      RowBox[{"zm", ",", "ym", ",", "180", ",", "13"}], "]"}], "/", 
+     RowBox[{"Sum", "[", 
+      RowBox[{
+       RowBox[{"J", "[", 
+        RowBox[{"zm", ",", "ym", ",", "180", ",", "13"}], "]"}], ",", " ", 
+       RowBox[{"{", 
+        RowBox[{"ym", ",", "0", ",", "13"}], "}"}], ",", 
+       RowBox[{"{", 
+        RowBox[{"zm", ",", 
+         RowBox[{"-", "90"}], ",", "90"}], "}"}]}], "]"}]}], " ", "*", 
+    RowBox[{"26", "/", "0.01"}]}]}]}]], "Input",
+ CellChangeTimes->{{3.696517829507984*^9, 3.6965178505387497`*^9}, {
+  3.6965186118987603`*^9, 3.6965186205082536`*^9}, {3.696638766318363*^9, 
+  3.6966387791880417`*^9}, {3.6966467229987497`*^9, 3.6966467289418125`*^9}}],
+
+Cell[BoxData[
+ TemplateBox[{
+  "NIntegrate","inumr",
+   "\"The integrand \\!\\(\\*FractionBox[RowBox[{\\\"90\\\", \\\"+\\\", \
+\\\"zm\\\"}], SuperscriptBox[RowBox[{\\\"(\\\", \
+RowBox[{SuperscriptBox[RowBox[{\\\"(\\\", RowBox[{RowBox[{\\\"-\\\", \
+\\\"y\\\"}], \\\"+\\\", \\\"ym\\\"}], \\\")\\\"}], \\\"2\\\"], \\\"+\\\", \
+SuperscriptBox[RowBox[{\\\"(\\\", RowBox[{\\\"90\\\", \\\"+\\\", \
+\\\"zm\\\"}], \\\")\\\"}], \\\"2\\\"]}], \\\")\\\"}], RowBox[{\\\"3\\\", \
+\\\"/\\\", \\\"7\\\"}]]]\\) has evaluated to non-numerical values for all \
+sampling points in the region with boundaries \\!\\(\\*RowBox[{\\\"{\\\", \
+RowBox[{\\\"{\\\", RowBox[{\\\"0\\\", \\\",\\\", \\\"13\\\"}], \\\"}\\\"}], \
+\\\"}\\\"}]\\).\"",2,172,772,23667967595296183195,"Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellChangeTimes->{3.6966474543885665`*^9}],
+
+Cell[BoxData[
+ TemplateBox[{
+  "NIntegrate","inumr",
+   "\"The integrand \\!\\(\\*FractionBox[RowBox[{\\\"90\\\", \\\"-\\\", \
+\\\"zm\\\"}], SuperscriptBox[RowBox[{\\\"(\\\", \
+RowBox[{SuperscriptBox[RowBox[{\\\"(\\\", RowBox[{RowBox[{\\\"-\\\", \
+\\\"y\\\"}], \\\"+\\\", \\\"ym\\\"}], \\\")\\\"}], \\\"2\\\"], \\\"+\\\", \
+SuperscriptBox[RowBox[{\\\"(\\\", RowBox[{\\\"90\\\", \\\"-\\\", \
+\\\"zm\\\"}], \\\")\\\"}], \\\"2\\\"]}], \\\")\\\"}], RowBox[{\\\"3\\\", \
+\\\"/\\\", \\\"7\\\"}]]]\\) has evaluated to non-numerical values for all \
+sampling points in the region with boundaries \\!\\(\\*RowBox[{\\\"{\\\", \
+RowBox[{\\\"{\\\", RowBox[{\\\"0\\\", \\\",\\\", \\\"13\\\"}], \\\"}\\\"}], \
+\\\"}\\\"}]\\).\"",2,172,773,23667967595296183195,"Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellChangeTimes->{3.696647454419816*^9}],
+
+Cell[BoxData[
+ TemplateBox[{
+  "NIntegrate","inumr",
+   "\"The integrand \\!\\(\\*FractionBox[\\\"ym\\\", \
+SuperscriptBox[RowBox[{\\\"(\\\", RowBox[{SuperscriptBox[\\\"ym\\\", \
+\\\"2\\\"], \\\"+\\\", SuperscriptBox[RowBox[{\\\"(\\\", \
+RowBox[{RowBox[{\\\"-\\\", \\\"z\\\"}], \\\"+\\\", \\\"zm\\\"}], \\\")\\\"}], \
+\\\"2\\\"]}], \\\")\\\"}], RowBox[{\\\"3\\\", \\\"/\\\", \\\"7\\\"}]]]\\) has \
+evaluated to non-numerical values for all sampling points in the region with \
+boundaries \\!\\(\\*RowBox[{\\\"{\\\", RowBox[{\\\"{\\\", \
+RowBox[{RowBox[{\\\"-\\\", \\\"90\\\"}], \\\",\\\", \\\"90\\\"}], \
+\\\"}\\\"}], \\\"}\\\"}]\\).\"",2,172,774,23667967595296183195,"Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellChangeTimes->{3.696647454435441*^9}],
+
+Cell[BoxData[
+ TemplateBox[{
+  "General","stop",
+   "\"Further output of \\!\\(\\*StyleBox[RowBox[{\\\"NIntegrate\\\", \
+\\\"::\\\", \\\"inumr\\\"}], \\\"MessageName\\\"]\\) will be suppressed \
+during this calculation.\"",2,172,775,23667967595296183195,"Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellChangeTimes->{3.6966474544510665`*^9}],
+
+Cell[BoxData[
+ TemplateBox[{
+  "NIntegrate","izero",
+   "\"Integral and error estimates are 0 on all integration subregions. Try \
+increasing the value of the MinRecursion option. If value of integral may be \
+0, specify a finite value for the AccuracyGoal option.\"",2,172,776,
+   23667967595296183195,"Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellChangeTimes->{3.696647454466691*^9}],
+
+Cell[BoxData[
+ TemplateBox[{
+  "NIntegrate","izero",
+   "\"Integral and error estimates are 0 on all integration subregions. Try \
+increasing the value of the MinRecursion option. If value of integral may be \
+0, specify a finite value for the AccuracyGoal option.\"",2,172,777,
+   23667967595296183195,"Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellChangeTimes->{3.696647454497942*^9}],
+
+Cell[BoxData[
+ TemplateBox[{
+  "NIntegrate","izero",
+   "\"Integral and error estimates are 0 on all integration subregions. Try \
+increasing the value of the MinRecursion option. If value of integral may be \
+0, specify a finite value for the AccuracyGoal option.\"",2,172,778,
+   23667967595296183195,"Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellChangeTimes->{3.696647454513567*^9}],
+
+Cell[BoxData[
+ TemplateBox[{
+  "General","stop",
+   "\"Further output of \\!\\(\\*StyleBox[RowBox[{\\\"NIntegrate\\\", \
+\\\"::\\\", \\\"izero\\\"}], \\\"MessageName\\\"]\\) will be suppressed \
+during this calculation.\"",2,172,779,23667967595296183195,"Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellChangeTimes->{3.696647454544817*^9}],
+
+Cell[BoxData[
+ RowBox[{"0.009842086840752056`", " ", 
+  RowBox[{"(", 
+   RowBox[{
+    RowBox[{"NIntegrate", "[", 
+     RowBox[{
+      RowBox[{"ym", " ", 
+       SuperscriptBox[
+        SqrtBox[
+         RowBox[{
+          SuperscriptBox[
+           RowBox[{"(", 
+            RowBox[{"zm", "-", "z"}], ")"}], "2"], "+", 
+          SuperscriptBox["ym", "2"]}]], 
+        RowBox[{
+         RowBox[{"-", "6"}], "/", "7"}]]}], ",", 
+      RowBox[{"{", 
+       RowBox[{"z", ",", 
+        RowBox[{"-", 
+         FractionBox["180", "2"]}], ",", 
+        FractionBox["180", "2"]}], "}"}]}], "]"}], "+", 
+    RowBox[{"NIntegrate", "[", 
+     RowBox[{
+      RowBox[{
+       RowBox[{"(", 
+        RowBox[{
+         FractionBox["180", "2"], "-", "zm"}], ")"}], " ", 
+       SuperscriptBox[
+        SqrtBox[
+         RowBox[{
+          SuperscriptBox[
+           RowBox[{"(", 
+            RowBox[{"ym", "-", "y"}], ")"}], "2"], "+", 
+          SuperscriptBox[
+           RowBox[{"(", 
+            RowBox[{
+             FractionBox["180", "2"], "-", "zm"}], ")"}], "2"]}]], 
+        RowBox[{
+         RowBox[{"-", "6"}], "/", "7"}]]}], ",", 
+      RowBox[{"{", 
+       RowBox[{"y", ",", "0", ",", "13"}], "}"}]}], "]"}], "+", 
+    RowBox[{"NIntegrate", "[", 
+     RowBox[{
+      RowBox[{
+       RowBox[{"(", 
+        RowBox[{
+         FractionBox["180", "2"], "+", "zm"}], ")"}], " ", 
+       SuperscriptBox[
+        SqrtBox[
+         RowBox[{
+          SuperscriptBox[
+           RowBox[{"(", 
+            RowBox[{"ym", "-", "y"}], ")"}], "2"], "+", 
+          SuperscriptBox[
+           RowBox[{"(", 
+            RowBox[{
+             FractionBox["180", "2"], "+", "zm"}], ")"}], "2"]}]], 
+        RowBox[{
+         RowBox[{"-", "6"}], "/", "7"}]]}], ",", 
+      RowBox[{"{", 
+       RowBox[{"y", ",", "0", ",", "13"}], "}"}]}], "]"}]}], 
+   ")"}]}]], "Output",
+ CellChangeTimes->{3.6966474925031395`*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"velAgostoCm", "[", 
+   RowBox[{"zm_", ",", "ym_"}], "]"}], " ", "=", " ", 
+  RowBox[{
+   RowBox[{
+    RowBox[{"J", "[", 
+     RowBox[{"zm", ",", "ym", ",", "180", ",", "127"}], "]"}], "/", 
+    RowBox[{"Sum", "[", 
+     RowBox[{
+      RowBox[{"J", "[", 
+       RowBox[{"zm", ",", "ym", ",", "180", ",", "127"}], "]"}], ",", " ", 
+      RowBox[{"{", 
+       RowBox[{"ym", ",", "0", ",", "127"}], "}"}], ",", 
+      RowBox[{"{", 
+       RowBox[{"zm", ",", 
+        RowBox[{"-", "90"}], ",", "90"}], "}"}]}], "]"}]}], " ", "*", 
+   RowBox[{"26", "/", "0.001"}]}]}]], "Input",
+ CellChangeTimes->{{3.696675684990527*^9, 3.696675698892371*^9}}],
+
+Cell[BoxData[
+ TemplateBox[{
+  "NIntegrate","inumr",
+   "\"The integrand \\!\\(\\*FractionBox[RowBox[{\\\"90\\\", \\\"+\\\", \
+\\\"zm\\\"}], SuperscriptBox[RowBox[{\\\"(\\\", \
+RowBox[{SuperscriptBox[RowBox[{\\\"(\\\", RowBox[{RowBox[{\\\"-\\\", \
+\\\"y\\\"}], \\\"+\\\", \\\"ym\\\"}], \\\")\\\"}], \\\"2\\\"], \\\"+\\\", \
+SuperscriptBox[RowBox[{\\\"(\\\", RowBox[{\\\"90\\\", \\\"+\\\", \
+\\\"zm\\\"}], \\\")\\\"}], \\\"2\\\"]}], \\\")\\\"}], RowBox[{\\\"3\\\", \
+\\\"/\\\", \\\"7\\\"}]]]\\) has evaluated to non-numerical values for all \
+sampling points in the region with boundaries \\!\\(\\*RowBox[{\\\"{\\\", \
+RowBox[{\\\"{\\\", RowBox[{\\\"0\\\", \\\",\\\", \\\"127\\\"}], \\\"}\\\"}], \
+\\\"}\\\"}]\\).\"",2,11,57,23668241090185444519,"Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellChangeTimes->{3.6966774164067492`*^9}],
+
+Cell[BoxData[
+ TemplateBox[{
+  "NIntegrate","inumr",
+   "\"The integrand \\!\\(\\*FractionBox[RowBox[{\\\"90\\\", \\\"-\\\", \
+\\\"zm\\\"}], SuperscriptBox[RowBox[{\\\"(\\\", \
+RowBox[{SuperscriptBox[RowBox[{\\\"(\\\", RowBox[{RowBox[{\\\"-\\\", \
+\\\"y\\\"}], \\\"+\\\", \\\"ym\\\"}], \\\")\\\"}], \\\"2\\\"], \\\"+\\\", \
+SuperscriptBox[RowBox[{\\\"(\\\", RowBox[{\\\"90\\\", \\\"-\\\", \
+\\\"zm\\\"}], \\\")\\\"}], \\\"2\\\"]}], \\\")\\\"}], RowBox[{\\\"3\\\", \
+\\\"/\\\", \\\"7\\\"}]]]\\) has evaluated to non-numerical values for all \
+sampling points in the region with boundaries \\!\\(\\*RowBox[{\\\"{\\\", \
+RowBox[{\\\"{\\\", RowBox[{\\\"0\\\", \\\",\\\", \\\"127\\\"}], \\\"}\\\"}], \
+\\\"}\\\"}]\\).\"",2,11,58,23668241090185444519,"Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellChangeTimes->{3.696677416438017*^9}],
+
+Cell[BoxData[
+ TemplateBox[{
+  "NIntegrate","inumr",
+   "\"The integrand \\!\\(\\*FractionBox[\\\"ym\\\", \
+SuperscriptBox[RowBox[{\\\"(\\\", RowBox[{SuperscriptBox[\\\"ym\\\", \
+\\\"2\\\"], \\\"+\\\", SuperscriptBox[RowBox[{\\\"(\\\", \
+RowBox[{RowBox[{\\\"-\\\", \\\"z\\\"}], \\\"+\\\", \\\"zm\\\"}], \\\")\\\"}], \
+\\\"2\\\"]}], \\\")\\\"}], RowBox[{\\\"3\\\", \\\"/\\\", \\\"7\\\"}]]]\\) has \
+evaluated to non-numerical values for all sampling points in the region with \
+boundaries \\!\\(\\*RowBox[{\\\"{\\\", RowBox[{\\\"{\\\", \
+RowBox[{RowBox[{\\\"-\\\", \\\"90\\\"}], \\\",\\\", \\\"90\\\"}], \
+\\\"}\\\"}], \\\"}\\\"}]\\).\"",2,11,59,23668241090185444519,"Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellChangeTimes->{3.6966774164597473`*^9}],
+
+Cell[BoxData[
+ TemplateBox[{
+  "General","stop",
+   "\"Further output of \\!\\(\\*StyleBox[RowBox[{\\\"NIntegrate\\\", \
+\\\"::\\\", \\\"inumr\\\"}], \\\"MessageName\\\"]\\) will be suppressed \
+during this calculation.\"",2,11,60,23668241090185444519,"Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellChangeTimes->{3.6966774164752245`*^9}],
+
+Cell[BoxData[
+ TemplateBox[{
+  "NIntegrate","izero",
+   "\"Integral and error estimates are 0 on all integration subregions. Try \
+increasing the value of the MinRecursion option. If value of integral may be \
+0, specify a finite value for the AccuracyGoal option.\"",2,11,61,
+   23668241090185444519,"Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellChangeTimes->{3.6966774164908514`*^9}],
+
+Cell[BoxData[
+ TemplateBox[{
+  "NIntegrate","izero",
+   "\"Integral and error estimates are 0 on all integration subregions. Try \
+increasing the value of the MinRecursion option. If value of integral may be \
+0, specify a finite value for the AccuracyGoal option.\"",2,11,62,
+   23668241090185444519,"Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellChangeTimes->{3.6966774165221014`*^9}],
+
+Cell[BoxData[
+ TemplateBox[{
+  "NIntegrate","izero",
+   "\"Integral and error estimates are 0 on all integration subregions. Try \
+increasing the value of the MinRecursion option. If value of integral may be \
+0, specify a finite value for the AccuracyGoal option.\"",2,11,63,
+   23668241090185444519,"Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellChangeTimes->{3.6966774165377264`*^9}],
+
+Cell[BoxData[
+ TemplateBox[{
+  "General","stop",
+   "\"Further output of \\!\\(\\*StyleBox[RowBox[{\\\"NIntegrate\\\", \
+\\\"::\\\", \\\"izero\\\"}], \\\"MessageName\\\"]\\) will be suppressed \
+during this calculation.\"",2,11,64,23668241090185444519,"Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellChangeTimes->{3.696677416566161*^9}],
+
+Cell[BoxData[
+ RowBox[{"0.0018052709108953768`", " ", 
+  RowBox[{"(", 
+   RowBox[{
+    RowBox[{"NIntegrate", "[", 
+     RowBox[{
+      RowBox[{"ym", " ", 
+       SuperscriptBox[
+        SqrtBox[
+         RowBox[{
+          SuperscriptBox[
+           RowBox[{"(", 
+            RowBox[{"zm", "-", "z"}], ")"}], "2"], "+", 
+          SuperscriptBox["ym", "2"]}]], 
+        RowBox[{
+         RowBox[{"-", "6"}], "/", "7"}]]}], ",", 
+      RowBox[{"{", 
+       RowBox[{"z", ",", 
+        RowBox[{"-", 
+         FractionBox["180", "2"]}], ",", 
+        FractionBox["180", "2"]}], "}"}]}], "]"}], "+", 
+    RowBox[{"NIntegrate", "[", 
+     RowBox[{
+      RowBox[{
+       RowBox[{"(", 
+        RowBox[{
+         FractionBox["180", "2"], "-", "zm"}], ")"}], " ", 
+       SuperscriptBox[
+        SqrtBox[
+         RowBox[{
+          SuperscriptBox[
+           RowBox[{"(", 
+            RowBox[{"ym", "-", "y"}], ")"}], "2"], "+", 
+          SuperscriptBox[
+           RowBox[{"(", 
+            RowBox[{
+             FractionBox["180", "2"], "-", "zm"}], ")"}], "2"]}]], 
+        RowBox[{
+         RowBox[{"-", "6"}], "/", "7"}]]}], ",", 
+      RowBox[{"{", 
+       RowBox[{"y", ",", "0", ",", "127"}], "}"}]}], "]"}], "+", 
+    RowBox[{"NIntegrate", "[", 
+     RowBox[{
+      RowBox[{
+       RowBox[{"(", 
+        RowBox[{
+         FractionBox["180", "2"], "+", "zm"}], ")"}], " ", 
+       SuperscriptBox[
+        SqrtBox[
+         RowBox[{
+          SuperscriptBox[
+           RowBox[{"(", 
+            RowBox[{"ym", "-", "y"}], ")"}], "2"], "+", 
+          SuperscriptBox[
+           RowBox[{"(", 
+            RowBox[{
+             FractionBox["180", "2"], "+", "zm"}], ")"}], "2"]}]], 
+        RowBox[{
+         RowBox[{"-", "6"}], "/", "7"}]]}], ",", 
+      RowBox[{"{", 
+       RowBox[{"y", ",", "0", ",", "127"}], "}"}]}], "]"}]}], 
+   ")"}]}]], "Output",
+ CellChangeTimes->{3.696677787363573*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"\[IndentingNewLine]", "\[IndentingNewLine]", 
+  RowBox[{
+   RowBox[{"velSettembre", "[", 
+    RowBox[{"zm_", ",", "ym_"}], "]"}], " ", "=", " ", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"J", "[", 
+      RowBox[{"zm", ",", "ym", ",", "180", ",", "12"}], "]"}], "/", 
+     RowBox[{"Sum", "[", 
+      RowBox[{
+       RowBox[{"J", "[", 
+        RowBox[{"zm", ",", "ym", ",", "180", ",", "12"}], "]"}], ",", " ", 
+       RowBox[{"{", 
+        RowBox[{"ym", ",", "0", ",", "12"}], "}"}], ",", 
+       RowBox[{"{", 
+        RowBox[{"zm", ",", 
+         RowBox[{"-", "90"}], ",", "90"}], "}"}]}], "]"}]}], " ", "*", 
+    RowBox[{"23", "/", "0.01"}]}]}]}]], "Input",
+ CellChangeTimes->{{3.6965190569424195`*^9, 3.6965190792071157`*^9}, {
+  3.6966387874003067`*^9, 3.6966387963323717`*^9}, {3.6966467347945766`*^9, 
+  3.6966467391102085`*^9}}],
+
+Cell[BoxData[
+ TemplateBox[{
+  "NIntegrate","inumr",
+   "\"The integrand \\!\\(\\*FractionBox[RowBox[{\\\"90\\\", \\\"+\\\", \
+\\\"zm\\\"}], SuperscriptBox[RowBox[{\\\"(\\\", \
+RowBox[{SuperscriptBox[RowBox[{\\\"(\\\", RowBox[{RowBox[{\\\"-\\\", \
+\\\"y\\\"}], \\\"+\\\", \\\"ym\\\"}], \\\")\\\"}], \\\"2\\\"], \\\"+\\\", \
+SuperscriptBox[RowBox[{\\\"(\\\", RowBox[{\\\"90\\\", \\\"+\\\", \
+\\\"zm\\\"}], \\\")\\\"}], \\\"2\\\"]}], \\\")\\\"}], RowBox[{\\\"3\\\", \
+\\\"/\\\", \\\"7\\\"}]]]\\) has evaluated to non-numerical values for all \
+sampling points in the region with boundaries \\!\\(\\*RowBox[{\\\"{\\\", \
+RowBox[{\\\"{\\\", RowBox[{\\\"0\\\", \\\",\\\", \\\"12\\\"}], \\\"}\\\"}], \
+\\\"}\\\"}]\\).\"",2,173,780,23667967595296183195,"Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellChangeTimes->{3.69664749293469*^9}],
+
+Cell[BoxData[
+ TemplateBox[{
+  "NIntegrate","inumr",
+   "\"The integrand \\!\\(\\*FractionBox[RowBox[{\\\"90\\\", \\\"-\\\", \
+\\\"zm\\\"}], SuperscriptBox[RowBox[{\\\"(\\\", \
+RowBox[{SuperscriptBox[RowBox[{\\\"(\\\", RowBox[{RowBox[{\\\"-\\\", \
+\\\"y\\\"}], \\\"+\\\", \\\"ym\\\"}], \\\")\\\"}], \\\"2\\\"], \\\"+\\\", \
+SuperscriptBox[RowBox[{\\\"(\\\", RowBox[{\\\"90\\\", \\\"-\\\", \
+\\\"zm\\\"}], \\\")\\\"}], \\\"2\\\"]}], \\\")\\\"}], RowBox[{\\\"3\\\", \
+\\\"/\\\", \\\"7\\\"}]]]\\) has evaluated to non-numerical values for all \
+sampling points in the region with boundaries \\!\\(\\*RowBox[{\\\"{\\\", \
+RowBox[{\\\"{\\\", RowBox[{\\\"0\\\", \\\",\\\", \\\"12\\\"}], \\\"}\\\"}], \
+\\\"}\\\"}]\\).\"",2,173,781,23667967595296183195,"Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellChangeTimes->{3.6966474929503155`*^9}],
+
+Cell[BoxData[
+ TemplateBox[{
+  "NIntegrate","inumr",
+   "\"The integrand \\!\\(\\*FractionBox[\\\"ym\\\", \
+SuperscriptBox[RowBox[{\\\"(\\\", RowBox[{SuperscriptBox[\\\"ym\\\", \
+\\\"2\\\"], \\\"+\\\", SuperscriptBox[RowBox[{\\\"(\\\", \
+RowBox[{RowBox[{\\\"-\\\", \\\"z\\\"}], \\\"+\\\", \\\"zm\\\"}], \\\")\\\"}], \
+\\\"2\\\"]}], \\\")\\\"}], RowBox[{\\\"3\\\", \\\"/\\\", \\\"7\\\"}]]]\\) has \
+evaluated to non-numerical values for all sampling points in the region with \
+boundaries \\!\\(\\*RowBox[{\\\"{\\\", RowBox[{\\\"{\\\", \
+RowBox[{RowBox[{\\\"-\\\", \\\"90\\\"}], \\\",\\\", \\\"90\\\"}], \
+\\\"}\\\"}], \\\"}\\\"}]\\).\"",2,173,782,23667967595296183195,"Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellChangeTimes->{3.6966474929815645`*^9}],
+
+Cell[BoxData[
+ TemplateBox[{
+  "General","stop",
+   "\"Further output of \\!\\(\\*StyleBox[RowBox[{\\\"NIntegrate\\\", \
+\\\"::\\\", \\\"inumr\\\"}], \\\"MessageName\\\"]\\) will be suppressed \
+during this calculation.\"",2,173,783,23667967595296183195,"Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellChangeTimes->{3.6966474929971914`*^9}],
+
+Cell[BoxData[
+ TemplateBox[{
+  "NIntegrate","izero",
+   "\"Integral and error estimates are 0 on all integration subregions. Try \
+increasing the value of the MinRecursion option. If value of integral may be \
+0, specify a finite value for the AccuracyGoal option.\"",2,173,784,
+   23667967595296183195,"Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellChangeTimes->{3.6966474930128136`*^9}],
+
+Cell[BoxData[
+ TemplateBox[{
+  "NIntegrate","izero",
+   "\"Integral and error estimates are 0 on all integration subregions. Try \
+increasing the value of the MinRecursion option. If value of integral may be \
+0, specify a finite value for the AccuracyGoal option.\"",2,173,785,
+   23667967595296183195,"Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellChangeTimes->{3.6966474930440664`*^9}],
+
+Cell[BoxData[
+ TemplateBox[{
+  "NIntegrate","izero",
+   "\"Integral and error estimates are 0 on all integration subregions. Try \
+increasing the value of the MinRecursion option. If value of integral may be \
+0, specify a finite value for the AccuracyGoal option.\"",2,173,786,
+   23667967595296183195,"Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellChangeTimes->{3.6966474930596914`*^9}],
+
+Cell[BoxData[
+ TemplateBox[{
+  "General","stop",
+   "\"Further output of \\!\\(\\*StyleBox[RowBox[{\\\"NIntegrate\\\", \
+\\\"::\\\", \\\"izero\\\"}], \\\"MessageName\\\"]\\) will be suppressed \
+during this calculation.\"",2,173,787,23667967595296183195,"Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellChangeTimes->{3.6966474930753164`*^9}],
+
+Cell[BoxData[
+ RowBox[{"0.010042414335104125`", " ", 
+  RowBox[{"(", 
+   RowBox[{
+    RowBox[{"NIntegrate", "[", 
+     RowBox[{
+      RowBox[{"ym", " ", 
+       SuperscriptBox[
+        SqrtBox[
+         RowBox[{
+          SuperscriptBox[
+           RowBox[{"(", 
+            RowBox[{"zm", "-", "z"}], ")"}], "2"], "+", 
+          SuperscriptBox["ym", "2"]}]], 
+        RowBox[{
+         RowBox[{"-", "6"}], "/", "7"}]]}], ",", 
+      RowBox[{"{", 
+       RowBox[{"z", ",", 
+        RowBox[{"-", 
+         FractionBox["180", "2"]}], ",", 
+        FractionBox["180", "2"]}], "}"}]}], "]"}], "+", 
+    RowBox[{"NIntegrate", "[", 
+     RowBox[{
+      RowBox[{
+       RowBox[{"(", 
+        RowBox[{
+         FractionBox["180", "2"], "-", "zm"}], ")"}], " ", 
+       SuperscriptBox[
+        SqrtBox[
+         RowBox[{
+          SuperscriptBox[
+           RowBox[{"(", 
+            RowBox[{"ym", "-", "y"}], ")"}], "2"], "+", 
+          SuperscriptBox[
+           RowBox[{"(", 
+            RowBox[{
+             FractionBox["180", "2"], "-", "zm"}], ")"}], "2"]}]], 
+        RowBox[{
+         RowBox[{"-", "6"}], "/", "7"}]]}], ",", 
+      RowBox[{"{", 
+       RowBox[{"y", ",", "0", ",", "12"}], "}"}]}], "]"}], "+", 
+    RowBox[{"NIntegrate", "[", 
+     RowBox[{
+      RowBox[{
+       RowBox[{"(", 
+        RowBox[{
+         FractionBox["180", "2"], "+", "zm"}], ")"}], " ", 
+       SuperscriptBox[
+        SqrtBox[
+         RowBox[{
+          SuperscriptBox[
+           RowBox[{"(", 
+            RowBox[{"ym", "-", "y"}], ")"}], "2"], "+", 
+          SuperscriptBox[
+           RowBox[{"(", 
+            RowBox[{
+             FractionBox["180", "2"], "+", "zm"}], ")"}], "2"]}]], 
+        RowBox[{
+         RowBox[{"-", "6"}], "/", "7"}]]}], ",", 
+      RowBox[{"{", 
+       RowBox[{"y", ",", "0", ",", "12"}], "}"}]}], "]"}]}], 
+   ")"}]}]], "Output",
+ CellChangeTimes->{3.696647529303667*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"velSettembreCm", "[", 
+   RowBox[{"zm_", ",", "ym_"}], "]"}], " ", "=", " ", 
+  RowBox[{
+   RowBox[{
+    RowBox[{"J", "[", 
+     RowBox[{"zm", ",", "ym", ",", "180", ",", "117"}], "]"}], "/", 
+    RowBox[{"Sum", "[", 
+     RowBox[{
+      RowBox[{"J", "[", 
+       RowBox[{"zm", ",", "ym", ",", "180", ",", "117"}], "]"}], ",", " ", 
+      RowBox[{"{", 
+       RowBox[{"ym", ",", "0", ",", "117"}], "}"}], ",", 
+      RowBox[{"{", 
+       RowBox[{"zm", ",", 
+        RowBox[{"-", "90"}], ",", "90"}], "}"}]}], "]"}]}], " ", "*", 
+   RowBox[{"23", "/", "0.001"}]}]}]], "Input",
+ CellChangeTimes->{{3.696675709013539*^9, 3.6966757248687654`*^9}}],
+
+Cell[BoxData[
+ TemplateBox[{
+  "NIntegrate","inumr",
+   "\"The integrand \\!\\(\\*FractionBox[RowBox[{\\\"90\\\", \\\"+\\\", \
+\\\"zm\\\"}], SuperscriptBox[RowBox[{\\\"(\\\", \
+RowBox[{SuperscriptBox[RowBox[{\\\"(\\\", RowBox[{RowBox[{\\\"-\\\", \
+\\\"y\\\"}], \\\"+\\\", \\\"ym\\\"}], \\\")\\\"}], \\\"2\\\"], \\\"+\\\", \
+SuperscriptBox[RowBox[{\\\"(\\\", RowBox[{\\\"90\\\", \\\"+\\\", \
+\\\"zm\\\"}], \\\")\\\"}], \\\"2\\\"]}], \\\")\\\"}], RowBox[{\\\"3\\\", \
+\\\"/\\\", \\\"7\\\"}]]]\\) has evaluated to non-numerical values for all \
+sampling points in the region with boundaries \\!\\(\\*RowBox[{\\\"{\\\", \
+RowBox[{\\\"{\\\", RowBox[{\\\"0\\\", \\\",\\\", \\\"117\\\"}], \\\"}\\\"}], \
+\\\"}\\\"}]\\).\"",2,12,65,23668241090185444519,"Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellChangeTimes->{3.6966777874135327`*^9}],
+
+Cell[BoxData[
+ TemplateBox[{
+  "NIntegrate","inumr",
+   "\"The integrand \\!\\(\\*FractionBox[RowBox[{\\\"90\\\", \\\"-\\\", \
+\\\"zm\\\"}], SuperscriptBox[RowBox[{\\\"(\\\", \
+RowBox[{SuperscriptBox[RowBox[{\\\"(\\\", RowBox[{RowBox[{\\\"-\\\", \
+\\\"y\\\"}], \\\"+\\\", \\\"ym\\\"}], \\\")\\\"}], \\\"2\\\"], \\\"+\\\", \
+SuperscriptBox[RowBox[{\\\"(\\\", RowBox[{\\\"90\\\", \\\"-\\\", \
+\\\"zm\\\"}], \\\")\\\"}], \\\"2\\\"]}], \\\")\\\"}], RowBox[{\\\"3\\\", \
+\\\"/\\\", \\\"7\\\"}]]]\\) has evaluated to non-numerical values for all \
+sampling points in the region with boundaries \\!\\(\\*RowBox[{\\\"{\\\", \
+RowBox[{\\\"{\\\", RowBox[{\\\"0\\\", \\\",\\\", \\\"117\\\"}], \\\"}\\\"}], \
+\\\"}\\\"}]\\).\"",2,12,66,23668241090185444519,"Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellChangeTimes->{3.6966777874291415`*^9}],
+
+Cell[BoxData[
+ TemplateBox[{
+  "NIntegrate","inumr",
+   "\"The integrand \\!\\(\\*FractionBox[\\\"ym\\\", \
+SuperscriptBox[RowBox[{\\\"(\\\", RowBox[{SuperscriptBox[\\\"ym\\\", \
+\\\"2\\\"], \\\"+\\\", SuperscriptBox[RowBox[{\\\"(\\\", \
+RowBox[{RowBox[{\\\"-\\\", \\\"z\\\"}], \\\"+\\\", \\\"zm\\\"}], \\\")\\\"}], \
+\\\"2\\\"]}], \\\")\\\"}], RowBox[{\\\"3\\\", \\\"/\\\", \\\"7\\\"}]]]\\) has \
+evaluated to non-numerical values for all sampling points in the region with \
+boundaries \\!\\(\\*RowBox[{\\\"{\\\", RowBox[{\\\"{\\\", \
+RowBox[{RowBox[{\\\"-\\\", \\\"90\\\"}], \\\",\\\", \\\"90\\\"}], \
+\\\"}\\\"}], \\\"}\\\"}]\\).\"",2,12,67,23668241090185444519,"Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellChangeTimes->{3.696677787460389*^9}],
+
+Cell[BoxData[
+ TemplateBox[{
+  "General","stop",
+   "\"Further output of \\!\\(\\*StyleBox[RowBox[{\\\"NIntegrate\\\", \
+\\\"::\\\", \\\"inumr\\\"}], \\\"MessageName\\\"]\\) will be suppressed \
+during this calculation.\"",2,12,68,23668241090185444519,"Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellChangeTimes->{3.69667778749166*^9}],
+
+Cell[BoxData[
+ TemplateBox[{
+  "NIntegrate","izero",
+   "\"Integral and error estimates are 0 on all integration subregions. Try \
+increasing the value of the MinRecursion option. If value of integral may be \
+0, specify a finite value for the AccuracyGoal option.\"",2,12,69,
+   23668241090185444519,"Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellChangeTimes->{3.6966777875072684`*^9}],
+
+Cell[BoxData[
+ TemplateBox[{
+  "NIntegrate","izero",
+   "\"Integral and error estimates are 0 on all integration subregions. Try \
+increasing the value of the MinRecursion option. If value of integral may be \
+0, specify a finite value for the AccuracyGoal option.\"",2,12,70,
+   23668241090185444519,"Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellChangeTimes->{3.696677787522893*^9}],
+
+Cell[BoxData[
+ TemplateBox[{
+  "NIntegrate","izero",
+   "\"Integral and error estimates are 0 on all integration subregions. Try \
+increasing the value of the MinRecursion option. If value of integral may be \
+0, specify a finite value for the AccuracyGoal option.\"",2,12,71,
+   23668241090185444519,"Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellChangeTimes->{3.696677787554159*^9}],
+
+Cell[BoxData[
+ TemplateBox[{
+  "General","stop",
+   "\"Further output of \\!\\(\\*StyleBox[RowBox[{\\\"NIntegrate\\\", \
+\\\"::\\\", \\\"izero\\\"}], \\\"MessageName\\\"]\\) will be suppressed \
+during this calculation.\"",2,12,72,23668241090185444519,"Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellChangeTimes->{3.696677787569768*^9}],
+
+Cell[BoxData[
+ RowBox[{"0.0018330169817861927`", " ", 
+  RowBox[{"(", 
+   RowBox[{
+    RowBox[{"NIntegrate", "[", 
+     RowBox[{
+      RowBox[{"ym", " ", 
+       SuperscriptBox[
+        SqrtBox[
+         RowBox[{
+          SuperscriptBox[
+           RowBox[{"(", 
+            RowBox[{"zm", "-", "z"}], ")"}], "2"], "+", 
+          SuperscriptBox["ym", "2"]}]], 
+        RowBox[{
+         RowBox[{"-", "6"}], "/", "7"}]]}], ",", 
+      RowBox[{"{", 
+       RowBox[{"z", ",", 
+        RowBox[{"-", 
+         FractionBox["180", "2"]}], ",", 
+        FractionBox["180", "2"]}], "}"}]}], "]"}], "+", 
+    RowBox[{"NIntegrate", "[", 
+     RowBox[{
+      RowBox[{
+       RowBox[{"(", 
+        RowBox[{
+         FractionBox["180", "2"], "-", "zm"}], ")"}], " ", 
+       SuperscriptBox[
+        SqrtBox[
+         RowBox[{
+          SuperscriptBox[
+           RowBox[{"(", 
+            RowBox[{"ym", "-", "y"}], ")"}], "2"], "+", 
+          SuperscriptBox[
+           RowBox[{"(", 
+            RowBox[{
+             FractionBox["180", "2"], "-", "zm"}], ")"}], "2"]}]], 
+        RowBox[{
+         RowBox[{"-", "6"}], "/", "7"}]]}], ",", 
+      RowBox[{"{", 
+       RowBox[{"y", ",", "0", ",", "117"}], "}"}]}], "]"}], "+", 
+    RowBox[{"NIntegrate", "[", 
+     RowBox[{
+      RowBox[{
+       RowBox[{"(", 
+        RowBox[{
+         FractionBox["180", "2"], "+", "zm"}], ")"}], " ", 
+       SuperscriptBox[
+        SqrtBox[
+         RowBox[{
+          SuperscriptBox[
+           RowBox[{"(", 
+            RowBox[{"ym", "-", "y"}], ")"}], "2"], "+", 
+          SuperscriptBox[
+           RowBox[{"(", 
+            RowBox[{
+             FractionBox["180", "2"], "+", "zm"}], ")"}], "2"]}]], 
+        RowBox[{
+         RowBox[{"-", "6"}], "/", "7"}]]}], ",", 
+      RowBox[{"{", 
+       RowBox[{"y", ",", "0", ",", "117"}], "}"}]}], "]"}]}], 
+   ")"}]}]], "Output",
+ CellChangeTimes->{3.696678119922002*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"\[IndentingNewLine]", "\[IndentingNewLine]", 
+  RowBox[{
+   RowBox[{"velOttobre", "[", 
+    RowBox[{"zm_", ",", "ym_"}], "]"}], " ", "=", " ", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"J", "[", 
+      RowBox[{"zm", ",", "ym", ",", "180", ",", "8"}], "]"}], "/", 
+     RowBox[{"Sum", "[", 
+      RowBox[{
+       RowBox[{"J", "[", 
+        RowBox[{"zm", ",", "ym", ",", "180", ",", "8"}], "]"}], ",", " ", 
+       RowBox[{"{", 
+        RowBox[{"ym", ",", "0", ",", "8"}], "}"}], ",", 
+       RowBox[{"{", 
+        RowBox[{"zm", ",", 
+         RowBox[{"-", "90"}], ",", "90"}], "}"}]}], "]"}]}], " ", "*", 
+    RowBox[{"12", "/", "0.01"}]}]}]}]], "Input",
+ CellChangeTimes->{{3.6965191743926983`*^9, 3.69651920530143*^9}, {
+  3.696638815962328*^9, 3.696638828809967*^9}, {3.6966467454253025`*^9, 
+  3.6966467489082828`*^9}}],
+
+Cell[BoxData[
+ TemplateBox[{
+  "NIntegrate","inumr",
+   "\"The integrand \\!\\(\\*FractionBox[RowBox[{\\\"90\\\", \\\"+\\\", \
+\\\"zm\\\"}], SuperscriptBox[RowBox[{\\\"(\\\", \
+RowBox[{SuperscriptBox[RowBox[{\\\"(\\\", RowBox[{RowBox[{\\\"-\\\", \
+\\\"y\\\"}], \\\"+\\\", \\\"ym\\\"}], \\\")\\\"}], \\\"2\\\"], \\\"+\\\", \
+SuperscriptBox[RowBox[{\\\"(\\\", RowBox[{\\\"90\\\", \\\"+\\\", \
+\\\"zm\\\"}], \\\")\\\"}], \\\"2\\\"]}], \\\")\\\"}], RowBox[{\\\"3\\\", \
+\\\"/\\\", \\\"7\\\"}]]]\\) has evaluated to non-numerical values for all \
+sampling points in the region with boundaries \\!\\(\\*RowBox[{\\\"{\\\", \
+RowBox[{\\\"{\\\", RowBox[{\\\"0\\\", \\\",\\\", \\\"8\\\"}], \\\"}\\\"}], \\\
+\"}\\\"}]\\).\"",2,174,788,23667967595296183195,"Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellChangeTimes->{3.696647529350525*^9}],
+
+Cell[BoxData[
+ TemplateBox[{
+  "NIntegrate","inumr",
+   "\"The integrand \\!\\(\\*FractionBox[RowBox[{\\\"90\\\", \\\"-\\\", \
+\\\"zm\\\"}], SuperscriptBox[RowBox[{\\\"(\\\", \
+RowBox[{SuperscriptBox[RowBox[{\\\"(\\\", RowBox[{RowBox[{\\\"-\\\", \
+\\\"y\\\"}], \\\"+\\\", \\\"ym\\\"}], \\\")\\\"}], \\\"2\\\"], \\\"+\\\", \
+SuperscriptBox[RowBox[{\\\"(\\\", RowBox[{\\\"90\\\", \\\"-\\\", \
+\\\"zm\\\"}], \\\")\\\"}], \\\"2\\\"]}], \\\")\\\"}], RowBox[{\\\"3\\\", \
+\\\"/\\\", \\\"7\\\"}]]]\\) has evaluated to non-numerical values for all \
+sampling points in the region with boundaries \\!\\(\\*RowBox[{\\\"{\\\", \
+RowBox[{\\\"{\\\", RowBox[{\\\"0\\\", \\\",\\\", \\\"8\\\"}], \\\"}\\\"}], \\\
+\"}\\\"}]\\).\"",2,174,789,23667967595296183195,"Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellChangeTimes->{3.696647529366149*^9}],
+
+Cell[BoxData[
+ TemplateBox[{
+  "NIntegrate","inumr",
+   "\"The integrand \\!\\(\\*FractionBox[\\\"ym\\\", \
+SuperscriptBox[RowBox[{\\\"(\\\", RowBox[{SuperscriptBox[\\\"ym\\\", \
+\\\"2\\\"], \\\"+\\\", SuperscriptBox[RowBox[{\\\"(\\\", \
+RowBox[{RowBox[{\\\"-\\\", \\\"z\\\"}], \\\"+\\\", \\\"zm\\\"}], \\\")\\\"}], \
+\\\"2\\\"]}], \\\")\\\"}], RowBox[{\\\"3\\\", \\\"/\\\", \\\"7\\\"}]]]\\) has \
+evaluated to non-numerical values for all sampling points in the region with \
+boundaries \\!\\(\\*RowBox[{\\\"{\\\", RowBox[{\\\"{\\\", \
+RowBox[{RowBox[{\\\"-\\\", \\\"90\\\"}], \\\",\\\", \\\"90\\\"}], \
+\\\"}\\\"}], \\\"}\\\"}]\\).\"",2,174,790,23667967595296183195,"Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellChangeTimes->{3.696647529397399*^9}],
+
+Cell[BoxData[
+ TemplateBox[{
+  "General","stop",
+   "\"Further output of \\!\\(\\*StyleBox[RowBox[{\\\"NIntegrate\\\", \
+\\\"::\\\", \\\"inumr\\\"}], \\\"MessageName\\\"]\\) will be suppressed \
+during this calculation.\"",2,174,791,23667967595296183195,"Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellChangeTimes->{3.696647529413026*^9}],
+
+Cell[BoxData[
+ TemplateBox[{
+  "NIntegrate","izero",
+   "\"Integral and error estimates are 0 on all integration subregions. Try \
+increasing the value of the MinRecursion option. If value of integral may be \
+0, specify a finite value for the AccuracyGoal option.\"",2,174,792,
+   23667967595296183195,"Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellChangeTimes->{3.696647529428649*^9}],
+
+Cell[BoxData[
+ TemplateBox[{
+  "NIntegrate","izero",
+   "\"Integral and error estimates are 0 on all integration subregions. Try \
+increasing the value of the MinRecursion option. If value of integral may be \
+0, specify a finite value for the AccuracyGoal option.\"",2,174,793,
+   23667967595296183195,"Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellChangeTimes->{3.696647529459899*^9}],
+
+Cell[BoxData[
+ TemplateBox[{
+  "NIntegrate","izero",
+   "\"Integral and error estimates are 0 on all integration subregions. Try \
+increasing the value of the MinRecursion option. If value of integral may be \
+0, specify a finite value for the AccuracyGoal option.\"",2,174,794,
+   23667967595296183195,"Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellChangeTimes->{3.696647529475525*^9}],
+
+Cell[BoxData[
+ TemplateBox[{
+  "General","stop",
+   "\"Further output of \\!\\(\\*StyleBox[RowBox[{\\\"NIntegrate\\\", \
+\\\"::\\\", \\\"izero\\\"}], \\\"MessageName\\\"]\\) will be suppressed \
+during this calculation.\"",2,174,795,23667967595296183195,"Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellChangeTimes->{3.69664752949115*^9}],
+
+Cell[BoxData[
+ RowBox[{"0.010761505919079718`", " ", 
+  RowBox[{"(", 
+   RowBox[{
+    RowBox[{"NIntegrate", "[", 
+     RowBox[{
+      RowBox[{"ym", " ", 
+       SuperscriptBox[
+        SqrtBox[
+         RowBox[{
+          SuperscriptBox[
+           RowBox[{"(", 
+            RowBox[{"zm", "-", "z"}], ")"}], "2"], "+", 
+          SuperscriptBox["ym", "2"]}]], 
+        RowBox[{
+         RowBox[{"-", "6"}], "/", "7"}]]}], ",", 
+      RowBox[{"{", 
+       RowBox[{"z", ",", 
+        RowBox[{"-", 
+         FractionBox["180", "2"]}], ",", 
+        FractionBox["180", "2"]}], "}"}]}], "]"}], "+", 
+    RowBox[{"NIntegrate", "[", 
+     RowBox[{
+      RowBox[{
+       RowBox[{"(", 
+        RowBox[{
+         FractionBox["180", "2"], "-", "zm"}], ")"}], " ", 
+       SuperscriptBox[
+        SqrtBox[
+         RowBox[{
+          SuperscriptBox[
+           RowBox[{"(", 
+            RowBox[{"ym", "-", "y"}], ")"}], "2"], "+", 
+          SuperscriptBox[
+           RowBox[{"(", 
+            RowBox[{
+             FractionBox["180", "2"], "-", "zm"}], ")"}], "2"]}]], 
+        RowBox[{
+         RowBox[{"-", "6"}], "/", "7"}]]}], ",", 
+      RowBox[{"{", 
+       RowBox[{"y", ",", "0", ",", "8"}], "}"}]}], "]"}], "+", 
+    RowBox[{"NIntegrate", "[", 
+     RowBox[{
+      RowBox[{
+       RowBox[{"(", 
+        RowBox[{
+         FractionBox["180", "2"], "+", "zm"}], ")"}], " ", 
+       SuperscriptBox[
+        SqrtBox[
+         RowBox[{
+          SuperscriptBox[
+           RowBox[{"(", 
+            RowBox[{"ym", "-", "y"}], ")"}], "2"], "+", 
+          SuperscriptBox[
+           RowBox[{"(", 
+            RowBox[{
+             FractionBox["180", "2"], "+", "zm"}], ")"}], "2"]}]], 
+        RowBox[{
+         RowBox[{"-", "6"}], "/", "7"}]]}], ",", 
+      RowBox[{"{", 
+       RowBox[{"y", ",", "0", ",", "8"}], "}"}]}], "]"}]}], ")"}]}]], "Output",
+ CellChangeTimes->{3.6966475531050477`*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"velOttobreCm", "[", 
+   RowBox[{"zm_", ",", "ym_"}], "]"}], " ", "=", " ", 
+  RowBox[{
+   RowBox[{
+    RowBox[{"J", "[", 
+     RowBox[{"zm", ",", "ym", ",", "180", ",", "76"}], "]"}], "/", 
+    RowBox[{"Sum", "[", 
+     RowBox[{
+      RowBox[{"J", "[", 
+       RowBox[{"zm", ",", "ym", ",", "180", ",", "76"}], "]"}], ",", " ", 
+      RowBox[{"{", 
+       RowBox[{"ym", ",", "0", ",", "76"}], "}"}], ",", 
+      RowBox[{"{", 
+       RowBox[{"zm", ",", 
+        RowBox[{"-", "90"}], ",", "90"}], "}"}]}], "]"}]}], " ", "*", 
+   RowBox[{"12", "/", "0.001"}]}]}]], "Input",
+ CellChangeTimes->{{3.6966757449960175`*^9, 3.696675764031497*^9}}],
+
+Cell[BoxData[
+ TemplateBox[{
+  "NIntegrate","inumr",
+   "\"The integrand \\!\\(\\*FractionBox[RowBox[{\\\"90\\\", \\\"+\\\", \
+\\\"zm\\\"}], SuperscriptBox[RowBox[{\\\"(\\\", \
+RowBox[{SuperscriptBox[RowBox[{\\\"(\\\", RowBox[{RowBox[{\\\"-\\\", \
+\\\"y\\\"}], \\\"+\\\", \\\"ym\\\"}], \\\")\\\"}], \\\"2\\\"], \\\"+\\\", \
+SuperscriptBox[RowBox[{\\\"(\\\", RowBox[{\\\"90\\\", \\\"+\\\", \
+\\\"zm\\\"}], \\\")\\\"}], \\\"2\\\"]}], \\\")\\\"}], RowBox[{\\\"3\\\", \
+\\\"/\\\", \\\"7\\\"}]]]\\) has evaluated to non-numerical values for all \
+sampling points in the region with boundaries \\!\\(\\*RowBox[{\\\"{\\\", \
+RowBox[{\\\"{\\\", RowBox[{\\\"0\\\", \\\",\\\", \\\"76\\\"}], \\\"}\\\"}], \
+\\\"}\\\"}]\\).\"",2,13,73,23668241090185444519,"Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellChangeTimes->{3.696678158880209*^9}],
+
+Cell[BoxData[
+ TemplateBox[{
+  "NIntegrate","inumr",
+   "\"The integrand \\!\\(\\*FractionBox[RowBox[{\\\"90\\\", \\\"-\\\", \
+\\\"zm\\\"}], SuperscriptBox[RowBox[{\\\"(\\\", \
+RowBox[{SuperscriptBox[RowBox[{\\\"(\\\", RowBox[{RowBox[{\\\"-\\\", \
+\\\"y\\\"}], \\\"+\\\", \\\"ym\\\"}], \\\")\\\"}], \\\"2\\\"], \\\"+\\\", \
+SuperscriptBox[RowBox[{\\\"(\\\", RowBox[{\\\"90\\\", \\\"-\\\", \
+\\\"zm\\\"}], \\\")\\\"}], \\\"2\\\"]}], \\\")\\\"}], RowBox[{\\\"3\\\", \
+\\\"/\\\", \\\"7\\\"}]]]\\) has evaluated to non-numerical values for all \
+sampling points in the region with boundaries \\!\\(\\*RowBox[{\\\"{\\\", \
+RowBox[{\\\"{\\\", RowBox[{\\\"0\\\", \\\",\\\", \\\"76\\\"}], \\\"}\\\"}], \
+\\\"}\\\"}]\\).\"",2,13,74,23668241090185444519,"Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellChangeTimes->{3.69667815891146*^9}],
+
+Cell[BoxData[
+ TemplateBox[{
+  "NIntegrate","inumr",
+   "\"The integrand \\!\\(\\*FractionBox[\\\"ym\\\", \
+SuperscriptBox[RowBox[{\\\"(\\\", RowBox[{SuperscriptBox[\\\"ym\\\", \
+\\\"2\\\"], \\\"+\\\", SuperscriptBox[RowBox[{\\\"(\\\", \
+RowBox[{RowBox[{\\\"-\\\", \\\"z\\\"}], \\\"+\\\", \\\"zm\\\"}], \\\")\\\"}], \
+\\\"2\\\"]}], \\\")\\\"}], RowBox[{\\\"3\\\", \\\"/\\\", \\\"7\\\"}]]]\\) has \
+evaluated to non-numerical values for all sampling points in the region with \
+boundaries \\!\\(\\*RowBox[{\\\"{\\\", RowBox[{\\\"{\\\", \
+RowBox[{RowBox[{\\\"-\\\", \\\"90\\\"}], \\\",\\\", \\\"90\\\"}], \
+\\\"}\\\"}], \\\"}\\\"}]\\).\"",2,13,75,23668241090185444519,"Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellChangeTimes->{3.696678158927104*^9}],
+
+Cell[BoxData[
+ TemplateBox[{
+  "General","stop",
+   "\"Further output of \\!\\(\\*StyleBox[RowBox[{\\\"NIntegrate\\\", \
+\\\"::\\\", \\\"inumr\\\"}], \\\"MessageName\\\"]\\) will be suppressed \
+during this calculation.\"",2,13,76,23668241090185444519,"Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellChangeTimes->{3.696678158958335*^9}],
+
+Cell[BoxData[
+ TemplateBox[{
+  "NIntegrate","izero",
+   "\"Integral and error estimates are 0 on all integration subregions. Try \
+increasing the value of the MinRecursion option. If value of integral may be \
+0, specify a finite value for the AccuracyGoal option.\"",2,13,77,
+   23668241090185444519,"Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellChangeTimes->{3.696678158989586*^9}],
+
+Cell[BoxData[
+ TemplateBox[{
+  "NIntegrate","izero",
+   "\"Integral and error estimates are 0 on all integration subregions. Try \
+increasing the value of the MinRecursion option. If value of integral may be \
+0, specify a finite value for the AccuracyGoal option.\"",2,13,78,
+   23668241090185444519,"Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellChangeTimes->{3.696678158989586*^9}],
+
+Cell[BoxData[
+ TemplateBox[{
+  "NIntegrate","izero",
+   "\"Integral and error estimates are 0 on all integration subregions. Try \
+increasing the value of the MinRecursion option. If value of integral may be \
+0, specify a finite value for the AccuracyGoal option.\"",2,13,79,
+   23668241090185444519,"Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellChangeTimes->{3.696678159005212*^9}],
+
+Cell[BoxData[
+ TemplateBox[{
+  "General","stop",
+   "\"Further output of \\!\\(\\*StyleBox[RowBox[{\\\"NIntegrate\\\", \
+\\\"::\\\", \\\"izero\\\"}], \\\"MessageName\\\"]\\) will be suppressed \
+during this calculation.\"",2,13,80,23668241090185444519,"Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellChangeTimes->{3.696678159036461*^9}],
+
+Cell[BoxData[
+ RowBox[{"0.0019965091524583676`", " ", 
+  RowBox[{"(", 
+   RowBox[{
+    RowBox[{"NIntegrate", "[", 
+     RowBox[{
+      RowBox[{"ym", " ", 
+       SuperscriptBox[
+        SqrtBox[
+         RowBox[{
+          SuperscriptBox[
+           RowBox[{"(", 
+            RowBox[{"zm", "-", "z"}], ")"}], "2"], "+", 
+          SuperscriptBox["ym", "2"]}]], 
+        RowBox[{
+         RowBox[{"-", "6"}], "/", "7"}]]}], ",", 
+      RowBox[{"{", 
+       RowBox[{"z", ",", 
+        RowBox[{"-", 
+         FractionBox["180", "2"]}], ",", 
+        FractionBox["180", "2"]}], "}"}]}], "]"}], "+", 
+    RowBox[{"NIntegrate", "[", 
+     RowBox[{
+      RowBox[{
+       RowBox[{"(", 
+        RowBox[{
+         FractionBox["180", "2"], "-", "zm"}], ")"}], " ", 
+       SuperscriptBox[
+        SqrtBox[
+         RowBox[{
+          SuperscriptBox[
+           RowBox[{"(", 
+            RowBox[{"ym", "-", "y"}], ")"}], "2"], "+", 
+          SuperscriptBox[
+           RowBox[{"(", 
+            RowBox[{
+             FractionBox["180", "2"], "-", "zm"}], ")"}], "2"]}]], 
+        RowBox[{
+         RowBox[{"-", "6"}], "/", "7"}]]}], ",", 
+      RowBox[{"{", 
+       RowBox[{"y", ",", "0", ",", "76"}], "}"}]}], "]"}], "+", 
+    RowBox[{"NIntegrate", "[", 
+     RowBox[{
+      RowBox[{
+       RowBox[{"(", 
+        RowBox[{
+         FractionBox["180", "2"], "+", "zm"}], ")"}], " ", 
+       SuperscriptBox[
+        SqrtBox[
+         RowBox[{
+          SuperscriptBox[
+           RowBox[{"(", 
+            RowBox[{"ym", "-", "y"}], ")"}], "2"], "+", 
+          SuperscriptBox[
+           RowBox[{"(", 
+            RowBox[{
+             FractionBox["180", "2"], "+", "zm"}], ")"}], "2"]}]], 
+        RowBox[{
+         RowBox[{"-", "6"}], "/", "7"}]]}], ",", 
+      RowBox[{"{", 
+       RowBox[{"y", ",", "0", ",", "76"}], "}"}]}], "]"}]}], 
+   ")"}]}]], "Output",
+ CellChangeTimes->{3.696678377510254*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"\[IndentingNewLine]", "\[IndentingNewLine]", "\[IndentingNewLine]", 
+  RowBox[{
+   RowBox[{"velNovembre", "[", 
+    RowBox[{"zm_", ",", "ym_"}], "]"}], " ", "=", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"J", "[", 
+      RowBox[{"zm", ",", "ym", ",", "180", ",", "8"}], "]"}], "/", 
+     RowBox[{"Sum", "[", 
+      RowBox[{
+       RowBox[{"J", "[", 
+        RowBox[{"zm", ",", "ym", ",", "180", ",", "8"}], "]"}], ",", " ", 
+       RowBox[{"{", 
+        RowBox[{"ym", ",", "0", ",", "8"}], "}"}], ",", 
+       RowBox[{"{", 
+        RowBox[{"zm", ",", 
+         RowBox[{"-", "90"}], ",", "90"}], "}"}]}], "]"}]}], " ", "*", 
+    RowBox[{"13", "/", "0.01"}]}]}]}]], "Input",
+ CellChangeTimes->{{3.696519278813979*^9, 3.696519306731947*^9}, {
+  3.6966388418543367`*^9, 3.6966388539159546`*^9}}],
+
+Cell[BoxData[
+ TemplateBox[{
+  "NIntegrate","inumr",
+   "\"The integrand \\!\\(\\*FractionBox[RowBox[{\\\"90\\\", \\\"+\\\", \
+\\\"zm\\\"}], SuperscriptBox[RowBox[{\\\"(\\\", \
+RowBox[{SuperscriptBox[RowBox[{\\\"(\\\", RowBox[{RowBox[{\\\"-\\\", \
+\\\"y\\\"}], \\\"+\\\", \\\"ym\\\"}], \\\")\\\"}], \\\"2\\\"], \\\"+\\\", \
+SuperscriptBox[RowBox[{\\\"(\\\", RowBox[{\\\"90\\\", \\\"+\\\", \
+\\\"zm\\\"}], \\\")\\\"}], \\\"2\\\"]}], \\\")\\\"}], RowBox[{\\\"3\\\", \
+\\\"/\\\", \\\"7\\\"}]]]\\) has evaluated to non-numerical values for all \
+sampling points in the region with boundaries \\!\\(\\*RowBox[{\\\"{\\\", \
+RowBox[{\\\"{\\\", RowBox[{\\\"0\\\", \\\",\\\", \\\"8\\\"}], \\\"}\\\"}], \\\
+\"}\\\"}]\\).\"",2,175,796,23667967595296183195,"Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellChangeTimes->{3.69664755316753*^9}],
+
+Cell[BoxData[
+ TemplateBox[{
+  "NIntegrate","inumr",
+   "\"The integrand \\!\\(\\*FractionBox[RowBox[{\\\"90\\\", \\\"-\\\", \
+\\\"zm\\\"}], SuperscriptBox[RowBox[{\\\"(\\\", \
+RowBox[{SuperscriptBox[RowBox[{\\\"(\\\", RowBox[{RowBox[{\\\"-\\\", \
+\\\"y\\\"}], \\\"+\\\", \\\"ym\\\"}], \\\")\\\"}], \\\"2\\\"], \\\"+\\\", \
+SuperscriptBox[RowBox[{\\\"(\\\", RowBox[{\\\"90\\\", \\\"-\\\", \
+\\\"zm\\\"}], \\\")\\\"}], \\\"2\\\"]}], \\\")\\\"}], RowBox[{\\\"3\\\", \
+\\\"/\\\", \\\"7\\\"}]]]\\) has evaluated to non-numerical values for all \
+sampling points in the region with boundaries \\!\\(\\*RowBox[{\\\"{\\\", \
+RowBox[{\\\"{\\\", RowBox[{\\\"0\\\", \\\",\\\", \\\"8\\\"}], \\\"}\\\"}], \\\
+\"}\\\"}]\\).\"",2,175,797,23667967595296183195,"Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellChangeTimes->{3.696647553183155*^9}],
+
+Cell[BoxData[
+ TemplateBox[{
+  "NIntegrate","inumr",
+   "\"The integrand \\!\\(\\*FractionBox[\\\"ym\\\", \
+SuperscriptBox[RowBox[{\\\"(\\\", RowBox[{SuperscriptBox[\\\"ym\\\", \
+\\\"2\\\"], \\\"+\\\", SuperscriptBox[RowBox[{\\\"(\\\", \
+RowBox[{RowBox[{\\\"-\\\", \\\"z\\\"}], \\\"+\\\", \\\"zm\\\"}], \\\")\\\"}], \
+\\\"2\\\"]}], \\\")\\\"}], RowBox[{\\\"3\\\", \\\"/\\\", \\\"7\\\"}]]]\\) has \
+evaluated to non-numerical values for all sampling points in the region with \
+boundaries \\!\\(\\*RowBox[{\\\"{\\\", RowBox[{\\\"{\\\", \
+RowBox[{RowBox[{\\\"-\\\", \\\"90\\\"}], \\\",\\\", \\\"90\\\"}], \
+\\\"}\\\"}], \\\"}\\\"}]\\).\"",2,175,798,23667967595296183195,"Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellChangeTimes->{3.69664755319878*^9}],
+
+Cell[BoxData[
+ TemplateBox[{
+  "General","stop",
+   "\"Further output of \\!\\(\\*StyleBox[RowBox[{\\\"NIntegrate\\\", \
+\\\"::\\\", \\\"inumr\\\"}], \\\"MessageName\\\"]\\) will be suppressed \
+during this calculation.\"",2,175,799,23667967595296183195,"Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellChangeTimes->{3.696647553230031*^9}],
+
+Cell[BoxData[
+ TemplateBox[{
+  "NIntegrate","izero",
+   "\"Integral and error estimates are 0 on all integration subregions. Try \
+increasing the value of the MinRecursion option. If value of integral may be \
+0, specify a finite value for the AccuracyGoal option.\"",2,175,800,
+   23667967595296183195,"Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellChangeTimes->{3.696647553245656*^9}],
+
+Cell[BoxData[
+ TemplateBox[{
+  "NIntegrate","izero",
+   "\"Integral and error estimates are 0 on all integration subregions. Try \
+increasing the value of the MinRecursion option. If value of integral may be \
+0, specify a finite value for the AccuracyGoal option.\"",2,175,801,
+   23667967595296183195,"Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellChangeTimes->{3.696647553261281*^9}],
+
+Cell[BoxData[
+ TemplateBox[{
+  "NIntegrate","izero",
+   "\"Integral and error estimates are 0 on all integration subregions. Try \
+increasing the value of the MinRecursion option. If value of integral may be \
+0, specify a finite value for the AccuracyGoal option.\"",2,175,802,
+   23667967595296183195,"Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellChangeTimes->{3.6966475532925315`*^9}],
+
+Cell[BoxData[
+ TemplateBox[{
+  "General","stop",
+   "\"Further output of \\!\\(\\*StyleBox[RowBox[{\\\"NIntegrate\\\", \
+\\\"::\\\", \\\"izero\\\"}], \\\"MessageName\\\"]\\) will be suppressed \
+during this calculation.\"",2,175,803,23667967595296183195,"Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellChangeTimes->{3.696647553308157*^9}],
+
+Cell[BoxData[
+ RowBox[{"0.011658298079003027`", " ", 
+  RowBox[{"(", 
+   RowBox[{
+    RowBox[{"NIntegrate", "[", 
+     RowBox[{
+      RowBox[{"ym", " ", 
+       SuperscriptBox[
+        SqrtBox[
+         RowBox[{
+          SuperscriptBox[
+           RowBox[{"(", 
+            RowBox[{"zm", "-", "z"}], ")"}], "2"], "+", 
+          SuperscriptBox["ym", "2"]}]], 
+        RowBox[{
+         RowBox[{"-", "6"}], "/", "7"}]]}], ",", 
+      RowBox[{"{", 
+       RowBox[{"z", ",", 
+        RowBox[{"-", 
+         FractionBox["180", "2"]}], ",", 
+        FractionBox["180", "2"]}], "}"}]}], "]"}], "+", 
+    RowBox[{"NIntegrate", "[", 
+     RowBox[{
+      RowBox[{
+       RowBox[{"(", 
+        RowBox[{
+         FractionBox["180", "2"], "-", "zm"}], ")"}], " ", 
+       SuperscriptBox[
+        SqrtBox[
+         RowBox[{
+          SuperscriptBox[
+           RowBox[{"(", 
+            RowBox[{"ym", "-", "y"}], ")"}], "2"], "+", 
+          SuperscriptBox[
+           RowBox[{"(", 
+            RowBox[{
+             FractionBox["180", "2"], "-", "zm"}], ")"}], "2"]}]], 
+        RowBox[{
+         RowBox[{"-", "6"}], "/", "7"}]]}], ",", 
+      RowBox[{"{", 
+       RowBox[{"y", ",", "0", ",", "8"}], "}"}]}], "]"}], "+", 
+    RowBox[{"NIntegrate", "[", 
+     RowBox[{
+      RowBox[{
+       RowBox[{"(", 
+        RowBox[{
+         FractionBox["180", "2"], "+", "zm"}], ")"}], " ", 
+       SuperscriptBox[
+        SqrtBox[
+         RowBox[{
+          SuperscriptBox[
+           RowBox[{"(", 
+            RowBox[{"ym", "-", "y"}], ")"}], "2"], "+", 
+          SuperscriptBox[
+           RowBox[{"(", 
+            RowBox[{
+             FractionBox["180", "2"], "+", "zm"}], ")"}], "2"]}]], 
+        RowBox[{
+         RowBox[{"-", "6"}], "/", "7"}]]}], ",", 
+      RowBox[{"{", 
+       RowBox[{"y", ",", "0", ",", "8"}], "}"}]}], "]"}]}], ")"}]}]], "Output",
+ CellChangeTimes->{3.696647576507078*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"velNovembreCm", "[", 
+   RowBox[{"zm_", ",", "ym_"}], "]"}], " ", "=", 
+  RowBox[{
+   RowBox[{
+    RowBox[{"J", "[", 
+     RowBox[{"zm", ",", "ym", ",", "180", ",", "80"}], "]"}], "/", 
+    RowBox[{"Sum", "[", 
+     RowBox[{
+      RowBox[{"J", "[", 
+       RowBox[{"zm", ",", "ym", ",", "180", ",", "80"}], "]"}], ",", " ", 
+      RowBox[{"{", 
+       RowBox[{"ym", ",", "0", ",", "80"}], "}"}], ",", 
+      RowBox[{"{", 
+       RowBox[{"zm", ",", 
+        RowBox[{"-", "90"}], ",", "90"}], "}"}]}], "]"}]}], " ", "*", 
+   RowBox[{"13", "/", "0.001"}]}]}]], "Input",
+ CellChangeTimes->{{3.6966757741356525`*^9, 3.696675781810089*^9}}],
+
+Cell[BoxData[
+ TemplateBox[{
+  "NIntegrate","inumr",
+   "\"The integrand \\!\\(\\*FractionBox[RowBox[{\\\"90\\\", \\\"+\\\", \
+\\\"zm\\\"}], SuperscriptBox[RowBox[{\\\"(\\\", \
+RowBox[{SuperscriptBox[RowBox[{\\\"(\\\", RowBox[{RowBox[{\\\"-\\\", \
+\\\"y\\\"}], \\\"+\\\", \\\"ym\\\"}], \\\")\\\"}], \\\"2\\\"], \\\"+\\\", \
+SuperscriptBox[RowBox[{\\\"(\\\", RowBox[{\\\"90\\\", \\\"+\\\", \
+\\\"zm\\\"}], \\\")\\\"}], \\\"2\\\"]}], \\\")\\\"}], RowBox[{\\\"3\\\", \
+\\\"/\\\", \\\"7\\\"}]]]\\) has evaluated to non-numerical values for all \
+sampling points in the region with boundaries \\!\\(\\*RowBox[{\\\"{\\\", \
+RowBox[{\\\"{\\\", RowBox[{\\\"0\\\", \\\",\\\", \\\"80\\\"}], \\\"}\\\"}], \
+\\\"}\\\"}]\\).\"",2,14,81,23668241090185444519,"Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellChangeTimes->{3.6966783775883813`*^9}],
+
+Cell[BoxData[
+ TemplateBox[{
+  "NIntegrate","inumr",
+   "\"The integrand \\!\\(\\*FractionBox[RowBox[{\\\"90\\\", \\\"-\\\", \
+\\\"zm\\\"}], SuperscriptBox[RowBox[{\\\"(\\\", \
+RowBox[{SuperscriptBox[RowBox[{\\\"(\\\", RowBox[{RowBox[{\\\"-\\\", \
+\\\"y\\\"}], \\\"+\\\", \\\"ym\\\"}], \\\")\\\"}], \\\"2\\\"], \\\"+\\\", \
+SuperscriptBox[RowBox[{\\\"(\\\", RowBox[{\\\"90\\\", \\\"-\\\", \
+\\\"zm\\\"}], \\\")\\\"}], \\\"2\\\"]}], \\\")\\\"}], RowBox[{\\\"3\\\", \
+\\\"/\\\", \\\"7\\\"}]]]\\) has evaluated to non-numerical values for all \
+sampling points in the region with boundaries \\!\\(\\*RowBox[{\\\"{\\\", \
+RowBox[{\\\"{\\\", RowBox[{\\\"0\\\", \\\",\\\", \\\"80\\\"}], \\\"}\\\"}], \
+\\\"}\\\"}]\\).\"",2,14,82,23668241090185444519,"Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellChangeTimes->{3.6966783776196165`*^9}],
+
+Cell[BoxData[
+ TemplateBox[{
+  "NIntegrate","inumr",
+   "\"The integrand \\!\\(\\*FractionBox[\\\"ym\\\", \
+SuperscriptBox[RowBox[{\\\"(\\\", RowBox[{SuperscriptBox[\\\"ym\\\", \
+\\\"2\\\"], \\\"+\\\", SuperscriptBox[RowBox[{\\\"(\\\", \
+RowBox[{RowBox[{\\\"-\\\", \\\"z\\\"}], \\\"+\\\", \\\"zm\\\"}], \\\")\\\"}], \
+\\\"2\\\"]}], \\\")\\\"}], RowBox[{\\\"3\\\", \\\"/\\\", \\\"7\\\"}]]]\\) has \
+evaluated to non-numerical values for all sampling points in the region with \
+boundaries \\!\\(\\*RowBox[{\\\"{\\\", RowBox[{\\\"{\\\", \
+RowBox[{RowBox[{\\\"-\\\", \\\"90\\\"}], \\\",\\\", \\\"90\\\"}], \
+\\\"}\\\"}], \\\"}\\\"}]\\).\"",2,14,83,23668241090185444519,"Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellChangeTimes->{3.696678377635237*^9}],
+
+Cell[BoxData[
+ TemplateBox[{
+  "General","stop",
+   "\"Further output of \\!\\(\\*StyleBox[RowBox[{\\\"NIntegrate\\\", \
+\\\"::\\\", \\\"inumr\\\"}], \\\"MessageName\\\"]\\) will be suppressed \
+during this calculation.\"",2,14,84,23668241090185444519,"Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellChangeTimes->{3.6966783776664877`*^9}],
+
+Cell[BoxData[
+ TemplateBox[{
+  "NIntegrate","izero",
+   "\"Integral and error estimates are 0 on all integration subregions. Try \
+increasing the value of the MinRecursion option. If value of integral may be \
+0, specify a finite value for the AccuracyGoal option.\"",2,14,85,
+   23668241090185444519,"Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellChangeTimes->{3.696678377682132*^9}],
+
+Cell[BoxData[
+ TemplateBox[{
+  "NIntegrate","izero",
+   "\"Integral and error estimates are 0 on all integration subregions. Try \
+increasing the value of the MinRecursion option. If value of integral may be \
+0, specify a finite value for the AccuracyGoal option.\"",2,14,86,
+   23668241090185444519,"Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellChangeTimes->{3.6966783777133827`*^9}],
+
+Cell[BoxData[
+ TemplateBox[{
+  "NIntegrate","izero",
+   "\"Integral and error estimates are 0 on all integration subregions. Try \
+increasing the value of the MinRecursion option. If value of integral may be \
+0, specify a finite value for the AccuracyGoal option.\"",2,14,87,
+   23668241090185444519,"Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellChangeTimes->{3.6966783777289906`*^9}],
+
+Cell[BoxData[
+ TemplateBox[{
+  "General","stop",
+   "\"Further output of \\!\\(\\*StyleBox[RowBox[{\\\"NIntegrate\\\", \
+\\\"::\\\", \\\"izero\\\"}], \\\"MessageName\\\"]\\) will be suppressed \
+during this calculation.\"",2,14,88,23668241090185444519,"Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellChangeTimes->{3.696678377760241*^9}],
+
+Cell[BoxData[
+ RowBox[{"0.001979925979647251`", " ", 
+  RowBox[{"(", 
+   RowBox[{
+    RowBox[{"NIntegrate", "[", 
+     RowBox[{
+      RowBox[{"ym", " ", 
+       SuperscriptBox[
+        SqrtBox[
+         RowBox[{
+          SuperscriptBox[
+           RowBox[{"(", 
+            RowBox[{"zm", "-", "z"}], ")"}], "2"], "+", 
+          SuperscriptBox["ym", "2"]}]], 
+        RowBox[{
+         RowBox[{"-", "6"}], "/", "7"}]]}], ",", 
+      RowBox[{"{", 
+       RowBox[{"z", ",", 
+        RowBox[{"-", 
+         FractionBox["180", "2"]}], ",", 
+        FractionBox["180", "2"]}], "}"}]}], "]"}], "+", 
+    RowBox[{"NIntegrate", "[", 
+     RowBox[{
+      RowBox[{
+       RowBox[{"(", 
+        RowBox[{
+         FractionBox["180", "2"], "-", "zm"}], ")"}], " ", 
+       SuperscriptBox[
+        SqrtBox[
+         RowBox[{
+          SuperscriptBox[
+           RowBox[{"(", 
+            RowBox[{"ym", "-", "y"}], ")"}], "2"], "+", 
+          SuperscriptBox[
+           RowBox[{"(", 
+            RowBox[{
+             FractionBox["180", "2"], "-", "zm"}], ")"}], "2"]}]], 
+        RowBox[{
+         RowBox[{"-", "6"}], "/", "7"}]]}], ",", 
+      RowBox[{"{", 
+       RowBox[{"y", ",", "0", ",", "80"}], "}"}]}], "]"}], "+", 
+    RowBox[{"NIntegrate", "[", 
+     RowBox[{
+      RowBox[{
+       RowBox[{"(", 
+        RowBox[{
+         FractionBox["180", "2"], "+", "zm"}], ")"}], " ", 
+       SuperscriptBox[
+        SqrtBox[
+         RowBox[{
+          SuperscriptBox[
+           RowBox[{"(", 
+            RowBox[{"ym", "-", "y"}], ")"}], "2"], "+", 
+          SuperscriptBox[
+           RowBox[{"(", 
+            RowBox[{
+             FractionBox["180", "2"], "+", "zm"}], ")"}], "2"]}]], 
+        RowBox[{
+         RowBox[{"-", "6"}], "/", "7"}]]}], ",", 
+      RowBox[{"{", 
+       RowBox[{"y", ",", "0", ",", "80"}], "}"}]}], "]"}]}], 
+   ")"}]}]], "Output",
+ CellChangeTimes->{3.6966785803058367`*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"\[IndentingNewLine]", 
+  RowBox[{
+   RowBox[{"velDicembre", "[", 
+    RowBox[{"zm_", ",", "ym_"}], "]"}], " ", "=", " ", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"J", "[", 
+      RowBox[{"zm", ",", "ym", ",", "180", ",", "8"}], "]"}], "/", 
+     RowBox[{"Sum", "[", 
+      RowBox[{
+       RowBox[{"J", "[", 
+        RowBox[{"zm", ",", "ym", ",", "180", ",", "8"}], "]"}], ",", " ", 
+       RowBox[{"{", 
+        RowBox[{"ym", ",", "0", ",", "8"}], "}"}], ",", 
+       RowBox[{"{", 
+        RowBox[{"zm", ",", 
+         RowBox[{"-", "90"}], ",", "90"}], "}"}]}], "]"}]}], " ", "*", 
+    RowBox[{"12", "/", "0.01"}]}]}]}]], "Input",
+ CellChangeTimes->{{3.696519490621647*^9, 3.6965195266748896`*^9}, 
+   3.6966388376073165`*^9, 3.696646757937642*^9}],
+
+Cell[BoxData[
+ TemplateBox[{
+  "NIntegrate","inumr",
+   "\"The integrand \\!\\(\\*FractionBox[RowBox[{\\\"90\\\", \\\"+\\\", \
+\\\"zm\\\"}], SuperscriptBox[RowBox[{\\\"(\\\", \
+RowBox[{SuperscriptBox[RowBox[{\\\"(\\\", RowBox[{RowBox[{\\\"-\\\", \
+\\\"y\\\"}], \\\"+\\\", \\\"ym\\\"}], \\\")\\\"}], \\\"2\\\"], \\\"+\\\", \
+SuperscriptBox[RowBox[{\\\"(\\\", RowBox[{\\\"90\\\", \\\"+\\\", \
+\\\"zm\\\"}], \\\")\\\"}], \\\"2\\\"]}], \\\")\\\"}], RowBox[{\\\"3\\\", \
+\\\"/\\\", \\\"7\\\"}]]]\\) has evaluated to non-numerical values for all \
+sampling points in the region with boundaries \\!\\(\\*RowBox[{\\\"{\\\", \
+RowBox[{\\\"{\\\", RowBox[{\\\"0\\\", \\\",\\\", \\\"8\\\"}], \\\"}\\\"}], \\\
+\"}\\\"}]\\).\"",2,176,804,23667967595296183195,"Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellChangeTimes->{3.696647576585208*^9}],
+
+Cell[BoxData[
+ TemplateBox[{
+  "NIntegrate","inumr",
+   "\"The integrand \\!\\(\\*FractionBox[RowBox[{\\\"90\\\", \\\"-\\\", \
+\\\"zm\\\"}], SuperscriptBox[RowBox[{\\\"(\\\", \
+RowBox[{SuperscriptBox[RowBox[{\\\"(\\\", RowBox[{RowBox[{\\\"-\\\", \
+\\\"y\\\"}], \\\"+\\\", \\\"ym\\\"}], \\\")\\\"}], \\\"2\\\"], \\\"+\\\", \
+SuperscriptBox[RowBox[{\\\"(\\\", RowBox[{\\\"90\\\", \\\"-\\\", \
+\\\"zm\\\"}], \\\")\\\"}], \\\"2\\\"]}], \\\")\\\"}], RowBox[{\\\"3\\\", \
+\\\"/\\\", \\\"7\\\"}]]]\\) has evaluated to non-numerical values for all \
+sampling points in the region with boundaries \\!\\(\\*RowBox[{\\\"{\\\", \
+RowBox[{\\\"{\\\", RowBox[{\\\"0\\\", \\\",\\\", \\\"8\\\"}], \\\"}\\\"}], \\\
+\"}\\\"}]\\).\"",2,176,805,23667967595296183195,"Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellChangeTimes->{3.696647576585208*^9}],
+
+Cell[BoxData[
+ TemplateBox[{
+  "NIntegrate","inumr",
+   "\"The integrand \\!\\(\\*FractionBox[\\\"ym\\\", \
+SuperscriptBox[RowBox[{\\\"(\\\", RowBox[{SuperscriptBox[\\\"ym\\\", \
+\\\"2\\\"], \\\"+\\\", SuperscriptBox[RowBox[{\\\"(\\\", \
+RowBox[{RowBox[{\\\"-\\\", \\\"z\\\"}], \\\"+\\\", \\\"zm\\\"}], \\\")\\\"}], \
+\\\"2\\\"]}], \\\")\\\"}], RowBox[{\\\"3\\\", \\\"/\\\", \\\"7\\\"}]]]\\) has \
+evaluated to non-numerical values for all sampling points in the region with \
+boundaries \\!\\(\\*RowBox[{\\\"{\\\", RowBox[{\\\"{\\\", \
+RowBox[{RowBox[{\\\"-\\\", \\\"90\\\"}], \\\",\\\", \\\"90\\\"}], \
+\\\"}\\\"}], \\\"}\\\"}]\\).\"",2,176,806,23667967595296183195,"Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellChangeTimes->{3.696647576616457*^9}],
+
+Cell[BoxData[
+ TemplateBox[{
+  "General","stop",
+   "\"Further output of \\!\\(\\*StyleBox[RowBox[{\\\"NIntegrate\\\", \
+\\\"::\\\", \\\"inumr\\\"}], \\\"MessageName\\\"]\\) will be suppressed \
+during this calculation.\"",2,176,807,23667967595296183195,"Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellChangeTimes->{3.6966475766320815`*^9}],
+
+Cell[BoxData[
+ TemplateBox[{
+  "NIntegrate","izero",
+   "\"Integral and error estimates are 0 on all integration subregions. Try \
+increasing the value of the MinRecursion option. If value of integral may be \
+0, specify a finite value for the AccuracyGoal option.\"",2,176,808,
+   23667967595296183195,"Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellChangeTimes->{3.6966475766633344`*^9}],
+
+Cell[BoxData[
+ TemplateBox[{
+  "NIntegrate","izero",
+   "\"Integral and error estimates are 0 on all integration subregions. Try \
+increasing the value of the MinRecursion option. If value of integral may be \
+0, specify a finite value for the AccuracyGoal option.\"",2,176,809,
+   23667967595296183195,"Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellChangeTimes->{3.6966475766789584`*^9}],
+
+Cell[BoxData[
+ TemplateBox[{
+  "NIntegrate","izero",
+   "\"Integral and error estimates are 0 on all integration subregions. Try \
+increasing the value of the MinRecursion option. If value of integral may be \
+0, specify a finite value for the AccuracyGoal option.\"",2,176,810,
+   23667967595296183195,"Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellChangeTimes->{3.6966475766945825`*^9}],
+
+Cell[BoxData[
+ TemplateBox[{
+  "General","stop",
+   "\"Further output of \\!\\(\\*StyleBox[RowBox[{\\\"NIntegrate\\\", \
+\\\"::\\\", \\\"izero\\\"}], \\\"MessageName\\\"]\\) will be suppressed \
+during this calculation.\"",2,176,811,23667967595296183195,"Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellChangeTimes->{3.696647576725835*^9}],
+
+Cell[BoxData[
+ RowBox[{"0.010761505919079718`", " ", 
+  RowBox[{"(", 
+   RowBox[{
+    RowBox[{"NIntegrate", "[", 
+     RowBox[{
+      RowBox[{"ym", " ", 
+       SuperscriptBox[
+        SqrtBox[
+         RowBox[{
+          SuperscriptBox[
+           RowBox[{"(", 
+            RowBox[{"zm", "-", "z"}], ")"}], "2"], "+", 
+          SuperscriptBox["ym", "2"]}]], 
+        RowBox[{
+         RowBox[{"-", "6"}], "/", "7"}]]}], ",", 
+      RowBox[{"{", 
+       RowBox[{"z", ",", 
+        RowBox[{"-", 
+         FractionBox["180", "2"]}], ",", 
+        FractionBox["180", "2"]}], "}"}]}], "]"}], "+", 
+    RowBox[{"NIntegrate", "[", 
+     RowBox[{
+      RowBox[{
+       RowBox[{"(", 
+        RowBox[{
+         FractionBox["180", "2"], "-", "zm"}], ")"}], " ", 
+       SuperscriptBox[
+        SqrtBox[
+         RowBox[{
+          SuperscriptBox[
+           RowBox[{"(", 
+            RowBox[{"ym", "-", "y"}], ")"}], "2"], "+", 
+          SuperscriptBox[
+           RowBox[{"(", 
+            RowBox[{
+             FractionBox["180", "2"], "-", "zm"}], ")"}], "2"]}]], 
+        RowBox[{
+         RowBox[{"-", "6"}], "/", "7"}]]}], ",", 
+      RowBox[{"{", 
+       RowBox[{"y", ",", "0", ",", "8"}], "}"}]}], "]"}], "+", 
+    RowBox[{"NIntegrate", "[", 
+     RowBox[{
+      RowBox[{
+       RowBox[{"(", 
+        RowBox[{
+         FractionBox["180", "2"], "+", "zm"}], ")"}], " ", 
+       SuperscriptBox[
+        SqrtBox[
+         RowBox[{
+          SuperscriptBox[
+           RowBox[{"(", 
+            RowBox[{"ym", "-", "y"}], ")"}], "2"], "+", 
+          SuperscriptBox[
+           RowBox[{"(", 
+            RowBox[{
+             FractionBox["180", "2"], "+", "zm"}], ")"}], "2"]}]], 
+        RowBox[{
+         RowBox[{"-", "6"}], "/", "7"}]]}], ",", 
+      RowBox[{"{", 
+       RowBox[{"y", ",", "0", ",", "8"}], "}"}]}], "]"}]}], ")"}]}]], "Output",
+ CellChangeTimes->{3.6966476022669353`*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"velDicembreCm", "[", 
+   RowBox[{"zm_", ",", "ym_"}], "]"}], " ", "=", " ", 
+  RowBox[{
+   RowBox[{
+    RowBox[{"J", "[", 
+     RowBox[{"zm", ",", "ym", ",", "180", ",", "76"}], "]"}], "/", 
+    RowBox[{"Sum", "[", 
+     RowBox[{
+      RowBox[{"J", "[", 
+       RowBox[{"zm", ",", "ym", ",", "180", ",", "76"}], "]"}], ",", " ", 
+      RowBox[{"{", 
+       RowBox[{"ym", ",", "0", ",", "76"}], "}"}], ",", 
+      RowBox[{"{", 
+       RowBox[{"zm", ",", 
+        RowBox[{"-", "90"}], ",", "90"}], "}"}]}], "]"}]}], " ", "*", 
+   RowBox[{"12", "/", "0.001"}]}]}]], "Input",
+ CellChangeTimes->{{3.6966757901920223`*^9, 3.696675801742201*^9}}],
+
+Cell[BoxData[
+ TemplateBox[{
+  "NIntegrate","inumr",
+   "\"The integrand \\!\\(\\*FractionBox[RowBox[{\\\"90\\\", \\\"+\\\", \
+\\\"zm\\\"}], SuperscriptBox[RowBox[{\\\"(\\\", \
+RowBox[{SuperscriptBox[RowBox[{\\\"(\\\", RowBox[{RowBox[{\\\"-\\\", \
+\\\"y\\\"}], \\\"+\\\", \\\"ym\\\"}], \\\")\\\"}], \\\"2\\\"], \\\"+\\\", \
+SuperscriptBox[RowBox[{\\\"(\\\", RowBox[{\\\"90\\\", \\\"+\\\", \
+\\\"zm\\\"}], \\\")\\\"}], \\\"2\\\"]}], \\\")\\\"}], RowBox[{\\\"3\\\", \
+\\\"/\\\", \\\"7\\\"}]]]\\) has evaluated to non-numerical values for all \
+sampling points in the region with boundaries \\!\\(\\*RowBox[{\\\"{\\\", \
+RowBox[{\\\"{\\\", RowBox[{\\\"0\\\", \\\",\\\", \\\"76\\\"}], \\\"}\\\"}], \
+\\\"}\\\"}]\\).\"",2,15,89,23668241090185444519,"Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellChangeTimes->{3.6966785803526907`*^9}],
+
+Cell[BoxData[
+ TemplateBox[{
+  "NIntegrate","inumr",
+   "\"The integrand \\!\\(\\*FractionBox[RowBox[{\\\"90\\\", \\\"-\\\", \
+\\\"zm\\\"}], SuperscriptBox[RowBox[{\\\"(\\\", \
+RowBox[{SuperscriptBox[RowBox[{\\\"(\\\", RowBox[{RowBox[{\\\"-\\\", \
+\\\"y\\\"}], \\\"+\\\", \\\"ym\\\"}], \\\")\\\"}], \\\"2\\\"], \\\"+\\\", \
+SuperscriptBox[RowBox[{\\\"(\\\", RowBox[{\\\"90\\\", \\\"-\\\", \
+\\\"zm\\\"}], \\\")\\\"}], \\\"2\\\"]}], \\\")\\\"}], RowBox[{\\\"3\\\", \
+\\\"/\\\", \\\"7\\\"}]]]\\) has evaluated to non-numerical values for all \
+sampling points in the region with boundaries \\!\\(\\*RowBox[{\\\"{\\\", \
+RowBox[{\\\"{\\\", RowBox[{\\\"0\\\", \\\",\\\", \\\"76\\\"}], \\\"}\\\"}], \
+\\\"}\\\"}]\\).\"",2,15,90,23668241090185444519,"Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellChangeTimes->{3.6966785803839407`*^9}],
+
+Cell[BoxData[
+ TemplateBox[{
+  "NIntegrate","inumr",
+   "\"The integrand \\!\\(\\*FractionBox[\\\"ym\\\", \
+SuperscriptBox[RowBox[{\\\"(\\\", RowBox[{SuperscriptBox[\\\"ym\\\", \
+\\\"2\\\"], \\\"+\\\", SuperscriptBox[RowBox[{\\\"(\\\", \
+RowBox[{RowBox[{\\\"-\\\", \\\"z\\\"}], \\\"+\\\", \\\"zm\\\"}], \\\")\\\"}], \
+\\\"2\\\"]}], \\\")\\\"}], RowBox[{\\\"3\\\", \\\"/\\\", \\\"7\\\"}]]]\\) has \
+evaluated to non-numerical values for all sampling points in the region with \
+boundaries \\!\\(\\*RowBox[{\\\"{\\\", RowBox[{\\\"{\\\", \
+RowBox[{RowBox[{\\\"-\\\", \\\"90\\\"}], \\\",\\\", \\\"90\\\"}], \
+\\\"}\\\"}], \\\"}\\\"}]\\).\"",2,15,91,23668241090185444519,"Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellChangeTimes->{3.696678580415191*^9}],
+
+Cell[BoxData[
+ TemplateBox[{
+  "General","stop",
+   "\"Further output of \\!\\(\\*StyleBox[RowBox[{\\\"NIntegrate\\\", \
+\\\"::\\\", \\\"inumr\\\"}], \\\"MessageName\\\"]\\) will be suppressed \
+during this calculation.\"",2,15,92,23668241090185444519,"Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellChangeTimes->{3.6966785804308352`*^9}],
+
+Cell[BoxData[
+ TemplateBox[{
+  "NIntegrate","izero",
+   "\"Integral and error estimates are 0 on all integration subregions. Try \
+increasing the value of the MinRecursion option. If value of integral may be \
+0, specify a finite value for the AccuracyGoal option.\"",2,15,93,
+   23668241090185444519,"Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellChangeTimes->{3.6966785804620695`*^9}],
+
+Cell[BoxData[
+ TemplateBox[{
+  "NIntegrate","izero",
+   "\"Integral and error estimates are 0 on all integration subregions. Try \
+increasing the value of the MinRecursion option. If value of integral may be \
+0, specify a finite value for the AccuracyGoal option.\"",2,15,94,
+   23668241090185444519,"Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellChangeTimes->{3.6966785804776945`*^9}],
+
+Cell[BoxData[
+ TemplateBox[{
+  "NIntegrate","izero",
+   "\"Integral and error estimates are 0 on all integration subregions. Try \
+increasing the value of the MinRecursion option. If value of integral may be \
+0, specify a finite value for the AccuracyGoal option.\"",2,15,95,
+   23668241090185444519,"Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellChangeTimes->{3.696678580508943*^9}],
+
+Cell[BoxData[
+ TemplateBox[{
+  "General","stop",
+   "\"Further output of \\!\\(\\*StyleBox[RowBox[{\\\"NIntegrate\\\", \
+\\\"::\\\", \\\"izero\\\"}], \\\"MessageName\\\"]\\) will be suppressed \
+during this calculation.\"",2,15,96,23668241090185444519,"Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellChangeTimes->{3.6966785805245695`*^9}],
+
+Cell[BoxData[
+ RowBox[{"0.0019965091524583676`", " ", 
+  RowBox[{"(", 
+   RowBox[{
+    RowBox[{"NIntegrate", "[", 
+     RowBox[{
+      RowBox[{"ym", " ", 
+       SuperscriptBox[
+        SqrtBox[
+         RowBox[{
+          SuperscriptBox[
+           RowBox[{"(", 
+            RowBox[{"zm", "-", "z"}], ")"}], "2"], "+", 
+          SuperscriptBox["ym", "2"]}]], 
+        RowBox[{
+         RowBox[{"-", "6"}], "/", "7"}]]}], ",", 
+      RowBox[{"{", 
+       RowBox[{"z", ",", 
+        RowBox[{"-", 
+         FractionBox["180", "2"]}], ",", 
+        FractionBox["180", "2"]}], "}"}]}], "]"}], "+", 
+    RowBox[{"NIntegrate", "[", 
+     RowBox[{
+      RowBox[{
+       RowBox[{"(", 
+        RowBox[{
+         FractionBox["180", "2"], "-", "zm"}], ")"}], " ", 
+       SuperscriptBox[
+        SqrtBox[
+         RowBox[{
+          SuperscriptBox[
+           RowBox[{"(", 
+            RowBox[{"ym", "-", "y"}], ")"}], "2"], "+", 
+          SuperscriptBox[
+           RowBox[{"(", 
+            RowBox[{
+             FractionBox["180", "2"], "-", "zm"}], ")"}], "2"]}]], 
+        RowBox[{
+         RowBox[{"-", "6"}], "/", "7"}]]}], ",", 
+      RowBox[{"{", 
+       RowBox[{"y", ",", "0", ",", "76"}], "}"}]}], "]"}], "+", 
+    RowBox[{"NIntegrate", "[", 
+     RowBox[{
+      RowBox[{
+       RowBox[{"(", 
+        RowBox[{
+         FractionBox["180", "2"], "+", "zm"}], ")"}], " ", 
+       SuperscriptBox[
+        SqrtBox[
+         RowBox[{
+          SuperscriptBox[
+           RowBox[{"(", 
+            RowBox[{"ym", "-", "y"}], ")"}], "2"], "+", 
+          SuperscriptBox[
+           RowBox[{"(", 
+            RowBox[{
+             FractionBox["180", "2"], "+", "zm"}], ")"}], "2"]}]], 
+        RowBox[{
+         RowBox[{"-", "6"}], "/", "7"}]]}], ",", 
+      RowBox[{"{", 
+       RowBox[{"y", ",", "0", ",", "76"}], "}"}]}], "]"}]}], 
+   ")"}]}]], "Output",
+ CellChangeTimes->{3.6966787756763725`*^9}]
+}, Open  ]]
+},
+WindowSize->{1344, 667},
+WindowMargins->{{0, Automatic}, {Automatic, 0}},
+FrontEndVersion->"11.0 for Microsoft Windows (64-bit) (September 21, 2016)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[580, 22, 2508, 77, 126, "Input"],
+Cell[3091, 101, 214, 3, 44, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[3342, 109, 819, 20, 30, "Input"],
+Cell[4164, 131, 837, 14, 50, "Message"],
+Cell[5004, 147, 837, 14, 50, "Message"],
+Cell[5844, 163, 762, 13, 48, "Message"],
+Cell[6609, 178, 345, 7, 21, "Message"],
+Cell[6957, 187, 397, 8, 21, "Message"],
+Cell[7357, 197, 397, 8, 21, "Message"],
+Cell[7757, 207, 394, 8, 21, "Message"],
+Cell[8154, 217, 348, 7, 21, "Message"],
+Cell[8505, 226, 1883, 61, 82, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[10425, 292, 728, 19, 30, "Input"],
+Cell[11156, 313, 836, 14, 50, "Message"],
+Cell[11995, 329, 836, 14, 50, "Message"],
+Cell[12834, 345, 758, 13, 48, "Message"],
+Cell[13595, 360, 344, 7, 21, "Message"],
+Cell[13942, 369, 393, 8, 21, "Message"],
+Cell[14338, 379, 393, 8, 21, "Message"],
+Cell[14734, 389, 391, 8, 21, "Message"],
+Cell[15128, 399, 344, 7, 21, "Message"],
+Cell[15475, 408, 1890, 62, 126, "Output"]
+}, Open  ]],
+Cell[17380, 473, 89, 1, 50, "Input"],
+Cell[CellGroupData[{
+Cell[17494, 478, 863, 21, 30, "Input"],
+Cell[18360, 501, 858, 14, 50, "Message"],
+Cell[19221, 517, 858, 14, 50, "Message"],
+Cell[20082, 533, 781, 13, 48, "Message"],
+Cell[20866, 548, 367, 7, 21, "Message"],
+Cell[21236, 557, 414, 8, 21, "Message"],
+Cell[21653, 567, 414, 8, 21, "Message"],
+Cell[22070, 577, 414, 8, 21, "Message"],
+Cell[22487, 587, 364, 7, 21, "Message"],
+Cell[22854, 596, 1906, 61, 82, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[24797, 662, 670, 18, 30, "Input"],
+Cell[25470, 682, 836, 14, 50, "Message"],
+Cell[26309, 698, 835, 14, 50, "Message"],
+Cell[27147, 714, 759, 13, 48, "Message"],
+Cell[27909, 729, 345, 7, 21, "Message"],
+Cell[28257, 738, 394, 8, 21, "Message"],
+Cell[28654, 748, 394, 8, 21, "Message"],
+Cell[29051, 758, 392, 8, 21, "Message"],
+Cell[29446, 768, 345, 7, 21, "Message"],
+Cell[29794, 777, 1893, 62, 126, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[31724, 844, 839, 21, 69, "Input"],
+Cell[32566, 867, 837, 14, 50, "Message"],
+Cell[33406, 883, 837, 14, 50, "Message"],
+Cell[34246, 899, 762, 13, 48, "Message"],
+Cell[35011, 914, 346, 7, 21, "Message"],
+Cell[35360, 923, 397, 8, 21, "Message"],
+Cell[35760, 933, 397, 8, 21, "Message"],
+Cell[36160, 943, 397, 8, 21, "Message"],
+Cell[36560, 953, 348, 7, 21, "Message"],
+Cell[36911, 962, 1886, 61, 82, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[38834, 1028, 670, 18, 30, "Input"],
+Cell[39507, 1048, 837, 14, 50, "Message"],
+Cell[40347, 1064, 837, 14, 50, "Message"],
+Cell[41187, 1080, 759, 13, 48, "Message"],
+Cell[41949, 1095, 343, 7, 21, "Message"],
+Cell[42295, 1104, 394, 8, 21, "Message"],
+Cell[42692, 1114, 394, 8, 21, "Message"],
+Cell[43089, 1124, 392, 8, 21, "Message"],
+Cell[43484, 1134, 343, 7, 21, "Message"],
+Cell[43830, 1143, 1893, 62, 126, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[45760, 1210, 816, 20, 69, "Input"],
+Cell[46579, 1232, 839, 14, 50, "Message"],
+Cell[47421, 1248, 839, 14, 50, "Message"],
+Cell[48263, 1264, 760, 13, 48, "Message"],
+Cell[49026, 1279, 346, 7, 21, "Message"],
+Cell[49375, 1288, 395, 8, 21, "Message"],
+Cell[49773, 1298, 395, 8, 21, "Message"],
+Cell[50171, 1308, 395, 8, 21, "Message"],
+Cell[50569, 1318, 346, 7, 21, "Message"],
+Cell[50918, 1327, 1885, 61, 82, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[52840, 1393, 671, 18, 30, "Input"],
+Cell[53514, 1413, 837, 14, 50, "Message"],
+Cell[54354, 1429, 837, 14, 50, "Message"],
+Cell[55194, 1445, 756, 13, 48, "Message"],
+Cell[55953, 1460, 343, 7, 21, "Message"],
+Cell[56299, 1469, 394, 8, 21, "Message"],
+Cell[56696, 1479, 394, 8, 21, "Message"],
+Cell[57093, 1489, 392, 8, 21, "Message"],
+Cell[57488, 1499, 343, 7, 21, "Message"],
+Cell[57834, 1508, 1890, 62, 126, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[59761, 1575, 850, 21, 69, "Input"],
+Cell[60614, 1598, 840, 14, 50, "Message"],
+Cell[61457, 1614, 840, 14, 50, "Message"],
+Cell[62300, 1630, 760, 13, 48, "Message"],
+Cell[63063, 1645, 346, 7, 21, "Message"],
+Cell[63412, 1654, 397, 8, 21, "Message"],
+Cell[63812, 1664, 397, 8, 21, "Message"],
+Cell[64212, 1674, 397, 8, 21, "Message"],
+Cell[64612, 1684, 348, 7, 21, "Message"],
+Cell[64963, 1693, 1891, 62, 112, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[66891, 1760, 675, 18, 30, "Input"],
+Cell[67569, 1780, 838, 14, 50, "Message"],
+Cell[68410, 1796, 838, 14, 50, "Message"],
+Cell[69251, 1812, 757, 13, 48, "Message"],
+Cell[70011, 1827, 345, 7, 21, "Message"],
+Cell[70359, 1836, 394, 8, 21, "Message"],
+Cell[70756, 1846, 392, 8, 21, "Message"],
+Cell[71151, 1856, 394, 8, 21, "Message"],
+Cell[71548, 1866, 345, 7, 21, "Message"],
+Cell[71896, 1875, 1893, 62, 126, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[73826, 1942, 893, 21, 69, "Input"],
+Cell[74722, 1965, 840, 14, 50, "Message"],
+Cell[75565, 1981, 838, 14, 50, "Message"],
+Cell[76406, 1997, 762, 13, 48, "Message"],
+Cell[77171, 2012, 346, 7, 21, "Message"],
+Cell[77520, 2021, 395, 8, 21, "Message"],
+Cell[77918, 2031, 397, 8, 21, "Message"],
+Cell[78318, 2041, 395, 8, 21, "Message"],
+Cell[78716, 2051, 348, 7, 21, "Message"],
+Cell[79067, 2060, 1892, 62, 112, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[80996, 2127, 675, 18, 30, "Input"],
+Cell[81674, 2147, 838, 14, 50, "Message"],
+Cell[82515, 2163, 838, 14, 50, "Message"],
+Cell[83356, 2179, 757, 13, 48, "Message"],
+Cell[84116, 2194, 343, 7, 21, "Message"],
+Cell[84462, 2203, 391, 8, 21, "Message"],
+Cell[84856, 2213, 392, 8, 21, "Message"],
+Cell[85251, 2223, 394, 8, 21, "Message"],
+Cell[85648, 2233, 343, 7, 21, "Message"],
+Cell[85994, 2242, 1895, 62, 126, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[87926, 2309, 922, 22, 69, "Input"],
+Cell[88851, 2333, 840, 14, 50, "Message"],
+Cell[89694, 2349, 838, 14, 50, "Message"],
+Cell[90535, 2365, 759, 13, 48, "Message"],
+Cell[91297, 2380, 348, 7, 21, "Message"],
+Cell[91648, 2389, 397, 8, 21, "Message"],
+Cell[92048, 2399, 395, 8, 21, "Message"],
+Cell[92446, 2409, 395, 8, 21, "Message"],
+Cell[92844, 2419, 348, 7, 21, "Message"],
+Cell[93195, 2428, 1892, 62, 82, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[95124, 2495, 675, 18, 44, "Input"],
+Cell[95802, 2515, 839, 14, 50, "Message"],
+Cell[96644, 2531, 837, 14, 50, "Message"],
+Cell[97484, 2547, 760, 13, 48, "Message"],
+Cell[98247, 2562, 346, 7, 21, "Message"],
+Cell[98596, 2571, 395, 8, 21, "Message"],
+Cell[98994, 2581, 395, 8, 21, "Message"],
+Cell[99392, 2591, 395, 8, 21, "Message"],
+Cell[99790, 2601, 346, 7, 21, "Message"],
+Cell[100139, 2610, 1895, 62, 126, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[102071, 2677, 898, 21, 69, "Input"],
+Cell[102972, 2700, 840, 14, 50, "Message"],
+Cell[103815, 2716, 838, 14, 50, "Message"],
+Cell[104656, 2732, 760, 13, 48, "Message"],
+Cell[105419, 2747, 348, 7, 21, "Message"],
+Cell[105770, 2756, 395, 8, 21, "Message"],
+Cell[106168, 2766, 395, 8, 21, "Message"],
+Cell[106566, 2776, 395, 8, 21, "Message"],
+Cell[106964, 2786, 346, 7, 21, "Message"],
+Cell[107313, 2795, 1892, 62, 82, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[109242, 2862, 673, 18, 44, "Input"],
+Cell[109918, 2882, 839, 14, 50, "Message"],
+Cell[110760, 2898, 837, 14, 50, "Message"],
+Cell[111600, 2914, 760, 13, 48, "Message"],
+Cell[112363, 2929, 346, 7, 21, "Message"],
+Cell[112712, 2938, 395, 8, 21, "Message"],
+Cell[113110, 2948, 395, 8, 21, "Message"],
+Cell[113508, 2958, 395, 8, 21, "Message"],
+Cell[113906, 2968, 344, 7, 21, "Message"],
+Cell[114253, 2977, 1893, 62, 126, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[116183, 3044, 855, 21, 69, "Input"],
+Cell[117041, 3067, 837, 14, 50, "Message"],
+Cell[117881, 3083, 840, 14, 50, "Message"],
+Cell[118724, 3099, 762, 13, 48, "Message"],
+Cell[119489, 3114, 348, 7, 21, "Message"],
+Cell[119840, 3123, 397, 8, 21, "Message"],
+Cell[120240, 3133, 397, 8, 21, "Message"],
+Cell[120640, 3143, 397, 8, 21, "Message"],
+Cell[121040, 3153, 348, 7, 21, "Message"],
+Cell[121391, 3162, 1890, 62, 112, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[123318, 3229, 678, 18, 44, "Input"],
+Cell[123999, 3249, 839, 14, 50, "Message"],
+Cell[124841, 3265, 839, 14, 50, "Message"],
+Cell[125683, 3281, 758, 13, 48, "Message"],
+Cell[126444, 3296, 343, 7, 21, "Message"],
+Cell[126790, 3305, 395, 8, 21, "Message"],
+Cell[127188, 3315, 393, 8, 21, "Message"],
+Cell[127584, 3325, 393, 8, 21, "Message"],
+Cell[127980, 3335, 344, 7, 21, "Message"],
+Cell[128327, 3344, 1893, 62, 126, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[130257, 3411, 843, 21, 69, "Input"],
+Cell[131103, 3434, 837, 14, 50, "Message"],
+Cell[131943, 3450, 837, 14, 50, "Message"],
+Cell[132783, 3466, 760, 13, 48, "Message"],
+Cell[133546, 3481, 346, 7, 21, "Message"],
+Cell[133895, 3490, 395, 8, 21, "Message"],
+Cell[134293, 3500, 395, 8, 21, "Message"],
+Cell[134691, 3510, 395, 8, 21, "Message"],
+Cell[135089, 3520, 345, 7, 21, "Message"],
+Cell[135437, 3529, 1886, 61, 82, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[137360, 3595, 673, 18, 44, "Input"],
+Cell[138036, 3615, 836, 14, 50, "Message"],
+Cell[138875, 3631, 835, 14, 50, "Message"],
+Cell[139713, 3647, 758, 13, 48, "Message"],
+Cell[140474, 3662, 344, 7, 21, "Message"],
+Cell[140821, 3671, 393, 8, 21, "Message"],
+Cell[141217, 3681, 393, 8, 21, "Message"],
+Cell[141613, 3691, 393, 8, 21, "Message"],
+Cell[142009, 3701, 344, 7, 21, "Message"],
+Cell[142356, 3710, 1891, 62, 126, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[144284, 3777, 812, 20, 88, "Input"],
+Cell[145099, 3799, 836, 14, 50, "Message"],
+Cell[145938, 3815, 837, 14, 50, "Message"],
+Cell[146778, 3831, 759, 13, 48, "Message"],
+Cell[147540, 3846, 346, 7, 21, "Message"],
+Cell[147889, 3855, 395, 8, 21, "Message"],
+Cell[148287, 3865, 395, 8, 21, "Message"],
+Cell[148685, 3875, 397, 8, 21, "Message"],
+Cell[149085, 3885, 346, 7, 21, "Message"],
+Cell[149434, 3894, 1884, 61, 82, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[151355, 3960, 669, 18, 44, "Input"],
+Cell[152027, 3980, 838, 14, 50, "Message"],
+Cell[152868, 3996, 838, 14, 50, "Message"],
+Cell[153709, 4012, 758, 13, 48, "Message"],
+Cell[154470, 4027, 346, 7, 21, "Message"],
+Cell[154819, 4036, 393, 8, 21, "Message"],
+Cell[155215, 4046, 395, 8, 21, "Message"],
+Cell[155613, 4056, 395, 8, 21, "Message"],
+Cell[156011, 4066, 344, 7, 21, "Message"],
+Cell[156358, 4075, 1892, 62, 126, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[158287, 4142, 770, 20, 50, "Input"],
+Cell[159060, 4164, 837, 14, 50, "Message"],
+Cell[159900, 4180, 837, 14, 50, "Message"],
+Cell[160740, 4196, 760, 13, 48, "Message"],
+Cell[161503, 4211, 348, 7, 21, "Message"],
+Cell[161854, 4220, 397, 8, 21, "Message"],
+Cell[162254, 4230, 397, 8, 21, "Message"],
+Cell[162654, 4240, 397, 8, 21, "Message"],
+Cell[163054, 4250, 346, 7, 21, "Message"],
+Cell[163403, 4259, 1886, 61, 82, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[165326, 4325, 674, 18, 44, "Input"],
+Cell[166003, 4345, 838, 14, 50, "Message"],
+Cell[166844, 4361, 838, 14, 50, "Message"],
+Cell[167685, 4377, 758, 13, 48, "Message"],
+Cell[168446, 4392, 346, 7, 21, "Message"],
+Cell[168795, 4401, 395, 8, 21, "Message"],
+Cell[169193, 4411, 395, 8, 21, "Message"],
+Cell[169591, 4421, 393, 8, 21, "Message"],
+Cell[169987, 4431, 346, 7, 21, "Message"],
+Cell[170336, 4440, 1893, 62, 159, "Output"]
+}, Open  ]]
+}
+]
+*)
+

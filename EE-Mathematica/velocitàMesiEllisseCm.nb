@@ -1,0 +1,3204 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 11.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[    127578,       3196]
+NotebookOptionsPosition[    116983,       2906]
+NotebookOutlinePosition[    117329,       2921]
+CellTagsIndexPosition[    117286,       2918]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{
+   RowBox[{"W", "[", 
+    RowBox[{"zm_", ",", "ym_", ",", "b_", ",", 
+     RowBox[{"h_", "?", "NumericQ"}]}], "]"}], " ", ":=", " ", 
+   RowBox[{
+    RowBox[{"NIntegrate", "[", 
+     RowBox[{
+      RowBox[{
+       RowBox[{
+        RowBox[{"(", 
+         RowBox[{"Sqrt", "[", 
+          RowBox[{
+           RowBox[{
+            RowBox[{"(", 
+             RowBox[{"zm", " ", "-", " ", 
+              RowBox[{
+               RowBox[{"b", "/", "2"}], " ", 
+               RowBox[{"Cos", "[", "t", "]"}]}]}], ")"}], "^", "2"}], " ", 
+           "+", " ", 
+           RowBox[{
+            RowBox[{"(", 
+             RowBox[{"ym", " ", "-", " ", 
+              RowBox[{"h", "  ", 
+               RowBox[{"Sin", "[", "t", "]"}]}]}], ")"}], "^", "2"}]}], "]"}],
+          ")"}], "^", 
+        RowBox[{"(", 
+         RowBox[{"1", "/", "7"}], ")"}]}], " ", "*", " ", 
+       RowBox[{"Cos", "[", 
+        RowBox[{"ArcTan", "[", 
+         RowBox[{"Abs", "[", 
+          RowBox[{
+           RowBox[{"(", 
+            RowBox[{
+             RowBox[{
+              RowBox[{"(", 
+               RowBox[{"b", "*", 
+                RowBox[{"Tan", "[", "t", "]"}]}], ")"}], "/", 
+              RowBox[{"(", 
+               RowBox[{"2", "*", "h"}], ")"}]}], "-", 
+             RowBox[{
+              RowBox[{"(", 
+               RowBox[{"ym", " ", "-", " ", 
+                RowBox[{"h", " ", 
+                 RowBox[{"Sin", "[", "t", "]"}]}]}], ")"}], "/", 
+              RowBox[{"(", 
+               RowBox[{"zm", " ", "-", " ", 
+                RowBox[{
+                 RowBox[{"b", "/", "2"}], " ", "*", " ", 
+                 RowBox[{"Cos", "[", "t", "]"}]}]}], ")"}]}]}], ")"}], "/", 
+           " ", 
+           RowBox[{"(", 
+            RowBox[{"1", " ", "+", " ", 
+             RowBox[{
+              RowBox[{
+               RowBox[{"(", 
+                RowBox[{"b", "*", 
+                 RowBox[{"Tan", "[", "t", "]"}]}], ")"}], "/", 
+               RowBox[{"(", 
+                RowBox[{"2", "*", "h"}], ")"}]}], " ", "*", 
+              RowBox[{
+               RowBox[{"(", 
+                RowBox[{"ym", " ", "-", " ", 
+                 RowBox[{"h", " ", 
+                  RowBox[{"Sin", "[", "t", "]"}]}]}], ")"}], " ", "/", " ", 
+               RowBox[{"(", 
+                RowBox[{"zm", " ", "-", " ", 
+                 RowBox[{
+                  RowBox[{"b", "/", "2"}], " ", "*", " ", 
+                  RowBox[{"Cos", "[", "t", "]"}]}]}], ")"}]}]}]}], ")"}]}], 
+          "]"}], "]"}], "]"}]}], ",", 
+      RowBox[{"{", 
+       RowBox[{"t", ",", "Pi", ",", 
+        RowBox[{"2", "Pi"}]}], "}"}]}], "]"}], " ", "/;", " ", 
+    RowBox[{
+     RowBox[{
+      RowBox[{
+       RowBox[{"zm", "^", "2"}], "/", 
+       RowBox[{
+        RowBox[{"(", 
+         RowBox[{"b", "/", "2"}], ")"}], "^", "2"}]}], " ", "+", " ", 
+      RowBox[{
+       RowBox[{"ym", "^", "2"}], "/", 
+       RowBox[{"h", "^", "2"}]}], " ", "-", " ", "1"}], " ", "<", "0"}]}]}], 
+  " ", ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"W", "[", 
+    RowBox[{"zm_", ",", "ym_", ",", "b_", ",", 
+     RowBox[{"h_", "?", "NumericQ"}]}], "]"}], " ", ":=", " ", 
+   RowBox[{"0", " ", "/;", " ", 
+    RowBox[{
+     RowBox[{
+      RowBox[{
+       RowBox[{"zm", "^", "2"}], "/", 
+       RowBox[{
+        RowBox[{"(", 
+         RowBox[{"b", "/", "2"}], ")"}], "^", "2"}]}], " ", "+", " ", 
+      RowBox[{
+       RowBox[{"ym", "^", "2"}], "/", 
+       RowBox[{"h", "^", "2"}]}], " ", "-", " ", "1"}], "\[GreaterEqual]", 
+     "0"}]}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{"W", "[", 
+  RowBox[{"0", ",", 
+   RowBox[{"-", "7.2"}], ",", "200", ",", "28"}], 
+  "]"}], "\[IndentingNewLine]"}], "Input",
+ CellChangeTimes->{{3.6963520749684277`*^9, 3.6963520986022234`*^9}, {
+  3.6963544012454295`*^9, 3.696354414060873*^9}, {3.69635590561705*^9, 
+  3.696355910588187*^9}, {3.696355940848299*^9, 3.6963559706841707`*^9}}],
+
+Cell[BoxData["3.5522901430313145`"], "Output",
+ CellChangeTimes->{{3.6963559549482965`*^9, 3.6963559722622633`*^9}, 
+   3.6963608453090878`*^9, 3.696387553969355*^9, 3.696426792962557*^9, 
+   3.696514341181219*^9, 3.696519707490308*^9, {3.69663814952591*^9, 
+   3.696638149606967*^9}, 3.696642315861314*^9, 3.6966491831801863`*^9, 
+   3.6966571021254215`*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"velGennaio", "[", 
+   RowBox[{"zm_", ",", "ym_"}], "]"}], " ", "=", " ", 
+  RowBox[{
+   RowBox[{
+    RowBox[{"W", "[", 
+     RowBox[{"zm", ",", "ym", ",", "180", ",", "7"}], "]"}], "/", 
+    RowBox[{"Sum", "[", 
+     RowBox[{
+      RowBox[{"W", "[", 
+       RowBox[{"zm", ",", 
+        RowBox[{"-", "ym"}], ",", "180", ",", "7"}], "]"}], ",", " ", 
+      RowBox[{"{", 
+       RowBox[{"ym", ",", "0", ",", "7"}], "}"}], ",", 
+      RowBox[{"{", 
+       RowBox[{"zm", ",", 
+        RowBox[{"-", "90"}], ",", "90"}], "}"}]}], "]"}]}], " ", "*", " ", 
+   RowBox[{"10", "/", "0.01"}]}]}]], "Input",
+ CellChangeTimes->{{3.696352104407361*^9, 3.6963522093095016`*^9}, {
+  3.6963536175412536`*^9, 3.6963536726053286`*^9}, {3.6963564992748547`*^9, 
+  3.6963565121994534`*^9}, {3.6963602165178065`*^9, 3.696360218304078*^9}, {
+  3.696514262478434*^9, 3.6965143067281485`*^9}, {3.696519716468693*^9, 
+  3.6965197306557627`*^9}, {3.696636678326761*^9, 3.696636713187516*^9}, {
+  3.6966367653972206`*^9, 3.6966367655534916`*^9}, {3.6966423792556367`*^9, 
+  3.6966423830073223`*^9}}],
+
+Cell[BoxData[
+ TemplateBox[{
+  "NIntegrate","ncvb",
+   "\"NIntegrate failed to converge to prescribed accuracy after \
+\\!\\(\\*RowBox[{\\\"9\\\"}]\\) recursive bisections in \
+\\!\\(\\*RowBox[{\\\"t\\\"}]\\) near \\!\\(\\*RowBox[{\\\"{\\\", \\\"t\\\", \
+\\\"}\\\"}]\\) = \\!\\(\\*RowBox[{\\\"{\\\", \\\"3.442204062511657`\\\", \
+\\\"}\\\"}]\\). NIntegrate obtained \
+\\!\\(\\*RowBox[{\\\"0.8089286923210229`\\\"}]\\) and \
+\\!\\(\\*RowBox[{\\\"2.316181862782713`*^-6\\\"}]\\) for the integral and \
+error estimates.\"",2,121,466,23667967595296183195,"Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellChangeTimes->{3.696638359116336*^9, 3.6966424062307625`*^9, 
+  3.696642437840254*^9}],
+
+Cell[BoxData[
+ TemplateBox[{
+  "NIntegrate","ncvb",
+   "\"NIntegrate failed to converge to prescribed accuracy after \
+\\!\\(\\*RowBox[{\\\"9\\\"}]\\) recursive bisections in \
+\\!\\(\\*RowBox[{\\\"t\\\"}]\\) near \\!\\(\\*RowBox[{\\\"{\\\", \\\"t\\\", \
+\\\"}\\\"}]\\) = \\!\\(\\*RowBox[{\\\"{\\\", \\\"5.988612170401821`\\\", \
+\\\"}\\\"}]\\). NIntegrate obtained \
+\\!\\(\\*RowBox[{\\\"0.8089286923210123`\\\"}]\\) and \
+\\!\\(\\*RowBox[{\\\"2.316181830817071`*^-6\\\"}]\\) for the integral and \
+error estimates.\"",2,121,467,23667967595296183195,"Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellChangeTimes->{3.696638359116336*^9, 3.6966424062307625`*^9, 
+  3.6966424480655284`*^9}],
+
+Cell[BoxData[
+ TemplateBox[{
+  "NIntegrate","ncvb",
+   "\"NIntegrate failed to converge to prescribed accuracy after \
+\\!\\(\\*RowBox[{\\\"9\\\"}]\\) recursive bisections in \
+\\!\\(\\*RowBox[{\\\"t\\\"}]\\) near \\!\\(\\*RowBox[{\\\"{\\\", \\\"t\\\", \
+\\\"}\\\"}]\\) = \\!\\(\\*RowBox[{\\\"{\\\", \\\"3.5956021413002217`\\\", \
+\\\"}\\\"}]\\). NIntegrate obtained \
+\\!\\(\\*RowBox[{\\\"0.7891723909329376`\\\"}]\\) and \
+\\!\\(\\*RowBox[{\\\"0.000020105354482135446`\\\"}]\\) for the integral and \
+error estimates.\"",2,121,468,23667967595296183195,"Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellChangeTimes->{3.696638359116336*^9, 3.6966424062307625`*^9, 
+  3.696642448122572*^9}],
+
+Cell[BoxData[
+ TemplateBox[{
+  "General","stop",
+   "\"Further output of \\!\\(\\*StyleBox[RowBox[{\\\"NIntegrate\\\", \
+\\\"::\\\", \\\"ncvb\\\"}], \\\"MessageName\\\"]\\) will be suppressed during \
+this calculation.\"",2,121,469,23667967595296183195,"Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellChangeTimes->{3.696638359116336*^9, 3.6966424062307625`*^9, 
+  3.696642448146586*^9}],
+
+Cell[BoxData[
+ TemplateBox[{
+  "NIntegrate","slwcon",
+   "\"Numerical integration converging too slowly; suspect one of the \
+following: singularity, value of the integration is 0, highly oscillatory \
+integrand, or WorkingPrecision too small.\"",2,121,470,23667967595296183195,
+   "Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellChangeTimes->{3.696638359116336*^9, 3.6966424062307625`*^9, 
+  3.6966424746314316`*^9}],
+
+Cell[BoxData[
+ TemplateBox[{
+  "NIntegrate","slwcon",
+   "\"Numerical integration converging too slowly; suspect one of the \
+following: singularity, value of the integration is 0, highly oscillatory \
+integrand, or WorkingPrecision too small.\"",2,121,471,23667967595296183195,
+   "Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellChangeTimes->{3.696638359116336*^9, 3.6966424062307625`*^9, 
+  3.6966424746934757`*^9}],
+
+Cell[BoxData[
+ TemplateBox[{
+  "NIntegrate","slwcon",
+   "\"Numerical integration converging too slowly; suspect one of the \
+following: singularity, value of the integration is 0, highly oscillatory \
+integrand, or WorkingPrecision too small.\"",2,121,472,23667967595296183195,
+   "Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellChangeTimes->{3.696638359116336*^9, 3.6966424062307625`*^9, 
+  3.6966424748165627`*^9}],
+
+Cell[BoxData[
+ TemplateBox[{
+  "General","stop",
+   "\"Further output of \\!\\(\\*StyleBox[RowBox[{\\\"NIntegrate\\\", \
+\\\"::\\\", \\\"slwcon\\\"}], \\\"MessageName\\\"]\\) will be suppressed \
+during this calculation.\"",2,121,473,23667967595296183195,"Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellChangeTimes->{3.696638359116336*^9, 3.6966424062307625`*^9, 
+  3.696642474843582*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"0.7320201538672618`", " ", 
+   RowBox[{"W", "[", 
+    RowBox[{"zm", ",", "ym", ",", "180", ",", "7"}], "]"}]}], 
+  "\[IndentingNewLine]"}], "\[IndentingNewLine]", 
+ RowBox[{"0.7320201538672618`", " ", 
+  RowBox[{"W", "[", 
+   RowBox[{"0", ",", "0", ",", "180", ",", "7"}], "]"}]}]}], "Input",
+ CellChangeTimes->{{3.6966571106880875`*^9, 3.696657141967001*^9}}],
+
+Cell[BoxData[
+ RowBox[{"0.7320201538672618`", " ", 
+  RowBox[{"W", "[", 
+   RowBox[{"zm", ",", "ym", ",", "180", ",", "7"}], "]"}]}]], "Output",
+ CellChangeTimes->{3.69665714320306*^9, 3.696657922538271*^9}],
+
+Cell[BoxData["1.2629103903633012`"], "Output",
+ CellChangeTimes->{3.69665714320306*^9, 3.6966579225851636`*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"\[IndentingNewLine]", 
+  RowBox[{
+   RowBox[{"velGennaioCm", "[", 
+    RowBox[{"zm_", ",", "ym_"}], "]"}], " ", "=", " ", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"W", "[", 
+      RowBox[{"zm", ",", "ym", ",", "180", ",", "67"}], "]"}], "/", 
+     RowBox[{"Sum", "[", 
+      RowBox[{
+       RowBox[{"W", "[", 
+        RowBox[{"zm", ",", 
+         RowBox[{"-", "ym"}], ",", "180", ",", "67"}], "]"}], ",", " ", 
+       RowBox[{"{", 
+        RowBox[{"ym", ",", "0", ",", "67"}], "}"}], ",", 
+       RowBox[{"{", 
+        RowBox[{"zm", ",", 
+         RowBox[{"-", "90"}], ",", "90"}], "}"}]}], "]"}]}], " ", "*", " ", 
+    RowBox[{"10", "/", "0.001"}]}]}]}]], "Input",
+ CellChangeTimes->{{3.696657187362837*^9, 3.69665722812908*^9}}],
+
+Cell[BoxData[
+ TemplateBox[{
+  "NIntegrate","ncvb",
+   "\"NIntegrate failed to converge to prescribed accuracy after \
+\\!\\(\\*RowBox[{\\\"9\\\"}]\\) recursive bisections in \
+\\!\\(\\*RowBox[{\\\"t\\\"}]\\) near \\!\\(\\*RowBox[{\\\"{\\\", \\\"t\\\", \
+\\\"}\\\"}]\\) = \\!\\(\\*RowBox[{\\\"{\\\", \\\"3.356301138390062`\\\", \
+\\\"}\\\"}]\\). NIntegrate obtained \\!\\(\\*RowBox[{\\\"3.223001633095887`\\\
+\"}]\\) and \\!\\(\\*RowBox[{\\\"0.00011008587694301692`\\\"}]\\) for the \
+integral and error estimates.\"",2,8,6,23668124586789405519,"Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellChangeTimes->{3.69665734829247*^9}],
+
+Cell[BoxData[
+ TemplateBox[{
+  "NIntegrate","ncvb",
+   "\"NIntegrate failed to converge to prescribed accuracy after \
+\\!\\(\\*RowBox[{\\\"9\\\"}]\\) recursive bisections in \
+\\!\\(\\*RowBox[{\\\"t\\\"}]\\) near \\!\\(\\*RowBox[{\\\"{\\\", \\\"t\\\", \
+\\\"}\\\"}]\\) = \\!\\(\\*RowBox[{\\\"{\\\", \\\"6.074515094523417`\\\", \
+\\\"}\\\"}]\\). NIntegrate obtained \\!\\(\\*RowBox[{\\\"3.223001633095884`\\\
+\"}]\\) and \\!\\(\\*RowBox[{\\\"0.00011008587694200357`\\\"}]\\) for the \
+integral and error estimates.\"",2,8,7,23668124586789405519,"Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellChangeTimes->{3.696657356272332*^9}],
+
+Cell[BoxData[
+ TemplateBox[{
+  "NIntegrate","ncvb",
+   "\"NIntegrate failed to converge to prescribed accuracy after \
+\\!\\(\\*RowBox[{\\\"9\\\"}]\\) recursive bisections in \
+\\!\\(\\*RowBox[{\\\"t\\\"}]\\) near \\!\\(\\*RowBox[{\\\"{\\\", \\\"t\\\", \
+\\\"}\\\"}]\\) = \\!\\(\\*RowBox[{\\\"{\\\", \\\"3.4790196014209127`\\\", \
+\\\"}\\\"}]\\). NIntegrate obtained \
+\\!\\(\\*RowBox[{\\\"2.9984350702560785`\\\"}]\\) and \
+\\!\\(\\*RowBox[{\\\"0.0001369684131158108`\\\"}]\\) for the integral and \
+error estimates.\"",2,8,8,23668124586789405519,"Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellChangeTimes->{3.6966574117562*^9}],
+
+Cell[BoxData[
+ TemplateBox[{
+  "General","stop",
+   "\"Further output of \\!\\(\\*StyleBox[RowBox[{\\\"NIntegrate\\\", \
+\\\"::\\\", \\\"ncvb\\\"}], \\\"MessageName\\\"]\\) will be suppressed during \
+this calculation.\"",2,8,9,23668124586789405519,"Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellChangeTimes->{3.696657411771822*^9}],
+
+Cell[BoxData[
+ TemplateBox[{
+  "NIntegrate","slwcon",
+   "\"Numerical integration converging too slowly; suspect one of the \
+following: singularity, value of the integration is 0, highly oscillatory \
+integrand, or WorkingPrecision too small.\"",2,8,10,23668124586789405519,
+   "Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellChangeTimes->{3.696657563059153*^9}],
+
+Cell[BoxData[
+ TemplateBox[{
+  "NIntegrate","slwcon",
+   "\"Numerical integration converging too slowly; suspect one of the \
+following: singularity, value of the integration is 0, highly oscillatory \
+integrand, or WorkingPrecision too small.\"",2,8,11,23668124586789405519,
+   "Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellChangeTimes->{3.696657569527568*^9}],
+
+Cell[BoxData[
+ TemplateBox[{
+  "NIntegrate","slwcon",
+   "\"Numerical integration converging too slowly; suspect one of the \
+following: singularity, value of the integration is 0, highly oscillatory \
+integrand, or WorkingPrecision too small.\"",2,8,12,23668124586789405519,
+   "Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellChangeTimes->{3.696657588127139*^9}],
+
+Cell[BoxData[
+ TemplateBox[{
+  "General","stop",
+   "\"Further output of \\!\\(\\*StyleBox[RowBox[{\\\"NIntegrate\\\", \
+\\\"::\\\", \\\"slwcon\\\"}], \\\"MessageName\\\"]\\) will be suppressed \
+during this calculation.\"",2,8,13,23668124586789405519,"Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellChangeTimes->{3.6966575881471376`*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"0.2428980580331402`", " ", 
+   RowBox[{"W", "[", 
+    RowBox[{"zm", ",", "ym", ",", "180", ",", "67"}], "]"}]}], 
+  "\[IndentingNewLine]"}], "\[IndentingNewLine]", 
+ RowBox[{"0.2428980580331402`", " ", 
+  RowBox[{"W", "[", 
+   RowBox[{"0", ",", "0", ",", "180", ",", "67"}], 
+   "]"}]}], "\[IndentingNewLine]"}], "Input",
+ CellChangeTimes->{{3.696657882566455*^9, 3.696657896254116*^9}}],
+
+Cell[BoxData[
+ RowBox[{"0.2428980580331402`", " ", 
+  RowBox[{"W", "[", 
+   RowBox[{"zm", ",", "ym", ",", "180", ",", "67"}], "]"}]}]], "Output",
+ CellChangeTimes->{3.6966578976291065`*^9}],
+
+Cell[BoxData["1.3929603103370056`"], "Output",
+ CellChangeTimes->{3.696657897675982*^9}]
+}, Open  ]],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"velFebbraio", "[", 
+   RowBox[{"zm_", ",", "ym_"}], "]"}], " ", "=", " ", 
+  RowBox[{
+   RowBox[{
+    RowBox[{"W", "[", 
+     RowBox[{"zm", ",", "ym", ",", "180", ",", "5"}], "]"}], "/", 
+    RowBox[{"Sum", "[", 
+     RowBox[{
+      RowBox[{"W", "[", 
+       RowBox[{"zm", ",", 
+        RowBox[{"-", "ym"}], ",", "180", ",", "5"}], "]"}], ",", " ", 
+      RowBox[{"{", 
+       RowBox[{"ym", ",", "0", ",", "5"}], "}"}], ",", 
+      RowBox[{"{", 
+       RowBox[{"zm", ",", 
+        RowBox[{"-", "90"}], ",", "90"}], "}"}]}], "]"}]}], " ", "*", " ", 
+   RowBox[{"7", "/", "0.01"}]}]}]], "Input",
+ CellChangeTimes->{{3.696354433365011*^9, 3.696354461633155*^9}, {
+   3.6963545078156395`*^9, 3.696354515394025*^9}, 3.6963547678077908`*^9, {
+   3.6963551253934975`*^9, 3.6963551303370457`*^9}, {3.6963559891875067`*^9, 
+   3.6963559983347783`*^9}, 3.696356263826373*^9, {3.6965143596558375`*^9, 
+   3.696514365649831*^9}, {3.6965199373031197`*^9, 3.6965199529787736`*^9}, {
+   3.696636725347745*^9, 3.696636737518469*^9}, {3.6966423965754633`*^9, 
+   3.6966424044444904`*^9}, {3.696649164093953*^9, 3.696649167530304*^9}, {
+   3.6966571554839554`*^9, 3.6966571790667844`*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"\[IndentingNewLine]", 
+  RowBox[{
+   RowBox[{"velFebbraioCm", "[", 
+    RowBox[{"zm_", ",", "ym_"}], "]"}], " ", "=", " ", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"W", "[", 
+      RowBox[{"zm", ",", "ym", ",", "180", ",", "53"}], "]"}], "/", 
+     RowBox[{"Sum", "[", 
+      RowBox[{
+       RowBox[{"W", "[", 
+        RowBox[{"zm", ",", 
+         RowBox[{"-", "ym"}], ",", "180", ",", "53"}], "]"}], ",", " ", 
+       RowBox[{"{", 
+        RowBox[{"ym", ",", "0", ",", "53"}], "}"}], ",", 
+       RowBox[{"{", 
+        RowBox[{"zm", ",", 
+         RowBox[{"-", "90"}], ",", "90"}], "}"}]}], "]"}]}], " ", "*", " ", 
+    RowBox[{"7", "/", "0.001"}]}]}]}]], "Input",
+ CellChangeTimes->{{3.6966577173371925`*^9, 3.696657754955361*^9}}],
+
+Cell[BoxData[
+ TemplateBox[{
+  "NIntegrate","ncvb",
+   "\"NIntegrate failed to converge to prescribed accuracy after \
+\\!\\(\\*RowBox[{\\\"9\\\"}]\\) recursive bisections in \
+\\!\\(\\*RowBox[{\\\"t\\\"}]\\) near \\!\\(\\*RowBox[{\\\"{\\\", \\\"t\\\", \
+\\\"}\\\"}]\\) = \\!\\(\\*RowBox[{\\\"{\\\", \\\"3.356301138390062`\\\", \
+\\\"}\\\"}]\\). NIntegrate obtained \
+\\!\\(\\*RowBox[{\\\"2.9044501290929827`\\\"}]\\) and \
+\\!\\(\\*RowBox[{\\\"0.00004391277515946209`\\\"}]\\) for the integral and \
+error estimates.\"",2,14,18,23668124586789405519,"Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellChangeTimes->{3.696658022969336*^9, 3.696658356993048*^9}],
+
+Cell[BoxData[
+ TemplateBox[{
+  "NIntegrate","ncvb",
+   "\"NIntegrate failed to converge to prescribed accuracy after \
+\\!\\(\\*RowBox[{\\\"9\\\"}]\\) recursive bisections in \
+\\!\\(\\*RowBox[{\\\"t\\\"}]\\) near \\!\\(\\*RowBox[{\\\"{\\\", \\\"t\\\", \
+\\\"}\\\"}]\\) = \\!\\(\\*RowBox[{\\\"{\\\", \\\"6.074515094523417`\\\", \
+\\\"}\\\"}]\\). NIntegrate obtained \
+\\!\\(\\*RowBox[{\\\"2.9044501290929827`\\\"}]\\) and \
+\\!\\(\\*RowBox[{\\\"0.000043912775160155745`\\\"}]\\) for the integral and \
+error estimates.\"",2,14,19,23668124586789405519,"Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellChangeTimes->{3.696658022969336*^9, 3.696658365196287*^9}],
+
+Cell[BoxData[
+ TemplateBox[{
+  "NIntegrate","ncvb",
+   "\"NIntegrate failed to converge to prescribed accuracy after \
+\\!\\(\\*RowBox[{\\\"9\\\"}]\\) recursive bisections in \
+\\!\\(\\*RowBox[{\\\"t\\\"}]\\) near \\!\\(\\*RowBox[{\\\"{\\\", \\\"t\\\", \
+\\\"}\\\"}]\\) = \\!\\(\\*RowBox[{\\\"{\\\", \\\"3.509699217178625`\\\", \
+\\\"}\\\"}]\\). NIntegrate obtained \
+\\!\\(\\*RowBox[{\\\"2.6439371540582535`\\\"}]\\) and \
+\\!\\(\\*RowBox[{\\\"0.00019977587028789128`\\\"}]\\) for the integral and \
+error estimates.\"",2,14,20,23668124586789405519,"Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellChangeTimes->{3.696658022969336*^9, 3.6966584215881224`*^9}],
+
+Cell[BoxData[
+ TemplateBox[{
+  "General","stop",
+   "\"Further output of \\!\\(\\*StyleBox[RowBox[{\\\"NIntegrate\\\", \
+\\\"::\\\", \\\"ncvb\\\"}], \\\"MessageName\\\"]\\) will be suppressed during \
+this calculation.\"",2,14,21,23668124586789405519,"Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellChangeTimes->{3.696658022969336*^9, 3.6966584216193733`*^9}],
+
+Cell[BoxData[
+ TemplateBox[{
+  "NIntegrate","slwcon",
+   "\"Numerical integration converging too slowly; suspect one of the \
+following: singularity, value of the integration is 0, highly oscillatory \
+integrand, or WorkingPrecision too small.\"",2,14,22,23668124586789405519,
+   "Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellChangeTimes->{3.696658022969336*^9, 3.696658627973784*^9}],
+
+Cell[BoxData[
+ TemplateBox[{
+  "NIntegrate","slwcon",
+   "\"Numerical integration converging too slowly; suspect one of the \
+following: singularity, value of the integration is 0, highly oscillatory \
+integrand, or WorkingPrecision too small.\"",2,14,23,23668124586789405519,
+   "Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellChangeTimes->{3.696658022969336*^9, 3.696658628114411*^9}],
+
+Cell[BoxData[
+ TemplateBox[{
+  "NIntegrate","slwcon",
+   "\"Numerical integration converging too slowly; suspect one of the \
+following: singularity, value of the integration is 0, highly oscillatory \
+integrand, or WorkingPrecision too small.\"",2,14,24,23668124586789405519,
+   "Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellChangeTimes->{3.696658022969336*^9, 3.6966586294112854`*^9}],
+
+Cell[BoxData[
+ TemplateBox[{
+  "General","stop",
+   "\"Further output of \\!\\(\\*StyleBox[RowBox[{\\\"NIntegrate\\\", \
+\\\"::\\\", \\\"slwcon\\\"}], \\\"MessageName\\\"]\\) will be suppressed \
+during this calculation.\"",2,14,25,23668124586789405519,"Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellChangeTimes->{3.696658022969336*^9, 3.696658629426913*^9}],
+
+Cell[BoxData[
+ RowBox[{"0.23168768772744924`", " ", 
+  RowBox[{"W", "[", 
+   RowBox[{"zm", ",", "ym", ",", "180", ",", "53"}], "]"}]}]], "Output",
+ CellChangeTimes->{3.6966582577195196`*^9, 3.6966586295519133`*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"\[IndentingNewLine]", 
+  RowBox[{
+   RowBox[{"velMarzo", "[", 
+    RowBox[{"zm_", ",", "ym_"}], "]"}], " ", "=", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"W", "[", 
+      RowBox[{"zm", ",", "ym", ",", "180", ",", "5"}], "]"}], "/", 
+     RowBox[{"Sum", "[", 
+      RowBox[{
+       RowBox[{"W", "[", 
+        RowBox[{"zm", ",", 
+         RowBox[{"-", "ym"}], ",", "180", ",", "5"}], "]"}], ",", " ", 
+       RowBox[{"{", 
+        RowBox[{"ym", ",", "0", ",", "5"}], "}"}], ",", 
+       RowBox[{"{", 
+        RowBox[{"zm", ",", 
+         RowBox[{"-", "90"}], ",", "90"}], "}"}]}], "]"}]}], " ", "*", " ", 
+    RowBox[{"6", "/", "0.01"}]}]}]}]], "Input",
+ CellChangeTimes->{{3.6965200744812417`*^9, 3.6965200916853127`*^9}, {
+  3.696636741521502*^9, 3.6966367511403832`*^9}, {3.6966424267973957`*^9, 
+  3.696642430756212*^9}}],
+
+Cell[BoxData[
+ TemplateBox[{
+  "NIntegrate","ncvb",
+   "\"NIntegrate failed to converge to prescribed accuracy after \
+\\!\\(\\*RowBox[{\\\"9\\\"}]\\) recursive bisections in \
+\\!\\(\\*RowBox[{\\\"t\\\"}]\\) near \\!\\(\\*RowBox[{\\\"{\\\", \\\"t\\\", \
+\\\"}\\\"}]\\) = \\!\\(\\*RowBox[{\\\"{\\\", \\\"3.356301138390062`\\\", \
+\\\"}\\\"}]\\). NIntegrate obtained \
+\\!\\(\\*RowBox[{\\\"0.6474611084083998`\\\"}]\\) and \
+\\!\\(\\*RowBox[{\\\"9.165646788350625`*^-7\\\"}]\\) for the integral and \
+error estimates.\"",2,123,482,23667967595296183195,"Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellChangeTimes->{3.696638449670224*^9, 3.6966425591165533`*^9}],
+
+Cell[BoxData[
+ TemplateBox[{
+  "NIntegrate","ncvb",
+   "\"NIntegrate failed to converge to prescribed accuracy after \
+\\!\\(\\*RowBox[{\\\"9\\\"}]\\) recursive bisections in \
+\\!\\(\\*RowBox[{\\\"t\\\"}]\\) near \\!\\(\\*RowBox[{\\\"{\\\", \\\"t\\\", \
+\\\"}\\\"}]\\) = \\!\\(\\*RowBox[{\\\"{\\\", \\\"6.074515094523417`\\\", \
+\\\"}\\\"}]\\). NIntegrate obtained \
+\\!\\(\\*RowBox[{\\\"0.6474611084083569`\\\"}]\\) and \
+\\!\\(\\*RowBox[{\\\"9.165646632950219`*^-7\\\"}]\\) for the integral and \
+error estimates.\"",2,123,483,23667967595296183195,"Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellChangeTimes->{3.696638449670224*^9, 3.6966425701133776`*^9}],
+
+Cell[BoxData[
+ TemplateBox[{
+  "NIntegrate","ncvb",
+   "\"NIntegrate failed to converge to prescribed accuracy after \
+\\!\\(\\*RowBox[{\\\"9\\\"}]\\) recursive bisections in \
+\\!\\(\\*RowBox[{\\\"t\\\"}]\\) near \\!\\(\\*RowBox[{\\\"{\\\", \\\"t\\\", \
+\\\"}\\\"}]\\) = \\!\\(\\*RowBox[{\\\"{\\\", \\\"3.5710584486940515`\\\", \
+\\\"}\\\"}]\\). NIntegrate obtained \
+\\!\\(\\*RowBox[{\\\"0.6334700644656219`\\\"}]\\) and \
+\\!\\(\\*RowBox[{\\\"4.035111831581807`*^-6\\\"}]\\) for the integral and \
+error estimates.\"",2,123,484,23667967595296183195,"Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellChangeTimes->{3.696638449670224*^9, 3.6966425701934347`*^9}],
+
+Cell[BoxData[
+ TemplateBox[{
+  "General","stop",
+   "\"Further output of \\!\\(\\*StyleBox[RowBox[{\\\"NIntegrate\\\", \
+\\\"::\\\", \\\"ncvb\\\"}], \\\"MessageName\\\"]\\) will be suppressed during \
+this calculation.\"",2,123,485,23667967595296183195,"Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellChangeTimes->{3.696638449670224*^9, 3.696642570216451*^9}],
+
+Cell[BoxData[
+ TemplateBox[{
+  "NIntegrate","slwcon",
+   "\"Numerical integration converging too slowly; suspect one of the \
+following: singularity, value of the integration is 0, highly oscillatory \
+integrand, or WorkingPrecision too small.\"",2,123,486,23667967595296183195,
+   "Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellChangeTimes->{3.696638449670224*^9, 3.6966425908881598`*^9}],
+
+Cell[BoxData[
+ TemplateBox[{
+  "NIntegrate","slwcon",
+   "\"Numerical integration converging too slowly; suspect one of the \
+following: singularity, value of the integration is 0, highly oscillatory \
+integrand, or WorkingPrecision too small.\"",2,123,487,23667967595296183195,
+   "Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellChangeTimes->{3.696638449670224*^9, 3.696642596648258*^9}]
+}, Open  ]],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"0.7584993113664453`", " ", 
+   RowBox[{"W", "[", 
+    RowBox[{"zm", ",", "ym", ",", "180", ",", "5"}], "]"}]}], 
+  "\[IndentingNewLine]", "\[IndentingNewLine]"}]], "Input",
+ CellChangeTimes->{{3.696657763256008*^9, 3.6966577638840027`*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"\[IndentingNewLine]", 
+  RowBox[{
+   RowBox[{"velMarzoCm", "[", 
+    RowBox[{"zm_", ",", "ym_"}], "]"}], " ", "=", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"W", "[", 
+      RowBox[{"zm", ",", "ym", ",", "180", ",", "48"}], "]"}], "/", 
+     RowBox[{"Sum", "[", 
+      RowBox[{
+       RowBox[{"W", "[", 
+        RowBox[{"zm", ",", 
+         RowBox[{"-", "ym"}], ",", "180", ",", "48"}], "]"}], ",", " ", 
+       RowBox[{"{", 
+        RowBox[{"ym", ",", "0", ",", "48"}], "}"}], ",", 
+       RowBox[{"{", 
+        RowBox[{"zm", ",", 
+         RowBox[{"-", "90"}], ",", "90"}], "}"}]}], "]"}]}], " ", "*", " ", 
+    RowBox[{"6", "/", "0.001"}]}]}]}]], "Input",
+ CellChangeTimes->{{3.696657769216384*^9, 3.696657795700096*^9}}],
+
+Cell[BoxData[
+ TemplateBox[{
+  "NIntegrate","ncvb",
+   "\"NIntegrate failed to converge to prescribed accuracy after \
+\\!\\(\\*RowBox[{\\\"9\\\"}]\\) recursive bisections in \
+\\!\\(\\*RowBox[{\\\"t\\\"}]\\) near \\!\\(\\*RowBox[{\\\"{\\\", \\\"t\\\", \
+\\\"}\\\"}]\\) = \\!\\(\\*RowBox[{\\\"{\\\", \\\"3.356301138390062`\\\", \
+\\\"}\\\"}]\\). NIntegrate obtained \\!\\(\\*RowBox[{\\\"2.759793413704623`\\\
+\"}]\\) and \\!\\(\\*RowBox[{\\\"0.00014830410119038114`\\\"}]\\) for the \
+integral and error estimates.\"",2,15,26,23668124586789405519,"Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellChangeTimes->{3.696658711662465*^9}],
+
+Cell[BoxData[
+ TemplateBox[{
+  "NIntegrate","ncvb",
+   "\"NIntegrate failed to converge to prescribed accuracy after \
+\\!\\(\\*RowBox[{\\\"9\\\"}]\\) recursive bisections in \
+\\!\\(\\*RowBox[{\\\"t\\\"}]\\) near \\!\\(\\*RowBox[{\\\"{\\\", \\\"t\\\", \
+\\\"}\\\"}]\\) = \\!\\(\\*RowBox[{\\\"{\\\", \\\"6.074515094523417`\\\", \
+\\\"}\\\"}]\\). NIntegrate obtained \
+\\!\\(\\*RowBox[{\\\"2.7597934137046227`\\\"}]\\) and \
+\\!\\(\\*RowBox[{\\\"0.00014830410118949633`\\\"}]\\) for the integral and \
+error estimates.\"",2,15,27,23668124586789405519,"Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellChangeTimes->{3.6966587197563124`*^9}],
+
+Cell[BoxData[
+ TemplateBox[{
+  "NIntegrate","ncvb",
+   "\"NIntegrate failed to converge to prescribed accuracy after \
+\\!\\(\\*RowBox[{\\\"9\\\"}]\\) recursive bisections in \
+\\!\\(\\*RowBox[{\\\"t\\\"}]\\) near \\!\\(\\*RowBox[{\\\"{\\\", \\\"t\\\", \
+\\\"}\\\"}]\\) = \\!\\(\\*RowBox[{\\\"{\\\", \\\"3.442204062511657`\\\", \
+\\\"}\\\"}]\\). NIntegrate obtained \
+\\!\\(\\*RowBox[{\\\"2.6312315752924893`\\\"}]\\) and \
+\\!\\(\\*RowBox[{\\\"0.000012003866127053018`\\\"}]\\) for the integral and \
+error estimates.\"",2,15,28,23668124586789405519,"Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellChangeTimes->{3.696658744272281*^9}],
+
+Cell[BoxData[
+ TemplateBox[{
+  "General","stop",
+   "\"Further output of \\!\\(\\*StyleBox[RowBox[{\\\"NIntegrate\\\", \
+\\\"::\\\", \\\"ncvb\\\"}], \\\"MessageName\\\"]\\) will be suppressed during \
+this calculation.\"",2,15,29,23668124586789405519,"Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellChangeTimes->{3.6966587442879066`*^9}],
+
+Cell[BoxData[
+ TemplateBox[{
+  "NIntegrate","slwcon",
+   "\"Numerical integration converging too slowly; suspect one of the \
+following: singularity, value of the integration is 0, highly oscillatory \
+integrand, or WorkingPrecision too small.\"",2,15,30,23668124586789405519,
+   "Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellChangeTimes->{3.6966589235508013`*^9}],
+
+Cell[BoxData[
+ TemplateBox[{
+  "NIntegrate","slwcon",
+   "\"Numerical integration converging too slowly; suspect one of the \
+following: singularity, value of the integration is 0, highly oscillatory \
+integrand, or WorkingPrecision too small.\"",2,15,31,23668124586789405519,
+   "Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellChangeTimes->{3.696658928066492*^9}],
+
+Cell[BoxData[
+ RowBox[{"0.2275092752866575`", " ", 
+  RowBox[{"W", "[", 
+   RowBox[{"zm", ",", "ym", ",", "180", ",", "48"}], "]"}]}]], "Output",
+ CellChangeTimes->{3.6966589503228884`*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"\[IndentingNewLine]", 
+  RowBox[{
+   RowBox[{"velAprile", "[", 
+    RowBox[{"zm_", ",", "ym_"}], "]"}], " ", "=", " ", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"W", "[", 
+      RowBox[{"zm", ",", "ym", ",", "180", ",", "7"}], "]"}], "/", 
+     RowBox[{"Sum", "[", 
+      RowBox[{
+       RowBox[{"W", "[", 
+        RowBox[{"zm", ",", 
+         RowBox[{"-", "ym"}], ",", "180", ",", "7"}], "]"}], ",", " ", 
+       RowBox[{"{", 
+        RowBox[{"ym", ",", "0", ",", "7"}], "}"}], ",", 
+       RowBox[{"{", 
+        RowBox[{"zm", ",", 
+         RowBox[{"-", "90"}], ",", "90"}], "}"}]}], "]"}]}], " ", "*", " ", 
+    RowBox[{"10", "/", "0.01"}]}]}]}]], "Input",
+ CellChangeTimes->{{3.6965202446163316`*^9, 3.6965202589459324`*^9}, {
+  3.6966370133589964`*^9, 3.6966370248376274`*^9}, {3.696642504515703*^9, 
+  3.69664250771498*^9}}],
+
+Cell[BoxData[
+ TemplateBox[{
+  "NIntegrate","ncvb",
+   "\"NIntegrate failed to converge to prescribed accuracy after \
+\\!\\(\\*RowBox[{\\\"9\\\"}]\\) recursive bisections in \
+\\!\\(\\*RowBox[{\\\"t\\\"}]\\) near \\!\\(\\*RowBox[{\\\"{\\\", \\\"t\\\", \
+\\\"}\\\"}]\\) = \\!\\(\\*RowBox[{\\\"{\\\", \\\"3.442204062511657`\\\", \
+\\\"}\\\"}]\\). NIntegrate obtained \
+\\!\\(\\*RowBox[{\\\"0.8089286923210229`\\\"}]\\) and \
+\\!\\(\\*RowBox[{\\\"2.316181862782713`*^-6\\\"}]\\) for the integral and \
+error estimates.\"",2,124,488,23667967595296183195,"Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellChangeTimes->{3.6966385104772973`*^9, 3.696642617694743*^9}],
+
+Cell[BoxData[
+ TemplateBox[{
+  "NIntegrate","ncvb",
+   "\"NIntegrate failed to converge to prescribed accuracy after \
+\\!\\(\\*RowBox[{\\\"9\\\"}]\\) recursive bisections in \
+\\!\\(\\*RowBox[{\\\"t\\\"}]\\) near \\!\\(\\*RowBox[{\\\"{\\\", \\\"t\\\", \
+\\\"}\\\"}]\\) = \\!\\(\\*RowBox[{\\\"{\\\", \\\"5.988612170401821`\\\", \
+\\\"}\\\"}]\\). NIntegrate obtained \
+\\!\\(\\*RowBox[{\\\"0.8089286923210123`\\\"}]\\) and \
+\\!\\(\\*RowBox[{\\\"2.316181830817071`*^-6\\\"}]\\) for the integral and \
+error estimates.\"",2,124,489,23667967595296183195,"Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellChangeTimes->{3.6966385104772973`*^9, 3.6966426281731963`*^9}],
+
+Cell[BoxData[
+ TemplateBox[{
+  "NIntegrate","ncvb",
+   "\"NIntegrate failed to converge to prescribed accuracy after \
+\\!\\(\\*RowBox[{\\\"9\\\"}]\\) recursive bisections in \
+\\!\\(\\*RowBox[{\\\"t\\\"}]\\) near \\!\\(\\*RowBox[{\\\"{\\\", \\\"t\\\", \
+\\\"}\\\"}]\\) = \\!\\(\\*RowBox[{\\\"{\\\", \\\"3.5956021413002217`\\\", \
+\\\"}\\\"}]\\). NIntegrate obtained \
+\\!\\(\\*RowBox[{\\\"0.7891723909329376`\\\"}]\\) and \
+\\!\\(\\*RowBox[{\\\"0.000020105354482135446`\\\"}]\\) for the integral and \
+error estimates.\"",2,124,490,23667967595296183195,"Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellChangeTimes->{3.6966385104772973`*^9, 3.6966426282282352`*^9}],
+
+Cell[BoxData[
+ TemplateBox[{
+  "General","stop",
+   "\"Further output of \\!\\(\\*StyleBox[RowBox[{\\\"NIntegrate\\\", \
+\\\"::\\\", \\\"ncvb\\\"}], \\\"MessageName\\\"]\\) will be suppressed during \
+this calculation.\"",2,124,491,23667967595296183195,"Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellChangeTimes->{3.6966385104772973`*^9, 3.696642628252252*^9}],
+
+Cell[BoxData[
+ TemplateBox[{
+  "NIntegrate","slwcon",
+   "\"Numerical integration converging too slowly; suspect one of the \
+following: singularity, value of the integration is 0, highly oscillatory \
+integrand, or WorkingPrecision too small.\"",2,124,492,23667967595296183195,
+   "Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellChangeTimes->{3.6966385104772973`*^9, 3.696642655638196*^9}],
+
+Cell[BoxData[
+ TemplateBox[{
+  "NIntegrate","slwcon",
+   "\"Numerical integration converging too slowly; suspect one of the \
+following: singularity, value of the integration is 0, highly oscillatory \
+integrand, or WorkingPrecision too small.\"",2,124,493,23667967595296183195,
+   "Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellChangeTimes->{3.6966385104772973`*^9, 3.696642655690118*^9}],
+
+Cell[BoxData[
+ TemplateBox[{
+  "NIntegrate","slwcon",
+   "\"Numerical integration converging too slowly; suspect one of the \
+following: singularity, value of the integration is 0, highly oscillatory \
+integrand, or WorkingPrecision too small.\"",2,124,494,23667967595296183195,
+   "Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellChangeTimes->{3.6966385104772973`*^9, 3.696642655810354*^9}],
+
+Cell[BoxData[
+ TemplateBox[{
+  "General","stop",
+   "\"Further output of \\!\\(\\*StyleBox[RowBox[{\\\"NIntegrate\\\", \
+\\\"::\\\", \\\"slwcon\\\"}], \\\"MessageName\\\"]\\) will be suppressed \
+during this calculation.\"",2,124,495,23667967595296183195,"Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellChangeTimes->{3.6966385104772973`*^9, 3.69664265582598*^9}]
+}, Open  ]],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"0.7320201538672618`", " ", 
+   RowBox[{"W", "[", 
+    RowBox[{"zm", ",", "ym", ",", "180", ",", "7"}], "]"}]}], 
+  "\[IndentingNewLine]", "\[IndentingNewLine]"}]], "Input",
+ CellChangeTimes->{{3.6966578086108065`*^9, 3.696657809890012*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{
+   RowBox[{"velAprileCm", "[", 
+    RowBox[{"zm_", ",", "ym_"}], "]"}], " ", "=", " ", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"W", "[", 
+      RowBox[{"zm", ",", "ym", ",", "180", ",", "67"}], "]"}], "/", 
+     RowBox[{"Sum", "[", 
+      RowBox[{
+       RowBox[{"W", "[", 
+        RowBox[{"zm", ",", 
+         RowBox[{"-", "ym"}], ",", "180", ",", "67"}], "]"}], ",", " ", 
+       RowBox[{"{", 
+        RowBox[{"ym", ",", "0", ",", "67"}], "}"}], ",", 
+       RowBox[{"{", 
+        RowBox[{"zm", ",", 
+         RowBox[{"-", "90"}], ",", "90"}], "}"}]}], "]"}]}], " ", "*", " ", 
+    RowBox[{"10", "/", "0.001"}]}]}], "\[IndentingNewLine]", 
+  "\[IndentingNewLine]"}]], "Input",
+ CellChangeTimes->{
+  3.6965204374706345`*^9, {3.69665780492446*^9, 3.6966578326715837`*^9}, 
+   3.696658086235837*^9}],
+
+Cell[BoxData[
+ TemplateBox[{
+  "NIntegrate","ncvb",
+   "\"NIntegrate failed to converge to prescribed accuracy after \
+\\!\\(\\*RowBox[{\\\"9\\\"}]\\) recursive bisections in \
+\\!\\(\\*RowBox[{\\\"t\\\"}]\\) near \\!\\(\\*RowBox[{\\\"{\\\", \\\"t\\\", \
+\\\"}\\\"}]\\) = \\!\\(\\*RowBox[{\\\"{\\\", \\\"3.356301138390062`\\\", \
+\\\"}\\\"}]\\). NIntegrate obtained \\!\\(\\*RowBox[{\\\"3.223001633095887`\\\
+\"}]\\) and \\!\\(\\*RowBox[{\\\"0.00011008587694301692`\\\"}]\\) for the \
+integral and error estimates.\"",2,16,32,23668124586789405519,"Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellChangeTimes->{3.6966590765177865`*^9}],
+
+Cell[BoxData[
+ TemplateBox[{
+  "NIntegrate","ncvb",
+   "\"NIntegrate failed to converge to prescribed accuracy after \
+\\!\\(\\*RowBox[{\\\"9\\\"}]\\) recursive bisections in \
+\\!\\(\\*RowBox[{\\\"t\\\"}]\\) near \\!\\(\\*RowBox[{\\\"{\\\", \\\"t\\\", \
+\\\"}\\\"}]\\) = \\!\\(\\*RowBox[{\\\"{\\\", \\\"6.074515094523417`\\\", \
+\\\"}\\\"}]\\). NIntegrate obtained \\!\\(\\*RowBox[{\\\"3.223001633095884`\\\
+\"}]\\) and \\!\\(\\*RowBox[{\\\"0.00011008587694200357`\\\"}]\\) for the \
+integral and error estimates.\"",2,16,33,23668124586789405519,"Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellChangeTimes->{3.6966590846723166`*^9}],
+
+Cell[BoxData[
+ TemplateBox[{
+  "NIntegrate","ncvb",
+   "\"NIntegrate failed to converge to prescribed accuracy after \
+\\!\\(\\*RowBox[{\\\"9\\\"}]\\) recursive bisections in \
+\\!\\(\\*RowBox[{\\\"t\\\"}]\\) near \\!\\(\\*RowBox[{\\\"{\\\", \\\"t\\\", \
+\\\"}\\\"}]\\) = \\!\\(\\*RowBox[{\\\"{\\\", \\\"3.4790196014209127`\\\", \
+\\\"}\\\"}]\\). NIntegrate obtained \
+\\!\\(\\*RowBox[{\\\"2.9984350702560785`\\\"}]\\) and \
+\\!\\(\\*RowBox[{\\\"0.0001369684131158108`\\\"}]\\) for the integral and \
+error estimates.\"",2,16,34,23668124586789405519,"Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellChangeTimes->{3.696659141434765*^9}],
+
+Cell[BoxData[
+ TemplateBox[{
+  "General","stop",
+   "\"Further output of \\!\\(\\*StyleBox[RowBox[{\\\"NIntegrate\\\", \
+\\\"::\\\", \\\"ncvb\\\"}], \\\"MessageName\\\"]\\) will be suppressed during \
+this calculation.\"",2,16,35,23668124586789405519,"Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellChangeTimes->{3.696659141434765*^9}],
+
+Cell[BoxData[
+ TemplateBox[{
+  "NIntegrate","slwcon",
+   "\"Numerical integration converging too slowly; suspect one of the \
+following: singularity, value of the integration is 0, highly oscillatory \
+integrand, or WorkingPrecision too small.\"",2,16,36,23668124586789405519,
+   "Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellChangeTimes->{3.6966593060367193`*^9}],
+
+Cell[BoxData[
+ TemplateBox[{
+  "NIntegrate","slwcon",
+   "\"Numerical integration converging too slowly; suspect one of the \
+following: singularity, value of the integration is 0, highly oscillatory \
+integrand, or WorkingPrecision too small.\"",2,16,37,23668124586789405519,
+   "Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellChangeTimes->{3.69665931354945*^9}],
+
+Cell[BoxData[
+ TemplateBox[{
+  "NIntegrate","slwcon",
+   "\"Numerical integration converging too slowly; suspect one of the \
+following: singularity, value of the integration is 0, highly oscillatory \
+integrand, or WorkingPrecision too small.\"",2,16,38,23668124586789405519,
+   "Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellChangeTimes->{3.696659332412896*^9}],
+
+Cell[BoxData[
+ TemplateBox[{
+  "General","stop",
+   "\"Further output of \\!\\(\\*StyleBox[RowBox[{\\\"NIntegrate\\\", \
+\\\"::\\\", \\\"slwcon\\\"}], \\\"MessageName\\\"]\\) will be suppressed \
+during this calculation.\"",2,16,39,23668124586789405519,"Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellChangeTimes->{3.696659332444145*^9}],
+
+Cell[BoxData[
+ RowBox[{"0.2428980580331402`", " ", 
+  RowBox[{"W", "[", 
+   RowBox[{"zm", ",", "ym", ",", "180", ",", "67"}], "]"}]}]], "Output",
+ CellChangeTimes->{3.6966594304518046`*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"velMaggio", "[", 
+   RowBox[{"zm_", ",", "ym_"}], "]"}], " ", "=", " ", 
+  RowBox[{
+   RowBox[{
+    RowBox[{"W", "[", 
+     RowBox[{"zm", ",", "ym", ",", "180", ",", "10"}], "]"}], "/", 
+    RowBox[{"Sum", "[", 
+     RowBox[{
+      RowBox[{"W", "[", 
+       RowBox[{"zm", ",", 
+        RowBox[{"-", "ym"}], ",", "180", ",", "10"}], "]"}], ",", " ", 
+      RowBox[{"{", 
+       RowBox[{"ym", ",", "0", ",", "10"}], "}"}], ",", 
+      RowBox[{"{", 
+       RowBox[{"zm", ",", 
+        RowBox[{"-", "90"}], ",", "90"}], "}"}]}], "]"}]}], " ", "*", 
+   RowBox[{"19", "/", "0.01"}]}]}]], "Input",
+ CellChangeTimes->{{3.6965204112068853`*^9, 3.6965204283789415`*^9}, {
+  3.6966370316252794`*^9, 3.696637052970659*^9}}],
+
+Cell[BoxData[
+ TemplateBox[{
+  "NIntegrate","slwcon",
+   "\"Numerical integration converging too slowly; suspect one of the \
+following: singularity, value of the integration is 0, highly oscillatory \
+integrand, or WorkingPrecision too small.\"",2,55,221,23667967595296183195,
+   "Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellChangeTimes->{3.696638600594941*^9}],
+
+Cell[BoxData[
+ TemplateBox[{
+  "NIntegrate","ncvb",
+   "\"NIntegrate failed to converge to prescribed accuracy after \
+\\!\\(\\*RowBox[{\\\"9\\\"}]\\) recursive bisections in \
+\\!\\(\\*RowBox[{\\\"t\\\"}]\\) near \\!\\(\\*RowBox[{\\\"{\\\", \\\"t\\\", \
+\\\"}\\\"}]\\) = \\!\\(\\*RowBox[{\\\"{\\\", \\\"3.92694199148352`\\\", \\\"}\
+\\\"}]\\). NIntegrate obtained \\!\\(\\*RowBox[{\\\"0.9691368528387428`\\\"}]\
+\\) and \\!\\(\\*RowBox[{\\\"0.00002246460869516284`\\\"}]\\) for the \
+integral and error estimates.\"",2,55,222,23667967595296183195,"Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellChangeTimes->{3.696638600600026*^9}],
+
+Cell[BoxData[
+ TemplateBox[{
+  "NIntegrate","slwcon",
+   "\"Numerical integration converging too slowly; suspect one of the \
+following: singularity, value of the integration is 0, highly oscillatory \
+integrand, or WorkingPrecision too small.\"",2,55,223,23667967595296183195,
+   "Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellChangeTimes->{3.696638600646903*^9}],
+
+Cell[BoxData[
+ TemplateBox[{
+  "NIntegrate","slwcon",
+   "\"Numerical integration converging too slowly; suspect one of the \
+following: singularity, value of the integration is 0, highly oscillatory \
+integrand, or WorkingPrecision too small.\"",2,55,224,23667967595296183195,
+   "Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellChangeTimes->{3.6966386079769583`*^9}],
+
+Cell[BoxData[
+ TemplateBox[{
+  "General","stop",
+   "\"Further output of \\!\\(\\*StyleBox[RowBox[{\\\"NIntegrate\\\", \
+\\\"::\\\", \\\"slwcon\\\"}], \\\"MessageName\\\"]\\) will be suppressed \
+during this calculation.\"",2,55,225,23667967595296183195,"Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellChangeTimes->{3.696638607992571*^9}],
+
+Cell[BoxData[
+ TemplateBox[{
+  "NIntegrate","ncvb",
+   "\"NIntegrate failed to converge to prescribed accuracy after \
+\\!\\(\\*RowBox[{\\\"9\\\"}]\\) recursive bisections in \
+\\!\\(\\*RowBox[{\\\"t\\\"}]\\) near \\!\\(\\*RowBox[{\\\"{\\\", \\\"t\\\", \
+\\\"}\\\"}]\\) = \\!\\(\\*RowBox[{\\\"{\\\", \\\"5.503874241429959`\\\", \
+\\\"}\\\"}]\\). NIntegrate obtained \
+\\!\\(\\*RowBox[{\\\"0.9691368528387247`\\\"}]\\) and \
+\\!\\(\\*RowBox[{\\\"0.000022464608694825494`\\\"}]\\) for the integral and \
+error estimates.\"",2,55,226,23667967595296183195,"Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellChangeTimes->{3.69663860805507*^9}],
+
+Cell[BoxData[
+ TemplateBox[{
+  "NIntegrate","ncvb",
+   "\"NIntegrate failed to converge to prescribed accuracy after \
+\\!\\(\\*RowBox[{\\\"9\\\"}]\\) recursive bisections in \
+\\!\\(\\*RowBox[{\\\"t\\\"}]\\) near \\!\\(\\*RowBox[{\\\"{\\\", \\\"t\\\", \
+\\\"}\\\"}]\\) = \\!\\(\\*RowBox[{\\\"{\\\", \\\"4.086475993423627`\\\", \
+\\\"}\\\"}]\\). NIntegrate obtained \
+\\!\\(\\*RowBox[{\\\"0.9784942762111778`\\\"}]\\) and \
+\\!\\(\\*RowBox[{\\\"0.000029016700245238782`\\\"}]\\) for the integral and \
+error estimates.\"",2,55,227,23667967595296183195,"Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellChangeTimes->{3.6966386081175714`*^9}],
+
+Cell[BoxData[
+ TemplateBox[{
+  "General","stop",
+   "\"Further output of \\!\\(\\*StyleBox[RowBox[{\\\"NIntegrate\\\", \
+\\\"::\\\", \\\"ncvb\\\"}], \\\"MessageName\\\"]\\) will be suppressed during \
+this calculation.\"",2,55,228,23667967595296183195,"Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellChangeTimes->{3.696638608133197*^9}]
+}, Open  ]],
+
+Cell[BoxData[
+ RowBox[{"0.7826734508367231`", " ", 
+  RowBox[{"W", "[", 
+   RowBox[{"zm", ",", "ym", ",", "180", ",", "10"}], "]"}]}]], "Input",
+ CellChangeTimes->{{3.696657839599442*^9, 3.696657869385603*^9}, {
+  3.696658035688266*^9, 3.6966580420477123`*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"velMaggioCm", "[", 
+   RowBox[{"zm_", ",", "ym_"}], "]"}], " ", "=", " ", 
+  RowBox[{
+   RowBox[{
+    RowBox[{"W", "[", 
+     RowBox[{"zm", ",", "ym", ",", "180", ",", "102"}], "]"}], "/", 
+    RowBox[{"Sum", "[", 
+     RowBox[{
+      RowBox[{"W", "[", 
+       RowBox[{"zm", ",", 
+        RowBox[{"-", "ym"}], ",", "180", ",", "102"}], "]"}], ",", " ", 
+      RowBox[{"{", 
+       RowBox[{"ym", ",", "0", ",", "102"}], "}"}], ",", 
+      RowBox[{"{", 
+       RowBox[{"zm", ",", 
+        RowBox[{"-", "90"}], ",", "90"}], "}"}]}], "]"}]}], " ", "*", 
+   RowBox[{"19", "/", "0.001"}]}]}]], "Input",
+ CellChangeTimes->{{3.6966580563604145`*^9, 3.6966580825951595`*^9}, {
+  3.696658147221073*^9, 3.696658147721078*^9}}],
+
+Cell[BoxData[
+ TemplateBox[{
+  "NIntegrate","slwcon",
+   "\"Numerical integration converging too slowly; suspect one of the \
+following: singularity, value of the integration is 0, highly oscillatory \
+integrand, or WorkingPrecision too small.\"",2,17,40,23668124586789405519,
+   "Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellChangeTimes->{3.6966595656514935`*^9}],
+
+Cell[BoxData[
+ TemplateBox[{
+  "NIntegrate","slwcon",
+   "\"Numerical integration converging too slowly; suspect one of the \
+following: singularity, value of the integration is 0, highly oscillatory \
+integrand, or WorkingPrecision too small.\"",2,17,41,23668124586789405519,
+   "Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellChangeTimes->{3.69665957496015*^9}],
+
+Cell[BoxData[
+ TemplateBox[{
+  "NIntegrate","ncvb",
+   "\"NIntegrate failed to converge to prescribed accuracy after \
+\\!\\(\\*RowBox[{\\\"9\\\"}]\\) recursive bisections in \
+\\!\\(\\*RowBox[{\\\"t\\\"}]\\) near \\!\\(\\*RowBox[{\\\"{\\\", \\\"t\\\", \
+\\\"}\\\"}]\\) = \\!\\(\\*RowBox[{\\\"{\\\", \
+\\\"3.28997532890969`15.954589770191005\\\", \\\"}\\\"}]\\). NIntegrate \
+obtained \\!\\(\\*RowBox[{\\\"3.8644032013834098`\\\"}]\\) and \
+\\!\\(\\*RowBox[{\\\"0.000012286638452258168`\\\"}]\\) for the integral and \
+error estimates.\"",2,17,42,23668124586789405519,"Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellChangeTimes->{3.6966595750401545`*^9}],
+
+Cell[BoxData[
+ TemplateBox[{
+  "NIntegrate","ncvb",
+   "\"NIntegrate failed to converge to prescribed accuracy after \
+\\!\\(\\*RowBox[{\\\"9\\\"}]\\) recursive bisections in \
+\\!\\(\\*RowBox[{\\\"t\\\"}]\\) near \\!\\(\\*RowBox[{\\\"{\\\", \\\"t\\\", \
+\\\"}\\\"}]\\) = \\!\\(\\*RowBox[{\\\"{\\\", \
+\\\"6.134802631859689`15.954589770191005\\\", \\\"}\\\"}]\\). NIntegrate \
+obtained \\!\\(\\*RowBox[{\\\"3.86440320138341`\\\"}]\\) and \
+\\!\\(\\*RowBox[{\\\"0.000012286638452124845`\\\"}]\\) for the integral and \
+error estimates.\"",2,17,43,23668124586789405519,"Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellChangeTimes->{3.6966595854049006`*^9}],
+
+Cell[BoxData[
+ TemplateBox[{
+  "NIntegrate","ncvb",
+   "\"NIntegrate failed to converge to prescribed accuracy after \
+\\!\\(\\*RowBox[{\\\"9\\\"}]\\) recursive bisections in \
+\\!\\(\\*RowBox[{\\\"t\\\"}]\\) near \\!\\(\\*RowBox[{\\\"{\\\", \\\"t\\\", \
+\\\"}\\\"}]\\) = \\!\\(\\*RowBox[{\\\"{\\\", \\\"3.350165215238519`\\\", \
+\\\"}\\\"}]\\). NIntegrate obtained \\!\\(\\*RowBox[{\\\"3.759157844730674`\\\
+\"}]\\) and \\!\\(\\*RowBox[{\\\"0.000053652907153431875`\\\"}]\\) for the \
+integral and error estimates.\"",2,17,44,23668124586789405519,"Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellChangeTimes->{3.696659633976119*^9}],
+
+Cell[BoxData[
+ TemplateBox[{
+  "General","stop",
+   "\"Further output of \\!\\(\\*StyleBox[RowBox[{\\\"NIntegrate\\\", \
+\\\"::\\\", \\\"ncvb\\\"}], \\\"MessageName\\\"]\\) will be suppressed during \
+this calculation.\"",2,17,45,23668124586789405519,"Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellChangeTimes->{3.696659633991726*^9}],
+
+Cell[BoxData[
+ TemplateBox[{
+  "NIntegrate","slwcon",
+   "\"Numerical integration converging too slowly; suspect one of the \
+following: singularity, value of the integration is 0, highly oscillatory \
+integrand, or WorkingPrecision too small.\"",2,17,46,23668124586789405519,
+   "Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellChangeTimes->{3.696660156396926*^9}],
+
+Cell[BoxData[
+ TemplateBox[{
+  "General","stop",
+   "\"Further output of \\!\\(\\*StyleBox[RowBox[{\\\"NIntegrate\\\", \
+\\\"::\\\", \\\"slwcon\\\"}], \\\"MessageName\\\"]\\) will be suppressed \
+during this calculation.\"",2,17,47,23668124586789405519,"Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellChangeTimes->{3.6966601564281735`*^9}],
+
+Cell[BoxData[
+ RowBox[{"0.2770689634632211`", " ", 
+  RowBox[{"W", "[", 
+   RowBox[{"zm", ",", "ym", ",", "180", ",", "102"}], "]"}]}]], "Output",
+ CellChangeTimes->{3.6966601610219903`*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"\[IndentingNewLine]", "\[IndentingNewLine]", 
+  RowBox[{
+   RowBox[{"velGiugno", "[", 
+    RowBox[{"zm_", ",", "ym_"}], "]"}], " ", "=", " ", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"W", "[", 
+      RowBox[{"zm", ",", "ym", ",", "180", ",", "13"}], "]"}], "/", 
+     RowBox[{"Sum", "[", 
+      RowBox[{
+       RowBox[{"W", "[", 
+        RowBox[{"zm", ",", 
+         RowBox[{"-", "ym"}], ",", "180", ",", "13"}], "]"}], ",", " ", 
+       RowBox[{"{", 
+        RowBox[{"ym", ",", "0", ",", "13"}], "}"}], ",", 
+       RowBox[{"{", 
+        RowBox[{"zm", ",", 
+         RowBox[{"-", "90"}], ",", "90"}], "}"}]}], "]"}]}], " ", "*", " ", 
+    RowBox[{"27", "/", "0.01"}]}]}]}]], "Input",
+ CellChangeTimes->{{3.696357158427246*^9, 3.696357178645631*^9}, {
+   3.6964263092845964`*^9, 3.6964263143211813`*^9}, {3.696427128914729*^9, 
+   3.696427144394248*^9}, 3.6965144227683306`*^9, {3.696515210485366*^9, 
+   3.696515214464565*^9}, {3.69652036764189*^9, 3.6965203987212086`*^9}, {
+   3.6966370683172455`*^9, 3.696637082347935*^9}, {3.696642531402834*^9, 
+   3.6966425352625813`*^9}, {3.696657845223787*^9, 3.6966578720418377`*^9}, {
+   3.6966580313756866`*^9, 3.6966580447508774`*^9}}],
+
+Cell[BoxData[
+ TemplateBox[{
+  "NIntegrate","ncvb",
+   "\"NIntegrate failed to converge to prescribed accuracy after \
+\\!\\(\\*RowBox[{\\\"9\\\"}]\\) recursive bisections in \
+\\!\\(\\*RowBox[{\\\"t\\\"}]\\) near \\!\\(\\*RowBox[{\\\"{\\\", \\\"t\\\", \
+\\\"}\\\"}]\\) = \\!\\(\\*RowBox[{\\\"{\\\", \\\"3.5403788329363386`\\\", \
+\\\"}\\\"}]\\). NIntegrate obtained \
+\\!\\(\\*RowBox[{\\\"1.1751541109245152`\\\"}]\\) and \
+\\!\\(\\*RowBox[{\\\"0.00011013184727408698`\\\"}]\\) for the integral and \
+error estimates.\"",2,125,496,23667967595296183195,"Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellChangeTimes->{3.696638677431842*^9, 3.696642704761002*^9}],
+
+Cell[BoxData[
+ TemplateBox[{
+  "NIntegrate","ncvb",
+   "\"NIntegrate failed to converge to prescribed accuracy after \
+\\!\\(\\*RowBox[{\\\"9\\\"}]\\) recursive bisections in \
+\\!\\(\\*RowBox[{\\\"t\\\"}]\\) near \\!\\(\\*RowBox[{\\\"{\\\", \\\"t\\\", \
+\\\"}\\\"}]\\) = \\!\\(\\*RowBox[{\\\"{\\\", \\\"5.890437399977141`\\\", \
+\\\"}\\\"}]\\). NIntegrate obtained \\!\\(\\*RowBox[{\\\"1.175154110924524`\\\
+\"}]\\) and \\!\\(\\*RowBox[{\\\"0.00011013184726042407`\\\"}]\\) for the \
+integral and error estimates.\"",2,125,497,23667967595296183195,"Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellChangeTimes->{3.696638677431842*^9, 3.6966427133751326`*^9}],
+
+Cell[BoxData[
+ TemplateBox[{
+  "NIntegrate","ncvb",
+   "\"NIntegrate failed to converge to prescribed accuracy after \
+\\!\\(\\*RowBox[{\\\"9\\\"}]\\) recursive bisections in \
+\\!\\(\\*RowBox[{\\\"t\\\"}]\\) near \\!\\(\\*RowBox[{\\\"{\\\", \\\"t\\\", \
+\\\"}\\\"}]\\) = \\!\\(\\*RowBox[{\\\"{\\\", \\\"4.031252685059744`\\\", \
+\\\"}\\\"}]\\). NIntegrate obtained \\!\\(\\*RowBox[{\\\"1.136832189252694`\\\
+\"}]\\) and \\!\\(\\*RowBox[{\\\"0.00006491279179814078`\\\"}]\\) for the \
+integral and error estimates.\"",2,125,498,23667967595296183195,"Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellChangeTimes->{3.696638677431842*^9, 3.696642741818369*^9}],
+
+Cell[BoxData[
+ TemplateBox[{
+  "General","stop",
+   "\"Further output of \\!\\(\\*StyleBox[RowBox[{\\\"NIntegrate\\\", \
+\\\"::\\\", \\\"ncvb\\\"}], \\\"MessageName\\\"]\\) will be suppressed during \
+this calculation.\"",2,125,499,23667967595296183195,"Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellChangeTimes->{3.696638677431842*^9, 3.696642741842405*^9}],
+
+Cell[BoxData[
+ TemplateBox[{
+  "NIntegrate","slwcon",
+   "\"Numerical integration converging too slowly; suspect one of the \
+following: singularity, value of the integration is 0, highly oscillatory \
+integrand, or WorkingPrecision too small.\"",2,125,500,23667967595296183195,
+   "Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellChangeTimes->{3.696638677431842*^9, 3.6966427475404406`*^9}],
+
+Cell[BoxData[
+ TemplateBox[{
+  "NIntegrate","slwcon",
+   "\"Numerical integration converging too slowly; suspect one of the \
+following: singularity, value of the integration is 0, highly oscillatory \
+integrand, or WorkingPrecision too small.\"",2,125,501,23667967595296183195,
+   "Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellChangeTimes->{3.696638677431842*^9, 3.696642747649519*^9}],
+
+Cell[BoxData[
+ TemplateBox[{
+  "NIntegrate","slwcon",
+   "\"Numerical integration converging too slowly; suspect one of the \
+following: singularity, value of the integration is 0, highly oscillatory \
+integrand, or WorkingPrecision too small.\"",2,125,502,23667967595296183195,
+   "Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellChangeTimes->{3.696638677431842*^9, 3.6966427523608704`*^9}],
+
+Cell[BoxData[
+ TemplateBox[{
+  "General","stop",
+   "\"Further output of \\!\\(\\*StyleBox[RowBox[{\\\"NIntegrate\\\", \
+\\\"::\\\", \\\"slwcon\\\"}], \\\"MessageName\\\"]\\) will be suppressed \
+during this calculation.\"",2,125,503,23667967595296183195,"Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellChangeTimes->{3.696638677431842*^9, 3.696642752383889*^9}],
+
+Cell[BoxData[
+ RowBox[{"0.7315255756035324`", " ", 
+  RowBox[{"W", "[", 
+   RowBox[{"zm", ",", "ym", ",", "180", ",", "13"}], "]"}]}]], "Output",
+ CellChangeTimes->{3.696638706310075*^9, 3.6966427561435633`*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"velGiugnoCm", "[", 
+   RowBox[{"zm_", ",", "ym_"}], "]"}], " ", "=", " ", 
+  RowBox[{
+   RowBox[{
+    RowBox[{"W", "[", 
+     RowBox[{"zm", ",", "ym", ",", "180", ",", "129"}], "]"}], "/", 
+    RowBox[{"Sum", "[", 
+     RowBox[{
+      RowBox[{"W", "[", 
+       RowBox[{"zm", ",", 
+        RowBox[{"-", "ym"}], ",", "180", ",", "129"}], "]"}], ",", " ", 
+      RowBox[{"{", 
+       RowBox[{"ym", ",", "0", ",", "129"}], "}"}], ",", 
+      RowBox[{"{", 
+       RowBox[{"zm", ",", 
+        RowBox[{"-", "90"}], ",", "90"}], "}"}]}], "]"}]}], " ", "*", " ", 
+   RowBox[{"27", "/", "0.001"}]}]}]], "Input",
+ CellChangeTimes->{{3.6964271927235513`*^9, 3.696427192726551*^9}, {
+  3.6966581122518277`*^9, 3.6966581405803523`*^9}}],
+
+Cell[BoxData[
+ TemplateBox[{
+  "NIntegrate","ncvb",
+   "\"NIntegrate failed to converge to prescribed accuracy after \
+\\!\\(\\*RowBox[{\\\"9\\\"}]\\) recursive bisections in \
+\\!\\(\\*RowBox[{\\\"t\\\"}]\\) near \\!\\(\\*RowBox[{\\\"{\\\", \\\"t\\\", \
+\\\"}\\\"}]\\) = \\!\\(\\*RowBox[{\\\"{\\\", \
+\\\"3.28997532890969`15.954589770191005\\\", \\\"}\\\"}]\\). NIntegrate \
+obtained \\!\\(\\*RowBox[{\\\"4.064355015669186`\\\"}]\\) and \
+\\!\\(\\*RowBox[{\\\"6.86936685460725`*^-6\\\"}]\\) for the integral and \
+error estimates.\"",2,18,48,23668124586789405519,"Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellChangeTimes->{3.6966603210905643`*^9}],
+
+Cell[BoxData[
+ TemplateBox[{
+  "NIntegrate","ncvb",
+   "\"NIntegrate failed to converge to prescribed accuracy after \
+\\!\\(\\*RowBox[{\\\"9\\\"}]\\) recursive bisections in \
+\\!\\(\\*RowBox[{\\\"t\\\"}]\\) near \\!\\(\\*RowBox[{\\\"{\\\", \\\"t\\\", \
+\\\"}\\\"}]\\) = \\!\\(\\*RowBox[{\\\"{\\\", \
+\\\"6.134802631859689`15.954589770191005\\\", \\\"}\\\"}]\\). NIntegrate \
+obtained \\!\\(\\*RowBox[{\\\"4.064355015669186`\\\"}]\\) and \
+\\!\\(\\*RowBox[{\\\"6.869366854837187`*^-6\\\"}]\\) for the integral and \
+error estimates.\"",2,18,49,23668124586789405519,"Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellChangeTimes->{3.696660329418805*^9}],
+
+Cell[BoxData[
+ TemplateBox[{
+  "NIntegrate","ncvb",
+   "\"NIntegrate failed to converge to prescribed accuracy after \
+\\!\\(\\*RowBox[{\\\"9\\\"}]\\) recursive bisections in \
+\\!\\(\\*RowBox[{\\\"t\\\"}]\\) near \\!\\(\\*RowBox[{\\\"{\\\", \\\"t\\\", \
+\\\"}\\\"}]\\) = \\!\\(\\*RowBox[{\\\"{\\\", \\\"3.356301138390062`\\\", \
+\\\"}\\\"}]\\). NIntegrate obtained \
+\\!\\(\\*RowBox[{\\\"3.9577540874866135`\\\"}]\\) and \
+\\!\\(\\*RowBox[{\\\"0.00029024476376187134`\\\"}]\\) for the integral and \
+error estimates.\"",2,18,50,23668124586789405519,"Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellChangeTimes->{3.696660386907963*^9}],
+
+Cell[BoxData[
+ TemplateBox[{
+  "General","stop",
+   "\"Further output of \\!\\(\\*StyleBox[RowBox[{\\\"NIntegrate\\\", \
+\\\"::\\\", \\\"ncvb\\\"}], \\\"MessageName\\\"]\\) will be suppressed during \
+this calculation.\"",2,18,51,23668124586789405519,"Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellChangeTimes->{3.6966603869235907`*^9}],
+
+Cell[BoxData[
+ TemplateBox[{
+  "NIntegrate","slwcon",
+   "\"Numerical integration converging too slowly; suspect one of the \
+following: singularity, value of the integration is 0, highly oscillatory \
+integrand, or WorkingPrecision too small.\"",2,18,52,23668124586789405519,
+   "Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellChangeTimes->{3.6966605895391045`*^9}],
+
+Cell[BoxData[
+ TemplateBox[{
+  "NIntegrate","slwcon",
+   "\"Numerical integration converging too slowly; suspect one of the \
+following: singularity, value of the integration is 0, highly oscillatory \
+integrand, or WorkingPrecision too small.\"",2,18,53,23668124586789405519,
+   "Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellChangeTimes->{3.6966605975074673`*^9}],
+
+Cell[BoxData[
+ TemplateBox[{
+  "NIntegrate","slwcon",
+   "\"Numerical integration converging too slowly; suspect one of the \
+following: singularity, value of the integration is 0, highly oscillatory \
+integrand, or WorkingPrecision too small.\"",2,18,54,23668124586789405519,
+   "Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellChangeTimes->{3.6966608855649853`*^9}],
+
+Cell[BoxData[
+ TemplateBox[{
+  "General","stop",
+   "\"Further output of \\!\\(\\*StyleBox[RowBox[{\\\"NIntegrate\\\", \
+\\\"::\\\", \\\"slwcon\\\"}], \\\"MessageName\\\"]\\) will be suppressed \
+during this calculation.\"",2,18,55,23668124586789405519,"Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellChangeTimes->{3.696660885596235*^9}],
+
+Cell[BoxData[
+ RowBox[{"0.3037559312197013`", " ", 
+  RowBox[{"W", "[", 
+   RowBox[{"zm", ",", "ym", ",", "180", ",", "129"}], "]"}]}]], "Output",
+ CellChangeTimes->{3.696661001687539*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"\[IndentingNewLine]", "\[IndentingNewLine]", 
+  RowBox[{
+   RowBox[{"velLuglio", "[", 
+    RowBox[{"zm_", ",", "ym__"}], "]"}], " ", "=", " ", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"W", "[", 
+      RowBox[{"zm", ",", "ym", ",", "180", ",", "14"}], "]"}], "/", 
+     RowBox[{"Sum", "[", 
+      RowBox[{
+       RowBox[{"W", "[", 
+        RowBox[{"zm", ",", 
+         RowBox[{"-", "ym"}], ",", "180", ",", "14"}], "]"}], ",", " ", 
+       RowBox[{"{", 
+        RowBox[{"ym", ",", "0", ",", "14"}], "}"}], ",", 
+       RowBox[{"{", 
+        RowBox[{"zm", ",", 
+         RowBox[{"-", "90"}], ",", "90"}], "}"}]}], "]"}]}], " ", "*", " ", 
+    RowBox[{"31", "/", "0.01"}]}]}]}]], "Input",
+ CellChangeTimes->{{3.696357430353408*^9, 3.6963574680069256`*^9}, {
+   3.6964270974104958`*^9, 3.696427116538643*^9}, 3.6964271471792297`*^9, 
+   3.6964271893411617`*^9, {3.6965154671877456`*^9, 3.6965154878442593`*^9}, {
+   3.6965205013635635`*^9, 3.6965205112357597`*^9}, {3.6966370873120995`*^9, 
+   3.696637107000661*^9}, {3.6966425409196053`*^9, 3.6966425495707617`*^9}}],
+
+Cell[BoxData[
+ TemplateBox[{
+  "NIntegrate","ncvb",
+   "\"NIntegrate failed to converge to prescribed accuracy after \
+\\!\\(\\*RowBox[{\\\"9\\\"}]\\) recursive bisections in \
+\\!\\(\\*RowBox[{\\\"t\\\"}]\\) near \\!\\(\\*RowBox[{\\\"{\\\", \\\"t\\\", \
+\\\"}\\\"}]\\) = \\!\\(\\*RowBox[{\\\"{\\\", \\\"3.509699217178625`\\\", \
+\\\"}\\\"}]\\). NIntegrate obtained \
+\\!\\(\\*RowBox[{\\\"1.2386023741625882`\\\"}]\\) and \
+\\!\\(\\*RowBox[{\\\"0.00006607492872679067`\\\"}]\\) for the integral and \
+error estimates.\"",2,126,504,23667967595296183195,"Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellChangeTimes->{3.696638748800256*^9, 3.696642798925003*^9}],
+
+Cell[BoxData[
+ TemplateBox[{
+  "NIntegrate","ncvb",
+   "\"NIntegrate failed to converge to prescribed accuracy after \
+\\!\\(\\*RowBox[{\\\"9\\\"}]\\) recursive bisections in \
+\\!\\(\\*RowBox[{\\\"t\\\"}]\\) near \\!\\(\\*RowBox[{\\\"{\\\", \\\"t\\\", \
+\\\"}\\\"}]\\) = \\!\\(\\*RowBox[{\\\"{\\\", \\\"5.921117015734853`\\\", \
+\\\"}\\\"}]\\). NIntegrate obtained \
+\\!\\(\\*RowBox[{\\\"1.2386023741625705`\\\"}]\\) and \
+\\!\\(\\*RowBox[{\\\"0.00006607492883618348`\\\"}]\\) for the integral and \
+error estimates.\"",2,126,505,23667967595296183195,"Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellChangeTimes->{3.696638748800256*^9, 3.696642807155859*^9}],
+
+Cell[BoxData[
+ TemplateBox[{
+  "NIntegrate","slwcon",
+   "\"Numerical integration converging too slowly; suspect one of the \
+following: singularity, value of the integration is 0, highly oscillatory \
+integrand, or WorkingPrecision too small.\"",2,126,506,23667967595296183195,
+   "Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellChangeTimes->{3.696638748800256*^9, 3.696642837353346*^9}],
+
+Cell[BoxData[
+ TemplateBox[{
+  "NIntegrate","slwcon",
+   "\"Numerical integration converging too slowly; suspect one of the \
+following: singularity, value of the integration is 0, highly oscillatory \
+integrand, or WorkingPrecision too small.\"",2,126,507,23667967595296183195,
+   "Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellChangeTimes->{3.696638748800256*^9, 3.6966428446355295`*^9}],
+
+Cell[BoxData[
+ TemplateBox[{
+  "NIntegrate","ncvb",
+   "\"NIntegrate failed to converge to prescribed accuracy after \
+\\!\\(\\*RowBox[{\\\"9\\\"}]\\) recursive bisections in \
+\\!\\(\\*RowBox[{\\\"t\\\"}]\\) near \\!\\(\\*RowBox[{\\\"{\\\", \\\"t\\\", \
+\\\"}\\\"}]\\) = \\!\\(\\*RowBox[{\\\"{\\\", \\\"4.0557963776659145`\\\", \
+\\\"}\\\"}]\\). NIntegrate obtained \\!\\(\\*RowBox[{\\\"1.189471030010972`\\\
+\"}]\\) and \\!\\(\\*RowBox[{\\\"0.000017863660491000212`\\\"}]\\) for the \
+integral and error estimates.\"",2,126,508,23667967595296183195,"Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellChangeTimes->{3.696638748800256*^9, 3.6966428446585455`*^9}],
+
+Cell[BoxData[
+ TemplateBox[{
+  "General","stop",
+   "\"Further output of \\!\\(\\*StyleBox[RowBox[{\\\"NIntegrate\\\", \
+\\\"::\\\", \\\"ncvb\\\"}], \\\"MessageName\\\"]\\) will be suppressed during \
+this calculation.\"",2,126,509,23667967595296183195,"Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellChangeTimes->{3.696638748800256*^9, 3.6966428446825633`*^9}],
+
+Cell[BoxData[
+ TemplateBox[{
+  "NIntegrate","slwcon",
+   "\"Numerical integration converging too slowly; suspect one of the \
+following: singularity, value of the integration is 0, highly oscillatory \
+integrand, or WorkingPrecision too small.\"",2,126,510,23667967595296183195,
+   "Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellChangeTimes->{3.696638748800256*^9, 3.6966428497671785`*^9}],
+
+Cell[BoxData[
+ TemplateBox[{
+  "General","stop",
+   "\"Further output of \\!\\(\\*StyleBox[RowBox[{\\\"NIntegrate\\\", \
+\\\"::\\\", \\\"slwcon\\\"}], \\\"MessageName\\\"]\\) will be suppressed \
+during this calculation.\"",2,126,511,23667967595296183195,"Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellChangeTimes->{3.696638748800256*^9, 3.6966428497891946`*^9}]
+}, Open  ]],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"0.7458646098410179`", " ", 
+   RowBox[{"W", "[", 
+    RowBox[{"zm", ",", "ym", ",", "180", ",", "14"}], "]"}]}], 
+  "\[IndentingNewLine]"}]], "Input",
+ CellChangeTimes->{{3.696658167158873*^9, 3.696658167158873*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"velLuglioCm", "[", 
+   RowBox[{"zm_", ",", "ym__"}], "]"}], " ", "=", " ", 
+  RowBox[{
+   RowBox[{
+    RowBox[{"W", "[", 
+     RowBox[{"zm", ",", "ym", ",", "180", ",", "142"}], "]"}], "/", 
+    RowBox[{"Sum", "[", 
+     RowBox[{
+      RowBox[{"W", "[", 
+       RowBox[{"zm", ",", 
+        RowBox[{"-", "ym"}], ",", "180", ",", "142"}], "]"}], ",", " ", 
+      RowBox[{"{", 
+       RowBox[{"ym", ",", "0", ",", "142"}], "}"}], ",", 
+      RowBox[{"{", 
+       RowBox[{"zm", ",", 
+        RowBox[{"-", "90"}], ",", "90"}], "}"}]}], "]"}]}], " ", "*", " ", 
+   RowBox[{"31", "/", "0.001"}]}]}]], "Input",
+ CellChangeTimes->{{3.6966581744089565`*^9, 3.6966581873935146`*^9}}],
+
+Cell[BoxData[
+ TemplateBox[{
+  "NIntegrate","ncvb",
+   "\"NIntegrate failed to converge to prescribed accuracy after \
+\\!\\(\\*RowBox[{\\\"9\\\"}]\\) recursive bisections in \
+\\!\\(\\*RowBox[{\\\"t\\\"}]\\) near \\!\\(\\*RowBox[{\\\"{\\\", \\\"t\\\", \
+\\\"}\\\"}]\\) = \\!\\(\\*RowBox[{\\\"{\\\", \
+\\\"3.286133458171905`15.954589770191005\\\", \\\"}\\\"}]\\). NIntegrate \
+obtained \\!\\(\\*RowBox[{\\\"4.141318916563219`\\\"}]\\) and \
+\\!\\(\\*RowBox[{\\\"0.000010817644244970788`\\\"}]\\) for the integral and \
+error estimates.\"",2,19,56,23668124586789405519,"Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellChangeTimes->{3.696661170816223*^9}],
+
+Cell[BoxData[
+ TemplateBox[{
+  "NIntegrate","ncvb",
+   "\"NIntegrate failed to converge to prescribed accuracy after \
+\\!\\(\\*RowBox[{\\\"9\\\"}]\\) recursive bisections in \
+\\!\\(\\*RowBox[{\\\"t\\\"}]\\) near \\!\\(\\*RowBox[{\\\"{\\\", \\\"t\\\", \
+\\\"}\\\"}]\\) = \\!\\(\\*RowBox[{\\\"{\\\", \
+\\\"6.138644502597474`15.954589770191005\\\", \\\"}\\\"}]\\). NIntegrate \
+obtained \\!\\(\\*RowBox[{\\\"4.141318916563223`\\\"}]\\) and \
+\\!\\(\\*RowBox[{\\\"0.000010817644244847387`\\\"}]\\) for the integral and \
+error estimates.\"",2,19,57,23668124586789405519,"Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellChangeTimes->{3.696661179371852*^9}],
+
+Cell[BoxData[
+ TemplateBox[{
+  "NIntegrate","ncvb",
+   "\"NIntegrate failed to converge to prescribed accuracy after \
+\\!\\(\\*RowBox[{\\\"9\\\"}]\\) recursive bisections in \
+\\!\\(\\*RowBox[{\\\"t\\\"}]\\) near \\!\\(\\*RowBox[{\\\"{\\\", \\\"t\\\", \
+\\\"}\\\"}]\\) = \\!\\(\\*RowBox[{\\\"{\\\", \\\"3.3440292920869763`\\\", \
+\\\"}\\\"}]\\). NIntegrate obtained \
+\\!\\(\\*RowBox[{\\\"4.06707186161527`\\\"}]\\) and \
+\\!\\(\\*RowBox[{\\\"4.621097669642138`*^-6\\\"}]\\) for the integral and \
+error estimates.\"",2,19,58,23668124586789405519,"Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellChangeTimes->{3.696661239009674*^9}],
+
+Cell[BoxData[
+ TemplateBox[{
+  "General","stop",
+   "\"Further output of \\!\\(\\*StyleBox[RowBox[{\\\"NIntegrate\\\", \
+\\\"::\\\", \\\"ncvb\\\"}], \\\"MessageName\\\"]\\) will be suppressed during \
+this calculation.\"",2,19,59,23668124586789405519,"Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellChangeTimes->{3.696661239040925*^9}],
+
+Cell[BoxData[
+ TemplateBox[{
+  "NIntegrate","slwcon",
+   "\"Numerical integration converging too slowly; suspect one of the \
+following: singularity, value of the integration is 0, highly oscillatory \
+integrand, or WorkingPrecision too small.\"",2,19,60,23668124586789405519,
+   "Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellChangeTimes->{3.6966615242821035`*^9}],
+
+Cell[BoxData[
+ TemplateBox[{
+  "NIntegrate","slwcon",
+   "\"Numerical integration converging too slowly; suspect one of the \
+following: singularity, value of the integration is 0, highly oscillatory \
+integrand, or WorkingPrecision too small.\"",2,19,61,23668124586789405519,
+   "Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellChangeTimes->{3.696661531547831*^9}],
+
+Cell[BoxData[
+ TemplateBox[{
+  "NIntegrate","slwcon",
+   "\"Numerical integration converging too slowly; suspect one of the \
+following: singularity, value of the integration is 0, highly oscillatory \
+integrand, or WorkingPrecision too small.\"",2,19,62,23668124586789405519,
+   "Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellChangeTimes->{3.696661857044389*^9}],
+
+Cell[BoxData[
+ TemplateBox[{
+  "General","stop",
+   "\"Further output of \\!\\(\\*StyleBox[RowBox[{\\\"NIntegrate\\\", \
+\\\"::\\\", \\\"slwcon\\\"}], \\\"MessageName\\\"]\\) will be suppressed \
+during this calculation.\"",2,19,63,23668124586789405519,"Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellChangeTimes->{3.696661857060017*^9}],
+
+Cell[BoxData[
+ RowBox[{"0.31571175512673433`", " ", 
+  RowBox[{"W", "[", 
+   RowBox[{"zm", ",", "ym", ",", "180", ",", "142"}], "]"}]}]], "Output",
+ CellChangeTimes->{3.6966619287622156`*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"\[IndentingNewLine]", "\[IndentingNewLine]", 
+  RowBox[{
+   RowBox[{"velAgosto", "[", 
+    RowBox[{"zm_", ",", "ym_"}], "]"}], " ", "=", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"W", "[", 
+      RowBox[{"zm", ",", "ym", ",", "180", ",", "13"}], "]"}], "/", 
+     RowBox[{"Sum", "[", 
+      RowBox[{
+       RowBox[{"W", "[", 
+        RowBox[{"zm", ",", 
+         RowBox[{"-", "ym"}], ",", "180", ",", "13"}], "]"}], ",", " ", 
+       RowBox[{"{", 
+        RowBox[{"ym", ",", "0", ",", "13"}], "}"}], ",", 
+       RowBox[{"{", 
+        RowBox[{"zm", ",", 
+         RowBox[{"-", "90"}], ",", "90"}], "}"}]}], "]"}]}], " ", "*", " ", 
+    RowBox[{"26", "/", "0.01"}]}]}]}]], "Input",
+ CellChangeTimes->{{3.696357759959532*^9, 3.696357782421035*^9}, {
+   3.6964281715295115`*^9, 3.696428178663588*^9}, 3.6965150157763577`*^9, {
+   3.6965158522794943`*^9, 3.696515862653348*^9}, {3.6965205152133265`*^9, 
+   3.6965205233352194`*^9}, {3.696637111189404*^9, 3.696637167487049*^9}, {
+   3.6966425576224904`*^9, 3.6966425616153316`*^9}}],
+
+Cell[BoxData[
+ TemplateBox[{
+  "NIntegrate","ncvb",
+   "\"NIntegrate failed to converge to prescribed accuracy after \
+\\!\\(\\*RowBox[{\\\"9\\\"}]\\) recursive bisections in \
+\\!\\(\\*RowBox[{\\\"t\\\"}]\\) near \\!\\(\\*RowBox[{\\\"{\\\", \\\"t\\\", \
+\\\"}\\\"}]\\) = \\!\\(\\*RowBox[{\\\"{\\\", \\\"3.5403788329363386`\\\", \
+\\\"}\\\"}]\\). NIntegrate obtained \
+\\!\\(\\*RowBox[{\\\"1.1751541109245152`\\\"}]\\) and \
+\\!\\(\\*RowBox[{\\\"0.00011013184727408698`\\\"}]\\) for the integral and \
+error estimates.\"",2,127,512,23667967595296183195,"Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellChangeTimes->{3.696638854933993*^9, 3.6966429034804573`*^9}],
+
+Cell[BoxData[
+ TemplateBox[{
+  "NIntegrate","ncvb",
+   "\"NIntegrate failed to converge to prescribed accuracy after \
+\\!\\(\\*RowBox[{\\\"9\\\"}]\\) recursive bisections in \
+\\!\\(\\*RowBox[{\\\"t\\\"}]\\) near \\!\\(\\*RowBox[{\\\"{\\\", \\\"t\\\", \
+\\\"}\\\"}]\\) = \\!\\(\\*RowBox[{\\\"{\\\", \\\"5.890437399977141`\\\", \
+\\\"}\\\"}]\\). NIntegrate obtained \\!\\(\\*RowBox[{\\\"1.175154110924524`\\\
+\"}]\\) and \\!\\(\\*RowBox[{\\\"0.00011013184726042407`\\\"}]\\) for the \
+integral and error estimates.\"",2,127,513,23667967595296183195,"Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellChangeTimes->{3.696638854933993*^9, 3.6966429120898485`*^9}],
+
+Cell[BoxData[
+ TemplateBox[{
+  "NIntegrate","ncvb",
+   "\"NIntegrate failed to converge to prescribed accuracy after \
+\\!\\(\\*RowBox[{\\\"9\\\"}]\\) recursive bisections in \
+\\!\\(\\*RowBox[{\\\"t\\\"}]\\) near \\!\\(\\*RowBox[{\\\"{\\\", \\\"t\\\", \
+\\\"}\\\"}]\\) = \\!\\(\\*RowBox[{\\\"{\\\", \\\"4.031252685059744`\\\", \
+\\\"}\\\"}]\\). NIntegrate obtained \\!\\(\\*RowBox[{\\\"1.136832189252694`\\\
+\"}]\\) and \\!\\(\\*RowBox[{\\\"0.00006491279179814078`\\\"}]\\) for the \
+integral and error estimates.\"",2,127,514,23667967595296183195,"Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellChangeTimes->{3.696638854933993*^9, 3.696642944239729*^9}],
+
+Cell[BoxData[
+ TemplateBox[{
+  "General","stop",
+   "\"Further output of \\!\\(\\*StyleBox[RowBox[{\\\"NIntegrate\\\", \
+\\\"::\\\", \\\"ncvb\\\"}], \\\"MessageName\\\"]\\) will be suppressed during \
+this calculation.\"",2,127,515,23667967595296183195,"Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellChangeTimes->{3.696638854933993*^9, 3.696642944266758*^9}],
+
+Cell[BoxData[
+ TemplateBox[{
+  "NIntegrate","slwcon",
+   "\"Numerical integration converging too slowly; suspect one of the \
+following: singularity, value of the integration is 0, highly oscillatory \
+integrand, or WorkingPrecision too small.\"",2,127,516,23667967595296183195,
+   "Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellChangeTimes->{3.696638854933993*^9, 3.6966429504427853`*^9}],
+
+Cell[BoxData[
+ TemplateBox[{
+  "NIntegrate","slwcon",
+   "\"Numerical integration converging too slowly; suspect one of the \
+following: singularity, value of the integration is 0, highly oscillatory \
+integrand, or WorkingPrecision too small.\"",2,127,517,23667967595296183195,
+   "Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellChangeTimes->{3.696638854933993*^9, 3.6966429506289177`*^9}],
+
+Cell[BoxData[
+ TemplateBox[{
+  "NIntegrate","slwcon",
+   "\"Numerical integration converging too slowly; suspect one of the \
+following: singularity, value of the integration is 0, highly oscillatory \
+integrand, or WorkingPrecision too small.\"",2,127,518,23667967595296183195,
+   "Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellChangeTimes->{3.696638854933993*^9, 3.696642956046773*^9}],
+
+Cell[BoxData[
+ TemplateBox[{
+  "General","stop",
+   "\"Further output of \\!\\(\\*StyleBox[RowBox[{\\\"NIntegrate\\\", \
+\\\"::\\\", \\\"slwcon\\\"}], \\\"MessageName\\\"]\\) will be suppressed \
+during this calculation.\"",2,127,519,23667967595296183195,"Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellChangeTimes->{3.696638854933993*^9, 3.6966429560737925`*^9}],
+
+Cell[BoxData[
+ RowBox[{"0.7044320357663646`", " ", 
+  RowBox[{"W", "[", 
+   RowBox[{"zm", ",", "ym", ",", "180", ",", "13"}], "]"}]}]], "Output",
+ CellChangeTimes->{3.6966388825849705`*^9, 3.6966429597156243`*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"velAgostoCm", "[", 
+   RowBox[{"zm_", ",", "ym_"}], "]"}], " ", "=", 
+  RowBox[{
+   RowBox[{
+    RowBox[{"W", "[", 
+     RowBox[{"zm", ",", "ym", ",", "180", ",", "126"}], "]"}], "/", 
+    RowBox[{"Sum", "[", 
+     RowBox[{
+      RowBox[{"W", "[", 
+       RowBox[{"zm", ",", 
+        RowBox[{"-", "ym"}], ",", "180", ",", "126"}], "]"}], ",", " ", 
+      RowBox[{"{", 
+       RowBox[{"ym", ",", "0", ",", "126"}], "}"}], ",", 
+      RowBox[{"{", 
+       RowBox[{"zm", ",", 
+        RowBox[{"-", "90"}], ",", "90"}], "}"}]}], "]"}]}], " ", "*", " ", 
+   RowBox[{"26", "/", "0.001"}]}]}]], "Input",
+ CellChangeTimes->{{3.6965158657495117`*^9, 3.696515868645721*^9}, {
+  3.696658205690646*^9, 3.6966582282847147`*^9}}],
+
+Cell[BoxData[
+ TemplateBox[{
+  "NIntegrate","ncvb",
+   "\"NIntegrate failed to converge to prescribed accuracy after \
+\\!\\(\\*RowBox[{\\\"9\\\"}]\\) recursive bisections in \
+\\!\\(\\*RowBox[{\\\"t\\\"}]\\) near \\!\\(\\*RowBox[{\\\"{\\\", \\\"t\\\", \
+\\\"}\\\"}]\\) = \\!\\(\\*RowBox[{\\\"{\\\", \
+\\\"3.286133458171905`15.954589770191005\\\", \\\"}\\\"}]\\). NIntegrate \
+obtained \\!\\(\\*RowBox[{\\\"4.062788533632554`\\\"}]\\) and \
+\\!\\(\\*RowBox[{\\\"0.000024037673535053116`\\\"}]\\) for the integral and \
+error estimates.\"",2,20,64,23668124586789405519,"Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellChangeTimes->{3.696662079511467*^9}],
+
+Cell[BoxData[
+ TemplateBox[{
+  "NIntegrate","ncvb",
+   "\"NIntegrate failed to converge to prescribed accuracy after \
+\\!\\(\\*RowBox[{\\\"9\\\"}]\\) recursive bisections in \
+\\!\\(\\*RowBox[{\\\"t\\\"}]\\) near \\!\\(\\*RowBox[{\\\"{\\\", \\\"t\\\", \
+\\\"}\\\"}]\\) = \\!\\(\\*RowBox[{\\\"{\\\", \
+\\\"6.138644502597474`15.954589770191005\\\", \\\"}\\\"}]\\). NIntegrate \
+obtained \\!\\(\\*RowBox[{\\\"4.062788533632555`\\\"}]\\) and \
+\\!\\(\\*RowBox[{\\\"0.000024037673534973844`\\\"}]\\) for the integral and \
+error estimates.\"",2,20,65,23668124586789405519,"Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellChangeTimes->{3.6966620877858763`*^9}],
+
+Cell[BoxData[
+ TemplateBox[{
+  "NIntegrate","ncvb",
+   "\"NIntegrate failed to converge to prescribed accuracy after \
+\\!\\(\\*RowBox[{\\\"9\\\"}]\\) recursive bisections in \
+\\!\\(\\*RowBox[{\\\"t\\\"}]\\) near \\!\\(\\*RowBox[{\\\"{\\\", \\\"t\\\", \
+\\\"}\\\"}]\\) = \\!\\(\\*RowBox[{\\\"{\\\", \\\"3.350165215238519`\\\", \
+\\\"}\\\"}]\\). NIntegrate obtained \
+\\!\\(\\*RowBox[{\\\"3.9520764173541463`\\\"}]\\) and \
+\\!\\(\\*RowBox[{\\\"0.00008087482143413692`\\\"}]\\) for the integral and \
+error estimates.\"",2,20,66,23668124586789405519,"Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellChangeTimes->{3.6966621450773773`*^9}],
+
+Cell[BoxData[
+ TemplateBox[{
+  "General","stop",
+   "\"Further output of \\!\\(\\*StyleBox[RowBox[{\\\"NIntegrate\\\", \
+\\\"::\\\", \\\"ncvb\\\"}], \\\"MessageName\\\"]\\) will be suppressed during \
+this calculation.\"",2,20,67,23668124586789405519,"Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellChangeTimes->{3.696662145092986*^9}],
+
+Cell[BoxData[
+ TemplateBox[{
+  "NIntegrate","slwcon",
+   "\"Numerical integration converging too slowly; suspect one of the \
+following: singularity, value of the integration is 0, highly oscillatory \
+integrand, or WorkingPrecision too small.\"",2,20,68,23668124586789405519,
+   "Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellChangeTimes->{3.696662223849588*^9}],
+
+Cell[BoxData[
+ TemplateBox[{
+  "NIntegrate","slwcon",
+   "\"Numerical integration converging too slowly; suspect one of the \
+following: singularity, value of the integration is 0, highly oscillatory \
+integrand, or WorkingPrecision too small.\"",2,20,69,23668124586789405519,
+   "Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellChangeTimes->{3.696662231541387*^9}],
+
+Cell[BoxData[
+ TemplateBox[{
+  "NIntegrate","slwcon",
+   "\"Numerical integration converging too slowly; suspect one of the \
+following: singularity, value of the integration is 0, highly oscillatory \
+integrand, or WorkingPrecision too small.\"",2,20,70,23668124586789405519,
+   "Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellChangeTimes->{3.6966624038072443`*^9}],
+
+Cell[BoxData[
+ TemplateBox[{
+  "General","stop",
+   "\"Further output of \\!\\(\\*StyleBox[RowBox[{\\\"NIntegrate\\\", \
+\\\"::\\\", \\\"slwcon\\\"}], \\\"MessageName\\\"]\\) will be suppressed \
+during this calculation.\"",2,20,71,23668124586789405519,"Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellChangeTimes->{3.696662403838493*^9}],
+
+Cell[BoxData[
+ RowBox[{"0.3001143115770635`", " ", 
+  RowBox[{"W", "[", 
+   RowBox[{"zm", ",", "ym", ",", "180", ",", "126"}], "]"}]}]], "Output",
+ CellChangeTimes->{3.6966627433218374`*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"\[IndentingNewLine]", 
+  RowBox[{
+   RowBox[{"velSettembre", "[", 
+    RowBox[{"zm_", ",", "ym_"}], "]"}], " ", "=", " ", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"W", "[", 
+      RowBox[{"zm", ",", "ym", ",", "180", ",", "12"}], "]"}], "/", 
+     RowBox[{"Sum", "[", 
+      RowBox[{
+       RowBox[{"W", "[", 
+        RowBox[{"zm", ",", 
+         RowBox[{"-", "ym"}], ",", "180", ",", "12"}], "]"}], ",", " ", 
+       RowBox[{"{", 
+        RowBox[{"ym", ",", "0", ",", "12"}], "}"}], ",", 
+       RowBox[{"{", 
+        RowBox[{"zm", ",", 
+         RowBox[{"-", "90"}], ",", "90"}], "}"}]}], "]"}]}], " ", "*", " ", 
+    RowBox[{"23", "/", "0.01"}]}]}]}]], "Input",
+ CellChangeTimes->{{3.6963583816156735`*^9, 3.6963584056030164`*^9}, 
+   3.696428167688779*^9, {3.6964282027377343`*^9, 3.696428206182166*^9}, {
+   3.6965161264691324`*^9, 3.6965161399813366`*^9}, {3.69652052834057*^9, 
+   3.6965205405362635`*^9}, 3.6966371479250546`*^9, {3.6966371980057898`*^9, 
+   3.6966372086897182`*^9}, {3.6966425818397217`*^9, 3.696642584976954*^9}}],
+
+Cell[BoxData[
+ TemplateBox[{
+  "NIntegrate","ncvb",
+   "\"NIntegrate failed to converge to prescribed accuracy after \
+\\!\\(\\*RowBox[{\\\"9\\\"}]\\) recursive bisections in \
+\\!\\(\\*RowBox[{\\\"t\\\"}]\\) near \\!\\(\\*RowBox[{\\\"{\\\", \\\"t\\\", \
+\\\"}\\\"}]\\) = \\!\\(\\*RowBox[{\\\"{\\\", \\\"3.767407989543413`\\\", \
+\\\"}\\\"}]\\). NIntegrate obtained \
+\\!\\(\\*RowBox[{\\\"1.0870129608736327`\\\"}]\\) and \
+\\!\\(\\*RowBox[{\\\"0.00013447527104522186`\\\"}]\\) for the integral and \
+error estimates.\"",2,128,520,23667967595296183195,"Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellChangeTimes->{3.696638929563389*^9, 3.696643017383477*^9}],
+
+Cell[BoxData[
+ TemplateBox[{
+  "NIntegrate","ncvb",
+   "\"NIntegrate failed to converge to prescribed accuracy after \
+\\!\\(\\*RowBox[{\\\"9\\\"}]\\) recursive bisections in \
+\\!\\(\\*RowBox[{\\\"t\\\"}]\\) near \\!\\(\\*RowBox[{\\\"{\\\", \\\"t\\\", \
+\\\"}\\\"}]\\) = \\!\\(\\*RowBox[{\\\"{\\\", \\\"5.663408243370067`\\\", \
+\\\"}\\\"}]\\). NIntegrate obtained \\!\\(\\*RowBox[{\\\"1.087012960873754`\\\
+\"}]\\) and \\!\\(\\*RowBox[{\\\"0.00013447527109907253`\\\"}]\\) for the \
+integral and error estimates.\"",2,128,521,23667967595296183195,"Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellChangeTimes->{3.696638929563389*^9, 3.6966430247086897`*^9}],
+
+Cell[BoxData[
+ TemplateBox[{
+  "NIntegrate","ncvb",
+   "\"NIntegrate failed to converge to prescribed accuracy after \
+\\!\\(\\*RowBox[{\\\"9\\\"}]\\) recursive bisections in \
+\\!\\(\\*RowBox[{\\\"t\\\"}]\\) near \\!\\(\\*RowBox[{\\\"{\\\", \\\"t\\\", \
+\\\"}\\\"}]\\) = \\!\\(\\*RowBox[{\\\"{\\\", \\\"3.8778546062711796`\\\", \
+\\\"}\\\"}]\\). NIntegrate obtained \
+\\!\\(\\*RowBox[{\\\"1.07872740160198`\\\"}]\\) and \
+\\!\\(\\*RowBox[{\\\"0.00010390937371240232`\\\"}]\\) for the integral and \
+error estimates.\"",2,128,522,23667967595296183195,"Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellChangeTimes->{3.696638929563389*^9, 3.696643024774737*^9}],
+
+Cell[BoxData[
+ TemplateBox[{
+  "General","stop",
+   "\"Further output of \\!\\(\\*StyleBox[RowBox[{\\\"NIntegrate\\\", \
+\\\"::\\\", \\\"ncvb\\\"}], \\\"MessageName\\\"]\\) will be suppressed during \
+this calculation.\"",2,128,523,23667967595296183195,"Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellChangeTimes->{3.696638929563389*^9, 3.6966430248007574`*^9}],
+
+Cell[BoxData[
+ RowBox[{"0.707340977940588`", " ", 
+  RowBox[{"W", "[", 
+   RowBox[{"zm", ",", "ym", ",", "180", ",", "12"}], "]"}]}]], "Output",
+ CellChangeTimes->{3.6966389714325466`*^9, 3.696643047905511*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"velSettembreCm", "[", 
+   RowBox[{"zm_", ",", "ym_"}], "]"}], " ", "=", " ", 
+  RowBox[{
+   RowBox[{
+    RowBox[{"W", "[", 
+     RowBox[{"zm", ",", "ym", ",", "180", ",", "116"}], "]"}], "/", 
+    RowBox[{"Sum", "[", 
+     RowBox[{
+      RowBox[{"W", "[", 
+       RowBox[{"zm", ",", 
+        RowBox[{"-", "ym"}], ",", "180", ",", "116"}], "]"}], ",", " ", 
+      RowBox[{"{", 
+       RowBox[{"ym", ",", "0", ",", "116"}], "}"}], ",", 
+      RowBox[{"{", 
+       RowBox[{"zm", ",", 
+        RowBox[{"-", "90"}], ",", "90"}], "}"}]}], "]"}]}], " ", "*", " ", 
+   RowBox[{"23", "/", "0.001"}]}]}]], "Input",
+ CellChangeTimes->{{3.696658305382943*^9, 3.696658323305071*^9}}],
+
+Cell[BoxData[
+ TemplateBox[{
+  "NIntegrate","ncvb",
+   "\"NIntegrate failed to converge to prescribed accuracy after \
+\\!\\(\\*RowBox[{\\\"9\\\"}]\\) recursive bisections in \
+\\!\\(\\*RowBox[{\\\"t\\\"}]\\) near \\!\\(\\*RowBox[{\\\"{\\\", \\\"t\\\", \
+\\\"}\\\"}]\\) = \\!\\(\\*RowBox[{\\\"{\\\", \
+\\\"3.28997532890969`15.954589770191005\\\", \\\"}\\\"}]\\). NIntegrate \
+obtained \\!\\(\\*RowBox[{\\\"3.986085682305298`\\\"}]\\) and \
+\\!\\(\\*RowBox[{\\\"0.000018081589578268705`\\\"}]\\) for the integral and \
+error estimates.\"",2,22,80,23668124586789405519,"Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellChangeTimes->{3.696662885490816*^9, 3.696663649267717*^9}],
+
+Cell[BoxData[
+ TemplateBox[{
+  "NIntegrate","ncvb",
+   "\"NIntegrate failed to converge to prescribed accuracy after \
+\\!\\(\\*RowBox[{\\\"9\\\"}]\\) recursive bisections in \
+\\!\\(\\*RowBox[{\\\"t\\\"}]\\) near \\!\\(\\*RowBox[{\\\"{\\\", \\\"t\\\", \
+\\\"}\\\"}]\\) = \\!\\(\\*RowBox[{\\\"{\\\", \
+\\\"6.134802631859689`15.954589770191005\\\", \\\"}\\\"}]\\). NIntegrate \
+obtained \\!\\(\\*RowBox[{\\\"3.9860856823053`\\\"}]\\) and \\!\\(\\*RowBox[{\
+\\\"0.000018081589578004604`\\\"}]\\) for the integral and error \
+estimates.\"",2,22,81,23668124586789405519,"Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellChangeTimes->{3.696662885490816*^9, 3.696663663541954*^9}],
+
+Cell[BoxData[
+ TemplateBox[{
+  "NIntegrate","ncvb",
+   "\"NIntegrate failed to converge to prescribed accuracy after \
+\\!\\(\\*RowBox[{\\\"9\\\"}]\\) recursive bisections in \
+\\!\\(\\*RowBox[{\\\"t\\\"}]\\) near \\!\\(\\*RowBox[{\\\"{\\\", \\\"t\\\", \
+\\\"}\\\"}]\\) = \\!\\(\\*RowBox[{\\\"{\\\", \\\"3.350165215238519`\\\", \
+\\\"}\\\"}]\\). NIntegrate obtained \
+\\!\\(\\*RowBox[{\\\"3.8803228473588653`\\\"}]\\) and \
+\\!\\(\\*RowBox[{\\\"0.00003098586759284748`\\\"}]\\) for the integral and \
+error estimates.\"",2,22,82,23668124586789405519,"Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellChangeTimes->{3.696662885490816*^9, 3.696663721041418*^9}],
+
+Cell[BoxData[
+ TemplateBox[{
+  "General","stop",
+   "\"Further output of \\!\\(\\*StyleBox[RowBox[{\\\"NIntegrate\\\", \
+\\\"::\\\", \\\"ncvb\\\"}], \\\"MessageName\\\"]\\) will be suppressed during \
+this calculation.\"",2,22,83,23668124586789405519,"Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellChangeTimes->{3.696662885490816*^9, 3.696663721064639*^9}],
+
+Cell[BoxData[
+ TemplateBox[{
+  "NIntegrate","slwcon",
+   "\"Numerical integration converging too slowly; suspect one of the \
+following: singularity, value of the integration is 0, highly oscillatory \
+integrand, or WorkingPrecision too small.\"",2,22,84,23668124586789405519,
+   "Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellChangeTimes->{3.696662885490816*^9, 3.69666384402114*^9}],
+
+Cell[BoxData[
+ TemplateBox[{
+  "NIntegrate","slwcon",
+   "\"Numerical integration converging too slowly; suspect one of the \
+following: singularity, value of the integration is 0, highly oscillatory \
+integrand, or WorkingPrecision too small.\"",2,22,85,23668124586789405519,
+   "Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellChangeTimes->{3.696662885490816*^9, 3.6966638559441648`*^9}],
+
+Cell[BoxData[
+ TemplateBox[{
+  "NIntegrate","slwcon",
+   "\"Numerical integration converging too slowly; suspect one of the \
+following: singularity, value of the integration is 0, highly oscillatory \
+integrand, or WorkingPrecision too small.\"",2,22,86,23668124586789405519,
+   "Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellChangeTimes->{3.696662885490816*^9, 3.69666411229241*^9}],
+
+Cell[BoxData[
+ TemplateBox[{
+  "General","stop",
+   "\"Further output of \\!\\(\\*StyleBox[RowBox[{\\\"NIntegrate\\\", \
+\\\"::\\\", \\\"slwcon\\\"}], \\\"MessageName\\\"]\\) will be suppressed \
+during this calculation.\"",2,22,87,23668124586789405519,"Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellChangeTimes->{3.696662885490816*^9, 3.69666411231242*^9}],
+
+Cell[BoxData[
+ RowBox[{"0.29033185452723614`", " ", 
+  RowBox[{"W", "[", 
+   RowBox[{"zm", ",", "ym", ",", "180", ",", "116"}], "]"}]}]], "Output",
+ CellChangeTimes->{3.696663499462001*^9, 3.6966643630158057`*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"\[IndentingNewLine]", 
+  RowBox[{
+   RowBox[{"velOttobre", "[", 
+    RowBox[{"zm_", ",", "ym__"}], "]"}], " ", "=", " ", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"W", "[", 
+      RowBox[{"zm", ",", "ym", ",", "180", ",", "8"}], "]"}], "/", 
+     RowBox[{"Sum", "[", 
+      RowBox[{
+       RowBox[{"W", "[", 
+        RowBox[{"zm", ",", 
+         RowBox[{"-", "ym"}], ",", "180", ",", "8"}], "]"}], ",", " ", 
+       RowBox[{"{", 
+        RowBox[{"ym", ",", "0", ",", "8"}], "}"}], ",", 
+       RowBox[{"{", 
+        RowBox[{"zm", ",", 
+         RowBox[{"-", "90"}], ",", "90"}], "}"}]}], "]"}]}], " ", "*", " ", 
+    RowBox[{"12", "/", "0.01"}]}]}]}]], "Input",
+ CellChangeTimes->{{3.6963596981300387`*^9, 3.696359725809146*^9}, {
+   3.6963602340317736`*^9, 3.6963602360361996`*^9}, 3.6964282336006756`*^9, {
+   3.696516192053028*^9, 3.696516192815749*^9}, {3.69652054556491*^9, 
+   3.696520558762944*^9}, {3.6966371738135276`*^9, 3.696637219788887*^9}, {
+   3.6966425971275997`*^9, 3.696642600983343*^9}}],
+
+Cell[BoxData[
+ TemplateBox[{
+  "NIntegrate","ncvb",
+   "\"NIntegrate failed to converge to prescribed accuracy after \
+\\!\\(\\*RowBox[{\\\"9\\\"}]\\) recursive bisections in \
+\\!\\(\\*RowBox[{\\\"t\\\"}]\\) near \\!\\(\\*RowBox[{\\\"{\\\", \\\"t\\\", \
+\\\"}\\\"}]\\) = \\!\\(\\*RowBox[{\\\"{\\\", \\\"3.822631297907296`\\\", \
+\\\"}\\\"}]\\). NIntegrate obtained \
+\\!\\(\\*RowBox[{\\\"0.8440482680347827`\\\"}]\\) and \
+\\!\\(\\*RowBox[{\\\"0.00010854110317145096`\\\"}]\\) for the integral and \
+error estimates.\"",2,129,524,23667967595296183195,"Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellChangeTimes->{3.696638990034873*^9, 3.696643101923772*^9}],
+
+Cell[BoxData[
+ TemplateBox[{
+  "NIntegrate","ncvb",
+   "\"NIntegrate failed to converge to prescribed accuracy after \
+\\!\\(\\*RowBox[{\\\"9\\\"}]\\) recursive bisections in \
+\\!\\(\\*RowBox[{\\\"t\\\"}]\\) near \\!\\(\\*RowBox[{\\\"{\\\", \\\"t\\\", \
+\\\"}\\\"}]\\) = \\!\\(\\*RowBox[{\\\"{\\\", \\\"5.608184935006183`\\\", \
+\\\"}\\\"}]\\). NIntegrate obtained \
+\\!\\(\\*RowBox[{\\\"0.8440482680347814`\\\"}]\\) and \
+\\!\\(\\*RowBox[{\\\"0.00010854110317442494`\\\"}]\\) for the integral and \
+error estimates.\"",2,129,525,23667967595296183195,"Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellChangeTimes->{3.696638990034873*^9, 3.696643110268729*^9}],
+
+Cell[BoxData[
+ TemplateBox[{
+  "NIntegrate","ncvb",
+   "\"NIntegrate failed to converge to prescribed accuracy after \
+\\!\\(\\*RowBox[{\\\"9\\\"}]\\) recursive bisections in \
+\\!\\(\\*RowBox[{\\\"t\\\"}]\\) near \\!\\(\\*RowBox[{\\\"{\\\", \\\"t\\\", \
+\\\"}\\\"}]\\) = \\!\\(\\*RowBox[{\\\"{\\\", \\\"4.000573069302032`\\\", \
+\\\"}\\\"}]\\). NIntegrate obtained \
+\\!\\(\\*RowBox[{\\\"0.8449326794436497`\\\"}]\\) and \
+\\!\\(\\*RowBox[{\\\"0.00011659311438636182`\\\"}]\\) for the integral and \
+error estimates.\"",2,129,526,23667967595296183195,"Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellChangeTimes->{3.696638990034873*^9, 3.696643110318745*^9}],
+
+Cell[BoxData[
+ TemplateBox[{
+  "General","stop",
+   "\"Further output of \\!\\(\\*StyleBox[RowBox[{\\\"NIntegrate\\\", \
+\\\"::\\\", \\\"ncvb\\\"}], \\\"MessageName\\\"]\\) will be suppressed during \
+this calculation.\"",2,129,527,23667967595296183195,"Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellChangeTimes->{3.696638990034873*^9, 3.69664311033876*^9}],
+
+Cell[BoxData[
+ TemplateBox[{
+  "NIntegrate","slwcon",
+   "\"Numerical integration converging too slowly; suspect one of the \
+following: singularity, value of the integration is 0, highly oscillatory \
+integrand, or WorkingPrecision too small.\"",2,129,528,23667967595296183195,
+   "Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellChangeTimes->{3.696638990034873*^9, 3.696643118362153*^9}],
+
+Cell[BoxData[
+ TemplateBox[{
+  "NIntegrate","slwcon",
+   "\"Numerical integration converging too slowly; suspect one of the \
+following: singularity, value of the integration is 0, highly oscillatory \
+integrand, or WorkingPrecision too small.\"",2,129,529,23667967595296183195,
+   "Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellChangeTimes->{3.696638990034873*^9, 3.6966431186613655`*^9}],
+
+Cell[BoxData[
+ TemplateBox[{
+  "NIntegrate","slwcon",
+   "\"Numerical integration converging too slowly; suspect one of the \
+following: singularity, value of the integration is 0, highly oscillatory \
+integrand, or WorkingPrecision too small.\"",2,129,530,23667967595296183195,
+   "Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellChangeTimes->{3.696638990034873*^9, 3.6966431229784365`*^9}],
+
+Cell[BoxData[
+ TemplateBox[{
+  "General","stop",
+   "\"Further output of \\!\\(\\*StyleBox[RowBox[{\\\"NIntegrate\\\", \
+\\\"::\\\", \\\"slwcon\\\"}], \\\"MessageName\\\"]\\) will be suppressed \
+during this calculation.\"",2,129,531,23667967595296183195,"Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellChangeTimes->{3.696638990034873*^9, 3.696643122998451*^9}],
+
+Cell[BoxData[
+ RowBox[{"0.7076019085139525`", " ", 
+  RowBox[{"W", "[", 
+   RowBox[{"zm", ",", "ym", ",", "180", ",", "8"}], "]"}]}]], "Output",
+ CellChangeTimes->{3.6966390320439277`*^9, 3.6966431233947334`*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"velOttobreCm", "[", 
+   RowBox[{"zm_", ",", "ym__"}], "]"}], " ", "=", " ", 
+  RowBox[{
+   RowBox[{
+    RowBox[{"W", "[", 
+     RowBox[{"zm", ",", "ym", ",", "180", ",", "75"}], "]"}], "/", 
+    RowBox[{"Sum", "[", 
+     RowBox[{
+      RowBox[{"W", "[", 
+       RowBox[{"zm", ",", 
+        RowBox[{"-", "ym"}], ",", "180", ",", "75"}], "]"}], ",", " ", 
+      RowBox[{"{", 
+       RowBox[{"ym", ",", "0", ",", "75"}], "}"}], ",", 
+      RowBox[{"{", 
+       RowBox[{"zm", ",", 
+        RowBox[{"-", "90"}], ",", "90"}], "}"}]}], "]"}]}], " ", "*", " ", 
+   RowBox[{"12", "/", "0.001"}]}]}]], "Input",
+ CellChangeTimes->{{3.6966583386177893`*^9, 3.696658362680645*^9}}],
+
+Cell[BoxData[
+ TemplateBox[{
+  "NIntegrate","ncvb",
+   "\"NIntegrate failed to converge to prescribed accuracy after \
+\\!\\(\\*RowBox[{\\\"9\\\"}]\\) recursive bisections in \
+\\!\\(\\*RowBox[{\\\"t\\\"}]\\) near \\!\\(\\*RowBox[{\\\"{\\\", \\\"t\\\", \
+\\\"}\\\"}]\\) = \\!\\(\\*RowBox[{\\\"{\\\", \
+\\\"3.28997532890969`15.954589770191005\\\", \\\"}\\\"}]\\). NIntegrate \
+obtained \\!\\(\\*RowBox[{\\\"3.5039888261873138`\\\"}]\\) and \
+\\!\\(\\*RowBox[{\\\"6.23319589835436`*^-6\\\"}]\\) for the integral and \
+error estimates.\"",2,23,88,23668124586789405519,"Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellChangeTimes->{3.6966644565013256`*^9}],
+
+Cell[BoxData[
+ TemplateBox[{
+  "NIntegrate","ncvb",
+   "\"NIntegrate failed to converge to prescribed accuracy after \
+\\!\\(\\*RowBox[{\\\"9\\\"}]\\) recursive bisections in \
+\\!\\(\\*RowBox[{\\\"t\\\"}]\\) near \\!\\(\\*RowBox[{\\\"{\\\", \\\"t\\\", \
+\\\"}\\\"}]\\) = \\!\\(\\*RowBox[{\\\"{\\\", \
+\\\"6.134802631859689`15.954589770191005\\\", \\\"}\\\"}]\\). NIntegrate \
+obtained \\!\\(\\*RowBox[{\\\"3.5039888261873147`\\\"}]\\) and \
+\\!\\(\\*RowBox[{\\\"6.233195898224699`*^-6\\\"}]\\) for the integral and \
+error estimates.\"",2,23,89,23668124586789405519,"Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellChangeTimes->{3.6966644649633465`*^9}],
+
+Cell[BoxData[
+ TemplateBox[{
+  "NIntegrate","ncvb",
+   "\"NIntegrate failed to converge to prescribed accuracy after \
+\\!\\(\\*RowBox[{\\\"9\\\"}]\\) recursive bisections in \
+\\!\\(\\*RowBox[{\\\"t\\\"}]\\) near \\!\\(\\*RowBox[{\\\"{\\\", \\\"t\\\", \
+\\\"}\\\"}]\\) = \\!\\(\\*RowBox[{\\\"{\\\", \\\"3.3992526004508594`\\\", \
+\\\"}\\\"}]\\). NIntegrate obtained \
+\\!\\(\\*RowBox[{\\\"3.2967483432093947`\\\"}]\\) and \
+\\!\\(\\*RowBox[{\\\"0.00004305500222674055`\\\"}]\\) for the integral and \
+error estimates.\"",2,23,90,23668124586789405519,"Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellChangeTimes->{3.696664523702142*^9}],
+
+Cell[BoxData[
+ TemplateBox[{
+  "General","stop",
+   "\"Further output of \\!\\(\\*StyleBox[RowBox[{\\\"NIntegrate\\\", \
+\\\"::\\\", \\\"ncvb\\\"}], \\\"MessageName\\\"]\\) will be suppressed during \
+this calculation.\"",2,23,91,23668124586789405519,"Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellChangeTimes->{3.6966645237221565`*^9}],
+
+Cell[BoxData[
+ TemplateBox[{
+  "NIntegrate","slwcon",
+   "\"Numerical integration converging too slowly; suspect one of the \
+following: singularity, value of the integration is 0, highly oscillatory \
+integrand, or WorkingPrecision too small.\"",2,23,92,23668124586789405519,
+   "Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellChangeTimes->{3.696664866463027*^9}],
+
+Cell[BoxData[
+ TemplateBox[{
+  "NIntegrate","slwcon",
+   "\"Numerical integration converging too slowly; suspect one of the \
+following: singularity, value of the integration is 0, highly oscillatory \
+integrand, or WorkingPrecision too small.\"",2,23,93,23668124586789405519,
+   "Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellChangeTimes->{3.696664867838008*^9}],
+
+Cell[BoxData[
+ RowBox[{"0.2528886702447932`", " ", 
+  RowBox[{"W", "[", 
+   RowBox[{"zm", ",", "ym", ",", "180", ",", "75"}], "]"}]}]], "Output",
+ CellChangeTimes->{3.6966648678630233`*^9}]
+}, Open  ]],
+
+Cell[BoxData[""], "Input",
+ CellChangeTimes->{{3.6963876313887634`*^9, 3.696387662556404*^9}, 
+   3.696431971183434*^9}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"velNovembre", "[", 
+   RowBox[{"zm_", ",", "ym_"}], "]"}], " ", "=", " ", 
+  RowBox[{
+   RowBox[{
+    RowBox[{"W", "[", 
+     RowBox[{"zm", ",", "ym", ",", "180", ",", "8"}], "]"}], "/", 
+    RowBox[{"Sum", "[", 
+     RowBox[{
+      RowBox[{"W", "[", 
+       RowBox[{"zm", ",", 
+        RowBox[{"-", "ym"}], ",", "180", ",", "8"}], "]"}], ",", " ", 
+      RowBox[{"{", 
+       RowBox[{"ym", ",", "0", ",", "8"}], "}"}], ",", 
+      RowBox[{"{", 
+       RowBox[{"zm", ",", 
+        RowBox[{"-", "90"}], ",", "90"}], "}"}]}], "]"}]}], " ", "*", " ", 
+   RowBox[{"13", "/", "0.01"}]}]}]], "Input",
+ CellChangeTimes->{
+  3.6966372292061763`*^9, {3.6966372662317533`*^9, 3.696637275896366*^9}}],
+
+Cell[BoxData[
+ TemplateBox[{
+  "NIntegrate","ncvb",
+   "\"NIntegrate failed to converge to prescribed accuracy after \
+\\!\\(\\*RowBox[{\\\"9\\\"}]\\) recursive bisections in \
+\\!\\(\\*RowBox[{\\\"t\\\"}]\\) near \\!\\(\\*RowBox[{\\\"{\\\", \\\"t\\\", \
+\\\"}\\\"}]\\) = \\!\\(\\*RowBox[{\\\"{\\\", \\\"3.822631297907296`\\\", \
+\\\"}\\\"}]\\). NIntegrate obtained \
+\\!\\(\\*RowBox[{\\\"0.8440482680347827`\\\"}]\\) and \
+\\!\\(\\*RowBox[{\\\"0.00010854110317145096`\\\"}]\\) for the integral and \
+error estimates.\"",2,61,257,23667967595296183195,"Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellChangeTimes->{3.696639083246715*^9}],
+
+Cell[BoxData[
+ TemplateBox[{
+  "NIntegrate","ncvb",
+   "\"NIntegrate failed to converge to prescribed accuracy after \
+\\!\\(\\*RowBox[{\\\"9\\\"}]\\) recursive bisections in \
+\\!\\(\\*RowBox[{\\\"t\\\"}]\\) near \\!\\(\\*RowBox[{\\\"{\\\", \\\"t\\\", \
+\\\"}\\\"}]\\) = \\!\\(\\*RowBox[{\\\"{\\\", \\\"5.608184935006183`\\\", \
+\\\"}\\\"}]\\). NIntegrate obtained \
+\\!\\(\\*RowBox[{\\\"0.8440482680347814`\\\"}]\\) and \
+\\!\\(\\*RowBox[{\\\"0.00010854110317442494`\\\"}]\\) for the integral and \
+error estimates.\"",2,61,258,23667967595296183195,"Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellChangeTimes->{3.6966390930351706`*^9}],
+
+Cell[BoxData[
+ TemplateBox[{
+  "NIntegrate","ncvb",
+   "\"NIntegrate failed to converge to prescribed accuracy after \
+\\!\\(\\*RowBox[{\\\"9\\\"}]\\) recursive bisections in \
+\\!\\(\\*RowBox[{\\\"t\\\"}]\\) near \\!\\(\\*RowBox[{\\\"{\\\", \\\"t\\\", \
+\\\"}\\\"}]\\) = \\!\\(\\*RowBox[{\\\"{\\\", \\\"4.000573069302032`\\\", \
+\\\"}\\\"}]\\). NIntegrate obtained \
+\\!\\(\\*RowBox[{\\\"0.8449326794436497`\\\"}]\\) and \
+\\!\\(\\*RowBox[{\\\"0.00011659311438636182`\\\"}]\\) for the integral and \
+error estimates.\"",2,61,259,23667967595296183195,"Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellChangeTimes->{3.6966390930911965`*^9}],
+
+Cell[BoxData[
+ TemplateBox[{
+  "General","stop",
+   "\"Further output of \\!\\(\\*StyleBox[RowBox[{\\\"NIntegrate\\\", \
+\\\"::\\\", \\\"ncvb\\\"}], \\\"MessageName\\\"]\\) will be suppressed during \
+this calculation.\"",2,61,260,23667967595296183195,"Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellChangeTimes->{3.696639093114231*^9}],
+
+Cell[BoxData[
+ TemplateBox[{
+  "NIntegrate","slwcon",
+   "\"Numerical integration converging too slowly; suspect one of the \
+following: singularity, value of the integration is 0, highly oscillatory \
+integrand, or WorkingPrecision too small.\"",2,61,261,23667967595296183195,
+   "Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellChangeTimes->{3.696639101197707*^9}],
+
+Cell[BoxData[
+ TemplateBox[{
+  "NIntegrate","slwcon",
+   "\"Numerical integration converging too slowly; suspect one of the \
+following: singularity, value of the integration is 0, highly oscillatory \
+integrand, or WorkingPrecision too small.\"",2,61,262,23667967595296183195,
+   "Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellChangeTimes->{3.6966391015479584`*^9}],
+
+Cell[BoxData[
+ TemplateBox[{
+  "NIntegrate","slwcon",
+   "\"Numerical integration converging too slowly; suspect one of the \
+following: singularity, value of the integration is 0, highly oscillatory \
+integrand, or WorkingPrecision too small.\"",2,61,263,23667967595296183195,
+   "Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellChangeTimes->{3.69663910645407*^9}],
+
+Cell[BoxData[
+ TemplateBox[{
+  "General","stop",
+   "\"Further output of \\!\\(\\*StyleBox[RowBox[{\\\"NIntegrate\\\", \
+\\\"::\\\", \\\"slwcon\\\"}], \\\"MessageName\\\"]\\) will be suppressed \
+during this calculation.\"",2,61,264,23667967595296183195,"Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellChangeTimes->{3.6966391064853206`*^9}],
+
+Cell[BoxData[
+ RowBox[{"0.7665687342234486`", " ", 
+  RowBox[{"W", "[", 
+   RowBox[{"zm", ",", "ym", ",", "180", ",", "8"}], "]"}]}]], "Output",
+ CellChangeTimes->{3.6966391068586864`*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"velNovembreCm", "[", 
+   RowBox[{"zm_", ",", "ym_"}], "]"}], " ", "=", " ", 
+  RowBox[{
+   RowBox[{
+    RowBox[{"W", "[", 
+     RowBox[{"zm", ",", "ym", ",", "180", ",", "80"}], "]"}], "/", 
+    RowBox[{"Sum", "[", 
+     RowBox[{
+      RowBox[{"W", "[", 
+       RowBox[{"zm", ",", 
+        RowBox[{"-", "ym"}], ",", "180", ",", "80"}], "]"}], ",", " ", 
+      RowBox[{"{", 
+       RowBox[{"ym", ",", "0", ",", "80"}], "}"}], ",", 
+      RowBox[{"{", 
+       RowBox[{"zm", ",", 
+        RowBox[{"-", "90"}], ",", "90"}], "}"}]}], "]"}]}], " ", "*", " ", 
+   RowBox[{"13", "/", "0.001"}]}]}]], "Input",
+ CellChangeTimes->{{3.6966583947752604`*^9, 3.696658412775496*^9}}],
+
+Cell[BoxData[
+ TemplateBox[{
+  "NIntegrate","ncvb",
+   "\"NIntegrate failed to converge to prescribed accuracy after \
+\\!\\(\\*RowBox[{\\\"9\\\"}]\\) recursive bisections in \
+\\!\\(\\*RowBox[{\\\"t\\\"}]\\) near \\!\\(\\*RowBox[{\\\"{\\\", \\\"t\\\", \
+\\\"}\\\"}]\\) = \\!\\(\\*RowBox[{\\\"{\\\", \\\"3.804223528452668`\\\", \
+\\\"}\\\"}]\\). NIntegrate obtained \\!\\(\\*RowBox[{\\\"2.754073369384629`\\\
+\"}]\\) and \\!\\(\\*RowBox[{\\\"0.000017125736294408188`\\\"}]\\) for the \
+integral and error estimates.\"",2,24,94,23668124586789405519,"Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellChangeTimes->{3.6966652722547636`*^9}],
+
+Cell[BoxData[
+ TemplateBox[{
+  "NIntegrate","ncvb",
+   "\"NIntegrate failed to converge to prescribed accuracy after \
+\\!\\(\\*RowBox[{\\\"9\\\"}]\\) recursive bisections in \
+\\!\\(\\*RowBox[{\\\"t\\\"}]\\) near \\!\\(\\*RowBox[{\\\"{\\\", \\\"t\\\", \
+\\\"}\\\"}]\\) = \\!\\(\\*RowBox[{\\\"{\\\", \\\"5.626592704460811`\\\", \
+\\\"}\\\"}]\\). NIntegrate obtained \\!\\(\\*RowBox[{\\\"2.754073369384626`\\\
+\"}]\\) and \\!\\(\\*RowBox[{\\\"0.00001712573629668385`\\\"}]\\) for the \
+integral and error estimates.\"",2,24,95,23668124586789405519,"Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellChangeTimes->{3.696665279178692*^9}],
+
+Cell[BoxData[
+ TemplateBox[{
+  "NIntegrate","ncvb",
+   "\"NIntegrate failed to converge to prescribed accuracy after \
+\\!\\(\\*RowBox[{\\\"9\\\"}]\\) recursive bisections in \
+\\!\\(\\*RowBox[{\\\"t\\\"}]\\) near \\!\\(\\*RowBox[{\\\"{\\\", \\\"t\\\", \
+\\\"}\\\"}]\\) = \\!\\(\\*RowBox[{\\\"{\\\", \\\"3.939213837786605`\\\", \
+\\\"}\\\"}]\\). NIntegrate obtained \\!\\(\\*RowBox[{\\\"2.597363494752001`\\\
+\"}]\\) and \\!\\(\\*RowBox[{\\\"0.000028399679130688423`\\\"}]\\) for the \
+integral and error estimates.\"",2,24,96,23668124586789405519,"Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellChangeTimes->{3.696665325884925*^9}],
+
+Cell[BoxData[
+ TemplateBox[{
+  "General","stop",
+   "\"Further output of \\!\\(\\*StyleBox[RowBox[{\\\"NIntegrate\\\", \
+\\\"::\\\", \\\"ncvb\\\"}], \\\"MessageName\\\"]\\) will be suppressed during \
+this calculation.\"",2,24,97,23668124586789405519,"Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellChangeTimes->{3.6966653259069395`*^9}],
+
+Cell[BoxData[
+ TemplateBox[{
+  "NIntegrate","slwcon",
+   "\"Numerical integration converging too slowly; suspect one of the \
+following: singularity, value of the integration is 0, highly oscillatory \
+integrand, or WorkingPrecision too small.\"",2,24,98,23668124586789405519,
+   "Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellChangeTimes->{3.6966653822320185`*^9}],
+
+Cell[BoxData[
+ TemplateBox[{
+  "NIntegrate","slwcon",
+   "\"Numerical integration converging too slowly; suspect one of the \
+following: singularity, value of the integration is 0, highly oscillatory \
+integrand, or WorkingPrecision too small.\"",2,24,99,23668124586789405519,
+   "Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellChangeTimes->{3.6966653870244284`*^9}],
+
+Cell[BoxData[
+ TemplateBox[{
+  "NIntegrate","slwcon",
+   "\"Numerical integration converging too slowly; suspect one of the \
+following: singularity, value of the integration is 0, highly oscillatory \
+integrand, or WorkingPrecision too small.\"",2,24,100,23668124586789405519,
+   "Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellChangeTimes->{3.696665426098231*^9}],
+
+Cell[BoxData[
+ TemplateBox[{
+  "General","stop",
+   "\"Further output of \\!\\(\\*StyleBox[RowBox[{\\\"NIntegrate\\\", \
+\\\"::\\\", \\\"slwcon\\\"}], \\\"MessageName\\\"]\\) will be suppressed \
+during this calculation.\"",2,24,101,23668124586789405519,"Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellChangeTimes->{3.696665426119246*^9}],
+
+Cell[BoxData[
+ RowBox[{"0.2529050989086881`", " ", 
+  RowBox[{"W", "[", 
+   RowBox[{"zm", ",", "ym", ",", "180", ",", "80"}], "]"}]}]], "Output",
+ CellChangeTimes->{3.696665427485217*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"\[IndentingNewLine]", "\[IndentingNewLine]", 
+  RowBox[{
+   RowBox[{"velDicembre", "[", 
+    RowBox[{"zm_", ",", "ym__"}], "]"}], " ", "=", " ", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"W", "[", 
+      RowBox[{"zm", ",", "ym", ",", "180", ",", "8"}], "]"}], "/", 
+     RowBox[{"Sum", "[", 
+      RowBox[{
+       RowBox[{"W", "[", 
+        RowBox[{"zm", ",", 
+         RowBox[{"-", "ym"}], ",", "180", ",", "8"}], "]"}], ",", " ", 
+       RowBox[{"{", 
+        RowBox[{"ym", ",", "0", ",", "8"}], "}"}], ",", 
+       RowBox[{"{", 
+        RowBox[{"zm", ",", 
+         RowBox[{"-", "90"}], ",", "90"}], "}"}]}], "]"}]}], " ", "*", " ", 
+    RowBox[{"12", "/", "0.01"}]}]}]}]], "Input",
+ CellChangeTimes->{{3.6965221866227655`*^9, 3.6965221946762486`*^9}, 
+   3.696637250146978*^9, {3.6966373047839265`*^9, 3.696637304987034*^9}, 
+   3.6966426142262716`*^9}],
+
+Cell[BoxData[
+ TemplateBox[{
+  "NIntegrate","ncvb",
+   "\"NIntegrate failed to converge to prescribed accuracy after \
+\\!\\(\\*RowBox[{\\\"9\\\"}]\\) recursive bisections in \
+\\!\\(\\*RowBox[{\\\"t\\\"}]\\) near \\!\\(\\*RowBox[{\\\"{\\\", \\\"t\\\", \
+\\\"}\\\"}]\\) = \\!\\(\\*RowBox[{\\\"{\\\", \\\"3.822631297907296`\\\", \
+\\\"}\\\"}]\\). NIntegrate obtained \
+\\!\\(\\*RowBox[{\\\"0.8440482680347827`\\\"}]\\) and \
+\\!\\(\\*RowBox[{\\\"0.00010854110317145096`\\\"}]\\) for the integral and \
+error estimates.\"",2,130,532,23667967595296183195,"Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellChangeTimes->{3.696639124879171*^9, 3.6966431755038023`*^9}],
+
+Cell[BoxData[
+ TemplateBox[{
+  "NIntegrate","ncvb",
+   "\"NIntegrate failed to converge to prescribed accuracy after \
+\\!\\(\\*RowBox[{\\\"9\\\"}]\\) recursive bisections in \
+\\!\\(\\*RowBox[{\\\"t\\\"}]\\) near \\!\\(\\*RowBox[{\\\"{\\\", \\\"t\\\", \
+\\\"}\\\"}]\\) = \\!\\(\\*RowBox[{\\\"{\\\", \\\"5.608184935006183`\\\", \
+\\\"}\\\"}]\\). NIntegrate obtained \
+\\!\\(\\*RowBox[{\\\"0.8440482680347814`\\\"}]\\) and \
+\\!\\(\\*RowBox[{\\\"0.00010854110317442494`\\\"}]\\) for the integral and \
+error estimates.\"",2,130,533,23667967595296183195,"Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellChangeTimes->{3.696639124879171*^9, 3.696643183823084*^9}],
+
+Cell[BoxData[
+ TemplateBox[{
+  "NIntegrate","ncvb",
+   "\"NIntegrate failed to converge to prescribed accuracy after \
+\\!\\(\\*RowBox[{\\\"9\\\"}]\\) recursive bisections in \
+\\!\\(\\*RowBox[{\\\"t\\\"}]\\) near \\!\\(\\*RowBox[{\\\"{\\\", \\\"t\\\", \
+\\\"}\\\"}]\\) = \\!\\(\\*RowBox[{\\\"{\\\", \\\"4.000573069302032`\\\", \
+\\\"}\\\"}]\\). NIntegrate obtained \
+\\!\\(\\*RowBox[{\\\"0.8449326794436497`\\\"}]\\) and \
+\\!\\(\\*RowBox[{\\\"0.00011659311438636182`\\\"}]\\) for the integral and \
+error estimates.\"",2,130,534,23667967595296183195,"Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellChangeTimes->{3.696639124879171*^9, 3.696643183885585*^9}],
+
+Cell[BoxData[
+ TemplateBox[{
+  "General","stop",
+   "\"Further output of \\!\\(\\*StyleBox[RowBox[{\\\"NIntegrate\\\", \
+\\\"::\\\", \\\"ncvb\\\"}], \\\"MessageName\\\"]\\) will be suppressed during \
+this calculation.\"",2,130,535,23667967595296183195,"Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellChangeTimes->{3.696639124879171*^9, 3.6966431839011908`*^9}],
+
+Cell[BoxData[
+ TemplateBox[{
+  "NIntegrate","slwcon",
+   "\"Numerical integration converging too slowly; suspect one of the \
+following: singularity, value of the integration is 0, highly oscillatory \
+integrand, or WorkingPrecision too small.\"",2,130,536,23667967595296183195,
+   "Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellChangeTimes->{3.696639124879171*^9, 3.6966431909614773`*^9}],
+
+Cell[BoxData[
+ TemplateBox[{
+  "NIntegrate","slwcon",
+   "\"Numerical integration converging too slowly; suspect one of the \
+following: singularity, value of the integration is 0, highly oscillatory \
+integrand, or WorkingPrecision too small.\"",2,130,537,23667967595296183195,
+   "Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellChangeTimes->{3.696639124879171*^9, 3.696643191250147*^9}],
+
+Cell[BoxData[
+ TemplateBox[{
+  "NIntegrate","slwcon",
+   "\"Numerical integration converging too slowly; suspect one of the \
+following: singularity, value of the integration is 0, highly oscillatory \
+integrand, or WorkingPrecision too small.\"",2,130,538,23667967595296183195,
+   "Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellChangeTimes->{3.696639124879171*^9, 3.6966431957216763`*^9}],
+
+Cell[BoxData[
+ TemplateBox[{
+  "General","stop",
+   "\"Further output of \\!\\(\\*StyleBox[RowBox[{\\\"NIntegrate\\\", \
+\\\"::\\\", \\\"slwcon\\\"}], \\\"MessageName\\\"]\\) will be suppressed \
+during this calculation.\"",2,130,539,23667967595296183195,"Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellChangeTimes->{3.696639124879171*^9, 3.6966431957373*^9}],
+
+Cell[BoxData[
+ RowBox[{"0.7076019085139525`", " ", 
+  RowBox[{"W", "[", 
+   RowBox[{"zm", ",", "ym", ",", "180", ",", "8"}], "]"}]}]], "Output",
+ CellChangeTimes->{3.6966391697466545`*^9, 3.6966431961435566`*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"velDicembreCm", "[", 
+   RowBox[{"zm_", ",", "ym__"}], "]"}], " ", "=", " ", 
+  RowBox[{
+   RowBox[{
+    RowBox[{"W", "[", 
+     RowBox[{"zm", ",", "ym", ",", "180", ",", "75"}], "]"}], "/", 
+    RowBox[{"Sum", "[", 
+     RowBox[{
+      RowBox[{"W", "[", 
+       RowBox[{"zm", ",", 
+        RowBox[{"-", "ym"}], ",", "180", ",", "75"}], "]"}], ",", " ", 
+      RowBox[{"{", 
+       RowBox[{"ym", ",", "0", ",", "75"}], "}"}], ",", 
+      RowBox[{"{", 
+       RowBox[{"zm", ",", 
+        RowBox[{"-", "90"}], ",", "90"}], "}"}]}], "]"}]}], " ", "*", " ", 
+   RowBox[{"12", "/", "0.001"}]}]}]], "Input",
+ CellChangeTimes->{{3.6966584237287755`*^9, 3.696658453244836*^9}}],
+
+Cell[BoxData[
+ TemplateBox[{
+  "NIntegrate","ncvb",
+   "\"NIntegrate failed to converge to prescribed accuracy after \
+\\!\\(\\*RowBox[{\\\"9\\\"}]\\) recursive bisections in \
+\\!\\(\\*RowBox[{\\\"t\\\"}]\\) near \\!\\(\\*RowBox[{\\\"{\\\", \\\"t\\\", \
+\\\"}\\\"}]\\) = \\!\\(\\*RowBox[{\\\"{\\\", \
+\\\"3.28997532890969`15.954589770191005\\\", \\\"}\\\"}]\\). NIntegrate \
+obtained \\!\\(\\*RowBox[{\\\"3.5039888261873138`\\\"}]\\) and \
+\\!\\(\\*RowBox[{\\\"6.23319589835436`*^-6\\\"}]\\) for the integral and \
+error estimates.\"",2,25,102,23668124586789405519,"Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellChangeTimes->{3.6966655247134*^9}],
+
+Cell[BoxData[
+ TemplateBox[{
+  "NIntegrate","ncvb",
+   "\"NIntegrate failed to converge to prescribed accuracy after \
+\\!\\(\\*RowBox[{\\\"9\\\"}]\\) recursive bisections in \
+\\!\\(\\*RowBox[{\\\"t\\\"}]\\) near \\!\\(\\*RowBox[{\\\"{\\\", \\\"t\\\", \
+\\\"}\\\"}]\\) = \\!\\(\\*RowBox[{\\\"{\\\", \
+\\\"6.134802631859689`15.954589770191005\\\", \\\"}\\\"}]\\). NIntegrate \
+obtained \\!\\(\\*RowBox[{\\\"3.5039888261873147`\\\"}]\\) and \
+\\!\\(\\*RowBox[{\\\"6.233195898224699`*^-6\\\"}]\\) for the integral and \
+error estimates.\"",2,25,103,23668124586789405519,"Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellChangeTimes->{3.6966655336187363`*^9}],
+
+Cell[BoxData[
+ TemplateBox[{
+  "NIntegrate","ncvb",
+   "\"NIntegrate failed to converge to prescribed accuracy after \
+\\!\\(\\*RowBox[{\\\"9\\\"}]\\) recursive bisections in \
+\\!\\(\\*RowBox[{\\\"t\\\"}]\\) near \\!\\(\\*RowBox[{\\\"{\\\", \\\"t\\\", \
+\\\"}\\\"}]\\) = \\!\\(\\*RowBox[{\\\"{\\\", \\\"3.3992526004508594`\\\", \
+\\\"}\\\"}]\\). NIntegrate obtained \
+\\!\\(\\*RowBox[{\\\"3.2967483432093947`\\\"}]\\) and \
+\\!\\(\\*RowBox[{\\\"0.00004305500222674055`\\\"}]\\) for the integral and \
+error estimates.\"",2,25,104,23668124586789405519,"Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellChangeTimes->{3.6966655942458725`*^9}],
+
+Cell[BoxData[
+ TemplateBox[{
+  "General","stop",
+   "\"Further output of \\!\\(\\*StyleBox[RowBox[{\\\"NIntegrate\\\", \
+\\\"::\\\", \\\"ncvb\\\"}], \\\"MessageName\\\"]\\) will be suppressed during \
+this calculation.\"",2,25,105,23668124586789405519,"Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellChangeTimes->{3.6966655942708907`*^9}],
+
+Cell[BoxData[
+ TemplateBox[{
+  "NIntegrate","slwcon",
+   "\"Numerical integration converging too slowly; suspect one of the \
+following: singularity, value of the integration is 0, highly oscillatory \
+integrand, or WorkingPrecision too small.\"",2,25,106,23668124586789405519,
+   "Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellChangeTimes->{3.6966659373732843`*^9}],
+
+Cell[BoxData[
+ TemplateBox[{
+  "NIntegrate","slwcon",
+   "\"Numerical integration converging too slowly; suspect one of the \
+following: singularity, value of the integration is 0, highly oscillatory \
+integrand, or WorkingPrecision too small.\"",2,25,107,23668124586789405519,
+   "Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellChangeTimes->{3.6966659386545534`*^9}],
+
+Cell[BoxData[
+ RowBox[{"0.2528886702447932`", " ", 
+  RowBox[{"W", "[", 
+   RowBox[{"zm", ",", "ym", ",", "180", ",", "75"}], "]"}]}]], "Output",
+ CellChangeTimes->{3.696665938670177*^9}]
+}, Open  ]]
+},
+WindowSize->{1344, 667},
+WindowMargins->{{0, Automatic}, {Automatic, 0}},
+FrontEndVersion->"11.0 for Microsoft Windows (64-bit) (September 21, 2016)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[580, 22, 3927, 109, 145, "Input"],
+Cell[4510, 133, 359, 5, 44, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[4906, 143, 1104, 25, 30, "Input"],
+Cell[6013, 170, 692, 13, 21, "Message"],
+Cell[6708, 185, 694, 13, 21, "Message"],
+Cell[7405, 200, 695, 13, 21, "Message"],
+Cell[8103, 215, 394, 8, 21, "Message"],
+Cell[8500, 225, 425, 9, 21, "Message"],
+Cell[8928, 236, 425, 9, 21, "Message"],
+Cell[9356, 247, 425, 9, 21, "Message"],
+Cell[9784, 258, 396, 8, 21, "Message"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[10217, 271, 396, 9, 83, InheritFromParent],
+Cell[10616, 282, 207, 4, 44, "Output"],
+Cell[10826, 288, 111, 1, 44, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[10974, 294, 752, 20, 50, InheritFromParent],
+Cell[11729, 316, 636, 11, 21, "Message"],
+Cell[12368, 329, 637, 11, 21, "Message"],
+Cell[13008, 342, 638, 12, 21, "Message"],
+Cell[13649, 356, 341, 7, 21, "Message"],
+Cell[13993, 365, 371, 8, 21, "Message"],
+Cell[14367, 375, 371, 8, 21, "Message"],
+Cell[14741, 385, 371, 8, 21, "Message"],
+Cell[15115, 395, 346, 7, 21, "Message"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[15498, 407, 423, 10, 88, InheritFromParent],
+Cell[15924, 419, 189, 4, 44, "Output"],
+Cell[16116, 425, 88, 1, 44, "Output"]
+}, Open  ]],
+Cell[16219, 429, 1206, 26, 30, "Input"],
+Cell[CellGroupData[{
+Cell[17450, 459, 755, 20, 64, "Input"],
+Cell[18208, 481, 664, 12, 21, "Message"],
+Cell[18875, 495, 665, 12, 21, "Message"],
+Cell[19543, 509, 666, 12, 21, "Message"],
+Cell[20212, 523, 367, 7, 21, "Message"],
+Cell[20582, 532, 394, 8, 21, "Message"],
+Cell[20979, 542, 394, 8, 21, "Message"],
+Cell[21376, 552, 396, 8, 21, "Message"],
+Cell[21775, 562, 367, 7, 21, "Message"],
+Cell[22145, 571, 214, 4, 44, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[22396, 580, 845, 22, 50, "Input"],
+Cell[23244, 604, 667, 12, 21, "Message"],
+Cell[23914, 618, 667, 12, 21, "Message"],
+Cell[24584, 632, 668, 12, 21, "Message"],
+Cell[25255, 646, 367, 7, 21, "Message"],
+Cell[25625, 655, 398, 8, 21, "Message"],
+Cell[26026, 665, 396, 8, 21, "Message"]
+}, Open  ]],
+Cell[26437, 676, 275, 6, 69, InheritFromParent],
+Cell[CellGroupData[{
+Cell[26737, 686, 745, 20, 64, "Input"],
+Cell[27485, 708, 639, 11, 21, "Message"],
+Cell[28127, 721, 644, 12, 21, "Message"],
+Cell[28774, 735, 643, 12, 21, "Message"],
+Cell[29420, 749, 345, 7, 21, "Message"],
+Cell[29768, 758, 374, 8, 21, "Message"],
+Cell[30145, 768, 372, 8, 21, "Message"],
+Cell[30520, 778, 189, 4, 44, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[30746, 787, 851, 22, 50, "Input"],
+Cell[31600, 811, 667, 12, 21, "Message"],
+Cell[32270, 825, 669, 12, 21, "Message"],
+Cell[32942, 839, 672, 12, 21, "Message"],
+Cell[33617, 853, 369, 7, 21, "Message"],
+Cell[33989, 862, 398, 8, 21, "Message"],
+Cell[34390, 872, 398, 8, 21, "Message"],
+Cell[34791, 882, 398, 8, 21, "Message"],
+Cell[35192, 892, 370, 7, 21, "Message"]
+}, Open  ]],
+Cell[35577, 902, 275, 6, 69, InheritFromParent],
+Cell[CellGroupData[{
+Cell[35877, 912, 832, 23, 83, "Input"],
+Cell[36712, 937, 641, 11, 21, "Message"],
+Cell[37356, 950, 641, 11, 21, "Message"],
+Cell[38000, 963, 642, 12, 21, "Message"],
+Cell[38645, 977, 343, 7, 21, "Message"],
+Cell[38991, 986, 374, 8, 21, "Message"],
+Cell[39368, 996, 371, 8, 21, "Message"],
+Cell[39742, 1006, 372, 8, 21, "Message"],
+Cell[40117, 1016, 345, 7, 21, "Message"],
+Cell[40465, 1025, 189, 4, 44, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[40691, 1034, 746, 20, 30, "Input"],
+Cell[41440, 1056, 373, 8, 21, "Message"],
+Cell[41816, 1066, 640, 11, 21, "Message"],
+Cell[42459, 1079, 373, 8, 21, "Message"],
+Cell[42835, 1089, 375, 8, 21, "Message"],
+Cell[43213, 1099, 346, 7, 21, "Message"],
+Cell[43562, 1108, 643, 12, 21, "Message"],
+Cell[44208, 1122, 646, 12, 21, "Message"],
+Cell[44857, 1136, 344, 7, 21, "Message"]
+}, Open  ]],
+Cell[45216, 1146, 261, 5, 30, InheritFromParent],
+Cell[CellGroupData[{
+Cell[45502, 1155, 750, 20, 44, "Input"],
+Cell[46255, 1177, 374, 8, 21, "Message"],
+Cell[46632, 1187, 371, 8, 21, "Message"],
+Cell[47006, 1197, 662, 12, 39, "Message"],
+Cell[47671, 1211, 661, 12, 21, "Message"],
+Cell[48335, 1225, 640, 11, 21, "Message"],
+Cell[48978, 1238, 343, 7, 21, "Message"],
+Cell[49324, 1247, 372, 8, 21, "Message"],
+Cell[49699, 1257, 347, 7, 21, "Message"],
+Cell[50049, 1266, 190, 4, 44, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[50276, 1275, 1203, 26, 69, "Input"],
+Cell[51482, 1303, 667, 12, 21, "Message"],
+Cell[52152, 1317, 665, 11, 21, "Message"],
+Cell[52820, 1330, 663, 11, 21, "Message"],
+Cell[53486, 1343, 367, 7, 21, "Message"],
+Cell[53856, 1352, 398, 8, 21, "Message"],
+Cell[54257, 1362, 396, 8, 21, "Message"],
+Cell[54656, 1372, 398, 8, 21, "Message"],
+Cell[55057, 1382, 369, 7, 21, "Message"],
+Cell[55429, 1391, 211, 4, 30, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[55677, 1400, 757, 20, 44, "Input"],
+Cell[56437, 1422, 658, 12, 21, "Message"],
+Cell[57098, 1436, 658, 12, 21, "Message"],
+Cell[57759, 1450, 642, 12, 21, "Message"],
+Cell[58404, 1464, 345, 7, 21, "Message"],
+Cell[58752, 1473, 374, 8, 21, "Message"],
+Cell[59129, 1483, 374, 8, 21, "Message"],
+Cell[59506, 1493, 374, 8, 21, "Message"],
+Cell[59883, 1503, 345, 7, 21, "Message"],
+Cell[60231, 1512, 188, 4, 44, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[60456, 1521, 1085, 24, 69, "Input"],
+Cell[61544, 1547, 666, 12, 21, "Message"],
+Cell[62213, 1561, 666, 12, 21, "Message"],
+Cell[62882, 1575, 396, 8, 21, "Message"],
+Cell[63281, 1585, 398, 8, 21, "Message"],
+Cell[63682, 1595, 667, 11, 21, "Message"],
+Cell[64352, 1608, 369, 7, 21, "Message"],
+Cell[64724, 1617, 398, 8, 21, "Message"],
+Cell[65125, 1627, 371, 7, 21, "Message"]
+}, Open  ]],
+Cell[65511, 1637, 251, 6, 50, InheritFromParent],
+Cell[CellGroupData[{
+Cell[65787, 1647, 707, 19, 44, "Input"],
+Cell[66497, 1668, 660, 12, 39, "Message"],
+Cell[67160, 1682, 660, 12, 39, "Message"],
+Cell[67823, 1696, 640, 12, 21, "Message"],
+Cell[68466, 1710, 343, 7, 21, "Message"],
+Cell[68812, 1719, 374, 8, 21, "Message"],
+Cell[69189, 1729, 372, 8, 21, "Message"],
+Cell[69564, 1739, 372, 8, 21, "Message"],
+Cell[69939, 1749, 345, 7, 21, "Message"],
+Cell[70287, 1758, 191, 4, 44, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[70515, 1767, 1049, 24, 69, "Input"],
+Cell[71567, 1793, 669, 12, 21, "Message"],
+Cell[72239, 1807, 665, 11, 21, "Message"],
+Cell[72907, 1820, 663, 11, 21, "Message"],
+Cell[73573, 1833, 367, 7, 21, "Message"],
+Cell[73943, 1842, 398, 8, 21, "Message"],
+Cell[74344, 1852, 398, 8, 21, "Message"],
+Cell[74745, 1862, 396, 8, 21, "Message"],
+Cell[75144, 1872, 371, 7, 21, "Message"],
+Cell[75518, 1881, 213, 4, 30, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[75768, 1890, 750, 20, 44, "Input"],
+Cell[76521, 1912, 660, 12, 39, "Message"],
+Cell[77184, 1926, 662, 12, 39, "Message"],
+Cell[77849, 1940, 644, 12, 21, "Message"],
+Cell[78496, 1954, 343, 7, 21, "Message"],
+Cell[78842, 1963, 372, 8, 21, "Message"],
+Cell[79217, 1973, 372, 8, 21, "Message"],
+Cell[79592, 1983, 374, 8, 21, "Message"],
+Cell[79969, 1993, 345, 7, 21, "Message"],
+Cell[80317, 2002, 190, 4, 44, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[80544, 2011, 1061, 24, 50, "Input"],
+Cell[81608, 2037, 666, 12, 21, "Message"],
+Cell[82277, 2051, 665, 11, 21, "Message"],
+Cell[82945, 2064, 665, 12, 21, "Message"],
+Cell[83613, 2078, 369, 7, 21, "Message"],
+Cell[83985, 2087, 210, 4, 30, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[84232, 2096, 705, 19, 44, "Input"],
+Cell[84940, 2117, 681, 12, 39, "Message"],
+Cell[85624, 2131, 680, 12, 21, "Message"],
+Cell[86307, 2145, 664, 12, 21, "Message"],
+Cell[86974, 2159, 365, 7, 21, "Message"],
+Cell[87342, 2168, 393, 8, 21, "Message"],
+Cell[87738, 2178, 396, 8, 21, "Message"],
+Cell[88137, 2188, 393, 8, 21, "Message"],
+Cell[88533, 2198, 366, 7, 21, "Message"],
+Cell[88902, 2207, 213, 4, 44, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[89152, 2216, 1027, 24, 50, "Input"],
+Cell[90182, 2242, 666, 12, 21, "Message"],
+Cell[90851, 2256, 666, 12, 21, "Message"],
+Cell[91520, 2270, 666, 12, 21, "Message"],
+Cell[92189, 2284, 366, 7, 21, "Message"],
+Cell[92558, 2293, 396, 8, 21, "Message"],
+Cell[92957, 2303, 398, 8, 21, "Message"],
+Cell[93358, 2313, 398, 8, 21, "Message"],
+Cell[93759, 2323, 369, 7, 21, "Message"],
+Cell[94131, 2332, 212, 4, 30, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[94380, 2341, 703, 19, 44, "Input"],
+Cell[95086, 2362, 659, 12, 21, "Message"],
+Cell[95748, 2376, 661, 12, 21, "Message"],
+Cell[96412, 2390, 643, 12, 21, "Message"],
+Cell[97058, 2404, 345, 7, 21, "Message"],
+Cell[97406, 2413, 372, 8, 21, "Message"],
+Cell[97781, 2423, 372, 8, 21, "Message"],
+Cell[98156, 2433, 189, 4, 44, "Output"]
+}, Open  ]],
+Cell[98360, 2440, 120, 2, 30, "Input"],
+Cell[CellGroupData[{
+Cell[98505, 2446, 724, 20, 30, "Input"],
+Cell[99232, 2468, 643, 12, 21, "Message"],
+Cell[99878, 2482, 645, 12, 21, "Message"],
+Cell[100526, 2496, 645, 12, 21, "Message"],
+Cell[101174, 2510, 344, 7, 21, "Message"],
+Cell[101521, 2519, 373, 8, 21, "Message"],
+Cell[101897, 2529, 375, 8, 21, "Message"],
+Cell[102275, 2539, 372, 8, 21, "Message"],
+Cell[102650, 2549, 348, 7, 21, "Message"],
+Cell[103001, 2558, 188, 4, 30, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[103226, 2567, 703, 19, 44, "Input"],
+Cell[103932, 2588, 642, 11, 21, "Message"],
+Cell[104577, 2601, 639, 11, 21, "Message"],
+Cell[105219, 2614, 640, 11, 21, "Message"],
+Cell[105862, 2627, 345, 7, 21, "Message"],
+Cell[106210, 2636, 374, 8, 21, "Message"],
+Cell[106587, 2646, 374, 8, 21, "Message"],
+Cell[106964, 2656, 373, 8, 21, "Message"],
+Cell[107340, 2666, 346, 7, 21, "Message"],
+Cell[107689, 2675, 187, 4, 44, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[107913, 2684, 878, 22, 69, "Input"],
+Cell[108794, 2708, 668, 12, 21, "Message"],
+Cell[109465, 2722, 666, 12, 21, "Message"],
+Cell[110134, 2736, 666, 12, 21, "Message"],
+Cell[110803, 2750, 369, 7, 21, "Message"],
+Cell[111175, 2759, 398, 8, 21, "Message"],
+Cell[111576, 2769, 396, 8, 21, "Message"],
+Cell[111975, 2779, 398, 8, 21, "Message"],
+Cell[112376, 2789, 367, 7, 21, "Message"],
+Cell[112746, 2798, 212, 4, 30, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[112995, 2807, 704, 19, 44, "Input"],
+Cell[113702, 2828, 656, 12, 21, "Message"],
+Cell[114361, 2842, 662, 12, 21, "Message"],
+Cell[115026, 2856, 646, 12, 21, "Message"],
+Cell[115675, 2870, 346, 7, 21, "Message"],
+Cell[116024, 2879, 375, 8, 21, "Message"],
+Cell[116402, 2889, 375, 8, 21, "Message"],
+Cell[116780, 2899, 187, 4, 44, "Output"]
+}, Open  ]]
+}
+]
+*)
+
